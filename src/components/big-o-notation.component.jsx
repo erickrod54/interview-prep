@@ -2,18 +2,13 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 1 - BigOnotation - 
+/**interview-prep-app - version 2 - BigOnotation - 
  * Features: 
  * 
- *     --> Building 'BigOnotation'.
+ *     --> Working on the 'BigOnotation' return.
  * 
- *     --> Building states and handlers to toggle 
- *         the functionalities.
- * 
- *     --> Building the return.
- * 
- * Note: pending to migrate functionalities and states 
- * to the context and provide them from there
+ * Note: depending on how big will be this component
+ * i'll make it's own context
  */
 
 const BigOnotation = () => {
@@ -23,8 +18,13 @@ const BigOnotation = () => {
     const [ showLarge, setShowLarge ] = useState(false)
     const [showNemoWithTime, setShowNemoWithTime ] = useState(false)
 
-    const { nemo, everyoneCharacter, largeArray } = useAppContext()
+    const { nemo, everyoneCharacter, largeArray, graphsData } = useAppContext()
 
+    console.log('The data of graphs ==>', graphsData )
+
+    const { image: firstgraph } = graphsData[0]
+    const { image: secondgraph } = graphsData[1]
+    
     const handleFindNemo = () => {
         setShowNemo(!showNemo)
         findNemo(nemo)
@@ -193,6 +193,35 @@ const BigOnotation = () => {
                     null    
                 }
                 </section>
+
+                <p>
+                    so by the last operations, it is defined
+                    big o graphicly as this:
+                </p>
+                <img src={firstgraph} alt='big o first graph'/>
+
+                <p>so as it grows the elements grows the operation
+                    number exponentialy, in linear way:
+                </p>
+                <img src={secondgraph} alt='big o second graph'/>
+
+                <p>
+                    so, here is the first big O notation 'O(n)'
+                    because 'findNemo' is a linear time to find
+                    nemo, for the last three exercises: 
+                </p>
+
+                <p>
+                with the nemo array the big o notation will be
+                    O(1), for the everyone array O(10), and for
+                    the large array O(100000).
+                </p>    
+                <p>
+                     -the n can 
+                    be anything, can be an array, objects, 
+                    or any kind od data that im performing 
+                    operations with-
+                </p> 
             </div>
         </Wrapper>
     )
@@ -219,7 +248,15 @@ const Wrapper = styled.div`
         width: 90%;
         height: 5rem;
     }
+
+    img{
+        width: 350px;
+        height: 300px;
+        border: 1px solid black;
+        border-radius: 2rem;
+    }
 `
+
 
 
 export default BigOnotation;
