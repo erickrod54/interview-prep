@@ -1,16 +1,27 @@
-/**interview-prep-app - version 1 - data js - 
+import { bigo1stgraph, bigo2ndgraph } from './assets'
+
+/**interview-prep-app - version 2 - data js - 
  * Features: 
  * 
- *     --> Building data 'nemo', 'everyoneCharacter'
- *         and 'largeArray' collections to use in
- *        'O notation'.
+ *     --> Building 'graphsData' to handle
+ *         assets.
  * 
- * Note: this data file is going to add more data
- * to integrate with the exercises
+ * Note: the first assets added to 'graphsData'
+ * are for big notation app
  */
 
 export const nemo = ['nemo'];
 
+export const graphsData = [
+    {
+        id:1,
+        image:bigo1stgraph
+    },
+    {
+        id:2,
+        image:bigo2ndgraph
+    }
+]
 
 export const everyoneCharacter = [
  'dory',
