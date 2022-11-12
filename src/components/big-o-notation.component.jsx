@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 2 - BigOnotation - 
+/**interview-prep-app - version 3 - BigOnotation - 
  * Features: 
  * 
- *     --> Working on the 'BigOnotation' return.
+ *     --> Adding content related with
+ *         'big o complexity constant time'.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -17,6 +18,7 @@ const BigOnotation = () => {
     const [ showEveryone, setShowEveryone ] = useState(false)
     const [ showLarge, setShowLarge ] = useState(false)
     const [showNemoWithTime, setShowNemoWithTime ] = useState(false)
+    const [ showPrintMe, setShowPrintMe ] = useState(false)
 
     const { nemo, everyoneCharacter, largeArray, graphsData } = useAppContext()
 
@@ -24,6 +26,8 @@ const BigOnotation = () => {
 
     const { image: firstgraph } = graphsData[0]
     const { image: secondgraph } = graphsData[1]
+    const { image: bigoconstant } = graphsData[2]
+    const { image: bigo3const } = graphsData[3]
     
     const handleFindNemo = () => {
         setShowNemo(!showNemo)
@@ -71,6 +75,11 @@ const BigOnotation = () => {
             let t1 = performance.now()
             console.log('call to find nemo took ==>', + (t1-t0) + ' miliseconds')
         }
+
+    const printMe = (arg) => {
+        setShowPrintMe(!showPrintMe)
+        return console.log(arg);
+    }
 
     return(
         <Wrapper>
@@ -222,16 +231,128 @@ const BigOnotation = () => {
                     or any kind od data that im performing 
                     operations with-
                 </p> 
+
+                <h3>so the name of this big o notation
+                    is ' O(n) - linear time '
+                </h3>
+
+                <p>now i'll continue with the second big o
+                    notation:
+                </p>
+                <h2>constant time:</h2>
+                <p>constant time refers to the same number of operations
+                    over '1' element 'o(1)' for example i have the following 
+                    function:
+                </p>
+
+                <section className="code-block">
+                            <p>{`const printMe = (arg) => {`}</p>
+                            <p>{`return console.log(arg)`}</p>
+                            <p>{`}`}</p>        
+                </section>
+
+                <p>if i execute  the function will result in a log
+                    prompt:
+                </p>
+
+                <button onClick={() => printMe(nemo)}>excute printMe</button>
+                { showPrintMe ? 
+                <>
+                    <p>checking the console i can see the data 'arg' being
+                        printed, for this example i am using 'nemo' array:
+                    </p>
+                    <section className="code-block">
+                                <p>{`() => printMe(nemo)`}</p>        
+                    </section>
+
+                    <p>in this case i handle an array, but this rule can
+                    be applied to any data structure, can be arrays,
+                    objects and more.
+                    </p>  
+
+                    <section className="code-block">
+                            <p>{`const printMe = (arg) => {`}</p>
+                            <p>{`return console.log(arg) // o(1)`}</p>
+                            <p>{`}`}</p>        
+                </section>  
+
+                    <p>and graphicly will be a flat line each time get
+                        excuted ( predictable code is excellent) and this
+                        expressed in graph will be:
+                    </p>
+                    <img src={bigoconstant} alt="big o constant"/>
+
+                    <p>where the operation is excuted many times 
+                        shapping a 'flat line' which means excellent
+                        application performance and predictable code
+                    </p>
+                </>
+
+
+
+                :
+                null
+                }
+
+                <p>so for example if i have:</p>
+                
+                <section className="code-block">
+                            <p>{`const printMe = (arg1, arg2, arg3) => {`}</p>
+                            <p>{`return console.log(arg1) // o(1)`}</p>
+                            <p>{`return console.log(arg2) // o(1)`}</p>
+                            <p>{`return console.log(arg3) // o(3)`}</p>
+                            <p>{`}`}</p>        
+                </section>  
+
+                <p>this will be an 'o(3)' but constant time
+                    because will execute the same operation
+                    on a shap of 'flat line', but in this
+                    case # operations increase to 3:
+                </p>
+            <img src={bigo3const} alt='big o 2 constant time'/>
             </div>
+
+            <p>
+                the following example:
+            </p>
+
+            <section className="code-block">
+                            <p>{`const funChallenge = (input) => {`}</p>
+                            <p>{`let a = 10; // O(1)`}</p>
+                            <p>{`a = 50 + 3; // O(1)`}</p>
+                            <p>{`for(let i = 0; i < input.length; i++){ // O(n)`}</p>
+                            <p>{`anotherFunction(); // O(n)`}</p>
+                            <p>{`let stranger = true; // O(n)`}</p>
+                            <p>{`a++ // O(n)`}</p>
+                            <p>{`}`}</p>
+                            <p>{`return a; // O(1)`}</p>
+                            <p>{`}`}</p>        
+            </section>
+
+            <p>by evaluating line by line i start with 'flat line'
+                then i go 'linear time' and then i come back to
+                'flat line' for 'const funChallenge':
+            </p>
+
+            <section className="code-block">
+                            <p>{`BIG O ( 3 + 4n )`}</p>        
+            </section>
+
         </Wrapper>
     )
 }
 
 const Wrapper = styled.div`
     .code-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 4rem;
+        width: 30%;
         border: 1px solid black;
     }
+
 
     li{
         display: flex;
