@@ -1,3 +1,11 @@
+/**interview-prep-app - version 4 - index css - 
+ * Features: 
+ * 
+ *     --> Placing '.code-block' index.css 
+ * 
+ * Note: to generate url's dinamicly
+ */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -28,4 +36,14 @@ code {
 .topics-container{
   margin: 4rem;
 
+}
+
+.code-block{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  width: 30%;
+  border: 1px solid black;
 }
