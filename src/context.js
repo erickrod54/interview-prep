@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { everyoneCharacter, graphsData, largeArray, nemo } from "./data";
+import { everyoneCharacter, graphsData, largeArray, linksData, nemo } from "./data";
 
-/**interview-prep-app - version 2 - context js - 
+/**interview-prep-app - version 4 - context js - 
  * Features: 
  * 
- *     --> Importing and providing 'graphsData'.
+ *     --> Importing and providing 'linksData'.
  * 
  * Note: pending to migrate functionalities from
  * local components
@@ -20,7 +20,8 @@ export const AppProvider = ({ children }) => {
             nemo,
             everyoneCharacter,
             largeArray,
-            graphsData           
+            graphsData,
+            linksData           
             }}>
             {children}
         </AppContext.Provider>
