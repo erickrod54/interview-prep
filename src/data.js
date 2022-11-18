@@ -1,14 +1,25 @@
 import { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart } from './assets'
 
-/**interview-prep-app - version 3 - data js - 
+/**interview-prep-app - version 4 - data js - 
  * Features: 
  * 
- *     --> Adding 'big o complexity constant time' 
- *          assets to graphData. 
+ *     --> Building linksData 
  * 
- * Note: the first assets added to 'graphsData'
- * are for big notation app
+ * Note: to generate url's dinamicly
  */
+
+export const linksData = [
+    {
+      id:1,
+      url:'/big-o-notation',
+      name:'big o notation'   
+    },
+    {
+      id:2,
+      url:'/big-o-rule-book',
+      name:'big o rule-book'
+    }
+]
 
 export const nemo = ['nemo'];
 
