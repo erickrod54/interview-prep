@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 3 - BigOnotation - 
+/**interview-prep-app - version 4 - BigOnotation - 
  * Features: 
  * 
- *     --> Adding content related with
- *         'big o complexity constant time'.
+ *     --> Moving '.code-block' to the index.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -343,16 +342,6 @@ const BigOnotation = () => {
 }
 
 const Wrapper = styled.div`
-    .code-block{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 4rem;
-        width: 30%;
-        border: 1px solid black;
-    }
-
 
     li{
         display: flex;
