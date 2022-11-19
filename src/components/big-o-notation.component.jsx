@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 4 - BigOnotation - 
+/**interview-prep-app - version 5 - BigOnotation - 
  * Features: 
  * 
- *     --> Moving '.code-block' to the index.
+ *     --> Moving 'img' to the index.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -357,13 +357,6 @@ const Wrapper = styled.div`
         margin: 2rem;
         width: 90%;
         height: 5rem;
-    }
-
-    img{
-        width: 350px;
-        height: 300px;
-        border: 1px solid black;
-        border-radius: 2rem;
     }
 `
 
