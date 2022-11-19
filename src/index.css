@@ -1,7 +1,7 @@
-/**interview-prep-app - version 4 - index css - 
+/**interview-prep-app - version 5 - index css - 
  * Features: 
  * 
- *     --> Placing '.code-block' index.css 
+ *     --> Placing 'img' styles. 
  * 
  * Note: to generate url's dinamicly
  */
@@ -46,4 +46,11 @@ code {
   padding: 4rem;
   width: 30%;
   border: 1px solid black;
+}
+
+img{
+  width: 350px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 2rem;
 }
