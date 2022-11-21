@@ -1,11 +1,10 @@
 import { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart } from './assets'
 
-/**interview-prep-app - version 6 - data js - 
+/**interview-prep-app - version 7 - data js - 
  * Features: 
  * 
- *     --> Building boxes, boxes1, 
- *         boxesletters and numbers
- *         data for big o rules.    
+ *     --> Adding 'SpaceComplexity' to
+ *         linksData.    
  * 
  * Note: to generate url's dinamicly
  */
@@ -20,6 +19,11 @@ export const linksData = [
       id:2,
       url:'/big-o-rule-book',
       name:'big o rule-book'
+    },
+    {
+      id:3,
+      url:'/space-complexity',
+      name:'space complexity'
     }
 ]
 
