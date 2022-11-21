@@ -1,10 +1,10 @@
 import { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart } from './assets'
 
-/**interview-prep-app - version 7 - data js - 
+/**interview-prep-app - version 8 - data js - 
  * Features: 
  * 
- *     --> Adding 'SpaceComplexity' to
- *         linksData.    
+ *     --> Building 'n' data for space
+ *         complexity    
  * 
  * Note: to generate url's dinamicly
  */
@@ -74,3 +74,5 @@ export const boxes1 = [1,2,3,4,5,6,7,8]
 export const boxesletters = [ 'a','b','c','d','e']
 
 export const numbers = [1,2,3,4,5]
+
+export const n = [1,2,3,4,5]
