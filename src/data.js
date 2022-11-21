@@ -1,9 +1,11 @@
 import { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart } from './assets'
 
-/**interview-prep-app - version 4 - data js - 
+/**interview-prep-app - version 6 - data js - 
  * Features: 
  * 
- *     --> Building linksData 
+ *     --> Building boxes, boxes1, 
+ *         boxesletters and numbers
+ *         data for big o rules.    
  * 
  * Note: to generate url's dinamicly
  */
@@ -60,3 +62,11 @@ export const everyoneCharacter = [
 ]
 
 export const largeArray = new Array(1000).fill('nemo')
+
+export const boxes = [1,2,3,4,5]
+
+export const boxes1 = [1,2,3,4,5,6,7,8]
+
+export const boxesletters = [ 'a','b','c','d','e']
+
+export const numbers = [1,2,3,4,5]
