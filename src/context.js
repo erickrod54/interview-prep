@@ -1,17 +1,18 @@
 import React, { useContext } from "react";
-import { everyoneCharacter, graphsData, largeArray, linksData, nemo } from "./data";
+import { boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 4 - context js - 
+/**interview-prep-app - version 6 - context js - 
  * Features: 
  * 
- *     --> Importing and providing 'linksData'.
+ *     --> Importing and providing 'boxes', 'boxes1', 
+ *         'boxesletters' and 'numbers'
+ *         data for big o rules.
  * 
  * Note: pending to migrate functionalities from
  * local components
  */
 
 export const AppContext = React.createContext()
-
 
 export const AppProvider = ({ children }) => {
     
@@ -21,7 +22,11 @@ export const AppProvider = ({ children }) => {
             everyoneCharacter,
             largeArray,
             graphsData,
-            linksData           
+            linksData,
+            boxes,
+            boxes1,
+            boxesletters,
+            numbers 
             }}>
             {children}
         </AppContext.Provider>
