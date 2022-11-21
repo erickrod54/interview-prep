@@ -2,27 +2,33 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 5 - 
- * HomePageInterviewPrep - Features: 
+/**interview-prep-app - version 6 - 
+ * BigORuleBook - Features: 
  * 
- *     --> Adding 'remove constant'
- *         rule 
+ *     --> Finishing big o rules 
  * 
  * Note: to generate url's dinamicly
  */
 
 const BigORuleBook = () => {
 
-    const { graphsData  } = useAppContext()
+    const { graphsData, boxes, boxes1, boxesletters, numbers } = useAppContext()
     
     const image = graphsData[4].image;
 
-    console.log( graphsData[4].image )
+    console.log('numebrs ==>', numbers)
+    //console.log( graphsData[4].image )
+    //console.log('boxes ==> ', boxes, 'and boxes 2 ==>', boxes1)
 
     const { everyoneCharacter } = useAppContext()
     const [ worstcase, setWorstcase ] = useState(false)
     const [ count, setCount ] = useState(0)
     const [counthi, setCounthi ] = useState(0)
+    const [ boxescount, setBoxescount ] = useState(0)
+    const [ boxescount1, setBoxescount1 ] = useState(0)
+    // eslint-disable-next-line
+    const [ boxespair, setBoxespair ] = useState([])
+    const [ boxespairshow, setBoxespairshow ] = useState(false) 
 
     const temCase = [...everyoneCharacter]
     const worstCase = [...temCase]
@@ -45,6 +51,44 @@ const BigORuleBook = () => {
             }
            
         }
+
+    const compressBoxesTwice = (boxes, boxes2) => {
+        boxes.forEach(function(boxes) {
+            console.log(boxes);
+            setBoxescount(boxes)
+        });
+
+        boxes2.forEach(function(boxes) {
+            console.log(boxes);
+            setBoxescount1(boxes)
+        })
+    }
+
+    const logAllPairsBoxes = (boxes) => {
+
+        for(let i=0; i < boxes.length; i++){
+            for(let j=0; j < boxes.length; j++){
+                console.log(boxes[i], boxes[j])
+                setBoxespair(boxes[i], boxes[j])
+            }   
+        }
+        setBoxespairshow(!boxespairshow)
+    }
+
+    const printnumebersAndPairSums = (numbers) => {
+
+        console.log('these are the numbers:')
+        numbers.forEach(function(number) {
+            console.log(number)
+        })
+
+        console.log('and these are their sums:')
+         numbers.forEach(function(firstNumber){
+            numbers.forEach(function(secondNumber){
+                console.log( firstNumber + secondNumber)
+            })
+         })
+    }
 
     const printItem  = (items) => {
         console.log(items[0])
@@ -203,7 +247,176 @@ const BigORuleBook = () => {
 
             <h3>3.- different terms for inputs:</h3>
 
+            <p>
+                i have the following function, and the porpuse
+                is to print two different arrays as 1 output:
+            </p>
 
+            <section className="code-block">
+                {/**print first item then frist half say hi
+                 * 100 times*/}
+                 <p>{`function compressBoxesTwice(boxes){`}</p>
+                 <p>{`boxes.forEach(function(boxes)`}</p>
+                 <p>{`console.log(boxes)`}</p>
+                 <p>{`});`}</p>
+                 <p>{``}</p>
+                 <p>{`boxes.forEach(function(boxes){`}</p>
+                 <p>{`console.log(boxes);`}</p>
+                 <p>{`});`}</p>
+                 <p>{`}`}</p>                 
+
+                 <p>so the complexity will be:</p>
+                 <p>O(2n)</p>
+
+                 <p>but the third rule says</p>
+                 <p>different terms for inputs</p>
+                 <p>so let's receive two arguments:</p>
+
+                 <p>{`function compressBoxesTwice(boxes, boxes1){`}</p>
+                 <p>{`boxes.forEach(function(boxes)`}</p>
+                 <p>{`console.log(boxes)`}</p>
+                 <p>{`});`}</p>
+                 <p>{``}</p>
+                 <p>{`boxes.forEach(function(boxes){`}</p>
+                 <p>{`console.log(boxes);`}</p>
+                 <p>{`});`}</p>
+                 <p>{`}`}</p>                 
+
+                 <p>so the complexity will be:</p>
+                 <p>O(a + b)</p>
+             </section>
+
+             <p>
+                if i trigger the function the output will be:
+            </p>
+
+             <button onClick={() => compressBoxesTwice(boxes, boxes1)}>compress boxes</button>
+
+             <section className="code-block">
+                {boxescount} and {boxescount1} boxes together !
+            </section>
+
+            <section className="code-block">
+                {/**print first item then frist half say hi
+                 * 100 times*/}
+                 <p>{`const logAllPairsBoxes = (boxes) => {`}</p>
+                 <p>{`for(let i=0; i < boxes.length; i++){`}</p>
+                 <p>{`for(let j=0; j < boxes.length; j++){`}</p>
+                 <p>{`console.log(boxes[i], boxes[j])`}</p>
+                 <p>{``}</p>
+                 <p>{`} `}</p>
+                 <p>{`}`}</p>
+                 <p>{`}`}</p>
+                 <p>so the complexity will be:</p>
+                 <p>O(n ^ 2)</p>
+                 <p>this last pattern is 'quadratic time'</p>
+                 <p>this complexity pattern can be:</p>
+                 <p>O(a*b)</p>
+             </section>
+
+              <button onClick={() => logAllPairsBoxes(boxesletters)}>log all pair boxes</button>
+
+            {boxespairshow  ?
+            
+            <section className="code-block">
+                check the console for the pairs
+            </section>
+            :
+            null
+            }                 
+            
+            <p>
+                this example comes up a lot in interviews
+                because different 'terms for different inputs'
+                means to identify this two last patterns
+                when i have 2 inputs (arguments) pattern O(a + b)
+                or two nested 'for' or 'map' cycles i have 
+                complexity in the red area of the 'chart graph'
+                that has a complexity of 'O(n ^ 2)'
+            </p>
+
+            <img src={image} alt='big o chart' />
+
+            <p>
+                and the challenge is to modify the code to
+                get from 'O(a + b)' and this 'O(n ^ 2)'
+                to the green area of the big o chart
+                as 'O(a + b)' instead of 'O(2n)' for
+                'different inputs', and 'O(a*b)' instead
+                of 'O(n ^ 2)' for 'nested loops'
+            </p>
+
+            <h3>4- drop non dominants:</h3>
+
+            <p>
+                i have the function to 'print all
+                numbers then all pair sums' of the 
+                array 'numbers':
+            </p>
+
+            <section className="code-block">
+                {/**print first item then frist half say hi
+                 * 100 times*/}
+                 <p>{`const printnumebersAndPairSums = (numbers) => {`}</p>
+                 <p>{`console.log('these are the numbers:')`}</p>
+                 <p>{`numbers.forEach(function(number) {`}</p>
+                 <p>{`console.log(number)`}</p>
+                 <p>{`})`}</p>
+                 <p>{``}</p>
+                 <p>{`console.log('and these are their sums:')`}</p>
+                 <p>{`numbers.forEach`}</p>
+                 <p>{`(function(secondNumber){`}</p>
+                 <p>{`console.log( firstNumber + secondNumber)`}</p>
+                 <p>{`})`}</p>                   
+                 <p>{`})`}</p>
+                 <p>{`}`}</p>
+            
+                 <p>so the complexity will be:</p>
+                 <p>O(n + n^2)</p>
+                 <p>but the dropping non dominants</p>
+                 <p>between 'n' and 'n^2'</p>
+                 <p>'n' is non dominant resulting in:</p>
+                 <p>O(n^2)</p>
+             </section>
+
+             <button onClick={() => printnumebersAndPairSums(numbers)}>log all numbers and their sums</button>
+
+             <p>
+                so when i have to 'drop non dominants' i have to
+                'keep' the most growing 'n' terms, those who represent
+                the major 'scale' for my code and re-factor the code 
+                in them, and 'drop' the less significant (remeber)
+                big o is about scale.
+            </p>     
+            
+            <h3>what cause time in a function ?</h3>
+
+            <p>
+                time in a function is caused by
+                (the two factors that come to play
+                in big o 'time' and 'operations #'):
+            </p>
+
+            <ul>
+                <li>operations ( +, -, *, / )</li>
+                <li>comparisons {`( <, >, ==)`}</li>
+                <li>looping (for, while )</li>
+                <li>outside function call (function)</li>
+            </ul>
+
+            <p>
+                so big o worries about big entries, so 
+                big code rules are applied to make the code
+                scalable to real life large entries that
+                can crash/break apps, the ability to find
+                the right 'data structure' to the 'right
+                large entry of data', this is what 
+                big o is about.
+            </p>
+
+            <section className="code-block">
+               <p>{`Data Structures + Algorithms = Programs`}</p>
+            </section>        
         </Wrapper>
     )
 }
