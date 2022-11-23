@@ -1,10 +1,10 @@
 import { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart } from './assets'
 
-/**interview-prep-app - version 8 - data js - 
+/**interview-prep-app - version 9 - data js - 
  * Features: 
  * 
- *     --> Building 'n' data for space
- *         complexity    
+ *     --> Adding 'how to solve problems'
+ *         to linksData     
  * 
  * Note: to generate url's dinamicly
  */
@@ -24,6 +24,11 @@ export const linksData = [
       id:3,
       url:'/space-complexity',
       name:'space complexity'
+    },
+    {
+      id:4,
+      url:'/how-to-solve-problems',
+      name:'how to solve problems'
     }
 ]
 
