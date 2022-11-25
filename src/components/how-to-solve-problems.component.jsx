@@ -1,18 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { useAppContext } from "../context";
 
-
-/**interview-prep-app - version 9 -
+/**interview-prep-app - version 10 -
  * HowToSolveProblems - Features: 
  * 
  *     --> Building 'HowToSolveProblems' 
  * 
- *     --> Placing fundamental concepts.    
+ *     --> Placing fundamental concepts.  
+ * 
+ *     --> Pending to finish better 
+ *         solution for 'n ^ 2'.        
  * 
  * Note: to generate url's dinamicly
  */
 
 const HowToSolveProblems = () => {
+    
+    const [ common, setCommon ] = useState(false)
+    const [ common1, setCommon1 ] = useState(true)
+    
+    const { array1, array2, array3, array4 } = useAppContext()
+   
+
+
+    const CommonElement = (arr1, arr2 ) => {
+        for (let i = 0; i < arr1.length; i++) {
+           for (let j = 0; j < arr2.length; j++) {
+                if (arr1[i] === arr2[j]) {
+                   setCommon(!common)
+                   return console.log('common element found ==>', true)
+                }
+            }
+            setCommon1(!common1)
+            return console.log('not common element found ==>',false)
+        }
+    }
+
 
     return(
         <Wrapper>
@@ -147,12 +171,97 @@ const HowToSolveProblems = () => {
                 </li>
             </ul>
 
+            <h3>solving section:</h3>
+
+            <p>
+                given 2 arrays, create a function that 
+                let's a user know (true / false) wheter
+                these two arrays contain any common
+                items:    
+            </p>
+
+            <p>
+                i have 2 arrays, array1 and array2:
+            </p>
+
+            <section className="code-block">
+                <p>{`const array1 = [ 'a', 'b', 'c', 'x']`}</p>
+                <p>{`const array2 = [ 'z', 'y', 'i' ]`}</p>    
+            </section>
+
+            <button onClick={() => CommonElement(array1, array2)}>compare 'array1' and 'array2'</button>
+                   
+            <section className="code-block">
+                { !common1 ?
+                <p>false - not common value found</p>
+                :
+                null
+                }
+            </section>
+
+            <p>
+                i have 2 more arrays, array3 and array4:
+            </p>
+
+            <section className="code-block">
+                <p>{`const array3 = [ 'a', 'b', 'c', 'x']`}</p>
+                <p>{`const array4 = [ 'a', 'y', 'x']`}</p>    
+            </section>        
+            
+            <button onClick={() => CommonElement(array3, array4)}>compare 'array3' and 'array4'</button>
+            
+            <section className="code-block">
+                {common ?
+                <p>true - common value found</p>
+                :
+                null
+                }
+            </section>
+
+            <h3>first solution:</h3>    
+
+            <p>
+                the first solution is by brute force
+                the most obvios solution that can be
+                high complexity:
+            </p>
+
+            <section className="code-block">
+                <p>{`const CommonElement = (arr1, arr2 ) => {`}</p>
+                <p>{`for (let i = 0; i < arr1.length; i++) {`}</p> 
+                <p>{`for (let j = 0; j < arr2.length; j++) {`}</p>
+                <p>{`if (arr1[i] === arr2[j]) {`}</p>    
+                <p>{`setCommon1(!common1)`}</p>
+                <p>{`return console.log('not common element found ==>',false)`}</p> 
+                <p>{`}`}</p> 
+                <p>{`}`}</p>  
+
+                <p>nested loops</p>
+                <p>complexity is n ^ 2</p>
+                <p>droping off constants n(a*b)</p>
+            </section>
+
+            <p>
+                so i have to become this 'n(a*b)' still
+                the worst case scenario and i need
+                to build it in something faster
+            </p>
+    
         </Wrapper>
     )
 }
 
 const Wrapper = styled.div`
     margin: 1.5rem 1rem 1rem 1.5rem;
+
+    button{
+        margin: 1.5rem 1rem 1rem 1.5rem;
+    }
+
+    section{
+        justify-content: center;
+        align-items: center;
+    }
 
     h2, h3 {
         text-transform: capitalize;
