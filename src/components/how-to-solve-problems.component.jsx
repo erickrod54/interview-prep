@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 10 -
+/**interview-prep-app - version 11 -
  * HowToSolveProblems - Features: 
  * 
- *     --> Building 'HowToSolveProblems' 
- * 
- *     --> Placing fundamental concepts.  
+ *     --> Migrating functionality
+ *         to the context.  
  * 
  *     --> Pending to finish better 
  *         solution for 'n ^ 2'.        
@@ -16,27 +15,8 @@ import { useAppContext } from "../context";
  */
 
 const HowToSolveProblems = () => {
-    
-    const [ common, setCommon ] = useState(false)
-    const [ common1, setCommon1 ] = useState(true)
-    
-    const { array1, array2, array3, array4 } = useAppContext()
-   
 
-
-    const CommonElement = (arr1, arr2 ) => {
-        for (let i = 0; i < arr1.length; i++) {
-           for (let j = 0; j < arr2.length; j++) {
-                if (arr1[i] === arr2[j]) {
-                   setCommon(!common)
-                   return console.log('common element found ==>', true)
-                }
-            }
-            setCommon1(!common1)
-            return console.log('not common element found ==>',false)
-        }
-    }
-
+    const { array1, array2, array3, array4, common, common1, CommonElement } = useAppContext()
 
     return(
         <Wrapper>
