@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
-import { boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
+import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 8 - context js - 
+/**interview-prep-app - version 10 - context js - 
  * Features: 
  * 
  *     --> Importing and providing 'n' data
- *          for 'space complexity'
+ *          for 'array1', array2', array3',
+ *         and array4'
  * 
  * Note: pending to migrate functionalities from
  * local components
@@ -26,7 +27,11 @@ export const AppProvider = ({ children }) => {
             boxes1,
             boxesletters,
             numbers,
-            n 
+            n,
+            array1,
+            array2, 
+            array3, 
+            array4
             }}>
             {children}
         </AppContext.Provider>
