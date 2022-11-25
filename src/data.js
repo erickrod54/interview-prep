@@ -1,10 +1,10 @@
 import { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart } from './assets'
 
-/**interview-prep-app - version 9 - data js - 
+/**interview-prep-app - version 10 - data js - 
  * Features: 
  * 
- *     --> Adding 'how to solve problems'
- *         to linksData     
+ *     --> Building array1, array2, array3
+ *         array4 for 'HowToSolveProblems'.     
  * 
  * Note: to generate url's dinamicly
  */
@@ -81,3 +81,11 @@ export const boxesletters = [ 'a','b','c','d','e']
 export const numbers = [1,2,3,4,5]
 
 export const n = [1,2,3,4,5]
+
+export const array1 = [ 'a', 'b', 'c', 'x']
+
+export const array2 = [ 'z', 'y', 'i' ]
+
+export const array3 = [ 'a', 'b', 'c', 'x']
+
+export const array4 = [ 'a', 'y', 'x']
