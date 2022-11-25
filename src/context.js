@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 10 - context js - 
+/**interview-prep-app - version 11 - context js - 
  * Features: 
  * 
- *     --> Importing and providing 'n' data
- *          for 'array1', array2', array3',
- *         and array4'
+ *     --> Providing states common,common1,
+ *          and feature CommonElement
  * 
  * Note: pending to migrate functionalities from
  * local components
@@ -15,6 +14,26 @@ import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCh
 export const AppContext = React.createContext()
 
 export const AppProvider = ({ children }) => {
+
+    /**--- logic for HowToSolveProblems Component start--*/
+    const [ common, setCommon ] = useState(false)
+    const [ common1, setCommon1 ] = useState(true)
+    
+    
+    const CommonElement = (arr1, arr2 ) => {
+        for (let i = 0; i < arr1.length; i++) {
+           for (let j = 0; j < arr2.length; j++) {
+                if (arr1[i] === arr2[j]) {
+                   setCommon(!common)
+                   return console.log('common element found ==>', true)
+                }
+            }
+            setCommon1(!common1)
+            return console.log('not common element found ==>',false)
+        }
+    }
+
+    /**--- logic for HowToSolveProblems Component end--*/
     
     return(
         <AppContext.Provider value={{
@@ -31,7 +50,10 @@ export const AppProvider = ({ children }) => {
             array1,
             array2, 
             array3, 
-            array4
+            array4,
+            common,
+            common1,
+            CommonElement
             }}>
             {children}
         </AppContext.Provider>
