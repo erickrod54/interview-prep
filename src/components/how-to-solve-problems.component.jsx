@@ -2,21 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 11 -
+/**interview-prep-app - version 12 -
  * HowToSolveProblems - Features: 
  * 
- *     --> Migrating functionality
- *         to the context.  
+ *     --> Destructuring 'CommonElement2'.  
  * 
  *     --> Pending to finish better 
  *         solution for 'n ^ 2'.        
  * 
- * Note: to generate url's dinamicly
+ * Note: CommonElement2 is a work in 
+ * progress
  */
 
 const HowToSolveProblems = () => {
 
-    const { array1, array2, array3, array4, common, common1, CommonElement } = useAppContext()
+    const { array1, array2, array3, array4, common, common1, CommonElement, CommonElement2 } = useAppContext()
 
     return(
         <Wrapper>
@@ -226,6 +226,13 @@ const HowToSolveProblems = () => {
                 the worst case scenario and i need
                 to build it in something faster
             </p>
+
+            <h3>solution 2 - turn n(a*b) to n(a + b)</h3>
+
+            <button onClick={() => CommonElement2(array3, array4)}>compare 'array3' and 'array4'</button>
+
+            <button onClick={() => CommonElement2(array1, array2)}>compare 'array1' and 'array2'</button>    
+            
     
         </Wrapper>
     )
