@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 11 - context js - 
+/**interview-prep-app - version 12 - context js - 
  * Features: 
  * 
- *     --> Providing states common,common1,
- *          and feature CommonElement
+ *     --> work in progress for 'CommonElement2'
  * 
  * Note: pending to migrate functionalities from
  * local components
@@ -33,6 +32,25 @@ export const AppProvider = ({ children }) => {
         }
     }
 
+    const CommonElement2 = (arr1, arr2 ) => {
+        let map = {};
+
+        for (let i = 0; i < arr1.length; i ++){
+            if (!map[array1[i]]) {
+                const item = array1[i];
+                map[item] = true
+            }
+        }
+        console.log('value from CommonElement2 ==> ',map)
+
+        for (let j = 0; j < arr2.length; j ++){
+            if (map[array2[j]]) {
+                return console.log(true)
+            }
+        }
+        return console.log(false)
+    }
+
     /**--- logic for HowToSolveProblems Component end--*/
     
     return(
@@ -53,7 +71,8 @@ export const AppProvider = ({ children }) => {
             array4,
             common,
             common1,
-            CommonElement
+            CommonElement,
+            CommonElement2
             }}>
             {children}
         </AppContext.Provider>
