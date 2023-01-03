@@ -1,15 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { BigOnotation, BigORuleBook, HowToSolveProblems, Nav, SpaceComplexity } from "./components/index.components";
-import { HomePageInterviewPrep } from "./pages/index.pages";
+import { Nav } from "./components/index.components";
+import SharedLayout from "./pages/SharedLayout";
+import SingleTopicPage from "./pages/single.topic.page";
+import TopicsPage from "./pages/topics.page";
 
-/**interview-prep-app - version 9 - App js - 
+/**interview-prep-app - version 13 - App js - 
  * Features: 
  * 
- *     --> Adding 'HowToSolveProblems'.  
+ *     --> Refactoring routing by adding a 
+ *         SharedLayout.
  * 
- * Note: the first assets added to 'graphsData'
- * are for big notation app
+ *     --> Adding TopicsPage.
+ * 
+ *     --> Adding SingleTopicPage. 
+ *   
+ * 
+ * Note: TopicsPage Component will display
+ * a route for all the topics, and 
+ * SingleTopicPage will have the single 
+ * topic
  */
 
 function App() {
@@ -17,11 +27,10 @@ function App() {
     <Router>
     <Nav />
       <Routes>
-          <Route path='/' element={<HomePageInterviewPrep />}/>
-          <Route path='/big-o-notation' element={<BigOnotation />}/>
-          <Route path='/big-o-rule-book' element={<BigORuleBook />}/>
-          <Route path='/space-complexity' element={<SpaceComplexity />}/>
-          <Route path='/how-to-solve-problems' element={<HowToSolveProblems />}/>
+          <Route path='/' element={<SharedLayout />}>
+            <Route index element={<TopicsPage />}/>
+            <Route path=":topicId" element={<SingleTopicPage />}/>
+          </Route>
       </Routes>
     </Router>
   );
