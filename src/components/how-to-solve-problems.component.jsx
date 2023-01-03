@@ -2,22 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 12 -
+/**interview-prep-app - version 13 -
  * HowToSolveProblems - Features: 
  * 
- *     --> Destructuring 'CommonElement2'.  
+ *     --> Fixing CommonElement, and 
+ *         CommonElement2 features
+ *               
  * 
- *     --> Pending to finish better 
- *         solution for 'n ^ 2'.        
- * 
- * Note: CommonElement2 is a work in 
- * progress
+ * Note: results of this features can be visulized by
+ * the java console.
  */
 
 const HowToSolveProblems = () => {
+        
+    const { array1, array2, array3, array4, CommonElement, CommonElement2, CommonElement3, CommonElement4 } = useAppContext()
 
-    const { array1, array2, array3, array4, common, common1, CommonElement, CommonElement2 } = useAppContext()
-
+    //console.log('this is array3 ==>', array3, 'and this is array 4 ==>', array4)
     return(
         <Wrapper>
             <h2>How To Solve Problems:</h2>
@@ -169,15 +169,7 @@ const HowToSolveProblems = () => {
                 <p>{`const array2 = [ 'z', 'y', 'i' ]`}</p>    
             </section>
 
-            <button onClick={() => CommonElement(array1, array2)}>compare 'array1' and 'array2'</button>
-                   
-            <section className="code-block">
-                { !common1 ?
-                <p>false - not common value found</p>
-                :
-                null
-                }
-            </section>
+            <button onClick={CommonElement(array1, array2)}>compare 'array1' and 'array2'</button>
 
             <p>
                 i have 2 more arrays, array3 and array4:
@@ -188,15 +180,8 @@ const HowToSolveProblems = () => {
                 <p>{`const array4 = [ 'a', 'y', 'x']`}</p>    
             </section>        
             
-            <button onClick={() => CommonElement(array3, array4)}>compare 'array3' and 'array4'</button>
+            <button onClick={CommonElement2(array3, array4)}>compare 'array3' and 'array4'</button>
             
-            <section className="code-block">
-                {common ?
-                <p>true - common value found</p>
-                :
-                null
-                }
-            </section>
 
             <h3>first solution:</h3>    
 
@@ -229,10 +214,58 @@ const HowToSolveProblems = () => {
 
             <h3>solution 2 - turn n(a*b) to n(a + b)</h3>
 
-            <button onClick={() => CommonElement2(array3, array4)}>compare 'array3' and 'array4'</button>
+            <section className="code-block">
+                <p>{` let map = {};`}</p>
+                <p>{`for(let i=0; i < arr3.length; i++){`}</p> 
+                <p>{`if (!map[arr3[i]]) {`}</p>
+                <p>{`const item = arr3[i]`}</p>    
+                <p>{`}`}</p>
+                <p>{`}`}</p> 
+                <p>{`//console.log('this is array 3 ==>', map)`}</p> 
+                <p>{`for(let j=0; j < arr4.length; j++){`}</p>
+                <p>{`if (map[arr4[j]]) {`}</p>
+                <p>{`return console.log('(a + b) - if i get here is because arra3 and array4 have at least one equal ==>',true)`}</p>  
+                <p>{`}`}</p>
+                <p>{`return console.log('(a + b) - array1 and array2 are not equal and is ==>',false)`}</p>
 
-            <button onClick={() => CommonElement2(array1, array2)}>compare 'array1' and 'array2'</button>    
-            
+                <p>not nested loops</p>
+                <p>complexity improve from (a*b) to (a + b)</p>
+            </section>
+
+            <p>
+                always try to break the code to test it in 
+                bad scenarios, and find bugs, some QA to 
+                be sure that always will work as expected
+            </p>
+
+            <h3>solution 3 - turn n(a*b) to n(a + b)</h3>
+
+            <p>
+                the third solutionis using methods of the language
+                usually this methods comes optimized to give an
+                o(a + b) for this case, or o(n) in few words the 
+                most effiecient solution
+            </p>
+
+            <section className="code-block">
+                <p>{`return arr1.some(item => arr2.includes(item))`}</p>
+
+                <p>one single line using prebuilt es6</p>
+                <p>in the current date must exist better standards</p>
+                <p>complexity improve from (a*b) to (a + b)</p>
+            </section>
+
+            <button onClick={CommonElement3(array3, array4)}>compare 'array3' and 'array4'</button>
+
+            <button onClick={CommonElement3(array1, array2)}>compare 'array3' and 'array4'</button>            
+
+            <p>
+                break down the code always in modular pieces <strong>'one
+                    function doing a bunch of things not ideal'
+                </strong> but <strong>'many
+                    functions doing one thing really well thats ideal'
+                </strong> testeable and readable code.
+            </p>
     
         </Wrapper>
     )
