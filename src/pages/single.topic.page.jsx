@@ -7,14 +7,17 @@ import BigOnotation from "../components/big-o-notation.component";
 import BigORuleBook from "../components/big-o-notation.rules.component";
 import DataStructures from "../components/data-structures-and-algorithms";
 import HowToSolveProblems from "../components/how-to-solve-problems.component";
+import BuildAndUseArrays from "../components/howtobuild.howtouse.an.array";
 import SpaceComplexity from "../components/space.complexity.component";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 16 - SingleTopicPage  
+/**interview-prep-app - version 16.01 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Building 'SingleTopicPage'. 
+ *     --> Adding 'BuildAndUseArrays'. 
+ * 
+ *     --> Changing versioning to 2 digits.
  * 
  * Note: by id this component make match and render the 
  * corresponding topic.
@@ -69,6 +72,9 @@ const SingleTopicPage = () => {
         return <ArraysImplementations />
     }
 
+    if (id === '9') {
+        return <BuildAndUseArrays/>
+    }
 }
 
 export default SingleTopicPage;
