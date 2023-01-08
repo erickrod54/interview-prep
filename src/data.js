@@ -1,11 +1,11 @@
 import { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart } from './assets'
 
-/**interview-prep-app - version 13 - data js - 
+/**interview-prep-app - version 16.01 - data js - 
  * Features: 
  * 
- *     --> Adding 'data structures and algorithms',
- *        'arrays', 'static arrays vs dynamic arrays',
- *        'arrays implementation' topics    
+ *     --> Adding 'Build and use Arrays' to topics 
+ * 
+ *     --> Changing versioning to 2 digits.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -47,13 +47,13 @@ export const linksData = [
     {
       id:'8',
       name:'arrays implementation'
+    },
+    {
+      id:'9',
+      name:'Build and use Arrays'
     }
     /**
      *,
-    {
-      id:'8',
-      name:'stacks'
-    },
     {
       id:'9',
       name:'tries'
