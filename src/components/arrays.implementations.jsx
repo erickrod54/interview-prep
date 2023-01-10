@@ -1,13 +1,11 @@
-s   import React from "react";
+import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 16.03 - ArraysImplementations  
+/**interview-prep-app - version 16.04 - ArraysImplementations  
  * - Features: 
  * 
- *     --> Adding context with player and wizard exapmple.
- * 
- *     --> Adding inheritance
+ *     --> Fixing typo error
  * 
  * Note: by id this component make match and render the 
  * corresponding topic.
@@ -15,7 +13,7 @@ import { DataStructuresWrapper } from "../styled.components";
 const ArraysImplementations = () => {
     
     
-    const { first, second, third, fourth, fifth, handleFirst, handleSecond, handleThird, handleFourth, handleContext,} = useAppContext()
+    const { first, second, third, fourth, fifth, handleFirst, handleSecond, handleThird, handleFourth, handleContext } = useAppContext()
 
     
     
