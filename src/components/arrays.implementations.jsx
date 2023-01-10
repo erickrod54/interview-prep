@@ -1,90 +1,23 @@
-import React, { useState } from "react";
+s   import React from "react";
+import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 16.01 - ArraysImplementations  
+/**interview-prep-app - version 16.03 - ArraysImplementations  
  * - Features: 
  * 
- *     --> Building 'ArraysImplementations'. 
+ *     --> Adding context with player and wizard exapmple.
  * 
- *     --> Changing versioning to 2 digits.
+ *     --> Adding inheritance
  * 
  * Note: by id this component make match and render the 
  * corresponding topic.
  */
-
 const ArraysImplementations = () => {
-
-
-
-    const [ first, setFirst ] = useState('')  
-    const [second, setSecond ] = useState('')
-    const [third, setThird ] = useState('')
-    const [fourth, setFourth ] = useState('')
-    const [fifth, setFifth ] = useState('')
-
-    const [ context, setContext ] = useState(false)
+    
+    
+    const { first, second, third, fourth, fifth, handleFirst, handleSecond, handleThird, handleFourth, handleContext,} = useAppContext()
 
     
-    const handleFirst = () => {
-        // eslint-disable-next-line 
-        if ( [] === []) {
-            setFirst(<h4>[] === [] - true</h4>)
-            return first
-        }
-        return setFirst(<h4>[] === [] - false</h4>)
-    }
-    
-    const handleSecond = () => {
-        var object1 = {value: 10};
-        var object3 = {value: 10};
-        
-        if (object1 === object3) {
-            setSecond(<h4>object1 === object3 - true</h4>)
-            return second
-        }
-        setSecond(<h4>object1 === object3 - false</h4>)
-        return second;
-    }
-    
-    const handleThird = () => {
-        var object1 = {value: 10};
-        var object2 = object1;
-        var object3 = {value: 10};
-        
-        if (object3 === object2) {
-            setThird(<h4>object3 === object2 - true</h4>)
-            return second
-        }
-        setThird(<h4>object3 === object2 - false</h4>)
-        return second;
-    }
-    
-    const handleFourth = () => {
-        var object1 = {value: 10};
-        var object2 = object1;
-        
-        
-        if (object1 === object2) {
-            setFourth(<h4>object1 === object2 - true</h4>)
-            return fourth
-        }
-        setThird(<h4>object1 === object2 - false</h4>)
-        return fourth;
-    }
-    
-    const handleContext = () => {
-        setContext(!context)
-        
-        const object4 = {
-            a:function() {
-                console.log(this)
-            }
-        }
-        
-        setFifth(<h4>{`{a: ƒ}`}</h4>)
-
-        return object4.a() && fifth
-    }
     
     class Player {
         /**i initiate the constructor to define all
