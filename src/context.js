@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 13 - context js - 
+/**interview-prep-app - version 16.03 - context js - 
  * Features: 
  * 
- *     --> fixing 'CommonElement' and 'CommonElement2'
+ *     --> Starting to migrate states and hanlders
  * 
  * Note: pending to migrate functionalities from
  * local components
@@ -63,6 +63,235 @@ export const AppProvider = ({ children }) => {
     
     
     /**--- logic for HowToSolveProblems Component end--*/
+
+    /** states and hanldlers for arrayImplementations ---- start */
+
+    const [ first, setFirst ] = useState('')  
+    const [second, setSecond ] = useState('')
+    const [third, setThird ] = useState('')
+    const [fourth, setFourth ] = useState('')
+    const [fifth, setFifth ] = useState('')
+
+    const [ context, setContext ] = useState(false)
+
+    
+    const handleFirst = () => {
+        // eslint-disable-next-line 
+        if ( [] === []) {
+            setFirst(<h4>[] === [] - true</h4>)
+            return first
+        }
+        return setFirst(<h4>[] === [] - false</h4>)
+    }
+    
+    const handleSecond = () => {
+        var object1 = {value: 10};
+        var object3 = {value: 10};
+        
+        if (object1 === object3) {
+            setSecond(<h4>object1 === object3 - true</h4>)
+            return second
+        }
+        setSecond(<h4>object1 === object3 - false</h4>)
+        return second;
+    }
+    
+    const handleThird = () => {
+        var object1 = {value: 10};
+        var object2 = object1;
+        var object3 = {value: 10};
+        
+        if (object3 === object2) {
+            setThird(<h4>object3 === object2 - true</h4>)
+            return second
+        }
+        setThird(<h4>object3 === object2 - false</h4>)
+        return second;
+    }
+    
+    const handleFourth = () => {
+        var object1 = {value: 10};
+        var object2 = object1;
+        
+        
+        if (object1 === object2) {
+            setFourth(<h4>object1 === object2 - true</h4>)
+            return fourth
+        }
+        setThird(<h4>object1 === object2 - false</h4>)
+        return fourth;
+    }
+    
+    const handleContext = () => {
+        setContext(!context)
+        
+        const object4 = {
+            a:function() {
+                console.log(this)
+            }
+        }
+        
+        setFifth(<h4>{`{a: ƒ}`}</h4>)
+
+        return object4.a() && fifth
+    }
+
+    /** states and hanldlers for arrayImplementations ---- end */
+
+    /**Big o notation states and handlers - start */
+
+    const [ showNemo, setShowNemo ] = useState(false)
+    const [ showEveryone, setShowEveryone ] = useState(false)
+    const [ showLarge, setShowLarge ] = useState(false)
+    const [showNemoWithTime, setShowNemoWithTime ] = useState(false)
+    const [ showPrintMe, setShowPrintMe ] = useState(false)
+    
+    const handleFindNemo = () => {
+        setShowNemo(!showNemo)
+        findNemo(nemo)
+    }
+
+    const handleFindNemoWithTime = () => {
+        setShowNemoWithTime(!showNemoWithTime)
+        
+        findNemoWithTime(nemo)
+    }
+
+    const handleFindNemoEveryone = () => {
+        setShowEveryone(!showEveryone)
+        
+        findNemoWithTime(everyoneCharacter)
+    }
+
+    const handleFindNemoLarge = () => {
+        setShowLarge(!showLarge)
+     
+        findNemoWithTime(largeArray)
+    }
+
+    const findNemo = (array) => {
+        for( let i = 0; i <  array.length; i++){
+            if (array[i] === 'nemo') {
+                return(
+                    console.log("Found Nemo!!!")
+                )
+            }
+        }
+    }
+
+    /**this is to measure the performance */
+    const findNemoWithTime = (array) => {
+        let t0 = performance.now()
+        for( let i = 0; i <  array.length; i++){
+            if (array[i] === 'nemo') {
+                return(
+                    console.log("Found Nemo measuring time!!!")
+                    )
+                }
+            }
+            let t1 = performance.now()
+            console.log('call to find nemo took ==>', + (t1-t0) + ' miliseconds')
+        }
+
+    const printMe = (arg) => {
+        setShowPrintMe(!showPrintMe)
+        return console.log(arg);
+    }
+
+    /**Big o notation states and handlers - end */
+
+    /**big o rule notation states and hanlders - start */
+
+    const [ worstcase, setWorstcase ] = useState(false)
+    const [ count, setCount ] = useState(0)
+    const [counthi, setCounthi ] = useState(0)
+    const [ boxescount, setBoxescount ] = useState(0)
+    const [ boxescount1, setBoxescount1 ] = useState(0)
+    // eslint-disable-next-line
+    const [ boxespair, setBoxespair ] = useState([])
+    const [ boxespairshow, setBoxespairshow ] = useState(false) 
+
+    const temCase = [...everyoneCharacter]
+    const worstCase = [...temCase]
+    worstCase[3] = 'hank'
+    worstCase[9] = 'nemo'
+
+    //console.log('worstCase ==>', worstCase)
+
+    const findNemoRule = (array) => {
+        for( let i = 0; i <  array.length; i++){
+            setWorstcase(!worstcase)
+            console.log(worstcase)
+            console.log('running')
+            if (array[i] === 'nemo') {
+                return(
+                    console.log("Found Nemo!!! ==>", i)
+                    )
+                }
+                setCount(i)
+            }
+           
+        }
+
+    const compressBoxesTwice = (boxes, boxes2) => {
+        boxes.forEach(function(boxes) {
+            console.log(boxes);
+            setBoxescount(boxes)
+        });
+
+        boxes2.forEach(function(boxes) {
+            console.log(boxes);
+            setBoxescount1(boxes)
+        })
+    }
+
+    const logAllPairsBoxes = (boxes) => {
+
+        for(let i=0; i < boxes.length; i++){
+            for(let j=0; j < boxes.length; j++){
+                console.log(boxes[i], boxes[j])
+                setBoxespair(boxes[i], boxes[j])
+            }   
+        }
+        setBoxespairshow(!boxespairshow)
+    }
+
+    const printnumebersAndPairSums = (numbers) => {
+
+        console.log('these are the numbers:')
+        numbers.forEach(function(number) {
+            console.log(number)
+        })
+
+        console.log('and these are their sums:')
+         numbers.forEach(function(firstNumber){
+            numbers.forEach(function(secondNumber){
+                console.log( firstNumber + secondNumber)
+            })
+         })
+    }
+
+    const printItem  = (items) => {
+        console.log(items[0])
+
+        var middleIndex = Math.floor(items.length / 2);
+        var index = 0;
+
+        while(index < middleIndex){
+            console.log(items[index]);
+            index++;
+           
+        }
+
+        for(var i = 0; i < 100; i++){
+            console.log('this is', 'hi')
+        }
+        setCounthi(items)
+
+    }
+
+    /**big o rule notation states and hanlders - end */
+
     
     return(
         <AppContext.Provider value={{
@@ -76,10 +305,43 @@ export const AppProvider = ({ children }) => {
             boxesletters,
             numbers,
             n,
+            first,
+            second,
+            third,
+            fourth,
+            fifth,
+            context,
+            showNemo,
+            showEveryone,
+            showLarge,
+            showNemoWithTime,
+            showPrintMe,
+            worstCase,
+            count,
+            counthi,
+            boxescount,
+            boxescount1,
+            boxespair,
+            boxespairshow,
+            findNemoRule,
+            compressBoxesTwice,
+            logAllPairsBoxes,
+            printnumebersAndPairSums,
+            printItem,
             array1,
             array2, 
             array3, 
             array4,
+            handleFindNemo,
+            handleFindNemoWithTime,
+            handleFindNemoEveryone,
+            handleFindNemoLarge,
+            printMe,
+            handleFirst,
+            handleSecond,
+            handleThird,
+            handleFourth,
+            handleContext,
             CommonElement,
             CommonElement2,
             CommonElement3,
