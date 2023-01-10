@@ -1,18 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 6 - 
+/**interview-prep-app - version 16.04 - 
  * BigORuleBook - Features: 
  * 
- *     --> Finishing big o rules 
+ *     --> Migrating states and handlers.
+ * 
+ *     --> Destructuring from context.
+ * 
+ *     --> Fixing duplicate key 
  * 
  * Note: to generate url's dinamicly
  */
 
 const BigORuleBook = () => {
 
-    const { graphsData, boxes, boxes1, boxesletters, numbers } = useAppContext()
+    const { graphsData, boxes, boxes1, boxesletters, numbers, everyoneCharacter, worstcase, findNemo, count,  printItem, counthi, boxescount1, compressBoxesTwice, boxescount, logAllPairsBoxes, boxespairshow, printnumebersAndPairSums } = useAppContext()
     
     const image = graphsData[4].image;
 
@@ -20,94 +24,10 @@ const BigORuleBook = () => {
     //console.log( graphsData[4].image )
     //console.log('boxes ==> ', boxes, 'and boxes 2 ==>', boxes1)
 
-    const { everyoneCharacter } = useAppContext()
-    const [ worstcase, setWorstcase ] = useState(false)
-    const [ count, setCount ] = useState(0)
-    const [counthi, setCounthi ] = useState(0)
-    const [ boxescount, setBoxescount ] = useState(0)
-    const [ boxescount1, setBoxescount1 ] = useState(0)
-    // eslint-disable-next-line
-    const [ boxespair, setBoxespair ] = useState([])
-    const [ boxespairshow, setBoxespairshow ] = useState(false) 
-
     const temCase = [...everyoneCharacter]
     const worstCase = [...temCase]
     worstCase[3] = 'hank'
     worstCase[9] = 'nemo'
-
-    //console.log('worstCase ==>', worstCase)
-
-    const findNemo = (array) => {
-        for( let i = 0; i <  array.length; i++){
-            setWorstcase(!worstcase)
-            console.log(worstcase)
-            console.log('running')
-            if (array[i] === 'nemo') {
-                return(
-                    console.log("Found Nemo!!! ==>", i)
-                    )
-                }
-                setCount(i)
-            }
-           
-        }
-
-    const compressBoxesTwice = (boxes, boxes2) => {
-        boxes.forEach(function(boxes) {
-            console.log(boxes);
-            setBoxescount(boxes)
-        });
-
-        boxes2.forEach(function(boxes) {
-            console.log(boxes);
-            setBoxescount1(boxes)
-        })
-    }
-
-    const logAllPairsBoxes = (boxes) => {
-
-        for(let i=0; i < boxes.length; i++){
-            for(let j=0; j < boxes.length; j++){
-                console.log(boxes[i], boxes[j])
-                setBoxespair(boxes[i], boxes[j])
-            }   
-        }
-        setBoxespairshow(!boxespairshow)
-    }
-
-    const printnumebersAndPairSums = (numbers) => {
-
-        console.log('these are the numbers:')
-        numbers.forEach(function(number) {
-            console.log(number)
-        })
-
-        console.log('and these are their sums:')
-         numbers.forEach(function(firstNumber){
-            numbers.forEach(function(secondNumber){
-                console.log( firstNumber + secondNumber)
-            })
-         })
-    }
-
-    const printItem  = (items) => {
-        console.log(items[0])
-
-        var middleIndex = Math.floor(items.length / 2);
-        var index = 0;
-
-        while(index < middleIndex){
-            console.log(items[index]);
-            index++;
-           
-        }
-
-        for(var i = 0; i < 100; i++){
-            console.log('this is', 'hi')
-        }
-        setCounthi(items)
-
-    }
         
     return(
         <Wrapper>
