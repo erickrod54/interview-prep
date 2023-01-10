@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 5 - BigOnotation - 
+/**interview-prep-app - version 16.03 - BigOnotation - 
  * Features: 
  * 
- *     --> Moving 'img' to the index.
+ *     --> Migrating states and hanlders.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -13,72 +13,20 @@ import { useAppContext } from "../context";
 
 const BigOnotation = () => {
 
-    const [ showNemo, setShowNemo ] = useState(false)
-    const [ showEveryone, setShowEveryone ] = useState(false)
-    const [ showLarge, setShowLarge ] = useState(false)
-    const [showNemoWithTime, setShowNemoWithTime ] = useState(false)
-    const [ showPrintMe, setShowPrintMe ] = useState(false)
+        const { nemo, graphsData, showNemo, showEveryone, showLarge, showNemoWithTime,
+            showPrintMe,
+            handleFindNemo,
+            handleFindNemoWithTime,
+            handleFindNemoEveryone,
+            handleFindNemoLarge,
+            printMe, } = useAppContext()
 
-    const { nemo, everyoneCharacter, largeArray, graphsData } = useAppContext()
+        console.log('The data of graphs ==>', graphsData )
 
-    console.log('The data of graphs ==>', graphsData )
-
-    const { image: firstgraph } = graphsData[0]
-    const { image: secondgraph } = graphsData[1]
-    const { image: bigoconstant } = graphsData[2]
-    const { image: bigo3const } = graphsData[3]
-    
-    const handleFindNemo = () => {
-        setShowNemo(!showNemo)
-        findNemo(nemo)
-    }
-
-    const handleFindNemoWithTime = () => {
-        setShowNemoWithTime(!showNemoWithTime)
-        
-        findNemoWithTime(nemo)
-    }
-
-    const handleFindNemoEveryone = () => {
-        setShowEveryone(!showEveryone)
-        
-        findNemoWithTime(everyoneCharacter)
-    }
-
-    const handleFindNemoLarge = () => {
-        setShowLarge(!showLarge)
-     
-        findNemoWithTime(largeArray)
-    }
-
-    const findNemo = (array) => {
-        for( let i = 0; i <  array.length; i++){
-            if (array[i] === 'nemo') {
-                return(
-                    console.log("Found Nemo!!!")
-                )
-            }
-        }
-    }
-
-    /**this is to measure the performance */
-    const findNemoWithTime = (array) => {
-        let t0 = performance.now()
-        for( let i = 0; i <  array.length; i++){
-            if (array[i] === 'nemo') {
-                return(
-                    console.log("Found Nemo measuring time!!!")
-                    )
-                }
-            }
-            let t1 = performance.now()
-            console.log('call to find nemo took ==>', + (t1-t0) + ' miliseconds')
-        }
-
-    const printMe = (arg) => {
-        setShowPrintMe(!showPrintMe)
-        return console.log(arg);
-    }
+        const { image: firstgraph } = graphsData[0]
+        const { image: secondgraph } = graphsData[1]
+        const { image: bigoconstant } = graphsData[2]
+        const { image: bigo3const } = graphsData[3]
 
     return(
         <Wrapper>
