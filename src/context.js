@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 16.03 - context js - 
+/**interview-prep-app - version 16.05 - context js - 
  * Features: 
  * 
- *     --> Starting to migrate states and hanlders
+ *     --> Migrating states and hanlders
  * 
  * Note: pending to migrate functionalities from
  * local components
@@ -211,10 +211,7 @@ export const AppProvider = ({ children }) => {
     const [ boxespair, setBoxespair ] = useState([])
     const [ boxespairshow, setBoxespairshow ] = useState(false) 
 
-    const temCase = [...everyoneCharacter]
-    const worstCase = [...temCase]
-    worstCase[3] = 'hank'
-    worstCase[9] = 'nemo'
+    
 
     //console.log('worstCase ==>', worstCase)
 
@@ -316,7 +313,7 @@ export const AppProvider = ({ children }) => {
             showLarge,
             showNemoWithTime,
             showPrintMe,
-            worstCase,
+            worstcase,
             count,
             counthi,
             boxescount,
@@ -332,6 +329,7 @@ export const AppProvider = ({ children }) => {
             array2, 
             array3, 
             array4,
+            findNemo,
             handleFindNemo,
             handleFindNemoWithTime,
             handleFindNemoEveryone,
