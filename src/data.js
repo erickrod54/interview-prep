@@ -1,11 +1,9 @@
 import { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart } from './assets'
 
-/**interview-prep-app - version 16.01 - data js - 
+/**interview-prep-app - version 16.06 - data js - 
  * Features: 
  * 
- *     --> Adding 'Build and use Arrays' to topics 
- * 
- *     --> Changing versioning to 2 digits.   
+ *     --> Adding 'Hash Tables'.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -51,13 +49,13 @@ export const linksData = [
     {
       id:'9',
       name:'Build and use Arrays'
+    },
+    {
+      id:'10',
+      name:'Hash Tables'
     }
     /**
      *,
-    {
-      id:'9',
-      name:'tries'
-    },
     {
       id:'10',
       name:'queues'
