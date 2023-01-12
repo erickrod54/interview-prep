@@ -6,18 +6,16 @@ import ArraysImplementations from "../components/arrays.implementations";
 import BigOnotation from "../components/big-o-notation.component";
 import BigORuleBook from "../components/big-o-notation.rules.component";
 import DataStructures from "../components/data-structures-and-algorithms";
+import HashTables from "../components/hash.tables.components";
 import HowToSolveProblems from "../components/how-to-solve-problems.component";
 import BuildAndUseArrays from "../components/howtobuild.howtouse.an.array";
 import SpaceComplexity from "../components/space.complexity.component";
 import { useAppContext } from "../context";
 
-
-/**interview-prep-app - version 16.01 - SingleTopicPage  
+/**interview-prep-app - version 16.06 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Adding 'BuildAndUseArrays'. 
- * 
- *     --> Changing versioning to 2 digits.
+ *     --> Adding 'HashTables'. 
  * 
  * Note: by id this component make match and render the 
  * corresponding topic.
@@ -75,6 +73,11 @@ const SingleTopicPage = () => {
     if (id === '9') {
         return <BuildAndUseArrays/>
     }
+
+    if (id === '10') {
+        return <HashTables />
+    }
+    
 }
 
 export default SingleTopicPage;
