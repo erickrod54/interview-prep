@@ -1,13 +1,12 @@
 import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 16.07 - HashTables  
+/**interview-prep-app - version 16.08 - HashTables  
  * - Features: 
  * 
- *     --> Building in progress 'HashTables'
+ *     --> Finish Building 'HashTables'
  * 
- * Note: by id this component make match and render the 
- * corresponding topic.
+ * Note: this is an intro for HasTables.
  */
 
 const HashTables = () => {
@@ -21,7 +20,7 @@ const HashTables = () => {
                 of data structures depending on 
                 the language or context may have 
                 other names as <strong>hash maps,
-                maps, dictionaries, objects</strong>
+                maps, dictionaries, objects </strong>
                 and slight variations
             </p>
 
@@ -61,6 +60,14 @@ const HashTables = () => {
             <a href="https://www.miraclesalad.com/webtools/md5.php">
                 miraclesalad hash md5 generator
             </a>
+
+            <p>
+                so to review i have a <strong>key</strong>
+                and also have a <strong>hash function</strong>
+                that is going to hash something and to 
+                address the memory location where the data 
+                is
+            </p>
 
         </DataStructuresWrapper>
     )
