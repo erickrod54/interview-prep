@@ -1,9 +1,9 @@
 import { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart } from './assets'
 
-/**interview-prep-app - version 16.06 - data js - 
+/**interview-prep-app - version 16.08 - data js - 
  * Features: 
  * 
- *     --> Adding 'Hash Tables'.   
+ *     --> Adding 'Hash Collisions'.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -53,6 +53,10 @@ export const linksData = [
     {
       id:'10',
       name:'Hash Tables'
+    },
+    {
+      id:'11',
+      name:'hash collisions'
     }
     /**
      *,
