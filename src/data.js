@@ -1,9 +1,9 @@
-import { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart } from './assets'
+import { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart, hashcollision } from './assets'
 
-/**interview-prep-app - version 16.08 - data js - 
+/**interview-prep-app - version 16.09 - data js - 
  * Features: 
  * 
- *     --> Adding 'Hash Collisions'.   
+ *     --> Adding 'hashcollision'.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -103,7 +103,11 @@ export const graphsData = [
     {
         id:5,
         image:bigochart
-    }
+    },
+    {
+      id:6,
+      image:hashcollision
+   }
 ]
 
 export const everyoneCharacter = [
