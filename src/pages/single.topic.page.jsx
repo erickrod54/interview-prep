@@ -6,13 +6,14 @@ import ArraysImplementations from "../components/arrays.implementations";
 import BigOnotation from "../components/big-o-notation.component";
 import BigORuleBook from "../components/big-o-notation.rules.component";
 import DataStructures from "../components/data-structures-and-algorithms";
+import HashCollisions from "../components/hash.collisions";
 import HashTables from "../components/hash.tables.components";
 import HowToSolveProblems from "../components/how-to-solve-problems.component";
 import BuildAndUseArrays from "../components/howtobuild.howtouse.an.array";
 import SpaceComplexity from "../components/space.complexity.component";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 16.06 - SingleTopicPage  
+/**interview-prep-app - version 16.09 - SingleTopicPage  
  * - Features: 
  * 
  *     --> Adding 'HashTables'. 
@@ -77,7 +78,10 @@ const SingleTopicPage = () => {
     if (id === '10') {
         return <HashTables />
     }
-    
+
+    if (id === '11') {
+        return <HashCollisions />
+    }
 }
 
 export default SingleTopicPage;
