@@ -8,15 +8,16 @@ import BigORuleBook from "../components/big-o-notation.rules.component";
 import DataStructures from "../components/data-structures-and-algorithms";
 import HashCollisions from "../components/hash.collisions";
 import HashTables from "../components/hash.tables.components";
+import BuildHashTables from "../components/how-to-build-hash-tables.component";
 import HowToSolveProblems from "../components/how-to-solve-problems.component";
 import BuildAndUseArrays from "../components/howtobuild.howtouse.an.array";
 import SpaceComplexity from "../components/space.complexity.component";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 16.09 - SingleTopicPage  
+/**interview-prep-app - version 16.10 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Adding 'HashTables'. 
+ *     --> Adding 'BuildHashTables'. 
  * 
  * Note: by id this component make match and render the 
  * corresponding topic.
@@ -81,6 +82,10 @@ const SingleTopicPage = () => {
 
     if (id === '11') {
         return <HashCollisions />
+    }
+
+    if (id === '12') {
+        return <BuildHashTables />
     }
 }
 
