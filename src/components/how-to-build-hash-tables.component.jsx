@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
 
-/**interview-prep-app - version 16.10 - BuildHashTables  
+/**interview-prep-app - version 16.11 - BuildHashTables  
  * - Features: 
  * 
- *     --> Building 'BuildHashTables'. 
+ *     --> Modifying HashTable class. 
  * 
  * Note: by id this component make match and render the 
  * corresponding topic.
@@ -68,6 +68,7 @@ const BuildHashTables = () => {
             }
             return undefined
         }
+        
     }
 
     /** 2 is the memory size that i set */
