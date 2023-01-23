@@ -6,17 +6,18 @@ import HashTables from "./hash.tables.components";
 import BuildHashTables from "./how-to-build-hash-tables.component";
 import HowToSolveProblems from "./how-to-solve-problems.component";
 import BuildAndUseArrays from "./howtobuild.howtouse.an.array";
+import InterviewQA from "./interview.questons";
 import Nav from "./nav.component";
 import SpaceComplexity from "./space.complexity.component";
 
-/**interview-prep-app - version 16.10 - 
+/**interview-prep-app - version 16.11 - 
  * components > index - Features: 
  * 
- *     --> Adding 'BuildHashTables' 
+ *     --> Adding 'InterviewQA' 
  *          to the index. 
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
  */
 
-export { BigOnotation, BigORuleBook, Nav, SpaceComplexity, HowToSolveProblems, ArraysImplementations, BuildAndUseArrays, HashTables, HashCollisions, BuildHashTables }
+export { BigOnotation, BigORuleBook, Nav, SpaceComplexity, HowToSolveProblems, ArraysImplementations, BuildAndUseArrays, HashTables, HashCollisions, BuildHashTables, InterviewQA }
