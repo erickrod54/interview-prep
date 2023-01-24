@@ -11,13 +11,14 @@ import HashTables from "../components/hash.tables.components";
 import BuildHashTables from "../components/how-to-build-hash-tables.component";
 import HowToSolveProblems from "../components/how-to-solve-problems.component";
 import BuildAndUseArrays from "../components/howtobuild.howtouse.an.array";
+import InterviewQA from "../components/interview.questons";
 import SpaceComplexity from "../components/space.complexity.component";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 16.10 - SingleTopicPage  
+/**interview-prep-app - version 16.11 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Adding 'BuildHashTables'. 
+ *     --> Commenting logs. 
  * 
  * Note: by id this component make match and render the 
  * corresponding topic.
@@ -27,16 +28,16 @@ import { useAppContext } from "../context";
 const SingleTopicPage = () => {
     
     const { linksData } = useAppContext()
-    console.log('links data in dataStructures ==>', linksData)
+    //console.log('links data in dataStructures ==>', linksData)
 
     const { topicId } = useParams();
    
-    console.log('the topic id==>', useParams())
+    //console.log('the topic id==>', useParams())
 
 
     const app = linksData.find((singleapp) => singleapp.id === topicId);
     
-    console.log("i find this ==>", app);
+    //console.log("i find this ==>", app);
 
     const { id } = app;
 
@@ -87,6 +88,11 @@ const SingleTopicPage = () => {
     if (id === '12') {
         return <BuildHashTables />
     }
+
+    if (id === '13') {
+        return <InterviewQA />
+    }
+
 }
 
 export default SingleTopicPage;
