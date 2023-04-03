@@ -1,21 +1,18 @@
 import React from "react";
+import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 14 - ArrayDataStructure 
+/**interview-prep-app - version 16.13 - ArrayDataStructure 
  * - Features: 
  * 
- *   --> Implementing methods over the array
- *       as 'push', 'pop', 'shift' and 'unshift'. 
+ *   --> Destructuring strings from the context. 
  * 
  * Note: to generate url's dinamicly
  */
 
 const ArrayDataStructure = () => {
 
-    /**if they are not in a 'handdler' the order matter
-     * when i do push, pop operations
-     */
-    const strings = ['a','b','c','d']
+    const { strings } = useAppContext()
 
     /**i copy/spread it to avoid to push it in
      * the same memory reference than original 'strings'*/
