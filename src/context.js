@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 16.05 - context js - 
+/**interview-prep-app - version 16.13 - context js - 
  * Features: 
  * 
- *     --> Migrating states and hanlders
+ *     --> Importing and Providing ArrayDestrcuture
+ *         states and hanlders
  * 
  * Note: pending to migrate functionalities from
  * local components
@@ -289,6 +290,13 @@ export const AppProvider = ({ children }) => {
 
     /**big o rule notation states and hanlders - end */
 
+    /**Array destructure handlers and state -- start*/
+
+    /**if they are not in a 'handdler' the order matter
+     * when i do push, pop operations
+     */
+     const strings = ['a','b','c','d']
+
     
     return(
         <AppContext.Provider value={{
@@ -320,6 +328,7 @@ export const AppProvider = ({ children }) => {
             boxescount1,
             boxespair,
             boxespairshow,
+            strings,
             findNemoRule,
             compressBoxesTwice,
             logAllPairsBoxes,
