@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 16.14 - context js - 
+/**interview-prep-app - version 16.15 - context js - 
  * Features: 
  * 
  *     --> Importing and Providing ArrayDestrcuture
- *         states 'newStrings'
+ *         states 'newStringspop'
  * 
  * Note: pending to migrate functionalities from
  * local components
@@ -301,6 +301,8 @@ export const AppProvider = ({ children }) => {
      * the same memory reference than original 'strings'*/
     const newStrings = [...strings]
 
+    const newStringspop = [...newStrings]
+
     
     return(
         <AppContext.Provider value={{
@@ -334,6 +336,7 @@ export const AppProvider = ({ children }) => {
             boxespairshow,
             strings,
             newStrings,
+            newStringspop,
             findNemoRule,
             compressBoxesTwice,
             logAllPairsBoxes,
