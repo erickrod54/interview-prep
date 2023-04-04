@@ -2,21 +2,17 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 16.13 - ArrayDataStructure 
+/**interview-prep-app - version 16.14 - ArrayDataStructure 
  * - Features: 
  * 
- *   --> Destructuring strings from the context. 
+ *   --> Destructuring 'newStrings' from the context. 
  * 
  * Note: to generate url's dinamicly
  */
 
 const ArrayDataStructure = () => {
 
-    const { strings } = useAppContext()
-
-    /**i copy/spread it to avoid to push it in
-     * the same memory reference than original 'strings'*/
-    const newStrings = [...strings]
+    const { strings, newStrings } = useAppContext()
     
     
     /**here i push the value that i want to add*/
