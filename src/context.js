@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 16.17 - context js - 
+/**interview-prep-app - version 16.18 - context js - 
  * Features: 
  * 
  *     --> Importing and Providing ArrayDestrcuture
- *         states 'newStringsunshift'
+ *         states 'stringsSplice'
  * 
  * Note: pending to migrate functionalities from
  * local components
@@ -307,6 +307,8 @@ export const AppProvider = ({ children }) => {
 
     const newStringsunshift = [...stringsUnshift]
 
+    const stringsSplice = [...newStringsunshift]
+
     
     return(
         <AppContext.Provider value={{
@@ -343,6 +345,7 @@ export const AppProvider = ({ children }) => {
             newStringspop,
             stringsUnshift,
             newStringsunshift,
+            stringsSplice,
             findNemoRule,
             compressBoxesTwice,
             logAllPairsBoxes,
