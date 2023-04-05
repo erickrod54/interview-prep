@@ -2,17 +2,17 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 16.16 - ArrayDataStructure 
+/**interview-prep-app - version 16.17 - ArrayDataStructure 
  * - Features: 
  * 
- *   --> Destructuring 'stringsUnshift' from the context.
+ *   --> Destructuring 'newStringsunshift' from the context.
  * 
  * Note: to generate url's dinamicly
  */
 
 const ArrayDataStructure = () => {
 
-    const { strings, newStrings, newStringspop,  stringsUnshift } = useAppContext()
+    const { strings, newStrings, newStringspop,  stringsUnshift, newStringsunshift } = useAppContext()
     
     
     /**here i push the value that i want to add*/
@@ -22,8 +22,6 @@ const ArrayDataStructure = () => {
 
     stringsUnshift.pop()// O(1)
     stringsUnshift.pop()// O(1)
-
-    const newStringsunshift = [...stringsUnshift]
 
     newStringsunshift.unshift('x')// O(n)
 
