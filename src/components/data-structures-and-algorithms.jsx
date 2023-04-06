@@ -1,26 +1,21 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useAppContext } from "../context";
 
-/**interview-prep-app - version 16.02 - DataStructures 
+/**interview-prep-app - version 16.19 - DataStructures 
  * - Features: 
  * 
- *   --> Building 'DataStructures' topic. 
+ *   --> Destructuring 'mathHandler' from the context. 
  * 
  * Note: to generate url's dinamicly
  */
 
 
 const DataStructures = () => {
-
-    const [ mathpow, setMathpower ] = useState(0,0)
-    const [ overflow, setOverflow ] = useState(0,0)
     
-    const mathHandler = () => {
-        const result = Math.pow(6,100)
-        setMathpower(result)
-        
-        return result;
-    }
+    const [ overflow, setOverflow ] = useState(0,0);
+
+    const { mathHandler, mathpow } = useAppContext()
 
     const overflowHandler = () => {
         const result = Math.pow(6,1000)
