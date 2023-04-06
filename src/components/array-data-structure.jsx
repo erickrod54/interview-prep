@@ -2,17 +2,17 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 16.17 - ArrayDataStructure 
+/**interview-prep-app - version 16.18 - ArrayDataStructure 
  * - Features: 
  * 
- *   --> Destructuring 'newStringsunshift' from the context.
+ *   --> Destructuring 'stringsSplice' from the context.
  * 
  * Note: to generate url's dinamicly
  */
 
 const ArrayDataStructure = () => {
 
-    const { strings, newStrings, newStringspop,  stringsUnshift, newStringsunshift } = useAppContext()
+    const { strings, newStrings, newStringspop,  stringsUnshift, newStringsunshift, stringsSplice } = useAppContext()
     
     
     /**here i push the value that i want to add*/
@@ -24,8 +24,6 @@ const ArrayDataStructure = () => {
     stringsUnshift.pop()// O(1)
 
     newStringsunshift.unshift('x')// O(n)
-
-    const stringsSplice = [...newStringsunshift]
 
     /**here i splice it has two parameters, first to add
      * in a exact 'index' and the second is to indicate
