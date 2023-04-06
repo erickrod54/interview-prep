@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 16.18 - context js - 
+/**interview-prep-app - version 16.19 - context js - 
  * Features: 
  * 
- *     --> Importing and Providing ArrayDestrcuture
- *         states 'stringsSplice'
+ *     --> Importing and Providing data-structures-and-algoritmhs
+ *         handlers and states 'mathHandler'
+ * 
  * 
  * Note: pending to migrate functionalities from
  * local components
@@ -309,6 +310,17 @@ export const AppProvider = ({ children }) => {
 
     const stringsSplice = [...newStringsunshift]
 
+    /**data-structures-and-algoritmhs states and handlers */
+
+    const [ mathpow, setMathpower ] = useState(0,0);
+
+    const mathHandler = () => {
+        const result = Math.pow(6,100)
+        setMathpower(result)
+        
+        return result;
+    }
+
     
     return(
         <AppContext.Provider value={{
@@ -346,6 +358,7 @@ export const AppProvider = ({ children }) => {
             stringsUnshift,
             newStringsunshift,
             stringsSplice,
+            mathpow,
             findNemoRule,
             compressBoxesTwice,
             logAllPairsBoxes,
@@ -370,6 +383,7 @@ export const AppProvider = ({ children }) => {
             CommonElement2,
             CommonElement3,
             CommonElement4,
+            mathHandler
         }}>
             {children}
         </AppContext.Provider>
