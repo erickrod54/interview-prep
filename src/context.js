@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 16.19 - context js - 
+/**interview-prep-app - version 17.00 - context js - 
  * Features: 
  * 
  *     --> Importing and Providing data-structures-and-algoritmhs
- *         handlers and states 'mathHandler'
+ *         handlers and states 'overflowHandler'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -313,10 +313,18 @@ export const AppProvider = ({ children }) => {
     /**data-structures-and-algoritmhs states and handlers */
 
     const [ mathpow, setMathpower ] = useState(0,0);
+    const [ overflow, setOverflow ] = useState(0,0);
 
     const mathHandler = () => {
         const result = Math.pow(6,100)
         setMathpower(result)
+        
+        return result;
+    }
+
+    const overflowHandler = () => {
+        const result = Math.pow(6,1000)
+        setOverflow(result)
         
         return result;
     }
@@ -359,6 +367,7 @@ export const AppProvider = ({ children }) => {
             newStringsunshift,
             stringsSplice,
             mathpow,
+            overflow,
             findNemoRule,
             compressBoxesTwice,
             logAllPairsBoxes,
@@ -383,7 +392,8 @@ export const AppProvider = ({ children }) => {
             CommonElement2,
             CommonElement3,
             CommonElement4,
-            mathHandler
+            mathHandler,
+            overflowHandler
         }}>
             {children}
         </AppContext.Provider>
