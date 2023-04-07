@@ -2,20 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 13 -
+/**interview-prep-app - version 17.01 -
  * HowToSolveProblems - Features: 
  * 
- *     --> Fixing CommonElement, and 
- *         CommonElement2 features
+ *     --> Taking off 'CommonElement4'
  *               
- * 
+ *  
  * Note: results of this features can be visulized by
  * the java console.
  */
 
 const HowToSolveProblems = () => {
         
-    const { array1, array2, array3, array4, CommonElement, CommonElement2, CommonElement3, CommonElement4 } = useAppContext()
+    const { array1, array2, array3, array4, CommonElement, CommonElement2, CommonElement3 } = useAppContext()
 
     //console.log('this is array3 ==>', array3, 'and this is array 4 ==>', array4)
     return(
