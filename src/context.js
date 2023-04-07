@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 17.01 - context js - 
+/**interview-prep-app - version 17.02 - context js - 
  * Features: 
  * 
- *     --> Importing and Providing hash.collisions
- *         handlers and states 'user'
+ *     --> Importing and Providing interviewQA
+ *         handlers and states 'reverseString'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -338,6 +338,22 @@ export const AppProvider = ({ children }) => {
             return 'ahhhhh!!'
         }
     }
+
+    /**interview QA questions */
+    const reverseString = (str) => {
+        if (!str || str.length < 2 || typeof str !== 'string') {
+            return 'mmm this is not a string';
+        }
+
+        const backwards = [];
+        const totalItems = str.length - 1;
+
+        for (let i = totalItems; i >= 0; i--) {
+            backwards.push(str[i]);
+        }
+
+        return backwards.join('');
+    };
     
     return(
         <AppContext.Provider value={{
@@ -403,7 +419,8 @@ export const AppProvider = ({ children }) => {
             CommonElement3,
             CommonElement4,
             mathHandler,
-            overflowHandler
+            overflowHandler,
+            reverseString
         }}>
             {children}
         </AppContext.Provider>
