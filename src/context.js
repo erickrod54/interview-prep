@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 17.00 - context js - 
+/**interview-prep-app - version 17.01 - context js - 
  * Features: 
  * 
- *     --> Importing and Providing data-structures-and-algoritmhs
- *         handlers and states 'overflowHandler'
+ *     --> Importing and Providing hash.collisions
+ *         handlers and states 'user'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -329,6 +329,15 @@ export const AppProvider = ({ children }) => {
         return result;
     }
 
+    /**hash collision  data structures*/
+    let user = {
+        age: 54,
+        name:'Kylie',
+        magic:true,
+        scream: function() {
+            return 'ahhhhh!!'
+        }
+    }
     
     return(
         <AppContext.Provider value={{
@@ -368,6 +377,7 @@ export const AppProvider = ({ children }) => {
             stringsSplice,
             mathpow,
             overflow,
+            user,
             findNemoRule,
             compressBoxesTwice,
             logAllPairsBoxes,
