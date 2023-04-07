@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 17.02 - context js - 
+/**interview-prep-app - version 17.03 - context js - 
  * Features: 
  * 
  *     --> Importing and Providing interviewQA
- *         handlers and states 'reverseString'
+ *         handlers and states 'handleReverse'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -340,6 +340,8 @@ export const AppProvider = ({ children }) => {
     }
 
     /**interview QA questions */
+    const [stringgiven, setStringgiven] = useState('');
+
     const reverseString = (str) => {
         if (!str || str.length < 2 || typeof str !== 'string') {
             return 'mmm this is not a string';
@@ -353,6 +355,11 @@ export const AppProvider = ({ children }) => {
         }
 
         return backwards.join('');
+    };
+
+    const handleReverse = () => {
+        const fullString = reverseString(stringgiven);
+        setStringgiven(fullString);
     };
     
     return(
@@ -394,6 +401,8 @@ export const AppProvider = ({ children }) => {
             mathpow,
             overflow,
             user,
+            stringgiven,
+            setStringgiven,
             findNemoRule,
             compressBoxesTwice,
             logAllPairsBoxes,
@@ -420,7 +429,8 @@ export const AppProvider = ({ children }) => {
             CommonElement4,
             mathHandler,
             overflowHandler,
-            reverseString
+            reverseString,
+            handleReverse
         }}>
             {children}
         </AppContext.Provider>
