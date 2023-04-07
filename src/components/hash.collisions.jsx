@@ -2,28 +2,19 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 16.09 - HashCollisions 
+/**interview-prep-app - version 17.01 - HashCollisions 
  * - Features: 
  * 
- *   --> Building 'HashCollisions'. 
+ *   --> Destructuring 'user'. 
  * 
  * Note: to generate url's dinamicly
  */
 
 const HashCollisions = () => {
    
-   const { graphsData } = useAppContext()
+   const { graphsData, user } = useAppContext();
 
-   const hashcollisions = graphsData[5].image
-
-    let user = {
-        age: 54,
-        name:'Kylie',
-        magic:true,
-        scream: function() {
-            return 'ahhhhh!!'
-        }
-    }
+   const hashcollisions = graphsData[5].image;
 
     return(
        <DataStructuresWrapper>
