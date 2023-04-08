@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 17.04 - context js - 
+/**interview-prep-app - version 17.05 - context js - 
  * Features: 
  * 
- *     --> Importing and Providing interviewQA
- *         handlers and states 'handleChange'
+ *     --> Importing and Providing SpaceComplexity
+ *         handlers and states
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -365,6 +365,9 @@ export const AppProvider = ({ children }) => {
     const handleChange = (e) => {
         setStringgiven(e.target.value);
     };
+
+    /**SpaceComplexity states and handlers */
+    const [ boo, setBoo ] = useState(0)
     
     return(
         <AppContext.Provider value={{
@@ -406,6 +409,8 @@ export const AppProvider = ({ children }) => {
             overflow,
             user,
             stringgiven,
+            boo,
+            setBoo,
             findNemoRule,
             compressBoxesTwice,
             logAllPairsBoxes,
