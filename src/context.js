@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 17.03 - context js - 
+/**interview-prep-app - version 17.04 - context js - 
  * Features: 
  * 
  *     --> Importing and Providing interviewQA
- *         handlers and states 'handleReverse'
+ *         handlers and states 'handleChange'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -361,6 +361,10 @@ export const AppProvider = ({ children }) => {
         const fullString = reverseString(stringgiven);
         setStringgiven(fullString);
     };
+
+    const handleChange = (e) => {
+        setStringgiven(e.target.value);
+    };
     
     return(
         <AppContext.Provider value={{
@@ -402,7 +406,6 @@ export const AppProvider = ({ children }) => {
             overflow,
             user,
             stringgiven,
-            setStringgiven,
             findNemoRule,
             compressBoxesTwice,
             logAllPairsBoxes,
@@ -430,7 +433,8 @@ export const AppProvider = ({ children }) => {
             mathHandler,
             overflowHandler,
             reverseString,
-            handleReverse
+            handleReverse,
+            handleChange
         }}>
             {children}
         </AppContext.Provider>
