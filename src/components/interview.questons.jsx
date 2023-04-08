@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 17.04 - InterviewQA  
+/**interview-prep-app - version 17.05 - InterviewQA  
  * - Features: 
  * 
- *     --> Destrcuturing from the context 'handleReverse'
+ *     --> Clearing unused useState.
  * 
  * Note: pending to build a second reverse method
  * using 'split' and the prebuilt 'reverse' method
