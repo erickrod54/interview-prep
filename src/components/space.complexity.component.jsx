@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 8 - 
- * components > index - Features: 
+/**interview-prep-app - version 17.05 - SpaceComplexity
+ *  - Features: 
  * 
- *     --> Building 'SpaceComplexity'. 
+ *     --> Destructuring SpaceComplexity states and 
+ *         handlers. 
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -13,11 +14,11 @@ import { useAppContext } from "../context";
 
 const SpaceComplexity = () => {
 
-    const { n } = useAppContext()
+    const { n, boo, setBoo } = useAppContext()
 
     console.log(n)
 
-    const [ boo, setBoo ] = useState(0)
+    
     const [ hiarray, sethiArray ] = useState(false)
 
     const booo = (array) => {
