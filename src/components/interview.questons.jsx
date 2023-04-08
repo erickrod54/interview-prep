@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 17.02 - InterviewQA  
+/**interview-prep-app - version 17.03 - InterviewQA  
  * - Features: 
  * 
- *     --> Destrcuturing from the context 'reverseString'
+ *     --> Destrcuturing from the context 'handleReverse'
  * 
  * Note: pending to build a second reverse method
  * using 'split' and the prebuilt 'reverse' method
@@ -13,14 +13,10 @@ import { DataStructuresWrapper } from "../styled.components";
  */
 
 const InterviewQA = () => {
-    const [stringgiven, setStringgiven] = useState('');
 
-    const { reverseString } = useAppContext()
+    const { handleReverse, setStringgiven, stringgiven } = useAppContext()
 
-    const handleReverse = () => {
-        const fullString = reverseString(stringgiven);
-        setStringgiven(fullString);
-    };
+    
 
     const handleChange = (e) => {
         setStringgiven(e.target.value);
