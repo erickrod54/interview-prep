@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 17.03 - InterviewQA  
+/**interview-prep-app - version 17.04 - InterviewQA  
  * - Features: 
  * 
  *     --> Destrcuturing from the context 'handleReverse'
@@ -14,13 +14,7 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const InterviewQA = () => {
 
-    const { handleReverse, setStringgiven, stringgiven } = useAppContext()
-
-    
-
-    const handleChange = (e) => {
-        setStringgiven(e.target.value);
-    };
+    const { handleReverse, stringgiven, handleChange } = useAppContext()
 
     return (
         <DataStructuresWrapper>
