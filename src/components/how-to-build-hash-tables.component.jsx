@@ -3,10 +3,11 @@ import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
 
-/**interview-prep-app - version 17.09 - BuildHashTables  
+/**interview-prep-app - version 17.10 - BuildHashTables  
  * - Features: 
  * 
- *     --> Destructuring HashTable states from the context. 
+ *     --> Destructuring HashTable states 'apples' from 
+ *         the context. 
  * 
  * Note: by id this component make match and render the 
  * corresponding topic.
@@ -15,11 +16,9 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const BuildHashTables = () => {
 
-    
-    const [ apples, setApples ] = useState([])
     const [ justapples, setJustApples ] = useState([])
 
-    const { grapes, setGrapes} = useAppContext()
+    const { grapes, setGrapes, apples, setApples } = useAppContext()
 
     class HashTable{
         constructor(size){
