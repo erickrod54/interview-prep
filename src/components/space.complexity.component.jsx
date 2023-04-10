@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 17.06 - SpaceComplexity
+/**interview-prep-app - version 17.07 - SpaceComplexity
  *  - Features: 
  * 
  *     --> Destructuring SpaceComplexity states and 
- *         handlers 'hiarray'. 
+ *         handlers 'booo'. 
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -14,16 +14,9 @@ import { useAppContext } from "../context";
 
 const SpaceComplexity = () => {
 
-    const { n, boo, setBoo, hiarray, sethiArray } = useAppContext()
+    const { n, boo, booo, hiarray, sethiArray } = useAppContext()
 
     console.log(n)
-
-    const booo = (array) => {
-        setBoo(n.length)
-        for(let i = 0; i < n.length; i++){
-           console.log('boooooo')
-        }
-    }
 
     const arrayOfHintTimes = (array) => {
         /**i have control over 'hiArray'*/
