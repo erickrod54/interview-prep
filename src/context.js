@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 17.09 - context js - 
+/**interview-prep-app - version 17.10 - context js - 
  * Features: 
  * 
  *     --> Importing and Providing how-to-build-has-tables
- *         handlers and states 
+ *         'apples' states 
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -388,6 +388,7 @@ export const AppProvider = ({ children }) => {
 
     /**how to build hash tables handlers and states */
     const [ grapes, setGrapes ] = useState([])
+    const [ apples, setApples ] = useState([])
     
     return(
         <AppContext.Provider value={{
@@ -432,6 +433,8 @@ export const AppProvider = ({ children }) => {
             boo,
             hiarray,
             grapes,
+            apples,
+            setApples,
             setGrapes,
             booo,
             sethiArray,
