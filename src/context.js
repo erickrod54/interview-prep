@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 17.06 - context js - 
+/**interview-prep-app - version 17.07 - context js - 
  * Features: 
  * 
  *     --> Importing and Providing SpaceComplexity
- *         handlers and states 'hiarray'
+ *         handlers and states 'booo'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -369,6 +369,13 @@ export const AppProvider = ({ children }) => {
     /**SpaceComplexity states and handlers */
     const [ boo, setBoo ] = useState(0);
     const [ hiarray, sethiArray ] = useState(false);
+
+    const booo = (array) => {
+        setBoo(n.length)
+        for(let i = 0; i < n.length; i++){
+           console.log('boooooo')
+        }
+    }
     
     return(
         <AppContext.Provider value={{
@@ -412,6 +419,7 @@ export const AppProvider = ({ children }) => {
             stringgiven,
             boo,
             hiarray,
+            booo,
             sethiArray,
             setBoo,
             findNemoRule,
