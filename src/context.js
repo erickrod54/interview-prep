@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 17.07 - context js - 
+/**interview-prep-app - version 17.08 - context js - 
  * Features: 
  * 
  *     --> Importing and Providing SpaceComplexity
- *         handlers and states 'booo'
+ *         handlers and states 'arrayOfHintTimes'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -376,6 +376,15 @@ export const AppProvider = ({ children }) => {
            console.log('boooooo')
         }
     }
+
+    const arrayOfHintTimes = (array) => {
+        /**i have control over 'hiArray'*/
+        let hiArray = [];
+        for(let i = 0; i < n; i++){
+            hiArray[i] = 'hi'
+        }
+        sethiArray(!hiarray)
+    }
     
     return(
         <AppContext.Provider value={{
@@ -450,7 +459,8 @@ export const AppProvider = ({ children }) => {
             overflowHandler,
             reverseString,
             handleReverse,
-            handleChange
+            handleChange,
+            arrayOfHintTimes
         }}>
             {children}
         </AppContext.Provider>
