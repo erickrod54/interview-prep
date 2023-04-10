@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
 
-/**interview-prep-app - version 16.11 - BuildHashTables  
+/**interview-prep-app - version 17.09 - BuildHashTables  
  * - Features: 
  * 
- *     --> Modifying HashTable class. 
+ *     --> Destructuring HashTable states from the context. 
  * 
  * Note: by id this component make match and render the 
  * corresponding topic.
@@ -14,9 +15,11 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const BuildHashTables = () => {
 
-    const [ grapes, setGrapes ] = useState([])
+    
     const [ apples, setApples ] = useState([])
     const [ justapples, setJustApples ] = useState([])
+
+    const { grapes, setGrapes} = useAppContext()
 
     class HashTable{
         constructor(size){
