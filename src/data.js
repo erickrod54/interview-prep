@@ -1,9 +1,9 @@
-import { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart, hashcollision } from './assets'
+import { hashtable, bigo1stgraph, bigo2ndgraph, bigo3const, bigoconst, bigochart, hashcollision } from './assets/index'
 
-/**interview-prep-app - version 16.11 - data js - 
+/**interview-prep-app - version 17.12 - data js - 
  * Features: 
  * 
- *     --> Adding 'Interview QA'.   
+ *     --> Adding 'hashtable' to 'graphsData'.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -115,6 +115,10 @@ export const graphsData = [
     {
       id:6,
       image:hashcollision
+   },
+   {
+      id:7,
+      image: hashtable
    }
 ]
 
