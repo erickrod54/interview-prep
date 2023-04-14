@@ -3,11 +3,13 @@ import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
 
-/**interview-prep-app - version 17.11 - BuildHashTables  
+/**interview-prep-app - version 17.12 - BuildHashTables  
  * - Features: 
  * 
- *     --> Destructuring HashTable states 'justapples' from 
+ *     --> Destructuring HashTable states 'graphsData' from 
  *         the context. 
+ * 
+ *      --> Work in progress developing HashTavble Concept
  * 
  * Note: by id this component make match and render the 
  * corresponding topic.
@@ -16,7 +18,9 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const BuildHashTables = () => {
 
-    const { grapes, setGrapes, apples, setApples, justapples, setJustApples } = useAppContext()
+    const { grapes, setGrapes, apples, setApples, justapples, setJustApples, graphsData } = useAppContext()
+
+    const hashTableGraphic = graphsData[6].image;
 
     class HashTable{
         constructor(size){
@@ -72,7 +76,7 @@ const BuildHashTables = () => {
     }
 
     /** 2 is the memory size that i set */
-    const myHashTable = new HashTable(2);
+    const myHashTable = new HashTable(50);
 
     const handleGrapes = () => {
         setGrapes(myHashTable.set('grapes ', 10000))
@@ -90,6 +94,9 @@ const BuildHashTables = () => {
         <DataStructuresWrapper>
             <h2>How Build Hash Tables</h2>
 
+            <p>the hash table data structure that i am going to create is the following:</p>
+
+            <img src={hashTableGraphic} alt='hashTable data structure'/>
             <p>
                 i have the following hash table template 
                 to create a fruits array:
@@ -158,7 +165,25 @@ const BuildHashTables = () => {
             
             <button onClick={handleJustApples}>handle just apples</button>
             
-            <p>{justapples}</p>  
+            <p>{justapples}</p>
+
+            <p>
+                here the <strong>'_hash'</strong> table has two methods 
+                i can create as many methods i need, but for this case 
+                has the methods 
+            </p>  
+
+            <ul>
+                <li>set</li>
+                <li>get</li>
+            </ul>
+            
+            <p>
+                the advantange of using hash tables is the complexity that is 
+                going to be reduce to <strong>O(1) or O(n)</strong> because 
+                combining the <strong>'keys'</strong> with the loops i can get a real fast search
+                and low comsuption of CPU resources
+            </p>
 
         </DataStructuresWrapper>
     )
