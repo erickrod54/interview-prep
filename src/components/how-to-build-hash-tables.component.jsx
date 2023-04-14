@@ -3,13 +3,13 @@ import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
 
-/**interview-prep-app - version 17.12 - BuildHashTables  
+/**interview-prep-app - version 17.13 - BuildHashTables  
  * - Features: 
  * 
- *     --> Destructuring HashTable states 'graphsData' from 
- *         the context. 
+ *      --> Building keys feature to allows us to iterate
+ *          over all the keys of HashTable.
  * 
- *      --> Work in progress developing HashTavble Concept
+ *      --> Work in progress developing HashTable Concept
  * 
  * Note: by id this component make match and render the 
  * corresponding topic.
@@ -19,6 +19,8 @@ import { DataStructuresWrapper } from "../styled.components";
 const BuildHashTables = () => {
 
     const { grapes, setGrapes, apples, setApples, justapples, setJustApples, graphsData } = useAppContext()
+
+    const [ keysarray, setKeysArray ] = useState([]);
 
     const hashTableGraphic = graphsData[6].image;
 
@@ -73,6 +75,17 @@ const BuildHashTables = () => {
             return undefined
         }
         
+        keys() {
+            const keysArray = [];
+            for (let i = 0; i < this.data.length; i++) {
+              if (this.data[i]) {
+                for (let j = 0; j < this.data[i].length; j++) {
+                  keysArray.push(this.data[i][j][0]);
+                }
+              }
+            }
+            return keysArray;
+          }
     }
 
     /** 2 is the memory size that i set */
@@ -89,6 +102,16 @@ const BuildHashTables = () => {
     const handleJustApples = () => {
         setJustApples(myHashTable.set('apples'))
     }
+
+    const handleKeys = () => {
+        myHashTable.set("apple ", 10);
+        myHashTable.set("orange ", 20);
+        myHashTable.set("banana ", 30);
+
+        const keysArray = myHashTable.keys();
+        setKeysArray(keysArray)
+        console.log(keysArray);
+      };
 
     return(
         <DataStructuresWrapper>
@@ -177,6 +200,51 @@ const BuildHashTables = () => {
                 <li>set</li>
                 <li>get</li>
             </ul>
+
+            <p>
+                if i take a close look how set and get are made, i can see 
+                the avdantages and disadvantages of using hashtables:
+            </p>
+
+            <h4>the method <strong>'set'</strong> time complexity:</h4>
+
+            <section className="code-block">
+                <p>{` set(key, value) { O(1)`}</p> 
+                <p>{` let address = this._hash(key); O(1)`}</p>
+                <p>{` if (!this.data[address]) { O(1)`}</p>
+                <p>{` this.data[address] = []; O(1)`}</p>
+                <p>{` this.data[address].push([key, value]) O(1)`}</p>
+                <p>{` return this.data O(1)`}</p>
+                <p>{` }`}</p>
+            </section>
+
+            <h4>the method <strong>'get'</strong> time complexity:</h4>
+
+            <section className="code-block">
+                <p>{` get(key){ O(1) `}</p>
+                <p>{` let address = this._hash(key); O(1)`}</p>
+                <p>{` const currentBucket = this.data[address]; O(1)`}</p>
+                <p>{` if (currentBucket.length) { O(1)`}</p>
+                <p>{` for (let i = 0; i < currentBucket.length; i++) { O(1)`}</p>
+                <p>{` if (currentBucket[i][0] === key) { O(1)`}</p>
+                <p>{` return currentBucket[i][1] O(1)`}</p>
+                <p>{` } O(1)`}</p>
+                <p>{` } O(1)`}</p>
+                <p>{` return undefined O(1)`}</p>
+                <p>{` } O(1)`}</p>
+                <p>{` } O(1)`}</p>    
+            </section>
+
+            <p>
+                is extremily fast because i loop over the <strong>'key'</strong>
+                vthat is a direct location of memory that does very efficient 
+                these operations, in the case of the collisions there are many ways
+                to solve it 
+            </p>
+
+            <a href="https://en.wikipedia.org/wiki/Hash_collision#:~:text=In%20computer%20science%2C%20a%20hash,a%20fixed%20length%20of%20bits." alt='hash collision'>
+                hash collision resolution
+            </a>
             
             <p>
                 the advantange of using hash tables is the complexity that is 
@@ -184,6 +252,12 @@ const BuildHashTables = () => {
                 combining the <strong>'keys'</strong> with the loops i can get a real fast search
                 and low comsuption of CPU resources
             </p>
+
+            <h4>building handle key method</h4>
+
+            <button onClick={handleKeys}>handle the keys</button>
+
+            <p>{keysarray ? `[ ${keysarray} ]` : null}</p>
 
         </DataStructuresWrapper>
     )
