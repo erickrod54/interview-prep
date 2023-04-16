@@ -5,14 +5,15 @@ import bigoconst from './big-o-constant-time.png';
 import bigochart from './big-o-complexity-chart.png';
 import hashcollision from './hash-collisions.png';
 import hashtable from './data_structure.png';
+import hashtablesvsarrays from './hashtables-vs-arrays.png'
 
-/**interview-prep-app - version 17.12 - assets > index - 
+/**interview-prep-app - version 17.14 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'hashtable'.
+ *     --> Importing and exporting 'hashtablesvsarrays'.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
  */
 
-export { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart, hashcollision, hashtable };
+export { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart, hashcollision, hashtable, hashtablesvsarrays };
