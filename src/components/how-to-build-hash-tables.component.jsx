@@ -3,11 +3,11 @@ import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
 
-/**interview-prep-app - version 17.13 - BuildHashTables  
+/**interview-prep-app - version 17.14 - BuildHashTables  
  * - Features: 
  * 
- *      --> Building keys feature to allows us to iterate
- *          over all the keys of HashTable.
+ *      --> Destructuring 'hashTableVsArrays' from 
+ *          'graphsData'.
  * 
  *      --> Work in progress developing HashTable Concept
  * 
@@ -23,6 +23,7 @@ const BuildHashTables = () => {
     const [ keysarray, setKeysArray ] = useState([]);
 
     const hashTableGraphic = graphsData[6].image;
+    const hashTableVsArrays = graphsData[7].image;
 
     class HashTable{
         constructor(size){
