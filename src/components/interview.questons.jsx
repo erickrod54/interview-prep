@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 17.17 - InterviewQA  
+/**interview-prep-app - version 17.18 - InterviewQA  
  * - Features: 
  * 
- *     --> First solution for second question
- *         'finding first duplicate number'
- * 
- *    --> Work in progress to fix for the array6
- *        the duplicate.
+ *    --> Fixing the array6 the duplicate by 
+ *        building a new 'handlefirstRecurringCharacter2' 
+ *        handler.
  * 
  * Note: the second interview question is about find 
  * the first duplicated number in the arrays and return
@@ -23,6 +21,7 @@ const InterviewQA = () => {
 
     const [ recurring, setRecurring ] = useState([]);
     const [ recurring1, setRecurring1 ] = useState([]);
+    const [ recurring2, setRecurring2 ] = useState([]);
 
     console.log('recurring value ==>', recurring)
 
@@ -39,6 +38,7 @@ const InterviewQA = () => {
         return undefined;
     }
 
+    
     const handlefirstRecurringCharacter1 = (input) => {
         for (let i = 0; i < input.length; i++) {
             for (let j = i + 1; j < input.length; j++) {
@@ -51,7 +51,20 @@ const InterviewQA = () => {
         setRecurring1('undefined')
         return undefined;
     }
-
+    
+    const handlefirstRecurringCharacter2 = (input) => {
+        let seenNumbers = {};
+        for (let i = 0; i < input.length; i++) {
+          if (seenNumbers[input[i]]) {
+            setRecurring2(input[i]);
+            return input[i];
+        } else {
+            seenNumbers[input[i]] = true;
+            setRecurring2(seenNumbers[input[i]]);
+        }
+    }
+    return undefined;
+      };
     return (
         <DataStructuresWrapper>
             <h2>Interview QA</h2>
@@ -121,10 +134,15 @@ const InterviewQA = () => {
             <button onClick={() => handlefirstRecurringCharacter(array5)}>find the duplicate in <strong>'array5'</strong></button>
 
             <p>{recurring}</p>
+            
+            <button onClick={() => handlefirstRecurringCharacter2(array6)}>find the duplicate in <strong>'array6'</strong></button>
+
+            <p>{recurring2}</p>    
 
             <button onClick={() => handlefirstRecurringCharacter1(array7)}>find the duplicate in <strong>'array7'</strong></button>
 
             <p>{recurring1}</p>
+
 
             </ul>
         </DataStructuresWrapper>
