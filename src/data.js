@@ -1,9 +1,10 @@
 import { hashtable, bigo1stgraph, bigo2ndgraph, bigo3const, bigoconst, bigochart, hashcollision, hashtablesvsarrays } from './assets/index';
 
-/**interview-prep-app - version 17.14 - data js - 
+/**interview-prep-app - version 17.15 - data js - 
  * Features: 
  * 
- *     --> Adding 'hashtablesvsarrays' to 'graphsData'.   
+ *     --> Building array5, array6, and array7
+ *         for interview.questions.jsx.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -159,4 +160,19 @@ export const array2 = [ 'z', 'y', 'i' ]
 export const array3 = [ 'a', 'b', 'c', 'x']
 
 export const array4 = [ 'a', 'y', 'x']
+
+/**data for interview.questions.jsx */
+
+//Google question first recurrent number
+
+//Given an array
+
+//it should return 2
+export const array5 = [ 2,5,1,2,3,5,1,2,4 ]
+
+//it should return 1
+export const array6 = [ 2,1,1,2,3,5,1,2,4 ]
+
+//it should return undefined
+export const array7 = [ 2,3,4,5 ]
 
