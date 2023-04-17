@@ -12,16 +12,16 @@ import BuildHashTables from "../components/how-to-build-hash-tables.component";
 import HowToSolveProblems from "../components/how-to-solve-problems.component";
 import BuildAndUseArrays from "../components/howtobuild.howtouse.an.array";
 import InterviewQA from "../components/interview.questons";
+import LinkedLists from "../components/linked.lists.component";
 import SpaceComplexity from "../components/space.complexity.component";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 16.11 - SingleTopicPage  
+/**interview-prep-app - version 17.19 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Commenting logs. 
+ *     --> Importing and placing 'LinkedLists' topic. 
  * 
- * Note: by id this component make match and render the 
- * corresponding topic.
+ * Note: Pending to re structure imports using the index.
  */
 
 
@@ -93,6 +93,9 @@ const SingleTopicPage = () => {
         return <InterviewQA />
     }
 
+    if (id === '14') {
+        return <LinkedLists />
+    }
 }
 
 export default SingleTopicPage;
