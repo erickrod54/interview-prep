@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
-import { array1, array2, array3, array4, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
+import { array1, array2, array3, array4, array5, array6, array7, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 17.11 - context js - 
+/**interview-prep-app - version 17.15 - context js - 
  * Features: 
  * 
- *     --> Importing and Providing how-to-build-has-tables
- *         'justapples' states 
+ *     --> Importing and Providing array5,array6,
+ *          array7 for interview.questions.jsx. 
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -65,17 +65,17 @@ export const AppProvider = ({ children }) => {
     
     
     /**--- logic for HowToSolveProblems Component end--*/
-
+    
     /** states and hanldlers for arrayImplementations ---- start */
-
+    
     const [ first, setFirst ] = useState('')  
     const [second, setSecond ] = useState('')
     const [third, setThird ] = useState('')
     const [fourth, setFourth ] = useState('')
     const [fifth, setFifth ] = useState('')
-
+    
     const [ context, setContext ] = useState(false)
-
+    
     
     const handleFirst = () => {
         // eslint-disable-next-line 
@@ -134,14 +134,14 @@ export const AppProvider = ({ children }) => {
         }
         
         setFifth(<h4>{`{a: ƒ}`}</h4>)
-
+        
         return object4.a() && fifth
     }
-
+    
     /** states and hanldlers for arrayImplementations ---- end */
-
+    
     /**Big o notation states and handlers - start */
-
+    
     const [ showNemo, setShowNemo ] = useState(false)
     const [ showEveryone, setShowEveryone ] = useState(false)
     const [ showLarge, setShowLarge ] = useState(false)
@@ -152,38 +152,38 @@ export const AppProvider = ({ children }) => {
         setShowNemo(!showNemo)
         findNemo(nemo)
     }
-
+    
     const handleFindNemoWithTime = () => {
         setShowNemoWithTime(!showNemoWithTime)
         
         findNemoWithTime(nemo)
     }
-
+    
     const handleFindNemoEveryone = () => {
         setShowEveryone(!showEveryone)
         
         findNemoWithTime(everyoneCharacter)
     }
-
+    
     const handleFindNemoLarge = () => {
         setShowLarge(!showLarge)
-     
+        
         findNemoWithTime(largeArray)
     }
-
+    
     const findNemo = (array) => {
         for( let i = 0; i <  array.length; i++){
             if (array[i] === 'nemo') {
                 return(
                     console.log("Found Nemo!!!")
-                )
+                    )
+                }
             }
         }
-    }
-
-    /**this is to measure the performance */
-    const findNemoWithTime = (array) => {
-        let t0 = performance.now()
+        
+        /**this is to measure the performance */
+        const findNemoWithTime = (array) => {
+            let t0 = performance.now()
         for( let i = 0; i <  array.length; i++){
             if (array[i] === 'nemo') {
                 return(
@@ -194,31 +194,31 @@ export const AppProvider = ({ children }) => {
             let t1 = performance.now()
             console.log('call to find nemo took ==>', + (t1-t0) + ' miliseconds')
         }
-
-    const printMe = (arg) => {
-        setShowPrintMe(!showPrintMe)
-        return console.log(arg);
-    }
-
-    /**Big o notation states and handlers - end */
-
-    /**big o rule notation states and hanlders - start */
-
-    const [ worstcase, setWorstcase ] = useState(false)
-    const [ count, setCount ] = useState(0)
-    const [counthi, setCounthi ] = useState(0)
-    const [ boxescount, setBoxescount ] = useState(0)
-    const [ boxescount1, setBoxescount1 ] = useState(0)
-    // eslint-disable-next-line
-    const [ boxespair, setBoxespair ] = useState([])
-    const [ boxespairshow, setBoxespairshow ] = useState(false) 
-
-    
-
-    //console.log('worstCase ==>', worstCase)
-
-    const findNemoRule = (array) => {
-        for( let i = 0; i <  array.length; i++){
+        
+        const printMe = (arg) => {
+            setShowPrintMe(!showPrintMe)
+            return console.log(arg);
+        }
+        
+        /**Big o notation states and handlers - end */
+        
+        /**big o rule notation states and hanlders - start */
+        
+        const [ worstcase, setWorstcase ] = useState(false)
+        const [ count, setCount ] = useState(0)
+        const [counthi, setCounthi ] = useState(0)
+        const [ boxescount, setBoxescount ] = useState(0)
+        const [ boxescount1, setBoxescount1 ] = useState(0)
+        // eslint-disable-next-line
+        const [ boxespair, setBoxespair ] = useState([])
+        const [ boxespairshow, setBoxespairshow ] = useState(false) 
+        
+        
+        
+        //console.log('worstCase ==>', worstCase)
+        
+        const findNemoRule = (array) => {
+            for( let i = 0; i <  array.length; i++){
             setWorstcase(!worstcase)
             console.log(worstcase)
             console.log('running')
@@ -231,104 +231,104 @@ export const AppProvider = ({ children }) => {
             }
            
         }
-
-    const compressBoxesTwice = (boxes, boxes2) => {
-        boxes.forEach(function(boxes) {
-            console.log(boxes);
-            setBoxescount(boxes)
-        });
-
-        boxes2.forEach(function(boxes) {
-            console.log(boxes);
-            setBoxescount1(boxes)
-        })
-    }
-
-    const logAllPairsBoxes = (boxes) => {
-
-        for(let i=0; i < boxes.length; i++){
-            for(let j=0; j < boxes.length; j++){
-                console.log(boxes[i], boxes[j])
-                setBoxespair(boxes[i], boxes[j])
-            }   
+        
+        const compressBoxesTwice = (boxes, boxes2) => {
+            boxes.forEach(function(boxes) {
+                console.log(boxes);
+                setBoxescount(boxes)
+            });
+            
+            boxes2.forEach(function(boxes) {
+                console.log(boxes);
+                setBoxescount1(boxes)
+            })
         }
-        setBoxespairshow(!boxespairshow)
-    }
+        
+        const logAllPairsBoxes = (boxes) => {
+            
+            for(let i=0; i < boxes.length; i++){
+                for(let j=0; j < boxes.length; j++){
+                    console.log(boxes[i], boxes[j])
+                    setBoxespair(boxes[i], boxes[j])
+                }   
+            }
+            setBoxespairshow(!boxespairshow)
+        }
 
     const printnumebersAndPairSums = (numbers) => {
-
+        
         console.log('these are the numbers:')
         numbers.forEach(function(number) {
             console.log(number)
         })
-
+        
         console.log('and these are their sums:')
-         numbers.forEach(function(firstNumber){
+        numbers.forEach(function(firstNumber){
             numbers.forEach(function(secondNumber){
                 console.log( firstNumber + secondNumber)
             })
-         })
+        })
     }
-
+    
     const printItem  = (items) => {
         console.log(items[0])
 
         var middleIndex = Math.floor(items.length / 2);
         var index = 0;
-
+        
         while(index < middleIndex){
             console.log(items[index]);
             index++;
-           
+            
         }
-
+        
         for(var i = 0; i < 100; i++){
             console.log('this is', 'hi')
         }
         setCounthi(items)
-
+        
     }
-
+    
     /**big o rule notation states and hanlders - end */
-
+    
     /**Array destructure handlers and state -- start*/
-
+    
     /**if they are not in a 'handdler' the order matter
      * when i do push, pop operations
      */
-     const strings = ['a','b','c','d']
-
-     /**i copy/spread it to avoid to push it in
+    const strings = ['a','b','c','d']
+    
+    /**i copy/spread it to avoid to push it in
      * the same memory reference than original 'strings'*/
     const newStrings = [...strings]
-
+    
     const newStringspop = [...newStrings]
-
+    
     const stringsUnshift = [...newStringspop]
-
+    
     const newStringsunshift = [...stringsUnshift]
-
+    
     const stringsSplice = [...newStringsunshift]
-
+    
     /**data-structures-and-algoritmhs states and handlers */
-
+    
     const [ mathpow, setMathpower ] = useState(0,0);
     const [ overflow, setOverflow ] = useState(0,0);
-
+    
     const mathHandler = () => {
         const result = Math.pow(6,100)
         setMathpower(result)
         
         return result;
     }
-
+    
     const overflowHandler = () => {
         const result = Math.pow(6,1000)
         setOverflow(result)
         
         return result;
     }
-
+    
     /**hash collision  data structures*/
     let user = {
         age: 54,
@@ -341,35 +341,35 @@ export const AppProvider = ({ children }) => {
 
     /**interview QA questions */
     const [stringgiven, setStringgiven] = useState('');
-
+    
     const reverseString = (str) => {
         if (!str || str.length < 2 || typeof str !== 'string') {
             return 'mmm this is not a string';
         }
-
+        
         const backwards = [];
         const totalItems = str.length - 1;
-
+        
         for (let i = totalItems; i >= 0; i--) {
             backwards.push(str[i]);
         }
-
+        
         return backwards.join('');
     };
-
+    
     const handleReverse = () => {
         const fullString = reverseString(stringgiven);
         setStringgiven(fullString);
     };
-
+    
     const handleChange = (e) => {
         setStringgiven(e.target.value);
     };
-
+    
     /**SpaceComplexity states and handlers */
     const [ boo, setBoo ] = useState(0);
     const [ hiarray, sethiArray ] = useState(false);
-
+    
     const booo = (array) => {
         setBoo(n.length)
         for(let i = 0; i < n.length; i++){
@@ -385,7 +385,7 @@ export const AppProvider = ({ children }) => {
         }
         sethiArray(!hiarray)
     }
-
+    
     /**how to build hash tables handlers and states */
     const [ grapes, setGrapes ] = useState([]);
     const [ apples, setApples ] = useState([]);
@@ -451,6 +451,9 @@ export const AppProvider = ({ children }) => {
             array2, 
             array3, 
             array4,
+            array5,
+            array6,
+            array7,
             findNemo,
             handleFindNemo,
             handleFindNemoWithTime,
