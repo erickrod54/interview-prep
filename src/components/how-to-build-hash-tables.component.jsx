@@ -3,11 +3,10 @@ import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
 
-/**interview-prep-app - version 17.14 - BuildHashTables  
+/**interview-prep-app - version 17.15 - BuildHashTables  
  * - Features: 
  * 
- *      --> Destructuring 'hashTableVsArrays' from 
- *          'graphsData'.
+ *      --> Placing 'hashTableVsArrays' in an image.
  * 
  *      --> Work in progress developing HashTable Concept
  * 
@@ -259,6 +258,25 @@ const BuildHashTables = () => {
             <button onClick={handleKeys}>handle the keys</button>
 
             <p>{keysarray ? `[ ${keysarray} ]` : null}</p>
+            
+            <h4>hash tables vs arrays</h4>
+
+            <p>
+                arrays and hash tables have their
+                own methods, and their complexity 
+                can be different dependidng if it is 
+                an <strong>'array'</strong> or a <strong>'hash table'</strong>
+                and the use case that i have:
+            </p>
+
+            <img src={hashTableVsArrays} alt='hashTable Vs Arrays graph'/>
+
+            <p>
+                for example in some cases i have cases where inserts can cause 
+                collisions so i can use arrays or maybe i can solve in some way
+                the collisions using some of the methods that are aleady 
+                proven solutions
+            </p>
 
         </DataStructuresWrapper>
     )
