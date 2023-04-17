@@ -1,10 +1,9 @@
 import { hashtable, bigo1stgraph, bigo2ndgraph, bigo3const, bigoconst, bigochart, hashcollision, hashtablesvsarrays } from './assets/index';
 
-/**interview-prep-app - version 17.15 - data js - 
+/**interview-prep-app - version 17.19 - data js - 
  * Features: 
  * 
- *     --> Building array5, array6, and array7
- *         for interview.questions.jsx.   
+ *     --> Adding 'linked lists' to 'linksData'.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -67,6 +66,10 @@ export const linksData = [
       id:'13',
       name:'Interview QA'
     },
+    {
+      id:'14',
+      name:'linked lists'
+    }
     /**
      *,
     {
