@@ -3,12 +3,10 @@ import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
 
-/**interview-prep-app - version 17.15 - BuildHashTables  
+/**interview-prep-app - version 17.19 - BuildHashTables  
  * - Features: 
  * 
- *      --> Placing 'hashTableVsArrays' in an image.
- * 
- *      --> Work in progress developing HashTable Concept
+ *      --> Placing upsides and downsides of hashtables.
  * 
  * Note: by id this component make match and render the 
  * corresponding topic.
@@ -277,6 +275,29 @@ const BuildHashTables = () => {
                 the collisions using some of the methods that are aleady 
                 proven solutions
             </p>
+
+            <p>
+                so i can evaluate <strong>downsides and upsides</strong> of <strong>'hashtables'</strong>
+            </p>
+
+            <h3>Upsides of hash tables</h3>
+
+            <ul>
+                <li>Fast lookups</li>
+                <li>Fast inserts</li>
+                <li>Flexible keys</li>
+            </ul>
+
+            <p>
+                <strong>Note: Good collision resolution needed</strong>
+            </p>
+
+            <h3>Downsides of hash tables</h3>
+            
+            <ul>
+                <li>Unoredered</li>
+                <li>Slow key iteration</li>
+            </ul>
 
         </DataStructuresWrapper>
     )
