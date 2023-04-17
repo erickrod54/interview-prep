@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 17.18 - InterviewQA  
+/**interview-prep-app - version 17.19 - InterviewQA  
  * - Features: 
  * 
- *    --> Fixing the array6 the duplicate by 
- *        building a new 'handlefirstRecurringCharacter2' 
- *        handler.
+ *    --> Explaning complexity of two solutions for
+ *        second question 'finding first duplicates'.
  * 
  * Note: the second interview question is about find 
  * the first duplicated number in the arrays and return
@@ -52,6 +51,10 @@ const InterviewQA = () => {
         return undefined;
     }
     
+    /**this solution implements hash tables, comparing every key
+     * of the array6 and returning the first recurring number, this
+     * solution can be proven with the rest of the arrays and the 
+     * result will be accurate*/
     const handlefirstRecurringCharacter2 = (input) => {
         let seenNumbers = {};
         for (let i = 0; i < input.length; i++) {
@@ -64,7 +67,8 @@ const InterviewQA = () => {
         }
     }
     return undefined;
-      };
+    };
+
     return (
         <DataStructuresWrapper>
             <h2>Interview QA</h2>
@@ -143,6 +147,54 @@ const InterviewQA = () => {
 
             <p>{recurring1}</p>
 
+            <p>
+                there is two solutions for this question, one that use nested loops and has more complexity and
+                one that uses hash tables that treat every array element as a key and then compare it
+            </p> 
+
+            <h3>Solution with <strong>'nested lops'</strong></h3>
+
+            <section className="code-block">
+                <p>{`const handlefirstRecurringCharacter1 = (input) => {`}</p>
+                <p>{`for (let i = 0; i < input.length; i++) {`}</p>
+                <p>{`for (let j = i + 1; j < input.length; j++) {`}</p>
+                <p>{`if (input[i] === input[j]) {`}</p>
+                <p>{`setRecurring1(input[i]);`}</p>
+                <p>{`}`}</p>
+                <p>{`}`}</p>
+                <p>{`setRecurring1('undefined')`}</p>
+                <p>{`return undefined;`}</p>
+                <p>{`}`}</p>
+            </section>
+
+            <p>
+                and the complexity for this last solution is <strong>'O(n ^ 2)'</strong>
+                because has two nested loops
+            </p>
+
+            <h3>Solution with <strong>'hash tables'</strong></h3>
+
+            <p>
+                and the complexity for this last solution is <strong>'O(n)'</strong>
+                that improves the first one by taking off a loop and making this 
+                <strong>'let seenNumbers = {};'</strong> object that get fill with 
+                the elements of the <strong>array</strong> in order to compare
+                them and find the duplicates 
+            </p>    
+
+            <section className="code-block">
+                <p>{`const handlefirstRecurringCharacter2 = (input) => {`}</p>
+                <p>{`let seenNumbers = {};`}</p>
+                <p>{`for (let i = 0; i < input.length; i++) {`}</p>
+                <p>{`if (seenNumbers[input[i]]) {`}</p>
+                <p>{`setRecurring2(input[i]);`}</p>
+                <p>{` } else {`}</p>
+                <p>{`seenNumbers[input[i]] = true;`}</p>
+                <p>{`setRecurring2(seenNumbers[input[i]]);`}</p>
+                <p>{`}`}</p>
+                <p>{`return undefined;`}</p>
+                <p>{`};`}</p>
+            </section>
 
             </ul>
         </DataStructuresWrapper>
