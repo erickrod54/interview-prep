@@ -2,19 +2,23 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 17.05 - InterviewQA  
+/**interview-prep-app - version 17.15 - InterviewQA  
  * - Features: 
  * 
- *     --> Clearing unused useState.
+ *     --> Destructuring from the context 'array5', 
+ *         'array6', 'array7'.
  * 
- * Note: pending to build a second reverse method
- * using 'split' and the prebuilt 'reverse' method
- * from javaScript.
+ *     --> Second interview questions
+ * 
+ * Note: the second interview question is about find 
+ * the first duplicated number in the arrays and return
+ * it, and in any other case return undefined.
  */
 
 const InterviewQA = () => {
 
-    const { handleReverse, stringgiven, handleChange } = useAppContext()
+    const { handleReverse, stringgiven, handleChange, array5, array6, array7 } = useAppContext();
+    console.log('the arrays for qa', array5, array6, array7)
 
     return (
         <DataStructuresWrapper>
@@ -30,17 +34,52 @@ const InterviewQA = () => {
 
             <ul>
                 <li>Can you create a function that reverses a string given in an input?</li>
-            </ul> 
 
             <input
                 type="text"
                 placeholder="Type a string"
                 value={stringgiven}
                 onChange={handleChange}
-            />
+                />
             <button onClick={handleReverse}>Reverse string (test)</button>
 
             <p>{stringgiven}</p>
+
+            <li>
+                This is a google question, from the given arrays return
+                the first duplicate number ? ( any other case undefined )
+            </li>
+
+            <section className="code-block">
+                <p>1st array:</p>
+                <p>
+                [{array5.map((number) => {
+                    return(
+                        `${number} ,`
+                    )
+                })}]
+                </p>
+
+                <p>2nd array:</p>
+                <p>
+                [{array6.map((number) => {
+                    return(
+                        `${number} ,`
+                    )
+                })}]    
+                </p>
+
+                <p>3rd array:</p>
+                <p>
+                [{array7.map((number) => {
+                    return(
+                        `${number} ,`
+                    )
+                })}]    
+                </p>
+            </section>
+            
+            </ul> 
         </DataStructuresWrapper>
     );
 };
