@@ -1,9 +1,9 @@
-import { hashtable, bigo1stgraph, bigo2ndgraph, bigo3const, bigoconst, bigochart, hashcollision, hashtablesvsarrays, linklistcomposition } from './assets/index';
+import { hashtable, bigo1stgraph, bigo2ndgraph, bigo3const, bigoconst, bigochart, hashcollision, hashtablesvsarrays, linklistcomposition, linklistmethodscomplexity } from './assets/index';
 
-/**interview-prep-app - version 18.00 - data js - 
+/**interview-prep-app - version 18.01 - data js - 
  * Features: 
  * 
- *     --> Adding 'linklistcomposition' to 'graphsData'.   
+ *     --> Adding 'linklistmethodscomplexity' to 'graphsData'.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -131,6 +131,10 @@ export const linksData = [
       {
         id:9,
         image:linklistcomposition
+      },
+      {
+        id:10,
+        image:linklistmethodscomplexity
       }
     ]
     
