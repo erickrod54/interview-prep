@@ -1,9 +1,10 @@
 import { hashtable, bigo1stgraph, bigo2ndgraph, bigo3const, bigoconst, bigochart, hashcollision, hashtablesvsarrays, linklistcomposition, linklistmethodscomplexity } from './assets/index';
 
-/**interview-prep-app - version 18.01 - data js - 
+/**interview-prep-app - version 18.02 - data js - 
  * Features: 
  * 
- *     --> Adding 'linklistmethodscomplexity' to 'graphsData'.   
+ *     --> Building first data 'basket' for 
+ *         linked lists.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -186,4 +187,10 @@ export const array6 = [ 2,1,1,2,3,5,1,2,4 ]
 
 //it should return undefined
 export const array7 = [ 2,3,4,5 ]
+
+/**linked list data */
+
+/**example array to linked list */
+export const basket = ['apples', 'grapes', 'pears']
+
 
