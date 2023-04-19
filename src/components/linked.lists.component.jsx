@@ -2,11 +2,8 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.01 - LinkedLists - 
- * Features: 
- * 
- *     --> Placing resources for linklist to show how 
- *         does it work   
+/**interview-prep-app - version 18.02 - LinkedLists - 
+ * Features:    
  * 
  *     --> Work in progress developing LinkedList Concept.   
  * 
@@ -31,7 +28,18 @@ const LinkedLists = () => {
 
             <p>
                 linked list is compound by a <strong> head</strong> and
-                a <strong> tail</strong> as the picture
+                a <strong> tail</strong> as the picture, each block 
+                represent a <strong> 'node'</strong> and each node has
+                the <strong> 'data' ( orange )</strong> that i want to store 
+                and the <strong> pointer ( green )</strong> to the next
+                <strong> node</strong> 
+            </p>
+
+            <p>
+                most of linked list we dont know the exact number of elements
+                that contain that's why the <strong> 'tail'</strong> is 
+                <strong> null</strong> terminated, because that way 
+                indicates the end of the linked list 
             </p>
 
             <img src={linklistcomposition} alt="link list composition"/>
@@ -53,7 +61,7 @@ const LinkedLists = () => {
             <img src={linklistmethods} alt="link list methods"/>
             
             and this methods:
-            
+
             <ul>
                 <li>
                     prepend
