@@ -2,18 +2,21 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.02 - LinkedLists - 
- * Features:    
+/**interview-prep-app - version 18.03 - LinkedLists - 
+ * Features:
+ * 
+ *     --> Destructuring 'basket' data from the context.    
  * 
  *     --> Work in progress developing LinkedList Concept.   
  * 
- * Note: Pending to threath images for better visualization
+ * Note: Basket data is to make an example of linkedlists
  */
 
 const LinkedLists = () => {
 
-    const { graphsData } = useAppContext();
-    console.log('graphsData ==> ', graphsData);
+    const { graphsData, basket } = useAppContext();
+    //console.log('graphsData ==> ', graphsData);
+    console.log('the example basket data', basket)
 
     const linklistcomposition = graphsData[8].image;
     const linklistmethods = graphsData[9].image;
