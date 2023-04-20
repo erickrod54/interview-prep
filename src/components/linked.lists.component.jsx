@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.07 - LinkedLists - 
+/**interview-prep-app - version 18.08 - LinkedLists - 
  * Features:
  * 
- *     --> Building prepend method and use in it by 
- *         'myLinkedList' 
+ *     --> Migrating states for context.
+ * 
+ *     --> Destructuring obj1, setObj1 from the context  
  * 
  *     --> Work in progress developing LinkedList Concept.   
  * 
@@ -15,11 +16,11 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const LinkedLists = () => {
 
-    const { graphsData, basket } = useAppContext();
+    const { graphsData, basket, obj1, setObj1 } = useAppContext();
     //console.log('graphsData ==> ', graphsData);
     console.log('the example basket data', basket)
 
-    const [obj1, setObj1] = useState('{a: true}');
+    
     const [obj2, setObj2] = useState(obj1);
     const [ mylinkedListvalue, setMylinkedList ] = useState();
     const [ mylinkedListappend, setMylinkedListappend ] = useState('')
