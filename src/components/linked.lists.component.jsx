@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.03 - LinkedLists - 
+/**interview-prep-app - version 18.04 - LinkedLists - 
  * Features:
  * 
- *     --> Destructuring 'basket' data from the context.    
+ *     --> Defining pointer concept.    
  * 
  *     --> Work in progress developing LinkedList Concept.   
  * 
@@ -18,8 +18,28 @@ const LinkedLists = () => {
     //console.log('graphsData ==> ', graphsData);
     console.log('the example basket data', basket)
 
+    const [obj1, setObj1] = useState('{a: true}');
+    const [obj2, setObj2] = useState(obj1);
+
     const linklistcomposition = graphsData[8].image;
     const linklistmethods = graphsData[9].image;
+
+    /**pointer data start */
+    
+    const handleDelete = () => {
+        setObj1(null);
+        setObj2(null);
+      }
+    
+    const Object1ValueBooya = () => {
+        let obj1 = `{a: 'booya'}`;
+        setObj1(obj1)
+    }
+
+    const Object1ValueHello = (args) => {
+        args = 'hello';
+        setObj2(args)
+    }
 
     return(
         <DataStructuresWrapper>
@@ -48,6 +68,17 @@ const LinkedLists = () => {
             <img src={linklistcomposition} alt="link list composition"/>
 
             <p>
+                linked list has a sort of loose structure that makes them flexible
+                at the moment of perform operations with it, but in someway is 
+                ordered because is compound of <strong> 'head'</strong> and 
+                <strong> 'tail'</strong> and in between the data is linked 
+                by a <strong> 'pointer'</strong> so i can have certain order
+                and flexibility at the same time
+            </p>
+
+
+
+            <p>
                 there are good resources to understand the the way
                 that link list works, as the following
             </p>
@@ -61,28 +92,136 @@ const LinkedLists = () => {
                 according with the operation that perform each
             </p>
 
+            <p>
+                linked list do <strong> traversal ( is as iterating)</strong> operations 
+                because has no ordered positions, in contrast to <strong> arrays</strong>,
+                in this case linked list is more as <strong> hash tables</strong>
+            </p>
+
             <img src={linklistmethods} alt="link list methods"/>
             
-            and this methods:
+            <p>and this methods: <strong> ( this are the worst case in complexity, usually linked
+                list can perform better than this complexity )</strong></p>
 
             <ul>
                 <li>
-                    prepend
+                    prepend:
                 </li>
+
+                <p> 
+                    add an element to the begining of the list and has 
+                    a complexity of <strong> O(1)</strong>
+                </p>
+
                 <li>
                     append
                 </li>
+
+                <p>
+                    add an element to the end of the list and has a complexity
+                    of O(1)
+                </p>
+
                 <li>
                     lookup
                 </li>
+
+                <p>
+                    which can be also callled <strong> traversal</strong> because
+                    iterates to look for an item, and the complexity is <strong> O(n)</strong>
+                    because it has to go from <strong> 'head'</strong> to <strong> 'tail'</strong>
+                    to find the element that i look for 
+                </p>
+
                 <li>
                     insert
                 </li>
+
+                <p>
+                    if i insert into a link list, by the way that 
+                    works i can add in it to ( different to a hash 
+                    table or an array that i have to shift and unshift)
+                    and also has a complexity of <strong> O(n)</strong>
+                    because does <strong> traversal</strong> to find 
+                    the index ( usually i won't know how large the linked
+                    list is ) to insert the element
+                </p>
+
                 <li>
                     delete
                 </li>
+
+                <p>
+                    has also complexity of <strong> O(n)</strong>
+                    because does <strong> traversal</strong> to find
+                    the element and delete it
+                </p>
+
             </ul>
 
+            <h3>what is a pointer ?</h3>
+
+            <p>
+                a <strong> 'pointer'</strong> as the word says points 
+                to a place of memory, a location where the data that 
+                i want to perform an operation is located, so i have 
+                the following data:   
+            </p>
+
+            <section className="code-block">
+                <p>{`let obj1 = [ a: true ]`}</p>
+                <p>{`const obj2 = obj1 `}</p>
+                <p>{`obj1.a = 'booya' `}</p>
+                <p>{`delete obj1`}</p>
+                <p>{`obj2 = 'hello' `}</p>    
+            </section>
+
+            <p>
+                let's perform the operations:
+            </p>
+
+            <p>first:</p>
+
+            <p>{`const obj2 = obj1 `}</p>
+
+            <p>
+                Assing <strong> 'obj1'</strong> to <strong> 'obj2'</strong>
+                results in:
+            </p>
+
+            <p> {obj1 ? '{a: true}' : 'not equal'} === {obj2}</p>
+
+            <p>second:</p>
+            
+            <p>{`obj1.a = 'booya' `}</p>
+
+            <button onClick={() => Object1ValueBooya(obj1)}>Assing <strong> 'obj1.a'</strong> value <strong> 'booya'</strong></button>
+
+            <p>{obj1}</p>
+
+            <p>third:</p>
+            
+            <p>{`delete obj1`}</p>
+
+            <button onClick={handleDelete}>delete <strong> 'obj1'</strong></button>
+
+            <p>object 1 deleted {obj1}</p>
+
+            <p>fourth:</p>
+
+            <p>{`obj2 = 'hello' `}</p>
+
+            <button onClick={() => Object1ValueHello(obj2)}>Assing <strong> 'obj2'</strong> value <strong> 'hello'</strong></button>
+            
+            <p>value of object 2: {obj2}</p>
+
+            <p>
+                by this example i can see that when <strong> obj1</strong> is assigned to <strong> obj2</strong>
+                they share the same memory space, so both use a <strong> 'pointer'</strong> for the same 
+                location, if i affect a one of the variables the other got affected and viceversa
+            </p>
+
+            
         </DataStructuresWrapper>
     )
 }
