@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.04 - LinkedLists - 
+/**interview-prep-app - version 18.05 - LinkedLists - 
  * Features:
  * 
- *     --> Defining pointer concept.    
+ *     --> Building first linked list.    
  * 
  *     --> Work in progress developing LinkedList Concept.   
  * 
@@ -20,6 +20,7 @@ const LinkedLists = () => {
 
     const [obj1, setObj1] = useState('{a: true}');
     const [obj2, setObj2] = useState(obj1);
+    const [ mylinkedListvalue, setMylinkedList ] = useState()
 
     const linklistcomposition = graphsData[8].image;
     const linklistmethods = graphsData[9].image;
@@ -40,6 +41,39 @@ const LinkedLists = () => {
         args = 'hello';
         setObj2(args)
     }
+
+// Define a linked list as an object
+let linkedList = {
+    head: {
+      value: 10,
+      next: {
+        value: 5,
+        next: {
+          value: 16,
+          next: null
+        }
+      }
+    }
+  }
+  
+  // Define a class for linked list
+  class LinkedList {
+    constructor(value) {
+      this.head = {
+        value: value,
+        next: null
+      };
+      this.tail = this.head;
+      this.length = 1;
+    }
+  }
+  
+  // Create a new instance of the linked list
+  const myLinkedList = new LinkedList(10);
+
+  const handleMylinkedList = () => {
+    setMylinkedList(myLinkedList)
+  }
 
     return(
         <DataStructuresWrapper>
@@ -220,7 +254,30 @@ const LinkedLists = () => {
                 they share the same memory space, so both use a <strong> 'pointer'</strong> for the same 
                 location, if i affect a one of the variables the other got affected and viceversa
             </p>
+            
+            <button onClick={handleMylinkedList}>create new linkedList</button>
 
+            <h3>first linked list exersice</h3>
+
+            <p>
+                this first linked list exercise has a <strong> 'head'</strong> and a <strong> 'tail'</strong>
+                and it is <strong> 'null'</strong> terminated as follows:
+            </p>
+
+            <section className="code-block">
+                <p>{`let linkedList = {`}</p>
+                <p>{`head: { `}</p>
+                <p>{`next: {`}</p>
+                <p>{`next: {`}</p>
+                <p>{`value: 16, `}</p>
+                <p>{`next: null `}</p>
+                <p>{`} `}</p>
+                <p>{`} `}</p>     
+                <p>{`} `}</p>
+                <p>{`} `}</p>
+            </section>
+            
+            <p>{ mylinkedListvalue ? 'head: {value:10, next:null}, tail: {value:10, next:null}, length:1' : null}</p>            
             
         </DataStructuresWrapper>
     )
