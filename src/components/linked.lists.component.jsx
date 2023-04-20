@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.05 - LinkedLists - 
+/**interview-prep-app - version 18.06 - LinkedLists - 
  * Features:
  * 
- *     --> Building first linked list.    
+ *     --> Building append method and use in it by 
+ *         'myLinkedList' 
  * 
  *     --> Work in progress developing LinkedList Concept.   
  * 
@@ -20,7 +21,8 @@ const LinkedLists = () => {
 
     const [obj1, setObj1] = useState('{a: true}');
     const [obj2, setObj2] = useState(obj1);
-    const [ mylinkedListvalue, setMylinkedList ] = useState()
+    const [ mylinkedListvalue, setMylinkedList ] = useState();
+    const [ mylinkedListappend, setMylinkedListappend ] = useState('')
 
     const linklistcomposition = graphsData[8].image;
     const linklistmethods = graphsData[9].image;
@@ -66,10 +68,26 @@ let linkedList = {
       this.tail = this.head;
       this.length = 1;
     }
+
+    append(value){
+        const newNode = {
+            value: value,
+            next: null
+        }
+        this.tail.next = newNode;
+        this.tail = newNode;
+        this.length++;
+        return this;
+    }
   }
+  
   
   // Create a new instance of the linked list
   const myLinkedList = new LinkedList(10);
+
+  const handlesetMylinkedListappend = () => {
+    return setMylinkedListappend(myLinkedList.append(5))
+  }
 
   const handleMylinkedList = () => {
     setMylinkedList(myLinkedList)
@@ -276,8 +294,16 @@ let linkedList = {
                 <p>{`} `}</p>
                 <p>{`} `}</p>
             </section>
-            
+
             <p>{ mylinkedListvalue ? 'head: {value:10, next:null}, tail: {value:10, next:null}, length:1' : null}</p>            
+
+            <p>
+                now let's create an append method for mylinkedList
+            </p>
+
+            <button onClick={handlesetMylinkedListappend}>append 5</button>
+
+            <p>value of mylinkedList: {mylinkedListappend ? 'head: {value:5, next:null}, tail: {value:5, next:null}, length:1' : null}</p>
             
         </DataStructuresWrapper>
     )
