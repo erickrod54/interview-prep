@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.06 - LinkedLists - 
+/**interview-prep-app - version 18.07 - LinkedLists - 
  * Features:
  * 
- *     --> Building append method and use in it by 
+ *     --> Building prepend method and use in it by 
  *         'myLinkedList' 
  * 
  *     --> Work in progress developing LinkedList Concept.   
@@ -23,7 +23,7 @@ const LinkedLists = () => {
     const [obj2, setObj2] = useState(obj1);
     const [ mylinkedListvalue, setMylinkedList ] = useState();
     const [ mylinkedListappend, setMylinkedListappend ] = useState('')
-
+    const [ mylinkedListprepend, setMylinkedListprepend ] = useState('')
     const linklistcomposition = graphsData[8].image;
     const linklistmethods = graphsData[9].image;
 
@@ -79,11 +79,26 @@ let linkedList = {
         this.length++;
         return this;
     }
+
+    prepend(value) {
+        const newNode = {
+            value:value,
+            next:null
+        };
+        newNode.next = this.head;
+        this.head = newNode;
+        this.length++;
+        return this
+    }
   }
   
   
   // Create a new instance of the linked list
   const myLinkedList = new LinkedList(10);
+
+  const handlesetMylinkedListprepend = () => {
+    return setMylinkedListprepend(myLinkedList.prepend(1))
+  }
 
   const handlesetMylinkedListappend = () => {
     return setMylinkedListappend(myLinkedList.append(5))
@@ -304,6 +319,14 @@ let linkedList = {
             <button onClick={handlesetMylinkedListappend}>append 5</button>
 
             <p>value of mylinkedList: {mylinkedListappend ? 'head: {value:5, next:null}, tail: {value:5, next:null}, length:1' : null}</p>
+
+            <p>
+                now let's perform a prepend method
+            </p>
+
+            <button onClick={handlesetMylinkedListprepend}>prepend 1</button>
+
+            <p>value of mylinkedListprepend : {mylinkedListprepend ? 'head: {value:5, next:null}, tail: {value:5, next:null}, length:1' : null}</p>
             
         </DataStructuresWrapper>
     )
