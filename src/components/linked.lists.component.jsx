@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.08 - LinkedLists - 
+/**interview-prep-app - version 18.09 - LinkedLists - 
  * Features:
  * 
- *     --> Migrating states for context.
- * 
- *     --> Destructuring obj1, setObj1 from the context  
+ *     --> Making 'Node' to instantiate it in 
+ *         append LinkedList class.  
  * 
  *     --> Work in progress developing LinkedList Concept.   
  * 
@@ -58,6 +57,15 @@ let linkedList = {
       }
     }
   }
+
+  /**Making 'Node' to instantiate it in 
+   * append LinkedList class */
+  class Node {
+    constructor(value) {
+        this.value = value;
+        this.next = null;
+    }
+  }
   
   // Define a class for linked list
   class LinkedList {
@@ -71,10 +79,8 @@ let linkedList = {
     }
 
     append(value){
-        const newNode = {
-            value: value,
-            next: null
-        }
+        /**switching syntax to instantiate the new Node */
+        const newNode = new Node(value);
         this.tail.next = newNode;
         this.tail = newNode;
         this.length++;
