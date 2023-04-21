@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.09 - LinkedLists - 
+/**interview-prep-app - version 18.10 - LinkedLists - 
  * Features:
  * 
- *     --> Making 'Node' to instantiate it in 
- *         append LinkedList class.  
+ *      --> Building 'print' method for LinkedList.  
  * 
  *     --> Work in progress developing LinkedList Concept.   
  * 
@@ -24,6 +23,8 @@ const LinkedLists = () => {
     const [ mylinkedListvalue, setMylinkedList ] = useState();
     const [ mylinkedListappend, setMylinkedListappend ] = useState('')
     const [ mylinkedListprepend, setMylinkedListprepend ] = useState('')
+    const [ printListvalue, setPrintListvalue ] = useState([])
+
     const linklistcomposition = graphsData[8].image;
     const linklistmethods = graphsData[9].image;
 
@@ -97,6 +98,20 @@ let linkedList = {
         this.length++;
         return this
     }
+
+    printList(){
+        const array = [];
+        let currentNode = this.head;
+        while(currentNode !== null){
+            array.push(currentNode.value,',');
+            currentNode = currentNode.next;
+        }
+        return array;
+    }
+
+    insert(index, value){
+        
+    }
   }
   
   
@@ -113,6 +128,13 @@ let linkedList = {
 
   const handleMylinkedList = () => {
     setMylinkedList(myLinkedList)
+  }
+
+  const handlePrintAppendList = () => {
+    console.log(myLinkedList.append(5))
+    myLinkedList.append(16);
+    myLinkedList.append(1);
+    return setPrintListvalue(myLinkedList.printList());
   }
 
     return(
@@ -334,6 +356,12 @@ let linkedList = {
             <button onClick={handlesetMylinkedListprepend}>prepend 1</button>
 
             <p>value of mylinkedListprepend : {mylinkedListprepend ? 'head: {value:5, next:null}, tail: {value:5, next:null}, length:1' : null}</p>
+
+            <h3>Making a printList and insert method:</h3>
+
+            <button onClick={handlePrintAppendList}>print the list</button>
+
+            <p>[{printListvalue}]</p>
             
         </DataStructuresWrapper>
     )
