@@ -2,14 +2,18 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.10 - LinkedLists - 
+/**interview-prep-app - version 18.11 - LinkedLists - 
  * Features:
  * 
- *      --> Building 'print' method for LinkedList.  
+ *     --> Building 'insert' method for LinkedList.
+ * 
+ *     --> Building 'traverseToIndex' method for LinkedList.   
  * 
  *     --> Work in progress developing LinkedList Concept.   
  * 
- * Note: Basket data is to make an example of linkedlists
+ * Note: 'traverseToIndex' method will find the index requested
+ * by the function call and hold the index to the next until finds
+ * the requested index to make the insertion
  */
 
 const LinkedLists = () => {
@@ -21,9 +25,10 @@ const LinkedLists = () => {
     
     const [obj2, setObj2] = useState(obj1);
     const [ mylinkedListvalue, setMylinkedList ] = useState();
-    const [ mylinkedListappend, setMylinkedListappend ] = useState('')
-    const [ mylinkedListprepend, setMylinkedListprepend ] = useState('')
-    const [ printListvalue, setPrintListvalue ] = useState([])
+    const [ mylinkedListappend, setMylinkedListappend ] = useState('');
+    const [ mylinkedListprepend, setMylinkedListprepend ] = useState('');
+    const [ printListvalue, setPrintListvalue ] = useState([]);
+    const [ inserListvalue, setInserListvalue ] = useState([]);
 
     const linklistcomposition = graphsData[8].image;
     const linklistmethods = graphsData[9].image;
@@ -109,9 +114,49 @@ let linkedList = {
         return array;
     }
 
+    /***note :
+     * 
+     * add this condition 
+     *  
+     * if (index === 0) {
+  this.prepend(value);
+  return this.printList();
+}
+
+     */
+
     insert(index, value){
-        
+    /**checking params */
+        if (index >= this.length) {
+            return this.append(value);   
+        }
+        const newNode = new Node(value);
+        /**here i catch the index */
+        const leader = this.traverseToIndex(index-1);
+        const holdingPointer = leader.next;
+        leader.next = newNode;
+        newNode.next = holdingPointer;
+        this.length++;
+
+        if (index === 0) {
+            this.prepend(value);
+            return this.printList();
+        }
+        return this.printList();
     }
+
+    /**here i build the 'traverseToIndex' to iterate and get the index
+     * requested by the function call*/
+    traverseToIndex(index){
+     /**check params */
+        let counter = 0;
+        let currentNode = this.head;
+        while (counter !== index){
+            currentNode = currentNode.next;
+            counter++;
+        }
+        return currentNode;
+    }   
   }
   
   
@@ -136,6 +181,16 @@ let linkedList = {
     myLinkedList.append(1);
     return setPrintListvalue(myLinkedList.printList());
   }
+
+  const handleInsertToList = () => {
+    console.log(myLinkedList.append(5))
+    myLinkedList.append(16);
+    myLinkedList.append(1);
+    /**first arg is 'index', and second arg is the value */
+    myLinkedList.insert(2,99)
+    return setInserListvalue(myLinkedList.printList());
+  }
+
 
     return(
         <DataStructuresWrapper>
@@ -362,6 +417,12 @@ let linkedList = {
             <button onClick={handlePrintAppendList}>print the list</button>
 
             <p>[{printListvalue}]</p>
+
+            <h3>Making the insert and traversal method:</h3>
+
+            <button onClick={handleInsertToList}>insert 99 in index 2</button>
+
+            <p>[{inserListvalue}]</p>
             
         </DataStructuresWrapper>
     )
