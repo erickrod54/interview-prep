@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.11 - LinkedLists - 
+/**interview-prep-app - version 18.12 - LinkedLists - 
  * Features:
  * 
- *     --> Building 'insert' method for LinkedList.
- * 
- *     --> Building 'traverseToIndex' method for LinkedList.   
+ *     --> Building 'remove' method for LinkedList.   
  * 
  *     --> Work in progress developing LinkedList Concept.   
  * 
  * Note: 'traverseToIndex' method will find the index requested
  * by the function call and hold the index to the next until finds
  * the requested index to make the insertion
+ * 
+ * pending to fix a bug with the index 0
  */
 
 const LinkedLists = () => {
@@ -29,6 +29,7 @@ const LinkedLists = () => {
     const [ mylinkedListprepend, setMylinkedListprepend ] = useState('');
     const [ printListvalue, setPrintListvalue ] = useState([]);
     const [ inserListvalue, setInserListvalue ] = useState([]);
+    const [ removeListvalue, setRemoveListvalue ] = useState([]);
 
     const linklistcomposition = graphsData[8].image;
     const linklistmethods = graphsData[9].image;
@@ -157,6 +158,15 @@ let linkedList = {
         }
         return currentNode;
     }   
+
+    remove(index){
+        //check params
+        const leader = this.traverseToIndex(index-1);
+        const unwantedNode = leader.next;
+        leader.next = unwantedNode.next;
+        this.length--;
+        return this.printList()
+    }
   }
   
   
@@ -187,10 +197,18 @@ let linkedList = {
     myLinkedList.append(16);
     myLinkedList.append(1);
     /**first arg is 'index', and second arg is the value */
-    myLinkedList.insert(2,99)
+    myLinkedList.insert(2,99);
     return setInserListvalue(myLinkedList.printList());
   }
 
+  const removeFromList = () => {
+    console.log(myLinkedList.append(5))
+    myLinkedList.append(16);
+    myLinkedList.append(1);
+    /**first arg is 'index', and second arg is the value */
+    myLinkedList.insert(2,99);
+    return setRemoveListvalue(myLinkedList.remove(3))
+  }
 
     return(
         <DataStructuresWrapper>
@@ -423,6 +441,12 @@ let linkedList = {
             <button onClick={handleInsertToList}>insert 99 in index 2</button>
 
             <p>[{inserListvalue}]</p>
+
+            <h3>Making remove method:</h3>
+
+            <button onClick={removeFromList}>remove <strong> index 3 and value 16</strong> from the list</button>
+
+            <p>[{removeListvalue}]</p>
             
         </DataStructuresWrapper>
     )
