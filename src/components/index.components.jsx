@@ -16,16 +16,16 @@ import LinkedLists from "./linked.lists.component";
 import SpaceComplexity from "./space.complexity.component";
 
 
-/**interview-prep-app - version 18.14 - 
+/**interview-prep-app - version 18.15 - 
  * components > index - Features: 
  * 
  *     --> Testing the components imports
  * 
+ *     --> Deleting old import line.
+ * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
  */
-
-//export { BigOnotation, DoublyLinkedList, BigORuleBook, Nav, SpaceComplexity, HowToSolveProblems, ArraysImplementations, BuildAndUseArrays, HashTables, HashCollisions, BuildHashTables, InterviewQA, LinkedLists }
 
 export { ArrayDataStructure,
          DynamicVsStatic,
