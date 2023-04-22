@@ -1,10 +1,10 @@
 import { hashtable, bigo1stgraph, bigo2ndgraph, bigo3const, bigoconst, bigochart, hashcollision, hashtablesvsarrays, linklistcomposition, linklistmethodscomplexity } from './assets/index';
 
-/**interview-prep-app - version 18.02 - data js - 
+/**interview-prep-app - version 18.13 - data js - 
  * Features: 
  * 
- *     --> Building first data 'basket' for 
- *         linked lists.   
+ *     --> Adding 'doubly linked lists' for 
+ *         linksData.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -70,7 +70,11 @@ export const linksData = [
     {
       id:'14',
       name:'linked lists'
-    }
+    },
+    {
+      id:'15',
+      name:'doubly linked lists'
+     }
     /**
      *,
      {
