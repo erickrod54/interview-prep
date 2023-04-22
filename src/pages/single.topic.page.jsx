@@ -6,6 +6,7 @@ import ArraysImplementations from "../components/arrays.implementations";
 import BigOnotation from "../components/big-o-notation.component";
 import BigORuleBook from "../components/big-o-notation.rules.component";
 import DataStructures from "../components/data-structures-and-algorithms";
+import DoublyLinkedList from "../components/doubly.linked.lists.component";
 import HashCollisions from "../components/hash.collisions";
 import HashTables from "../components/hash.tables.components";
 import BuildHashTables from "../components/how-to-build-hash-tables.component";
@@ -16,10 +17,10 @@ import LinkedLists from "../components/linked.lists.component";
 import SpaceComplexity from "../components/space.complexity.component";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 17.19 - SingleTopicPage  
+/**interview-prep-app - version 18.13 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Importing and placing 'LinkedLists' topic. 
+ *     --> Importing and placing 'DoublyLinkedList' topic. 
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -95,6 +96,10 @@ const SingleTopicPage = () => {
 
     if (id === '14') {
         return <LinkedLists />
+    }
+
+    if (id === '15') {
+        return <DoublyLinkedList />
     }
 }
 
