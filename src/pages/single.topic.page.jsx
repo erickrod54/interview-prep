@@ -1,26 +1,29 @@
 import React from "react";
 import { useParams } from 'react-router-dom'
-import ArrayDataStructure from "../components/array-data-structure";
-import DynamicVsStatic from "../components/arrays-dynamic-vs-static";
-import ArraysImplementations from "../components/arrays.implementations";
-import BigOnotation from "../components/big-o-notation.component";
-import BigORuleBook from "../components/big-o-notation.rules.component";
-import DataStructures from "../components/data-structures-and-algorithms";
-import DoublyLinkedList from "../components/doubly.linked.lists.component";
-import HashCollisions from "../components/hash.collisions";
-import HashTables from "../components/hash.tables.components";
-import BuildHashTables from "../components/how-to-build-hash-tables.component";
-import HowToSolveProblems from "../components/how-to-solve-problems.component";
-import BuildAndUseArrays from "../components/howtobuild.howtouse.an.array";
-import InterviewQA from "../components/interview.questons";
-import LinkedLists from "../components/linked.lists.component";
-import SpaceComplexity from "../components/space.complexity.component";
+
+import { ArrayDataStructure,
+         DynamicVsStatic,
+         ArraysImplementations,
+         BigOnotation,
+         BigORuleBook,
+         DataStructures,
+         DoublyLinkedList,
+         HashCollisions,
+         HashTables,
+         BuildHashTables,
+         HowToSolveProblems,
+         BuildAndUseArrays,
+         InterviewQA,
+         LinkedLists,
+         SpaceComplexity
+        } from '../components/index.components';
+
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 18.13 - SingleTopicPage  
+/**interview-prep-app - version 18.14 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Importing and placing 'DoublyLinkedList' topic. 
+ *     --> Structuring imports using the index. 
  * 
  * Note: Pending to re structure imports using the index.
  */
