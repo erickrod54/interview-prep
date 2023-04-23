@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 17.19 - InterviewQA  
+/**interview-prep-app - version 18.16 - InterviewQA  
  * - Features: 
  * 
- *    --> Explaning complexity of two solutions for
- *        second question 'finding first duplicates'.
+ *    --> Migrating states to the context 'recurring',
+ *        and 'setRecurring' states.
  * 
  * Note: the second interview question is about find 
  * the first duplicated number in the arrays and return
@@ -15,10 +15,18 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const InterviewQA = () => {
 
-    const { handleReverse, stringgiven, handleChange, array5, array6, array7 } = useAppContext();
+    const { handleReverse,
+            stringgiven,
+            handleChange,
+            array5,
+            array6,
+            array7,
+            recurring,
+            setRecurring } = useAppContext();
+            
     console.log('the arrays for qa', array5, array6, array7)
 
-    const [ recurring, setRecurring ] = useState([]);
+    
     const [ recurring1, setRecurring1 ] = useState([]);
     const [ recurring2, setRecurring2 ] = useState([]);
 
