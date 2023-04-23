@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 18.08 - context js - 
+/**interview-prep-app - version 18.16 - context js - 
  * Features: 
  * 
- *     --> Importing and Providing linked.lists.component 
- *          states and handlers.  
+ *     --> Placing 'recurring', and 'setRecurring'
+ *         states from interview.questions.  
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -393,6 +393,11 @@ export const AppProvider = ({ children }) => {
 
     /**linked.lists.component states and handlers --start */
     const [obj1, setObj1] = useState('{a: true}');
+
+    /**linked.lists.component states and handlers --end */
+
+    /**states and handlers from interview questions --start */
+    const [ recurring, setRecurring ] = useState([]);
     
     return(
         <AppContext.Provider value={{
@@ -440,7 +445,9 @@ export const AppProvider = ({ children }) => {
             apples,
             justapples,
             basket, 
-            obj1, 
+            obj1,
+            recurring,
+            setRecurring, 
             setObj1,
             setJustApples,
             setApples,
