@@ -2,14 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.20 - InterviewQA  
+/**interview-prep-app - version 19.00 - InterviewQA  
  * - Features: 
  * 
- *    --> Migrating 'handlefirstRecurringCharacter1'
- *        to the context.
- * 
- *    --> Destructuring 'handlefirstRecurringCharacter1'
- *        from context.
+ *    --> Clearing 'setRecurring1'.
  * 
  * Note: the second interview question is about find 
  * the first duplicated number in the arrays and return
@@ -27,7 +23,6 @@ const InterviewQA = () => {
             recurring,
             handlefirstRecurringCharacter,
             recurring1, 
-            setRecurring1,
             handlefirstRecurringCharacter1 } = useAppContext();
             
     console.log('the arrays for qa', array5, array6, array7)
