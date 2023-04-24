@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.19 - InterviewQA  
+/**interview-prep-app - version 18.20 - InterviewQA  
  * - Features: 
  * 
- *    --> Migrating 'recurring1' and 'setRecurring1'
+ *    --> Migrating 'handlefirstRecurringCharacter1'
  *        to the context.
  * 
- *    --> Destructuring 'recurring1' and 'setRecurring1'
+ *    --> Destructuring 'handlefirstRecurringCharacter1'
  *        from context.
  * 
  * Note: the second interview question is about find 
@@ -27,7 +27,8 @@ const InterviewQA = () => {
             recurring,
             handlefirstRecurringCharacter,
             recurring1, 
-            setRecurring1 } = useAppContext();
+            setRecurring1,
+            handlefirstRecurringCharacter1 } = useAppContext();
             
     console.log('the arrays for qa', array5, array6, array7)
 
@@ -36,20 +37,6 @@ const InterviewQA = () => {
     const [ recurring2, setRecurring2 ] = useState([]);
 
     console.log('recurring value ==>', recurring)
-
-    
-    const handlefirstRecurringCharacter1 = (input) => {
-        for (let i = 0; i < input.length; i++) {
-            for (let j = i + 1; j < input.length; j++) {
-                if (input[i] === input[j]) {
-                    setRecurring1(input[i]);
-                    return input[i];
-                }
-            }
-        }
-        setRecurring1('undefined')
-        return undefined;
-    }
     
     /**this solution implements hash tables, comparing every key
      * of the array6 and returning the first recurring number, this
