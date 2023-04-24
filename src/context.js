@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 18.19 - context js - 
+/**interview-prep-app - version 18.20 - context js - 
  * Features: 
  * 
- *     --> Placing and Providing 'recurring1', and 
- *         'setRecurring1.  
+ *     --> Placing and Providing 
+ *         'handlefirstRecurringCharacter1'.  
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -412,6 +412,19 @@ export const AppProvider = ({ children }) => {
         setRecurring('undefined')
         return undefined;
     }
+
+    const handlefirstRecurringCharacter1 = (input) => {
+        for (let i = 0; i < input.length; i++) {
+            for (let j = i + 1; j < input.length; j++) {
+                if (input[i] === input[j]) {
+                    setRecurring1(input[i]);
+                    return input[i];
+                }
+            }
+        }
+        setRecurring1('undefined')
+        return undefined;
+    }
     
     return(
         <AppContext.Provider value={{
@@ -503,7 +516,8 @@ export const AppProvider = ({ children }) => {
             handleReverse,
             handleChange,
             arrayOfHintTimes,
-            handlefirstRecurringCharacter
+            handlefirstRecurringCharacter,
+            handlefirstRecurringCharacter1
         }}>
             {children}
         </AppContext.Provider>
