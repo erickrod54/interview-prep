@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 19.01 - context js - 
+/**interview-prep-app - version 19.02 - context js - 
  * Features: 
  * 
- *     --> Placing and Providing recurring2, and 
- *         setRecurring2.  
+ *     --> Placing and Providing 
+ *         'handlefirstRecurringCharacter2'.  
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -426,6 +426,24 @@ export const AppProvider = ({ children }) => {
         setRecurring1('undefined')
         return undefined;
     }
+
+    /**this solution implements hash tables, comparing every key
+     * of the array6 and returning the first recurring number, this
+     * solution can be proven with the rest of the arrays and the 
+     * result will be accurate*/
+    const handlefirstRecurringCharacter2 = (input) => {
+        let seenNumbers = {};
+        for (let i = 0; i < input.length; i++) {
+          if (seenNumbers[input[i]]) {
+            setRecurring2(input[i]);
+            return input[i];
+        } else {
+            seenNumbers[input[i]] = true;
+            setRecurring2(seenNumbers[input[i]]);
+        }
+    }
+    return undefined;
+    };
     
     return(
         <AppContext.Provider value={{
@@ -475,7 +493,9 @@ export const AppProvider = ({ children }) => {
             basket, 
             obj1,
             recurring,
-            recurring1, 
+            recurring1,
+            recurring2,
+            setRecurring2, 
             setObj1,
             setJustApples,
             setApples,
@@ -519,7 +539,8 @@ export const AppProvider = ({ children }) => {
             handleChange,
             arrayOfHintTimes,
             handlefirstRecurringCharacter,
-            handlefirstRecurringCharacter1
+            handlefirstRecurringCharacter1,
+            handlefirstRecurringCharacter2
         }}>
             {children}
         </AppContext.Provider>
