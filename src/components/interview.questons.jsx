@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.01 - InterviewQA  
+/**interview-prep-app - version 19.02 - InterviewQA  
  * - Features: 
  * 
- *    --> Migrating 'recurring2', and 'setRecurring2'.
+ *    --> Migrating 'handlefirstRecurringCharacter2'.
  * 
- *    --> Destructuring 'recurring2', and 'setRecurring2'
+ *    --> Destructuring 'handlefirstRecurringCharacter2'
  *        from the context.
  * 
  * Note: the second interview question is about find 
@@ -28,29 +28,14 @@ const InterviewQA = () => {
             recurring1, 
             handlefirstRecurringCharacter1,
             recurring2,
-            setRecurring2 } = useAppContext();
+            setRecurring2,
+            handlefirstRecurringCharacter2 } = useAppContext();
             
     console.log('the arrays for qa', array5, array6, array7)
 
     console.log('recurring value ==>', recurring)
     
-    /**this solution implements hash tables, comparing every key
-     * of the array6 and returning the first recurring number, this
-     * solution can be proven with the rest of the arrays and the 
-     * result will be accurate*/
-    const handlefirstRecurringCharacter2 = (input) => {
-        let seenNumbers = {};
-        for (let i = 0; i < input.length; i++) {
-          if (seenNumbers[input[i]]) {
-            setRecurring2(input[i]);
-            return input[i];
-        } else {
-            seenNumbers[input[i]] = true;
-            setRecurring2(seenNumbers[input[i]]);
-        }
-    }
-    return undefined;
-    };
+    
 
     return (
         <DataStructuresWrapper>
