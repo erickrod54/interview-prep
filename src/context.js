@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 19.00 - context js - 
+/**interview-prep-app - version 19.01 - context js - 
  * Features: 
  * 
- *     --> Clearing 'setRecurring1' provide.  
+ *     --> Placing and Providing recurring2, and 
+ *         setRecurring2.  
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -398,6 +399,7 @@ export const AppProvider = ({ children }) => {
     /**states and handlers from interview questions --start */
     const [ recurring, setRecurring ] = useState([]);
     const [ recurring1, setRecurring1 ] = useState([]);
+    const [ recurring2, setRecurring2 ] = useState([]);
 
     const handlefirstRecurringCharacter = (input) => {
         for (let i = 0; i < input.length; i++) {
@@ -493,6 +495,8 @@ export const AppProvider = ({ children }) => {
             array5,
             array6,
             array7,
+            recurring2,
+            setRecurring2,
             findNemo,
             handleFindNemo,
             handleFindNemoWithTime,
