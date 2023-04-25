@@ -9,7 +9,8 @@ import { DataStructuresWrapper } from "../styled.components";
  * 
  * Note: the second interview question is about find 
  * the first duplicated number in the arrays and return
- * it, and in any other case return undefined.
+ * it, and in any other case return undefined. changesb y 
+ * clearing setRecurring2
  */
 
 const InterviewQA = () => {
