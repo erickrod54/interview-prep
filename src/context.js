@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 19.02 - context js - 
+/**interview-prep-app - version 19.03 - context js - 
  * Features: 
  * 
- *     --> Placing and Providing 
- *         'handlefirstRecurringCharacter2'.  
+ *     --> Clearing 'setRecurring2'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -495,7 +494,6 @@ export const AppProvider = ({ children }) => {
             recurring,
             recurring1,
             recurring2,
-            setRecurring2, 
             setObj1,
             setJustApples,
             setApples,
@@ -515,8 +513,6 @@ export const AppProvider = ({ children }) => {
             array5,
             array6,
             array7,
-            recurring2,
-            setRecurring2,
             findNemo,
             handleFindNemo,
             handleFindNemoWithTime,
