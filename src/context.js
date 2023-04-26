@@ -1,10 +1,12 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 19.05 - context js - 
+/**interview-prep-app - version 19.06 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'handleDelete'
+ *     --> Placing and providing 'mylinkedListvalue',
+ *          and 'setMylinkedList' for 
+ *          linked.lists.component
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -446,6 +448,8 @@ export const AppProvider = ({ children }) => {
 
     /**handlers and states for linked.lists.component */
     const [obj2, setObj2] = useState(obj1);
+    const [ mylinkedListvalue, setMylinkedList ] = useState();
+    
 
      /**pointer data start */
     
@@ -506,6 +510,8 @@ export const AppProvider = ({ children }) => {
             recurring1,
             recurring2,
             obj2,
+            mylinkedListvalue,
+            setMylinkedList,
             setObj2,
             setObj1,
             setJustApples,
