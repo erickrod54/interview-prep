@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 19.04 - context js - 
+/**interview-prep-app - version 19.05 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'obj2', and 
- *        'setObj2'
+ *     --> Placing and providing 'handleDelete'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -447,6 +446,13 @@ export const AppProvider = ({ children }) => {
 
     /**handlers and states for linked.lists.component */
     const [obj2, setObj2] = useState(obj1);
+
+     /**pointer data start */
+    
+     const handleDelete = () => {
+        setObj1(null);
+        setObj2(null);
+     }
     
     
     return(
@@ -543,7 +549,8 @@ export const AppProvider = ({ children }) => {
             arrayOfHintTimes,
             handlefirstRecurringCharacter,
             handlefirstRecurringCharacter1,
-            handlefirstRecurringCharacter2
+            handlefirstRecurringCharacter2,
+            handleDelete
         }}>
             {children}
         </AppContext.Provider>
