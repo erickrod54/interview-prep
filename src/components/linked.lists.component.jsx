@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.04 - LinkedLists - 
+/**interview-prep-app - version 19.05 - LinkedLists - 
  * Features:
  * 
- *     --> Migrating 'obj2', and 'setObj2' to the context.   
+ *     --> Migrating 'handleDelete' to the context.   
+ * 
+ *     --> Destructuring 'handleDelete' from the context.
  * 
  * Note: 'traverseToIndex' method will find the index requested
  * by the function call and hold the index to the next until finds
@@ -16,7 +18,7 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const LinkedLists = () => {
 
-    const { graphsData, basket, obj1, setObj1 , obj2, setObj2 } = useAppContext();
+    const { graphsData, basket, obj1, setObj1 , obj2, setObj2, handleDelete } = useAppContext();
     //console.log('graphsData ==> ', graphsData);
     console.log('the example basket data', basket)
 
@@ -33,11 +35,6 @@ const LinkedLists = () => {
     const linklistmethods = graphsData[9].image;
 
     /**pointer data start */
-    
-    const handleDelete = () => {
-        setObj1(null);
-        setObj2(null);
-      }
     
     const Object1ValueBooya = () => {
         let obj1 = `{a: 'booya'}`;
