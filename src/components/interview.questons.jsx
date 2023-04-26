@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.03 - InterviewQA  
+/**interview-prep-app - version 19.04 - InterviewQA  
  * - Features: 
  * 
- *    --> Clearing 'setRecurring2'.
+ *    --> Clearing 'useState'.
  * 
  * Note: the second interview question is about find 
  * the first duplicated number in the arrays and return
