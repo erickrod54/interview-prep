@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 19.03 - context js - 
+/**interview-prep-app - version 19.04 - context js - 
  * Features: 
  * 
- *     --> Clearing 'setRecurring2'
+ *     --> Placing and providing 'obj2', and 
+ *        'setObj2'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -443,11 +444,15 @@ export const AppProvider = ({ children }) => {
     }
     return undefined;
     };
+
+    /**handlers and states for linked.lists.component */
+    const [obj2, setObj2] = useState(obj1);
+    
     
     return(
         <AppContext.Provider value={{
             nemo,
-            everyoneCharacter,
+            everyoneCharacter, 
             largeArray,
             graphsData,
             linksData,
@@ -494,6 +499,8 @@ export const AppProvider = ({ children }) => {
             recurring,
             recurring1,
             recurring2,
+            obj2,
+            setObj2,
             setObj1,
             setJustApples,
             setApples,
