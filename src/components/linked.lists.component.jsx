@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 18.12 - LinkedLists - 
+/**interview-prep-app - version 19.04 - LinkedLists - 
  * Features:
  * 
- *     --> Building 'remove' method for LinkedList.   
- * 
- *     --> Work in progress developing LinkedList Concept.   
+ *     --> Migrating 'obj2', and 'setObj2' to the context.   
  * 
  * Note: 'traverseToIndex' method will find the index requested
  * by the function call and hold the index to the next until finds
@@ -18,12 +16,12 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const LinkedLists = () => {
 
-    const { graphsData, basket, obj1, setObj1 } = useAppContext();
+    const { graphsData, basket, obj1, setObj1 , obj2, setObj2 } = useAppContext();
     //console.log('graphsData ==> ', graphsData);
     console.log('the example basket data', basket)
 
     
-    const [obj2, setObj2] = useState(obj1);
+    
     const [ mylinkedListvalue, setMylinkedList ] = useState();
     const [ mylinkedListappend, setMylinkedListappend ] = useState('');
     const [ mylinkedListprepend, setMylinkedListprepend ] = useState('');
