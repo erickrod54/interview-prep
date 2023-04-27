@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 19.07 - context js - 
+/**interview-prep-app - version 19.08 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'mylinkedListappend', 
- *          and 'setMylinkedListappend' for 
- *          linked.lists.component
+ *     --> Placing and providing 'mylinkedListprepend', 
+ *         and setMylinkedListprepend' for 
+ *         linked.lists.component
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -450,6 +450,7 @@ export const AppProvider = ({ children }) => {
     const [obj2, setObj2] = useState(obj1);
     const [ mylinkedListvalue, setMylinkedList ] = useState();
     const [ mylinkedListappend, setMylinkedListappend ] = useState('');
+    const [ mylinkedListprepend, setMylinkedListprepend ] = useState('');
     
 
      /**pointer data start */
@@ -513,6 +514,8 @@ export const AppProvider = ({ children }) => {
             obj2,
             mylinkedListvalue,
             mylinkedListappend,
+            mylinkedListprepend,
+            setMylinkedListprepend,
             setMylinkedListappend,
             setMylinkedList,
             setObj2,
