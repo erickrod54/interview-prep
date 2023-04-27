@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.07 - LinkedLists - 
+/**interview-prep-app - version 19.08 - LinkedLists - 
  * Features:   
  * 
- *     --> Destructuring 'mylinkedListappend', and 
- *         'setMylinkedListappend' from the context.
+ *     --> Destructuring 'mylinkedListprepend', and 
+ *         'setMylinkedListprepend' from the context.
  * 
  * Note: 'traverseToIndex' method will find the index requested
  * by the function call and hold the index to the next until finds
@@ -27,12 +27,13 @@ const LinkedLists = () => {
              mylinkedListvalue,
              setMylinkedList,
              mylinkedListappend,
-             setMylinkedListappend } = useAppContext();
+             setMylinkedListappend,
+             mylinkedListprepend, 
+             setMylinkedListprepend } = useAppContext();
              
     //console.log('graphsData ==> ', graphsData);
     console.log('the example basket data', basket)
 
-    const [ mylinkedListprepend, setMylinkedListprepend ] = useState('');
     const [ printListvalue, setPrintListvalue ] = useState([]);
     const [ inserListvalue, setInserListvalue ] = useState([]);
     const [ removeListvalue, setRemoveListvalue ] = useState([]);
