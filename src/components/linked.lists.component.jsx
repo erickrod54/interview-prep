@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.05 - LinkedLists - 
- * Features:
+/**interview-prep-app - version 19.06 - LinkedLists - 
+ * Features:   
  * 
- *     --> Migrating 'handleDelete' to the context.   
- * 
- *     --> Destructuring 'handleDelete' from the context.
+ *     --> Destructuring 'mylinkedListvalue', and 'setMylinkedList' 
+ *         from the context.
  * 
  * Note: 'traverseToIndex' method will find the index requested
  * by the function call and hold the index to the next until finds
@@ -18,13 +17,19 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const LinkedLists = () => {
 
-    const { graphsData, basket, obj1, setObj1 , obj2, setObj2, handleDelete } = useAppContext();
+    const { graphsData,
+             basket,
+             obj1,
+             setObj1 ,
+             obj2,
+             setObj2,
+             handleDelete,
+             mylinkedListvalue,
+             setMylinkedList } = useAppContext();
+             
     //console.log('graphsData ==> ', graphsData);
     console.log('the example basket data', basket)
 
-    
-    
-    const [ mylinkedListvalue, setMylinkedList ] = useState();
     const [ mylinkedListappend, setMylinkedListappend ] = useState('');
     const [ mylinkedListprepend, setMylinkedListprepend ] = useState('');
     const [ printListvalue, setPrintListvalue ] = useState([]);
