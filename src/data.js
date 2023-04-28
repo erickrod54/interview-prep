@@ -1,10 +1,20 @@
-import { hashtable, bigo1stgraph, bigo2ndgraph, bigo3const, bigoconst, bigochart, hashcollision, hashtablesvsarrays, linklistcomposition, linklistmethodscomplexity } from './assets/index';
+import { hashtable,
+         bigo1stgraph,
+         bigo2ndgraph,
+         bigo3const,
+         bigoconst,
+         bigochart,
+         hashcollision,
+         hashtablesvsarrays,
+         linklistcomposition,
+         linklistmethodscomplexity, 
+         doublylinklistcomposition } from './assets/index';
 
-/**interview-prep-app - version 18.13 - data js - 
+/**interview-prep-app - version 19.07 - data js - 
  * Features: 
  * 
- *     --> Adding 'doubly linked lists' for 
- *         linksData.   
+ *     --> Adding 'doublylinklistcomposition' for 
+ *         graphsData.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -140,6 +150,10 @@ export const linksData = [
       {
         id:10,
         image:linklistmethodscomplexity
+      },
+      {
+        id:11,
+        image:doublylinklistcomposition
       }
     ]
     
@@ -147,13 +161,13 @@ export const linksData = [
       'dory',
       'bruce',
       'marlin',
- 'nemo',
- 'gill',
- 'bloat',
- 'nigel',
- 'squirt',
- 'darla',
- 'hank'
+      'nemo',
+      'gill',
+      'bloat',
+      'nigel',
+      'squirt',
+      'darla',
+      'hank'
 ]
 
 export const largeArray = new Array(1000).fill('nemo')
