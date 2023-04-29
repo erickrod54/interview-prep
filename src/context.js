@@ -1,12 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 19.11 - context js - 
+/**interview-prep-app - version 19.12 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'removeListvalue',
- *          and 'setRemoveListvalue' for 
- *         linked.lists.component
+ *     --> Placing and providing 'Object1ValueBooya' 
+ *         for linked.lists.component
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -462,7 +461,10 @@ export const AppProvider = ({ children }) => {
         setObj2(null);
     }
 
-
+    const Object1ValueBooya = () => {
+        let obj1 = `{a: 'booya'}`;
+        setObj1(obj1)
+    }
 
 
     return (
@@ -521,6 +523,7 @@ export const AppProvider = ({ children }) => {
             mylinkedListprepend,
             inserListvalue,
             removeListvalue,
+            Object1ValueBooya,
             setRemoveListvalue,
             setInserListvalue,
             setMylinkedListprepend,
