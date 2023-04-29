@@ -13,6 +13,8 @@ import { DataStructuresWrapper } from "../styled.components";
  * the requested index to make the insertion
  * 
  * pending to fix a bug with the index 0
+ * 
+ * 'inserListvalue', and 'setInserListvalue'
  */
 
 const LinkedLists = () => {
