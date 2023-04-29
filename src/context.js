@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 19.10 - context js - 
+/**interview-prep-app - version 19.11 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'inserListvalue',
- *          and 'setInserListvalue' for 
+ *     --> Placing and providing 'removeListvalue',
+ *          and 'setRemoveListvalue' for 
  *         linked.lists.component
  * 
  * 
@@ -452,6 +452,7 @@ export const AppProvider = ({ children }) => {
     const [mylinkedListappend, setMylinkedListappend] = useState('');
     const [mylinkedListprepend, setMylinkedListprepend] = useState('');
     const [inserListvalue, setInserListvalue] = useState([]);
+    const [removeListvalue, setRemoveListvalue] = useState([]);
 
 
     /**pointer data start */
@@ -460,6 +461,8 @@ export const AppProvider = ({ children }) => {
         setObj1(null);
         setObj2(null);
     }
+
+
 
 
     return (
@@ -517,6 +520,8 @@ export const AppProvider = ({ children }) => {
             mylinkedListappend,
             mylinkedListprepend,
             inserListvalue,
+            removeListvalue,
+            setRemoveListvalue,
             setInserListvalue,
             setMylinkedListprepend,
             setMylinkedListappend,
