@@ -9,14 +9,25 @@ import hashtablesvsarrays from './hashtables-vs-arrays.png';
 import linklistcomposition from './link_list_composition.png';
 import linklistmethodscomplexity from './link_list_methods_complexity.png';
 import doublylinklistcomposition from './doubly_link_list_composition.png';
+import doublylinklistmethodscomplexity from './doubly_link_list_methods_complexity.png'
 
-/**interview-prep-app - version 19.07 - assets > index - 
+/**interview-prep-app - version 19.08 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'doublylinklistcomposition'.
+ *     --> Importing and exporting 'doublylinklistmethodscomplexity'.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
  */
 
-export { bigo1stgraph, bigo2ndgraph, bigoconst, bigo3const, bigochart, hashcollision, hashtable, hashtablesvsarrays, linklistcomposition, linklistmethodscomplexity, doublylinklistcomposition };
+export { bigo1stgraph,
+         bigo2ndgraph,
+         bigoconst,
+         bigo3const,
+         bigochart,
+         hashcollision,
+         hashtable, hashtablesvsarrays,
+         linklistcomposition,
+         linklistmethodscomplexity,
+         doublylinklistcomposition,
+         doublylinklistmethodscomplexity };
