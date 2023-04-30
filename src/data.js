@@ -8,12 +8,13 @@ import { hashtable,
          hashtablesvsarrays,
          linklistcomposition,
          linklistmethodscomplexity, 
-         doublylinklistcomposition } from './assets/index';
+         doublylinklistcomposition, 
+         doublylinklistmethodscomplexity} from './assets/index';
 
-/**interview-prep-app - version 19.07 - data js - 
+/**interview-prep-app - version 19.13 - data js - 
  * Features: 
  * 
- *     --> Adding 'doublylinklistcomposition' for 
+ *     --> Adding ' doublylinklistmethodscomplexity' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -154,6 +155,10 @@ export const linksData = [
       {
         id:11,
         image:doublylinklistcomposition
+      },
+      {
+        id:12,
+        image: doublylinklistmethodscomplexity
       }
     ]
     
