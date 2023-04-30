@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.15 - DoublyLinkedLists - 
+/**interview-prep-app - version 19.16 - DoublyLinkedLists - 
  * Features:   
  * 
- *     --> Developing 'prepend' method for doublyLinkedLists.
+ *     --> Developing 'insert' method for doublyLinkedLists.
  * 
  * Note: this component will use 'traverseToIndex' the 
  * same linked.list structure and i will modify it until 
@@ -136,26 +136,36 @@ let linkedList = {
 
      */
 
-    insert(index, value){
-    /**checking params */
-        if (index >= this.length) {
-            return this.append(value);   
-        }
-        const newNode = new Node(value);
-        /**here i catch the index */
-        const leader = this.traverseToIndex(index-1);
-        const holdingPointer = leader.next;
-        leader.next = newNode;
-        newNode.next = holdingPointer;
-        this.length++;
+insert(index, value){
+  /**checking params */
+      if (index >= this.length) {
+          return this.append(value);   
+      }
+      /**i make the new node to add the prev, as the 
+       * append and prepend
+       */
+      const newNode = {
+          value: value,
+          next: null,
+          prev: null
+      };
+      /**here i catch the index */
+      const leader = this.traverseToIndex(index-1);
+      const follower = leader.next;
+      /**here i change the movement of the nodes in the list */
+      leader.next = newNode;
+      newNode.prev = leader;
+      newNode.next = follower;
+      follower.prev = newNode;
+      this.length++;
 
-        if (index === 0) {
-            this.prepend(value);
-            return this.printList();
-        }
-        return this.printList();
-    }
-
+      if (index === 0) {
+          this.prepend(value);
+          return this.printList();
+      }
+      return this.printList();
+  }
+  
     /**here i build the 'traverseToIndex' to iterate and get the index
      * requested by the function call*/
     traverseToIndex(index){
@@ -325,6 +335,14 @@ let linkedList = {
                     the index ( usually i won't know how large the linked
                     list is ) to insert the element
                 </p>
+
+                <p>
+                    let's insert number<strong> 99 </strong> in the index <strong> 2</strong>
+                </p>
+
+                <button onClick={handleInsertToList}>insert number<strong> 99 </strong> in the index <strong> 2</strong> </button>
+
+                <p>[{inserListvalue}]</p>
 
                 <li>
                     delete
