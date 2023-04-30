@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.16 - DoublyLinkedLists - 
+/**interview-prep-app - version 19.17 - DoublyLinkedLists - 
  * Features:   
  * 
- *     --> Developing 'insert' method for doublyLinkedLists.
+ *     --> Developing 'Single VS Double Linked list' concept 
+ *        for doublyLinkedLists.
  * 
  * Note: this component will use 'traverseToIndex' the 
  * same linked.list structure and i will modify it until 
@@ -353,6 +354,68 @@ insert(index, value){
                     because does <strong> traversal</strong> to find
                     the element and delete it
                 </p>
+
+                <h3> Single VS Double Linked list</h3>
+
+                <h4>Single:</h4>
+
+                <h5>advantages:</h5>
+
+                <ul>
+                    <li>
+                        simple implementation
+                    </li>
+                    <li>
+                        requires lesser memory
+                    </li>
+                    <li>
+                        fast insertion
+                    </li>
+                    <li>
+                        fast deletion
+                    </li>
+                    <li>
+                        is faster
+                    </li>
+                </ul>
+
+                <h5>downsides:</h5>
+
+                <ul>
+                    <li>
+                        cannot iterate in <strong> reverse</strong> or <strong> treverse</strong> from back to front ( if a ever lose the memory referene or the headnode, the list can be lose in memory forever)
+                    </li>
+                </ul>
+
+                <h4>Note: use cases when you have les memory reources to work and and need fast insertion and fast deletion</h4>
+
+                <h4>Double:</h4>
+                       
+                <h5>advantages:</h5>
+
+                <ul>
+                    <li>
+                        can be iterated in <strong> reverse</strong> or <strong> treverse</strong> from back to front and from the front to the back 
+                    </li>
+                    <li>
+                        does not need to trverse from the <strong> head </strong> to the <strong> tail </strong> to find then the node when performing
+                        <strong> deletion </strong> 
+                    </li>
+                    <li>
+                        good performing in <strong> searching</strong> operations
+                    </li>
+                </ul>
+
+                <h5>downsides:</h5>
+
+                <ul>
+                    <li>
+                        fairly complex
+                    </li>
+                    <li>
+                        requires more memory and storage
+                    </li>
+                </ul>
 
             </ul>
             
