@@ -2,13 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.13 - DoublyLinkedLists - 
+/**interview-prep-app - version 19.14 - DoublyLinkedLists - 
  * Features:   
  * 
- *     --> Destructuring ' doublylinklistmethodscomplexity'
- *         from graphsData.
- * 
- *     --> Starting to define methods.
+ *     --> Developing 'append' method for doublyLinkedLists.
  * 
  * Note: this component will use 'traverseToIndex' the 
  * same linked.list structure and i will modify it until 
@@ -91,13 +88,19 @@ let linkedList = {
     }
 
     append(value){
-        /**switching syntax to instantiate the new Node */
-        const newNode = new Node(value);
-        this.tail.next = newNode;
-        this.tail = newNode;
-        this.length++;
-        return this;
-    }
+      /**switching syntax to instantiate the new Node */
+      const newNode = {
+          value: value,
+          next:null,
+          prev:null
+      };
+
+      newNode.prev = this.tail;
+      this.tail.next = newNode;
+      this.tail = newNode;
+      this.length++;
+      return this;
+  }
 
     prepend(value) {
         const newNode = {
@@ -260,6 +263,70 @@ let linkedList = {
             <p>and this methods: <strong> ( this are the worst case in complexity, usually linked
                 list can perform better than this complexity )</strong></p>
 
+            <ul>
+                <li>
+                    prepend:
+                </li>
+
+                <p> 
+                    add an element to the begining of the list and has 
+                    a complexity of <strong> O(1)</strong>
+                </p>
+
+                <li>
+                    append
+                </li>
+
+                <p>
+                    add an element to the end of the list and has a complexity
+                    of O(1)
+                </p>
+
+                <p>
+                    let's append <strong> 5</strong> and <strong> 16</strong>
+                    to the list:
+                </p>
+
+                <button onClick={handlesetMylinkedListappend}>append <strong> 5</strong> and <strong> 16</strong></button>
+
+                <p>value of mylinkedList: {mylinkedListappend ? '[16, 5, 10 ] after 10 is null' : null}</p>
+
+                <li>
+                    lookup
+                </li>
+
+                <p>
+                    which can be also callled <strong> traversal</strong> because
+                    iterates to look for an item, and the complexity is <strong> O(n)</strong>
+                    because it has to go from <strong> 'head'</strong> to <strong> 'tail'</strong>
+                    to find the element that i look for 
+                </p>
+
+                <li>
+                    insert
+                </li>
+
+                <p>
+                    if i insert into a link list, by the way that 
+                    works i can add in it to ( different to a hash 
+                    table or an array that i have to shift and unshift)
+                    and also has a complexity of <strong> O(n)</strong>
+                    because does <strong> traversal</strong> to find 
+                    the index ( usually i won't know how large the linked
+                    list is ) to insert the element
+                </p>
+
+                <li>
+                    delete
+                </li>
+
+                <p>
+                    has also complexity of <strong> O(n)</strong>
+                    because does <strong> traversal</strong> to find
+                    the element and delete it
+                </p>
+
+            </ul>
             
             
         </DataStructuresWrapper>
