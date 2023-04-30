@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.07 - DoublyLinkedLists - 
+/**interview-prep-app - version 19.13 - DoublyLinkedLists - 
  * Features:   
  * 
- *     --> Building 'DoublyLinkedLists'.
+ *     --> Destructuring ' doublylinklistmethodscomplexity'
+ *         from graphsData.
  * 
- *     --> Work in progress developing
- *         'DoublyLinkedLists'.
+ *     --> Starting to define methods.
  * 
  * Note: this component will use 'traverseToIndex' the 
  * same linked.list structure and i will modify it until 
@@ -32,6 +32,7 @@ const DoublyLinkedLists = () => {
              setMylinkedListappend,
              mylinkedListprepend, 
              setMylinkedListprepend,
+             setRemoveListvalue,
              printListvalue, setPrintListvalue} = useAppContext();
              
     //console.log('graphsData ==> ', graphsData);
@@ -39,10 +40,9 @@ const DoublyLinkedLists = () => {
 
     
     const [ inserListvalue, setInserListvalue ] = useState([]);
-    const [ removeListvalue, setRemoveListvalue ] = useState([]);
 
     const doublylinklistcomposition = graphsData[10].image;
-    const linklistmethods = graphsData[9].image;
+    const doublylinklistmethodscomplexity = graphsData[11].image;
 
     /**pointer data start */
     
@@ -242,6 +242,25 @@ let linkedList = {
 
             <img src={doublylinklistcomposition} alt="link list composition"/>
 
+            <h3>doubly link list methods:</h3>
+
+            <p>
+                link lists has a set of methods and they have their comlexity
+                according with the operation that perform each
+            </p>
+
+            <p>
+                linked list do <strong> traversal ( is as iterating)</strong> operations 
+                because has no ordered positions, in contrast to <strong> arrays</strong>,
+                in this case linked list is more as <strong> hash tables</strong>
+            </p>
+
+            <img src={doublylinklistmethodscomplexity} alt="link list methods"/>
+            
+            <p>and this methods: <strong> ( this are the worst case in complexity, usually linked
+                list can perform better than this complexity )</strong></p>
+
+            
             
         </DataStructuresWrapper>
     )
