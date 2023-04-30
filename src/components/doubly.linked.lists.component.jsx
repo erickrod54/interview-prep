@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.14 - DoublyLinkedLists - 
+/**interview-prep-app - version 19.15 - DoublyLinkedLists - 
  * Features:   
  * 
- *     --> Developing 'append' method for doublyLinkedLists.
+ *     --> Developing 'prepend' method for doublyLinkedLists.
  * 
  * Note: this component will use 'traverseToIndex' the 
  * same linked.list structure and i will modify it until 
@@ -102,16 +102,18 @@ let linkedList = {
       return this;
   }
 
-    prepend(value) {
-        const newNode = {
-            value:value,
-            next:null
-        };
-        newNode.next = this.head;
-        this.head = newNode;
-        this.length++;
-        return this
-    }
+  prepend(value) {
+    const newNode = {
+        value:value,
+        next:null,
+        prev:null
+    };
+    newNode.next = this.head;
+    this.head.prev = newNode;
+    this.head = newNode;
+    this.length++;
+    return this
+}
 
     printList(){
         const array = [];
@@ -272,6 +274,14 @@ let linkedList = {
                     add an element to the begining of the list and has 
                     a complexity of <strong> O(1)</strong>
                 </p>
+
+                <p>
+                    let's prepend number <strong> 1</strong> to the list
+                </p>
+
+                <button onClick={handlesetMylinkedListprepend}> prepend <strong> 1</strong> to the list</button>
+ 
+                <p>value of mylinkedListprepend : {mylinkedListprepend ? '[1, 16, 5, 10 ] after 10 is null' : null}</p>
 
                 <li>
                     append
