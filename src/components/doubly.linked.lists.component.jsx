@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.17 - DoublyLinkedLists - 
+/**interview-prep-app - version 19.18 - DoublyLinkedLists - 
  * Features:   
  * 
- *     --> Developing 'Single VS Double Linked list' concept 
+ *     --> Adding 'Single VS Double Linked list' note concept 
  *        for doublyLinkedLists.
  * 
  * Note: this component will use 'traverseToIndex' the 
@@ -419,6 +419,7 @@ insert(index, value){
 
             </ul>
             
+            <h4>Note: use cases when you have good memory reources to work and and need fast <strong> lookup </strong> backwards and forward</h4>
             
         </DataStructuresWrapper>
     )
