@@ -11,7 +11,7 @@ import linklistmethodscomplexity from './link_list_methods_complexity.png';
 import doublylinklistcomposition from './doubly_link_list_composition.png';
 import doublylinklistmethodscomplexity from './doubly_link_list_methods_complexity.png'
 
-/**interview-prep-app - version 19.08 - assets > index - 
+/**interview-prep-app - version 19.19 - assets > index - 
  * Features: 
  * 
  *     --> Importing and exporting 'doublylinklistmethodscomplexity'.
