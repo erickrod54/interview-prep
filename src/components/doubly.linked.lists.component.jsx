@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.18 - DoublyLinkedLists - 
+/**interview-prep-app - version 19.19 - DoublyLinkedLists - 
  * Features:   
  * 
- *     --> Adding 'Single VS Double Linked list' note concept 
- *        for doublyLinkedLists.
+ *     --> Fixing 'doublylinklistmethodscomplexity' asset.
  * 
  * Note: this component will use 'traverseToIndex' the 
  * same linked.list structure and i will modify it until 
@@ -40,7 +39,7 @@ const DoublyLinkedLists = () => {
     const [ inserListvalue, setInserListvalue ] = useState([]);
 
     const doublylinklistcomposition = graphsData[10].image;
-    const doublylinklistmethodscomplexity = graphsData[11].image;
+    const doublylinklistmethodscomplexity = graphsData[11].image; 
 
     /**pointer data start */
     
@@ -230,6 +229,9 @@ insert(index, value){
     myLinkedList.insert(2,99);
     return setRemoveListvalue(myLinkedList.remove(3))
   }
+
+  
+  
 
     return(
         <DataStructuresWrapper>
