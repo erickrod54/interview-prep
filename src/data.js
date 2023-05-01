@@ -11,10 +11,10 @@ import { hashtable,
          doublylinklistcomposition, 
          doublylinklistmethodscomplexity} from './assets/index';
 
-/**interview-prep-app - version 19.13 - data js - 
+/**interview-prep-app - version 19.19 - data js - 
  * Features: 
  * 
- *     --> Adding ' doublylinklistmethodscomplexity' for 
+ *     --> Fixing Adding ' doublylinklistmethodscomplexity' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
