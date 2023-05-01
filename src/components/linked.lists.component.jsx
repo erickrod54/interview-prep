@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.11 - LinkedLists - 
+/**interview-prep-app - version 19.19 - LinkedLists - 
  * Features:   
  * 
- *     --> Destructuring 'removeListvalue', and 
+ *     --> Fixing destructuring 'removeListvalue', and 
  *         'setRemoveListvalue' from the context.
  * 
  * Note: 'traverseToIndex' method will find the index requested
@@ -35,7 +35,9 @@ const LinkedLists = () => {
         printListvalue,
         setPrintListvalue,
         inserListvalue,
-        setInserListvalue } = useAppContext();
+        setInserListvalue,
+        removeListvalue,
+        setRemoveListvalue } = useAppContext();
 
     //console.log('graphsData ==> ', graphsData);
     console.log('the example basket data', basket)
