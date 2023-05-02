@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.00 - LinkedLists - 
+/**interview-prep-app - version 20.01 - LinkedLists - 
  * Features:   
  * 
- *     --> Building 'beforeReverseFromlist' handler
- *          and states.
+ *     --> Printing the list and defining the beforereverse section.
  * 
  * Note: 'traverseToIndex' method will find the index requested
  * by the function call and hold the index to the next until finds
@@ -480,6 +479,16 @@ const LinkedLists = () => {
             <button onClick={removeFromList}>remove <strong> index 3 and value 16</strong> from the list</button>
 
             <p>[{removeListvalue}]</p>
+
+            <h3>A favorite interview question is reverse using a linked list:</h3>
+
+            <p>
+                i have the following list:
+            </p>
+
+            <button onClick={beforeReverseFromlist}>show before Reverse From list</button>
+
+            <p>[{beforereversevalue}]</p>
 
 
 
