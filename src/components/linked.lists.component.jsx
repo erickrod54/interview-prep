@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.02 - LinkedLists - 
+/**interview-prep-app - version 20.03 - LinkedLists - 
  * Features:   
  * 
- *     --> Building the reverseFromlist hanlder and states.
+ *     --> Rendering 'reversevalue' to show the original list 
+ *         reversed.
  * 
  * Note: 'traverseToIndex' method will find the index requested
  * by the function call and hold the index to the next until finds
@@ -499,6 +500,14 @@ const LinkedLists = () => {
             <button onClick={beforeReverseFromlist}>show before Reverse From list</button>
 
             <p>[{beforereversevalue}]</p>
+            
+            <p>
+                let's reverse the list 
+            </p>
+
+            <button onClick={reverseFromlist}>reverse From list</button>
+
+            <p>[{reversevalue}]</p>
 
 
 
