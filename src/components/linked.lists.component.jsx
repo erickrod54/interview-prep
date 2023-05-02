@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.19 - LinkedLists - 
+/**interview-prep-app - version 19.20 - LinkedLists - 
  * Features:   
  * 
- *     --> Fixing destructuring 'removeListvalue', and 
- *         'setRemoveListvalue' from the context.
+ *     --> Developing 'reverse' method for LinkedList list.
  * 
  * Note: 'traverseToIndex' method will find the index requested
  * by the function call and hold the index to the next until finds
@@ -41,6 +40,8 @@ const LinkedLists = () => {
 
     //console.log('graphsData ==> ', graphsData);
     console.log('the example basket data', basket)
+
+    
 
     const linklistcomposition = graphsData[8].image;
     const linklistmethods = graphsData[9].image;
@@ -173,6 +174,23 @@ const LinkedLists = () => {
             this.length--;
             return this.printList()
         }
+
+        reverse(){
+            if (!this.head.next) {
+               return this.head     
+            }
+            let first = this.head;
+            let second = first.next;
+            while(second){
+                const temp = second.next;
+                second.next = first;
+                first = second;
+                second = temp;
+            }
+            this.head.next = null;
+            this.head = first;
+         
+        }
     }
 
 
@@ -215,6 +233,8 @@ const LinkedLists = () => {
         myLinkedList.insert(2, 99);
         return setRemoveListvalue(myLinkedList.remove(3))
     }
+
+    
 
     return (
         <DataStructuresWrapper>
@@ -453,6 +473,8 @@ const LinkedLists = () => {
             <button onClick={removeFromList}>remove <strong> index 3 and value 16</strong> from the list</button>
 
             <p>[{removeListvalue}]</p>
+
+
 
         </DataStructuresWrapper>
     )
