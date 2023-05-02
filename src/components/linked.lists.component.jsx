@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 19.20 - LinkedLists - 
+/**interview-prep-app - version 20.00 - LinkedLists - 
  * Features:   
  * 
- *     --> Developing 'reverse' method for LinkedList list.
+ *     --> Building 'beforeReverseFromlist' handler
+ *          and states.
  * 
  * Note: 'traverseToIndex' method will find the index requested
  * by the function call and hold the index to the next until finds
@@ -41,7 +42,7 @@ const LinkedLists = () => {
     //console.log('graphsData ==> ', graphsData);
     console.log('the example basket data', basket)
 
-    
+    const [ beforereversevalue, setBeforeReversevalue ] = useState([]);
 
     const linklistcomposition = graphsData[8].image;
     const linklistmethods = graphsData[9].image;
@@ -234,7 +235,13 @@ const LinkedLists = () => {
         return setRemoveListvalue(myLinkedList.remove(3))
     }
 
-    
+    const beforeReverseFromlist = () => {
+        myLinkedList.append(1);
+        myLinkedList.append(10);
+        myLinkedList.append(16);
+        myLinkedList.append(88);
+        return setBeforeReversevalue(myLinkedList.printList())
+    }
 
     return (
         <DataStructuresWrapper>
