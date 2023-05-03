@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.03 - LinkedLists - 
+/**interview-prep-app - version 20.04 - LinkedLists - 
  * Features:   
  * 
- *     --> Rendering 'reversevalue' to show the original list 
- *         reversed.
+ *     --> Developing 'Linked List VS Other Data Structures'.
  * 
  * Note: 'traverseToIndex' method will find the index requested
  * by the function call and hold the index to the next until finds
@@ -508,6 +507,65 @@ const LinkedLists = () => {
             <button onClick={reverseFromlist}>reverse From list</button>
 
             <p>[{reversevalue}]</p>
+
+            <h3>Linked List VS Other Data Structures:</h3>
+
+            <p>
+                Linked list is one of the most challenging data structures
+                but domanating this data structure most od the rest is easier 
+                to implement, let's make a comparison of <strong> linked list </strong> 
+                with the rest of the data structure
+            </p>
+
+            <p>
+                It doesn't como pre built in some languages as javaScript
+                but comes pre built in others, is a low level data structure
+                they are ordered they have pointer so in that certaine loose 
+                strcuture that is <strong> flexible </strong> is an order related with the memory
+                address of the pointers and also <strong> flexible </strong>
+                because they can grow in an amazing way keeping the order 
+            </p>
+
+            <p>
+                There is no random accsess with linked lists, when i performs
+                lookups because we have to <strong> traverse </strong> the list 
+                to find the item unlike <strong> hash tables </strong> that i can 
+                find the data right away or with <strong> arrays </strong> that i 
+                can use indexes to find data faster also
+            </p>
+
+            <h4>advantages:</h4>
+
+            <ul>
+                <li>
+                     Fast insertion   
+                </li>
+                <li>
+                    Fast Deletion
+                </li>
+                <li>
+                    Ordered
+                </li>
+                <li>
+                    Flexible Size
+                </li>
+            </ul>
+
+            <h4>downsides:</h4>
+
+            <ul>
+                <li>
+                    Slow Lookup
+                </li>
+                <li>
+                    More memory
+                </li>
+            </ul>
+
+            <h4>Note: use cases implementing file systems, browser history (when you go back and forth),
+                linked list is chosen over other data structures because once is applied their simplicity
+                and their capacity of grow as is needed.
+            </h4>
 
 
 
