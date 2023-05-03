@@ -11,11 +11,11 @@ import { hashtable,
          doublylinklistcomposition, 
          doublylinklistmethodscomplexity} from './assets/index';
 
-/**interview-prep-app - version 19.19 - data js - 
+/**interview-prep-app - version 20.05 - data js - 
  * Features: 
  * 
- *     --> Fixing Adding ' doublylinklistmethodscomplexity' for 
- *         graphsData.   
+ *     --> Adding 'stack & queues' for 
+ *         LinksData.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -85,7 +85,11 @@ export const linksData = [
     {
       id:'15',
       name:'doubly linked lists'
-     }
+     },
+     {
+       id:'16',
+       name:'stack & queues'
+      }
     /**
      *,
      {
