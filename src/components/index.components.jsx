@@ -14,14 +14,12 @@ import BuildAndUseArrays from "./howtobuild.howtouse.an.array";
 import InterviewQA from "./interview.questons";
 import LinkedLists from "./linked.lists.component";
 import SpaceComplexity from "./space.complexity.component";
+import StackAndQueues from "./stack.and.queues.component";
 
-
-/**interview-prep-app - version 18.15 - 
+/**interview-prep-app - version 20.05 - 
  * components > index - Features: 
  * 
- *     --> Testing the components imports
- * 
- *     --> Deleting old import line.
+ *     --> Importing and exporting 'StackAndQueues'.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -42,5 +40,6 @@ export { ArrayDataStructure,
          BuildAndUseArrays,
          InterviewQA,
          LinkedLists,
-         SpaceComplexity
+         SpaceComplexity,
+         StackAndQueues
         }
