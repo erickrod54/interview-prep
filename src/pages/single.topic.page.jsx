@@ -15,15 +15,16 @@ import { ArrayDataStructure,
          BuildAndUseArrays,
          InterviewQA,
          LinkedLists,
-         SpaceComplexity
+         SpaceComplexity,
+         StackAndQueues
         } from '../components/index.components';
 
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 18.14 - SingleTopicPage  
+/**interview-prep-app - version 20.05 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Structuring imports using the index. 
+ *     --> Adding 'StackAndQueues' to the single topic. 
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -103,6 +104,10 @@ const SingleTopicPage = () => {
 
     if (id === '15') {
         return <DoublyLinkedList />
+    }
+
+    if (id === '16') {
+        return < StackAndQueues />
     }
 }
 
