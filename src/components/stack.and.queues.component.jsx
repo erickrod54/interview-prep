@@ -1,15 +1,23 @@
 import React from "react";
+import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.06 - StackAndQueues - 
+/**interview-prep-app - version 20.07 - StackAndQueues - 
  * Features: 
  * 
- *     --> Work in progress developing 'Stack and Queues'.   
+ *     --> Work in progress developing 'Stack and Queues'.  
+ * 
+ *     --> Destructuring 'graphsData' from the context. 
  * 
  * Note: to generate url's dinamicly
  */
 
 const StackAndQueues = () => {
+
+    const { graphsData } = useAppContext();
+    console.log('this is the graphsData ==>', graphsData)
+
+    const stackandmethods = graphsData[12].image;
     
     return(
         
@@ -34,6 +42,66 @@ const StackAndQueues = () => {
                 limit the permforming operations resulting in a better
                 control over the data
             </p>
+
+            <h3>Stacks ( LIFO )</h3>
+
+            <p>
+                the analogy to analize stacks is that they are like a stack of plates,
+                that i have a piece of data stack over other piece of data, and the only
+                way to access is throught the top of the data
+            </p>
+
+            <p>
+                <strong> 'LIFO' </strong> is because the last item in come in, is the 
+                first item in come out
+            </p>
+
+            <img src={stackandmethods} alt='stack and methods'/>
+            
+            <p>
+
+            </p>
+            <h4>Note: use cases are language specifics as stackoverflow ( it is a stack 
+            characteristic), when fucntions get called it is called in stack architecture
+            (function that call another function), the undo and redo features are made
+            with stacks, browser history (back and forth in the history )</h4>
+
+            <h3>Stacks methods: ( LIFO )</h3>
+
+            <ul>
+                <li>
+                    lookup complexity O(n):
+                </li>
+
+                <p>
+                    lookup  is posible in a stack but is a heavier 
+                    operation
+                </p>
+
+                <li>
+                    pop complexity O(1):
+                </li>
+
+                <p>
+                    removes the last item ( remove the plate )
+                </p>
+
+                <li>
+                    push complexity O(1):
+                </li>
+
+                <p>
+                    adds an item ( adds the plate )
+                </p>
+
+                <li>
+                    peek complexity O(1):
+                </li>
+
+                <p>
+                    view the top most item ( plate by analogy )
+                </p>
+            </ul>
             
         </DataStructuresWrapper>
     )
