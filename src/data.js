@@ -9,13 +9,14 @@ import { hashtable,
          linklistcomposition,
          linklistmethodscomplexity, 
          doublylinklistcomposition, 
-         doublylinklistmethodscomplexity} from './assets/index';
+         doublylinklistmethodscomplexity,
+         stacksandmethods} from './assets/index';
 
-/**interview-prep-app - version 20.05 - data js - 
+/**interview-prep-app - version 20.07 - data js - 
  * Features: 
  * 
- *     --> Adding 'stack & queues' for 
- *         LinksData.   
+ *     --> Adding 'stacksandmethods' for 
+ *         graphsData.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -163,6 +164,10 @@ export const linksData = [
       {
         id:12,
         image: doublylinklistmethodscomplexity
+      },
+      {
+        id:13,
+        image: stacksandmethods
       }
     ]
     
