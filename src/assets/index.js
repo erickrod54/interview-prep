@@ -10,11 +10,12 @@ import linklistcomposition from './link_list_composition.png';
 import linklistmethodscomplexity from './link_list_methods_complexity.png';
 import doublylinklistcomposition from './doubly_link_list_composition.png';
 import doublylinklistmethodscomplexity from './doubly_link_list_methods_complexity.png'
+import stacksandmethods from  './stacks_and_methods.png';
 
-/**interview-prep-app - version 19.19 - assets > index - 
+/**interview-prep-app - version 20.07 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'doublylinklistmethodscomplexity'.
+ *     --> Importing and exporting 'stacksandmethods'.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -30,4 +31,5 @@ export { bigo1stgraph,
          linklistcomposition,
          linklistmethodscomplexity,
          doublylinklistcomposition,
-         doublylinklistmethodscomplexity };
+         doublylinklistmethodscomplexity,
+         stacksandmethods };
