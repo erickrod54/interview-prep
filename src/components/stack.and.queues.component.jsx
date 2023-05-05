@@ -2,12 +2,12 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.08 - StackAndQueues - 
+/**interview-prep-app - version 20.09 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Developing 'Queues methods: ( FIFO )'. 
+ *     --> Developing 'Queues methods: ( FIFO )' concept. 
  * 
  * Note: to generate url's dinamicly
  */
@@ -103,6 +103,29 @@ const StackAndQueues = () => {
                 </p>
             </ul>
 
+            <h3>Queues ( FIFO )</h3>
+
+            <p>
+                the best way to think about <strong> queues </strong> is like
+                an entrance to a roller coster, <strong> 'the first person that
+                arrives in line, gets to go first' </strong>, in this sense 
+                is the opposite to stacks because the first data to get in 
+                in the queues is the first data to come out, and they are use a lot
+                in programming 
+            </p>
+
+            <h4>Note: use cases are waiting lists apps, apps for buying tickets,
+                restaurants app ( to check a table ), uber or lyft to get a ride if 
+                you request first you get priority, printer queues the first person
+                printing has priority
+            </h4>
+
+            <h4>Note: Why an array should not be use to develop a queue ?, becuase 
+                the shifting of the indexes will made the queue very inefficient,
+                when i remove an item by shifting iall the indexes have to be moved
+                so will amke the queue really slow
+            </h4>
+
             <h3>Queues methods: ( FIFO )</h3>
 
             <p>
@@ -111,30 +134,37 @@ const StackAndQueues = () => {
 
             <ul>
                 <li>
-                    lookup
+                    lookup complexity O(n):
                 </li>
 
                 <p>
-
+                    usually it wont perform a lookup, but is posible to make it, and becuase
+                    when a <strong> 'queue' </strong> is applied is because i want to be focus
+                    in <strong> 'enqueue and dequeue' </strong>
                 </p>
 
                 <li>
-                    enqueue
+                    enqueue complexity O(1):
                 </li>
 
                 <p>
+                    as push adds the data in the queue
+                </p>1
 
+                <li>
+                    denqueue complexity O(1):
+                </li>
+
+                <p>
+                    as pop remove data from the queue
                 </p>
 
                 <li>
-                    denqueue
-                </li>
-                <li>
-                    peek
+                    peek complexity O(1):
                 </li>
 
                 <p>
-
+                    tell us whats the first data in the queue ( opposite to stack that will return the last piece of data of the stack )
                 </p>
 
             </ul>
