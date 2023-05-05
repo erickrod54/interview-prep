@@ -2,12 +2,12 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.07 - StackAndQueues - 
+/**interview-prep-app - version 20.08 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Destructuring 'graphsData' from the context. 
+ *     --> Developing 'Queues methods: ( FIFO )'. 
  * 
  * Note: to generate url's dinamicly
  */
@@ -101,6 +101,42 @@ const StackAndQueues = () => {
                 <p>
                     view the top most item ( plate by analogy )
                 </p>
+            </ul>
+
+            <h3>Queues methods: ( FIFO )</h3>
+
+            <p>
+
+            </p>
+
+            <ul>
+                <li>
+                    lookup
+                </li>
+
+                <p>
+
+                </p>
+
+                <li>
+                    enqueue
+                </li>
+
+                <p>
+
+                </p>
+
+                <li>
+                    denqueue
+                </li>
+                <li>
+                    peek
+                </li>
+
+                <p>
+
+                </p>
+
             </ul>
             
         </DataStructuresWrapper>
