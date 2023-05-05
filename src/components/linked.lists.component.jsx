@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.04 - LinkedLists - 
+/**interview-prep-app - version 20.11 - LinkedLists - 
  * Features:   
  * 
- *     --> Developing 'Linked List VS Other Data Structures'.
+ *     --> Destructuring 'reversevalue', and 'setReversevalue'
+ *         from the context.
  * 
  * Note: 'traverseToIndex' method will find the index requested
  * by the function call and hold the index to the next until finds
@@ -36,12 +37,13 @@ const LinkedLists = () => {
         inserListvalue,
         setInserListvalue,
         removeListvalue,
-        setRemoveListvalue } = useAppContext();
+        setRemoveListvalue,
+        reversevalue, setReversevalue } = useAppContext();
 
     //console.log('graphsData ==> ', graphsData);
     console.log('the example basket data', basket)
 
-    const [ reversevalue, setReversevalue ]  = useState([]);
+    
     const [ beforereversevalue, setBeforeReversevalue ] = useState([]);
 
     const linklistcomposition = graphsData[8].image;
