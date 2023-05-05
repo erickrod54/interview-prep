@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 19.12 - context js - 
+/**interview-prep-app - version 20.11 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'Object1ValueBooya' 
- *         for linked.lists.component
+ *     --> Placing and providing 'reversevalue', and 
+ *         'setReversevalue' for linked.lists.component
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -393,6 +393,7 @@ export const AppProvider = ({ children }) => {
 
     /**linked.lists.component states and handlers --start */
     const [obj1, setObj1] = useState('{a: true}');
+    const [ reversevalue, setReversevalue ]  = useState([]);
 
     /**linked.lists.component states and handlers --end */
 
@@ -523,6 +524,8 @@ export const AppProvider = ({ children }) => {
             mylinkedListprepend,
             inserListvalue,
             removeListvalue,
+            reversevalue,
+            setReversevalue,
             Object1ValueBooya,
             setRemoveListvalue,
             setInserListvalue,
