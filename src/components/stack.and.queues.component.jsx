@@ -2,12 +2,12 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.09 - StackAndQueues - 
+/**interview-prep-app - version 20.10 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Developing 'Queues methods: ( FIFO )' concept. 
+ *     --> Developing concepts related with 'Stack and Queues in javaScript'. 
  * 
  * Note: to generate url's dinamicly
  */
@@ -123,7 +123,11 @@ const StackAndQueues = () => {
             <h4>Note: Why an array should not be use to develop a queue ?, becuase 
                 the shifting of the indexes will made the queue very inefficient,
                 when i remove an item by shifting iall the indexes have to be moved
-                so will amke the queue really slow
+                so will amke the queue really slow and with an array will be an 
+                <strong> O(n) </strong> operation, with <strong> linked lists </strong>
+                will be an O(1) operations becuase the way that a  linked list is 
+                strcuture with a head and tail and everything is connected to a pointer
+                so i have access right away to insert or delete.
             </h4>
 
             <h3>Queues methods: ( FIFO )</h3>
@@ -168,6 +172,16 @@ const StackAndQueues = () => {
                 </p>
 
             </ul>
+
+            <h3>Concepts that involves Stack and Queues in javaScript:</h3>
+
+            <p>
+                Implementing stacks in javascript involves concepts as <strong> memory heap </strong>
+                (limited ammount of memory ) and , <strong> memory leak </strong> ( when i hve unused memory
+                - that's why global variables are bad because if i forgot to cleaned up 
+                they provoque a memory leak ), and the other concept is the <strong> callstack </strong>
+
+            </p>
             
         </DataStructuresWrapper>
     )
