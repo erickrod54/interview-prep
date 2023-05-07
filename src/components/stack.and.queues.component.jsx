@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.10 - StackAndQueues - 
+/**interview-prep-app - version 20.12 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Developing concepts related with 'Stack and Queues in javaScript'. 
+ *     --> Developing concepts exercise related with 'Stack and Queues'. 
+ * 
+ *     --> Starting to build states and handlers.
  * 
  * Note: to generate url's dinamicly
  */
@@ -18,6 +20,20 @@ const StackAndQueues = () => {
     console.log('this is the graphsData ==>', graphsData)
 
     const stackandmethods = graphsData[12].image;
+
+    const [ a_state, setA_state ] = useState(0);
+    const [ b_state, setB_state ] = useState(0);
+    const [ c_state, setC_state ] = useState(0);
+
+    const callStack = () => {
+        return (
+                setA_state(1),
+                setB_state(2),
+                setC_state(3)
+                )
+            }
+
+    
     
     return(
         
@@ -182,6 +198,29 @@ const StackAndQueues = () => {
                 they provoque a memory leak ), and the other concept is the <strong> callstack </strong>
 
             </p>
+
+            <h3>Stack and Queues exercise:</h3>
+
+            <p>
+                i have the following stack:         
+            </p>
+
+            <button onClick={callStack}> Generate the stack </button>
+      
+            <p>
+                value of <strong> 'a' </strong>: {a_state}
+            </p>
+
+            <p>
+                value of <strong> 'b' </strong>:{b_state}
+            </p>
+
+            <p>
+                value of <strong> 'c' </strong>: {c_state}
+            </p>
+
+            { callStack ? console.log('values of the stack ==>', a_state, b_state, c_state) : null}
+
             
         </DataStructuresWrapper>
     )
