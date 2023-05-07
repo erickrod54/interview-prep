@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.12 - StackAndQueues - 
+/**interview-prep-app - version 20.14 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Developing concepts exercise related with 'Stack and Queues'. 
- * 
- *     --> Starting to build states and handlers.
+ *     --> Destructuring 'queuesandmethods' from the context.
  * 
  * Note: to generate url's dinamicly
  */
@@ -20,6 +18,7 @@ const StackAndQueues = () => {
     console.log('this is the graphsData ==>', graphsData)
 
     const stackandmethods = graphsData[12].image;
+    const queuesandmethods = graphsData[13].image;
 
     const [ a_state, setA_state ] = useState(0);
     const [ b_state, setB_state ] = useState(0);
@@ -149,8 +148,10 @@ const StackAndQueues = () => {
             <h3>Queues methods: ( FIFO )</h3>
 
             <p>
-
+                queues is like a waiting line <strong> ' the first in come in, is the first in come out' </strong> as follows in the picture:
             </p>
+
+            <img src={queuesandmethods} alt='queues and methods'/>
 
             <ul>
                 <li>
