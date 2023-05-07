@@ -11,12 +11,13 @@ import { hashtable,
          doublylinklistcomposition, 
          doublylinklistmethodscomplexity,
          stacksandmethods,
-         queuesandmethods} from './assets/index';
+         queuesandmethods,
+         synchronousprocessing} from './assets/index';
 
-/**interview-prep-app - version 20.08 - data js - 
+/**interview-prep-app - version 20.13 - data js - 
  * Features: 
  * 
- *     --> Adding 'queuesandmethods' for 
+ *     --> Adding 'synchronousprocessing' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -173,6 +174,10 @@ export const linksData = [
       {
         id:14,
         image: queuesandmethods
+      },
+      {
+        id:15,
+        image:synchronousprocessing
       }
     ]
     
