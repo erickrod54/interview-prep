@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.14 - StackAndQueues - 
+/**interview-prep-app - version 20.15 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Destructuring 'queuesandmethods' from the context.
+ *     --> Destructuring 'synchronousprocessing' from the context.
  * 
  * Note: to generate url's dinamicly
  */
@@ -19,6 +19,7 @@ const StackAndQueues = () => {
 
     const stackandmethods = graphsData[12].image;
     const queuesandmethods = graphsData[13].image;
+    const synchronousprocessing = graphsData[14].image;
 
     const [ a_state, setA_state ] = useState(0);
     const [ b_state, setB_state ] = useState(0);
@@ -221,6 +222,26 @@ const StackAndQueues = () => {
             </p>
 
             { callStack ? console.log('values of the stack ==>', a_state, b_state, c_state) : null}
+
+            <p>
+                after generating the stack i have to know the concept of Synchronous Processing.
+            </p>
+
+            <h3>Synchronous Processing:</h3>
+
+            <p>
+                the stack involves <strong> the JavaScript enviroment </strong>, so all the  
+                operations performed, by setting a <strong> 'setTimeout' </strong>, operations
+                are divided between the <strong> 'web application' </strong> and the <strong> WEB API's </strong>
+                this is call <strong> 'synchronousprocessing' </strong>, as the picture that
+                follows:
+            </p>
+
+            <img src={synchronousprocessing} alt='synchronous processing'/>
+
+            <p>
+                the stack generated is located in the <strong> 'Call Stack' </strong>
+            </p>
 
             
         </DataStructuresWrapper>
