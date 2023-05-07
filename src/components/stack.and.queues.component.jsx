@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.15 - StackAndQueues - 
+/**interview-prep-app - version 20.16 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Destructuring 'synchronousprocessing' from the context.
+ *     --> Developing synchromnous concept.
  * 
  * Note: to generate url's dinamicly
  */
@@ -242,6 +242,19 @@ const StackAndQueues = () => {
             <p>
                 the stack generated is located in the <strong> 'Call Stack' </strong>
             </p>
+
+            <p>
+                so i have the following code that implements a <strong> 'setTimeout' </strong>:
+            </p>
+
+            <section className="code-block">
+               <p>{`console.log('1');`}</p>
+               <p>{`setTimeout(() => {`}</p>
+               <p>{`console.log('2')`}</p>
+               <p>{`}, 2000)`}</p>
+               <p>with a <strong> time of 2 seconds </strong></p>
+               <p>{`console.log(3)`}</p> 
+            </section>
 
             
         </DataStructuresWrapper>
