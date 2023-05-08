@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.19 - StackAndQueues - 
+/**interview-prep-app - version 20.20 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Rendering CALL STACK && CALLBACK QUEUE values.
+ *     --> Building a CALL STACK handler cleanUp function.
  * 
  * Note: to generate url's dinamicly
  */
@@ -36,7 +36,8 @@ const StackAndQueues = () => {
         return (
                 setA_state(1),
                 setB_state(2),
-                setC_state(3)
+                setC_state(3),
+                cleanUpfunction()
                 )
     }
 
@@ -51,7 +52,16 @@ const StackAndQueues = () => {
                 )
     }
 
-    
+    //CALL STACK handler cleanUp function
+    const cleanUpfunction = () => {
+        setTimeout(() => {
+            return(
+                setA_state(0),
+                setB_state(0),
+                setC_state(0)
+            )
+        }, 10000)
+    }
     
     return(
         
