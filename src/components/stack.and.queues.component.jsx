@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.01 - StackAndQueues - 
+/**interview-prep-app - version 21.02 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Changing time for cleanUpfunction to 6  seconds.
+ *     --> Building CALL STACK && CALLBACK QUEUE cleanup function.
  * 
  * Note: With the knowledge adquire so far i build a clean
  * up function to clear the values for CALLSTACK handler,
@@ -51,7 +51,8 @@ const StackAndQueues = () => {
                 setTimeout(() => {
                     setB_time_state(2)
                 }, 2000),
-                setC_time_state(3)
+                setC_time_state(3),
+                cleanUpSetTimeoutfunction()
                 )
     }
 
@@ -62,6 +63,17 @@ const StackAndQueues = () => {
                 setA_state(0),
                 setB_state(0),
                 setC_state(0)
+            )
+        }, 6000)
+    }
+
+    //CALL STACK && CALLBACK QUEUE cleanup function
+    const cleanUpSetTimeoutfunction = () => {
+        setTimeout(() => {
+            return(
+                setA_time_state(0),
+                setB_time_state(0),
+                setC_time_state(0)
             )
         }, 6000)
     }
