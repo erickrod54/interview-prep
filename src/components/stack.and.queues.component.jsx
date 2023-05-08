@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.16 - StackAndQueues - 
+/**interview-prep-app - version 20.17 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Developing synchromnous concept.
+ *     --> Building CALL STACK && CALLBACK QUEUE states.
  * 
  * Note: to generate url's dinamicly
  */
@@ -21,17 +21,24 @@ const StackAndQueues = () => {
     const queuesandmethods = graphsData[13].image;
     const synchronousprocessing = graphsData[14].image;
 
+    //CALL STACK states
     const [ a_state, setA_state ] = useState(0);
     const [ b_state, setB_state ] = useState(0);
     const [ c_state, setC_state ] = useState(0);
 
+    //CALL STACK && CALLBACK QUEUE states 
+    const [ a_time_state, setA_time_state ] = useState(0);
+    const [ b_time_state, setB_time_state ] = useState(0);
+    const [ c_time_state, setC_time_state ] = useState(0);
+
+    //CALL STACK handler
     const callStack = () => {
         return (
                 setA_state(1),
                 setB_state(2),
                 setC_state(3)
                 )
-            }
+    }
 
     
     
@@ -254,8 +261,7 @@ const StackAndQueues = () => {
                <p>{`}, 2000)`}</p>
                <p>with a <strong> time of 2 seconds </strong></p>
                <p>{`console.log(3)`}</p> 
-            </section>
-
+            </section>         
             
         </DataStructuresWrapper>
     )
