@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 20.18 - StackAndQueues - 
+/**interview-prep-app - version 20.19 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Building 'callSetTimeoutStack' hanlder for 
- *          CALL STACK && CALLBACK QUEUE.
+ *     --> Rendering CALL STACK && CALLBACK QUEUE values.
  * 
  * Note: to generate url's dinamicly
  */
@@ -273,7 +272,27 @@ const StackAndQueues = () => {
                <p>{`}, 2000)`}</p>
                <p>with a <strong> time of 2 seconds </strong></p>
                <p>{`console.log(3)`}</p> 
-            </section>         
+            </section>
+
+            <p>
+                So, let's Generate the stack again:         
+            </p>
+
+            <button onClick={callSetTimeoutStack}> Generate the stack with setTimeOut</button>
+
+                <p>
+                value of <strong> 'a' </strong>: {a_time_state}
+            </p>
+
+            <p>
+                value of <strong> 'b' </strong>:{b_time_state} 
+            </p>
+
+            <p>{b_time_state === 2 ?  'after 2 seconds b value get rendered'  : null}</p>
+
+            <p>
+                value of <strong> 'c' </strong>: {c_time_state}
+            </p>         
             
         </DataStructuresWrapper>
     )
