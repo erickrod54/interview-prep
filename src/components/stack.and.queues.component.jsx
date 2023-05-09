@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.03 - StackAndQueues - 
+/**interview-prep-app - version 21.04 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Building CALL STACK && CALLBACK QUEUE states for zero 
+ *     --> Building CALL STACK && CALLBACK QUEUE handler for zero 
  *         seconds case.
  * 
  * Note: With the knowledge adquire so far i build a clean
@@ -83,6 +83,17 @@ const StackAndQueues = () => {
             )
         }, 6000)
     }
+
+    //CALL STACK && CALLBACK QUEUE handler for 0 seconds case
+    const callSetTimeoutStackZero = () => {
+    return (
+            setA_zero_state(1),
+            setTimeout(() => {
+                setB_zero_state(2)
+            }, 0),
+            setC_zero_state(3)
+            )
+        }
     
     return(
         
