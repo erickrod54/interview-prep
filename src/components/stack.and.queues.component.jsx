@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.02 - StackAndQueues - 
+/**interview-prep-app - version 21.03 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Building CALL STACK && CALLBACK QUEUE cleanup function.
+ *     --> Building CALL STACK && CALLBACK QUEUE states for zero 
+ *         seconds case.
  * 
  * Note: With the knowledge adquire so far i build a clean
  * up function to clear the values for CALLSTACK handler,
@@ -33,6 +34,11 @@ const StackAndQueues = () => {
     const [ a_time_state, setA_time_state ] = useState(0);
     const [ b_time_state, setB_time_state ] = useState(0);
     const [ c_time_state, setC_time_state ] = useState(0);
+
+    //CALL STACK && CALLBACK QUEUE states for zero seconds case
+    const [ a_zero_state, setA_zero_state ] = useState(0);
+    const [ b_zero_state, setB_zero_state ] = useState(0);
+    const [ c_zero_state, setC_zero_state ] = useState(0);
 
     //CALL STACK handler
     const callStack = () => {
@@ -317,7 +323,8 @@ const StackAndQueues = () => {
 
             <p>
                 value of <strong> 'c' </strong>: {c_time_state}
-            </p>         
+            </p>
+
             
         </DataStructuresWrapper>
     )
