@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.04 - StackAndQueues - 
+/**interview-prep-app - version 21.05 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Building CALL STACK && CALLBACK QUEUE handler for zero 
+ *     --> Rendering CALL STACK && CALLBACK QUEUE values for zero 
  *         seconds case.
  * 
  * Note: With the knowledge adquire so far i build a clean
@@ -334,6 +334,40 @@ const StackAndQueues = () => {
 
             <p>
                 value of <strong> 'c' </strong>: {c_time_state}
+            </p>
+
+            <p>
+                so what is the case when i set the time to <strong> '0' </strong>
+                seconds, as follows
+            </p>     
+
+             <section className="code-block">
+               <p>{`console.log('1');`}</p>
+               <p>{`setTimeout(() => {`}</p>
+               <p>{`console.log('2')`}</p>
+               <p>{`}, 0)`}</p>
+               <p>with a <strong> time of 2 seconds </strong></p>
+               <p>{`console.log(3)`}</p> 
+            </section>
+
+            <p>
+                so lets generate this stack with a time of <strong> '0' </strong>
+            </p>
+
+            <button onClick={callSetTimeoutStackZero}>Generate the stack with setTimeOut for zero seconds </button>
+
+
+
+            <p>
+                value of <strong> 'a' </strong>: {a_zero_state}
+            </p>
+
+            <p>
+                value of <strong> 'c' </strong>: {c_zero_state}
+            </p>    
+            
+            <p>
+                value of <strong> 'b' </strong>:{b_zero_state} 
             </p>
 
             
