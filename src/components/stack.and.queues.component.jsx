@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.07 - StackAndQueues - 
+/**interview-prep-app - version 21.08 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Destructuring 'exerciseinsynchronousprocessing' from the context. 
+ *     --> Adding a note about synchronous processing. 
  * 
  * Note: With the knowledge adquire so far i build a clean
  * up function to clear the values for CALLSTACK handler,
@@ -381,6 +381,22 @@ const StackAndQueues = () => {
             <p>
                 value of <strong> 'b' </strong>:{b_zero_state} 
             </p>
+
+            <p>
+                 the <strong> 'zero case' </strong> when the time in the setTimeout is 
+                 set as <strong> 'zero' </strong>, anyway will have to render the 
+                 values of <strong> '1' </strong> and <strong> '3' </strong> first 
+                 and then the value of <strong> '2' </strong> because it has to go 
+                 to the <strong> 'WEB API's' </strong> and then <strong> 'CALLBACK QUEUES' </strong>
+                 and then before hit the stack to <strong> 'Event loop' </strong>
+            </p>
+
+            <h3>
+                Note: With the evolution in processing that are faster than before, this 
+                process can look that happen at the same, but is not, and if it is tested
+                in lower processor, or with proccesing under stress of operations
+                 you can tell the difference
+            </h3>
 
             <p>
                 after the <strong> 'setTimeout' </strong>, has been set will
