@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.06 - StackAndQueues - 
+/**interview-prep-app - version 21.07 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Building 'cleanUpSetTimeoutZerofunction'.
+ *     --> Destructuring 'exerciseinsynchronousprocessing' from the context. 
  * 
  * Note: With the knowledge adquire so far i build a clean
  * up function to clear the values for CALLSTACK handler,
@@ -23,6 +23,7 @@ const StackAndQueues = () => {
     const stackandmethods = graphsData[12].image;
     const queuesandmethods = graphsData[13].image;
     const synchronousprocessing = graphsData[14].image;
+    const exerciseinsynchronousprocessing = graphsData[15].image
 
     //CALL STACK states
     const [ a_state, setA_state ] = useState(0);
@@ -381,6 +382,16 @@ const StackAndQueues = () => {
                 value of <strong> 'b' </strong>:{b_zero_state} 
             </p>
 
+            <p>
+                after the <strong> 'setTimeout' </strong>, has been set will
+                 divide operations between the <strong> 'web application' </strong> and the 
+                 <strong> WEB API's </strong> this is call <strong> 'synchronousprocessing' 
+                </strong> activating the rest of the pieces that compound the
+                <strong> 'JavaScript Runtime Enviroment' </strong>, as the picture 
+                that follows:
+            </p>
+
+            <img src={exerciseinsynchronousprocessing} alt='exercise in synchronous processing'/>
             
         </DataStructuresWrapper>
     )
