@@ -14,13 +14,14 @@ import stacksandmethods from  './stacks_and_methods.png';
 import queuesandmethods from './queues_and_methods.png'; 
 import stacksoverflow from './stacks_overflow.png';
 import synchronousprocessing from './synchronous_processing.png';
-import exerciseinsynchronousprocessing from './exercise_in_synchronous_processing.png';
+import exerciseinasynchronousprocessing from './exercise_in_asynchronous_processing.png';
 
 
-/**interview-prep-app - version 20.14 - assets > index - 
+/**interview-prep-app - version 21.09 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'exerciseinsynchronousprocessing' asset.
+ *     --> Renaming 'exerciseinsynchronousprocessing' as 
+ *         'exerciseinasynchronousprocessing' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -41,4 +42,4 @@ export { bigo1stgraph,
          queuesandmethods,
          stacksoverflow,
          synchronousprocessing,
-         exerciseinsynchronousprocessing };
+         exerciseinasynchronousprocessing };
