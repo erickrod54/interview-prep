@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.08 - StackAndQueues - 
+/**interview-prep-app - version 21.09 - StackAndQueues - 
  * Features: 
  * 
  *     --> Work in progress developing 'Stack and Queues'.  
  * 
- *     --> Adding a note about synchronous processing. 
+ *     --> Changing 'exerciseinsynchronousprocessing' to 
+ *         'exerciseinasynchronousprocessing'. 
  * 
  * Note: With the knowledge adquire so far i build a clean
  * up function to clear the values for CALLSTACK handler,
@@ -23,7 +24,7 @@ const StackAndQueues = () => {
     const stackandmethods = graphsData[12].image;
     const queuesandmethods = graphsData[13].image;
     const synchronousprocessing = graphsData[14].image;
-    const exerciseinsynchronousprocessing = graphsData[15].image
+    const exerciseinasynchronousprocessing = graphsData[15].image
 
     //CALL STACK states
     const [ a_state, setA_state ] = useState(0);
@@ -296,10 +297,10 @@ const StackAndQueues = () => {
             { callStack ? console.log('values of the stack ==>', a_state, b_state, c_state) : null}
 
             <p>
-                after generating the stack i have to know the concept of Synchronous Processing.
+                after generating the stack i have to know the concept of Synchronous and Asynchronous Processing.
             </p>
 
-            <h3>Synchronous Processing:</h3>
+            <h3>Asynchronous Processing:</h3>
 
             <p>
                 the stack involves <strong> the JavaScript enviroment </strong>, so all the  
@@ -309,7 +310,19 @@ const StackAndQueues = () => {
                 follows:
             </p>
 
-            <img src={synchronousprocessing} alt='synchronous processing'/>
+            <h3>Asynchronous VS Synchronous Processing:</h3>
+
+            <p>
+                Syncchronous processing takes place in the callstack, everything is executed in order,
+                so one process does not get exceuted until the next on the stack is done, the perefect
+                analogy is a phone call, you're calling to get an answer and in the meantime you just
+                wait and do nothing until the call get answered, and asynchronous is when the javaScript
+                Runtime enviroment works with a setTimeout and is executing things in paralel until the 
+                callback queue is done and execute the pending processes, the analogy is like a text message 
+                you send it, but you do things while you wait the answer
+            </p>
+
+            <img src={synchronousprocessing} alt='asynchronous processing'/>
 
             <p>
                 the stack generated is located in the <strong> 'Call Stack' </strong>
@@ -401,13 +414,13 @@ const StackAndQueues = () => {
             <p>
                 after the <strong> 'setTimeout' </strong>, has been set will
                  divide operations between the <strong> 'web application' </strong> and the 
-                 <strong> WEB API's </strong> this is call <strong> 'synchronousprocessing' 
+                 <strong> WEB API's </strong> this is call <strong> 'asynchronous processing' 
                 </strong> activating the rest of the pieces that compound the
                 <strong> 'JavaScript Runtime Enviroment' </strong>, as the picture 
                 that follows:
             </p>
 
-            <img src={exerciseinsynchronousprocessing} alt='exercise in synchronous processing'/>
+            <img src={exerciseinasynchronousprocessing} alt='exercise in synchronous processing'/>
             
         </DataStructuresWrapper>
     )
