@@ -13,15 +13,15 @@ import doublylinklistmethodscomplexity from './doubly_link_list_methods_complexi
 import stacksandmethods from  './stacks_and_methods.png';
 import queuesandmethods from './queues_and_methods.png'; 
 import stacksoverflow from './stacks_overflow.png';
-import synchronousprocessing from './synchronous_processing.png';
+import asynchronousprocessing from './asynchronous_processing.png';
 import exerciseinasynchronousprocessing from './exercise_in_asynchronous_processing.png';
 
 
-/**interview-prep-app - version 21.09 - assets > index - 
+/**interview-prep-app - version 21.10 - assets > index - 
  * Features: 
  * 
- *     --> Renaming 'exerciseinsynchronousprocessing' as 
- *         'exerciseinasynchronousprocessing' asset.
+ *     --> Renaming 'synchronousprocessing' as 
+ *         'asynchronousprocessing' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -41,5 +41,5 @@ export { bigo1stgraph,
          stacksandmethods,
          queuesandmethods,
          stacksoverflow,
-         synchronousprocessing,
+         asynchronousprocessing,
          exerciseinasynchronousprocessing };
