@@ -13,13 +13,13 @@ import { hashtable,
          stacksandmethods,
          queuesandmethods,
          synchronousprocessing,
-         exerciseinsynchronousprocessing} from './assets/index';
-         
+         exerciseinasynchronousprocessing,
+         } from './assets/index';      
 
-/**interview-prep-app - version 20.14 - data js - 
+/**interview-prep-app - version 21.09 - data js - 
  * Features: 
  * 
- *     --> Adding 'exerciseinsynchronousprocessing' for 
+ *     --> Adding 'exerciseinasynchronousprocessing' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -183,7 +183,7 @@ export const linksData = [
       },
       {
         id:16,
-        image:exerciseinsynchronousprocessing
+        image:exerciseinasynchronousprocessing
       }
     ]
     
