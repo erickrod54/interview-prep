@@ -12,14 +12,14 @@ import { hashtable,
          doublylinklistmethodscomplexity,
          stacksandmethods,
          queuesandmethods,
-         synchronousprocessing,
          exerciseinasynchronousprocessing,
+         asynchronousprocessing,
          } from './assets/index';      
 
-/**interview-prep-app - version 21.09 - data js - 
+/**interview-prep-app - version 21.10 - data js - 
  * Features: 
  * 
- *     --> Adding 'exerciseinasynchronousprocessing' for 
+ *     --> Adding 'asynchronousprocessing' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -179,7 +179,7 @@ export const linksData = [
       },
       {
         id:15,
-        image:synchronousprocessing
+        image:asynchronousprocessing
       },
       {
         id:16,
