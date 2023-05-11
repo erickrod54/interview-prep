@@ -15,11 +15,12 @@ import InterviewQA from "./interview.questons";
 import LinkedLists from "./linked.lists.component";
 import SpaceComplexity from "./space.complexity.component";
 import StackAndQueues from "./stack.and.queues.component";
+import StacksAndLinkedList from "./stack.linked.list.component";
 
-/**interview-prep-app - version 20.05 - 
+/**interview-prep-app - version 21.11 - 
  * components > index - Features: 
  * 
- *     --> Importing and exporting 'StackAndQueues'.
+ *     --> Importing and exporting 'StacksAndLinkedList'.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -41,5 +42,6 @@ export { ArrayDataStructure,
          InterviewQA,
          LinkedLists,
          SpaceComplexity,
-         StackAndQueues
+         StackAndQueues,
+         StacksAndLinkedList
         }
