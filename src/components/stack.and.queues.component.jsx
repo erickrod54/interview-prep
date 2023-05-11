@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.09 - StackAndQueues - 
+/**interview-prep-app - version 21.10 - StackAndQueues - 
  * Features: 
  * 
- *     --> Work in progress developing 'Stack and Queues'.  
+ *     --> Finishing to developing 'Stack and Queues'.  
  * 
- *     --> Changing 'exerciseinsynchronousprocessing' to 
- *         'exerciseinasynchronousprocessing'. 
+ *     --> Changing 'synchronousprocessing' to 
+ *         'asynchronousprocessing'.
+ * 
+ *     --> Fininshing to editing synchronous and 
+ *         asynchronous concept. 
  * 
  * Note: With the knowledge adquire so far i build a clean
  * up function to clear the values for CALLSTACK handler,
@@ -23,7 +26,7 @@ const StackAndQueues = () => {
 
     const stackandmethods = graphsData[12].image;
     const queuesandmethods = graphsData[13].image;
-    const synchronousprocessing = graphsData[14].image;
+    const asynchronousprocessing = graphsData[14].image;
     const exerciseinasynchronousprocessing = graphsData[15].image
 
     //CALL STACK states
@@ -306,7 +309,7 @@ const StackAndQueues = () => {
                 the stack involves <strong> the JavaScript enviroment </strong>, so all the  
                 operations performed, by setting a <strong> 'setTimeout' </strong>, operations
                 are divided between the <strong> 'web application' </strong> and the <strong> WEB API's </strong>
-                this is call <strong> 'synchronousprocessing' </strong>, as the picture that
+                this is call <strong> 'asynchronousprocessing' </strong>, as the picture that
                 follows:
             </p>
 
@@ -322,7 +325,7 @@ const StackAndQueues = () => {
                 you send it, but you do things while you wait the answer
             </p>
 
-            <img src={synchronousprocessing} alt='asynchronous processing'/>
+            <img src={asynchronousprocessing} alt='asynchronous processing'/>
 
             <p>
                 the stack generated is located in the <strong> 'Call Stack' </strong>
