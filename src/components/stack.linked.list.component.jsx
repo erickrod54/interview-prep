@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.18 - StacksAndLinkedList  
+/**interview-prep-app - version 21.19 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building states for push method. 
+ *     --> Building push method in the linked list. 
  * 
  * Note: In this component is going to be develop 
  * how stacks works with linked list to create a new
@@ -37,6 +37,22 @@ const StacksAndLinkedList = () => {
         peek(){
             cleanupPeek()
             return this.top;
+        }
+
+        push(value){
+            /**i can create a new object or instatiate as i am doing it 
+             * new Node*/
+            const newNode = new Node(value)
+            if (this.length === 0) {
+                this.top = newNode;
+                this.bottom = newNode;
+            }else{
+                const holdingPointer = this.top;
+                this.top = newNode;
+                this.top.next = holdingPointer;
+            }
+            this.length++;
+            return this;
         }
         
         pop(){
