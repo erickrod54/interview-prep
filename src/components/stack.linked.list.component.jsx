@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.19 - StacksAndLinkedList  
+/**interview-prep-app - version 21.20 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building push method in the linked list. 
+ *     --> Building printList method in the linked list. 
  * 
- * Note: In this component is going to be develop 
- * how stacks works with linked list to create a new
- * data structure.
+ * Note: printList method will help the handler to print 
+ * the list by using the handler and states.
  */
 
 const StacksAndLinkedList = () => {
@@ -53,6 +52,16 @@ const StacksAndLinkedList = () => {
             }
             this.length++;
             return this;
+        }
+
+        printList() {
+            const array = [];
+            let currentNode = this.top;
+            while (currentNode !== null) {
+                array.push(currentNode.value, ',');
+                currentNode = currentNode.next;
+            }
+            return array;
         }
         
         pop(){
