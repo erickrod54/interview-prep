@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.17 - StacksAndLinkedList  
+/**interview-prep-app - version 21.18 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Placing cleanupPeek in the peek method. 
+ *     --> Building states for push method. 
  * 
  * Note: In this component is going to be develop 
  * how stacks works with linked list to create a new
@@ -17,6 +17,8 @@ import { DataStructuresWrapper } from "../styled.components";
 const StacksAndLinkedList = () => {
 
     const [ peek, setPeek ] = useState('')
+    const [ pushvalue, setPushvalue ] = useState([])
+    
 
     class Node {
         constructor(value) {
@@ -36,14 +38,12 @@ const StacksAndLinkedList = () => {
             cleanupPeek()
             return this.top;
         }
-
-        push(value){
-
-        }
-
+        
         pop(){
 
         }
+
+      
 
         //
     }
@@ -92,6 +92,13 @@ const StacksAndLinkedList = () => {
             <button onClick={handlePeek}> handle peek </button>
 
             <p>{peek === null ? 'null' : peek}</p>
+
+
+            <h3>Push mehtod:</h3>
+
+            <p>
+                the push method is going to insert a value into an array using the linked list 
+            </p>
             
 
         </DataStructuresWrapper>
