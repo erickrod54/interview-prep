@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.13 - StacksAndLinkedList  
+/**interview-prep-app - version 21.14 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building peek method in the linked list
- *         and states to mutate it 
+ *     --> Building handlePeek handler to mutate the
+ *         peek state 
  * 
  * Note: In this component is going to be develop 
  * how stacks works with linked list to create a new
@@ -51,6 +51,10 @@ const StacksAndLinkedList = () => {
 
     const myStack = new Stack();
 
+    const handlePeek = () => {
+        setPeek(myStack.peek())
+        console.log(peek)
+    }
     
     
     return(
