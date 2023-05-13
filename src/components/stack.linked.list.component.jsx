@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.14 - StacksAndLinkedList  
+/**interview-prep-app - version 21.15 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
@@ -61,6 +61,32 @@ const StacksAndLinkedList = () => {
         <DataStructuresWrapper>
             <h2>Stacks And Linked List</h2>
 
+            <p>
+                For the stack i am going to create the methods:
+            </p>
+
+            <ul>
+                <li>
+                    <strong> peek() </strong>
+                </li>
+                <li>
+                    <strong> push() </strong>
+                </li>
+                <li>
+                    <strong> pop() </strong>
+                </li>
+            </ul>
+
+            <h3>Peek method:</h3>
+
+            <p>
+                the <strong> peek </strong> method will get the plate from the top 
+                of the stack
+            </p>
+
+            <button onClick={handlePeek}> handle peek </button>
+
+            <p>{peek === null ? 'null' : peek}</p>
             
 
         </DataStructuresWrapper>
