@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.07 - StacksAndLinkedList  
+/**interview-prep-app - version 22.08 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building the pop method in the linked list. 
+ *     --> Building the handlePopvalue handler. 
  * 
  * Note: printList method will help the handler to print 
  * the list by using the handler and states.
@@ -117,6 +117,15 @@ const StacksAndLinkedList = () => {
 
         setPushvalue(myStack.printList())
     }
+
+    const handlePopvalue = () => {
+        myStack.push(' google ')
+        myStack.push(' discord ')
+        myStack.push(' udemy ')
+        myStack.pop()
+        console.log('push values stack ==> ',myStack)
+        setPopvalue(myStack.printList())
+      }
     
     return(
         <DataStructuresWrapper>
