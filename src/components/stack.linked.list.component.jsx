@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.02 - StacksAndLinkedList  
+/**interview-prep-app - version 22.03 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building peekfrompush states. 
+ *     --> Adding more values to the push list stack. 
  * 
  * Note: printList method will help the handler to print 
  * the list by using the handler and states.
@@ -95,8 +95,11 @@ const StacksAndLinkedList = () => {
     
     const handlePushvalue = () => {
         myStack.push(' google ')
+        myStack.push(' discord ')
+        myStack.push(' udemy ')
+        console.log('push values stack ==> ',myStack)
+
         setPushvalue(myStack.printList())
-        return console.log(myStack.printList())
     }
     
     return(
