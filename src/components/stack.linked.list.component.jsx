@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.04 - StacksAndLinkedList  
+/**interview-prep-app - version 22.05 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Implementing peek states and mutator to get
- *         the last item added to the stack. 
+ *     --> Rendering the last value added to the list. 
  * 
  * Note: printList method will help the handler to print 
  * the list by using the handler and states.
@@ -151,6 +150,12 @@ const StacksAndLinkedList = () => {
             <button onClick={handlePushvalue}>insert a value into the stack</button>
 
             <p>[{pushvalue}]</p>
+
+            <p>
+                and if i want to know the <strong> last value added to the last list </strong>:
+            </p>
+
+            <p>{peekfrompush}</p>
             
 
         </DataStructuresWrapper>
