@@ -1,30 +1,27 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.09 - StacksAndLinkedList  
+/**interview-prep-app - version 22.10 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Rendering the list after pop the las element. 
+ *     --> Using 'Stack' structure to build up 'StackusingArrays'. 
  * 
- * Note: printList method will help the handler to print 
- * the list by using the handler and states.
- * 
- * Here, peek() method is called to get the top element of 
- * the stack and its value is assigned to the peekValue constant 
- * using the optional chaining operator (?.) and the nullish coalescing
- *  operator (??) to handle cases when peek() method 
- * returns null or undefined.
+ * Note:'Stack' structure use objects and 'StackusingArrays' will
+ * use arrays by changing the constructor object for an array
  */
 
 const StacksAndLinkedList = () => {
 
+    /**linked list stack using objects */
     const [ peek, setPeek ] = useState('')
     const [ pushvalue, setPushvalue ] = useState([])
     const [ peekfrompush, setPeekfrompush ] = useState([])
     const [ popvalue, setPopvalue ] = useState([])
+
+    
 
     class Node {
         constructor(value) {
@@ -33,6 +30,7 @@ const StacksAndLinkedList = () => {
         }
     }
 
+    /**This Stack is implemented with objects */ 
     class Stack {
         constructor(){
             this.top = null;
@@ -88,6 +86,64 @@ const StacksAndLinkedList = () => {
 
         //
     }
+
+    /**This Stack is implemented with arrays */ 
+    class StackusingArrays {
+        /**constructor changes the emoty objects for an empty array */
+        constructor(){
+            this.array = []
+        }
+
+        peek(){
+            cleanupPeek()
+            return this.top;
+        }
+
+        push(value){
+            /**i can create a new object or instatiate as i am doing it 
+             * new Node*/
+            const newNode = new Node(value)
+            if (this.length === 0) {
+                this.top = newNode;
+                this.bottom = newNode;
+            }else{
+                const holdingPointer = this.top;
+                this.top = newNode;
+                this.top.next = holdingPointer;
+            }
+            this.length++;
+            return this;
+        }
+
+        printList() {
+            const array = [];
+            let currentNode = this.top;
+            while (currentNode !== null) {
+                array.push(currentNode.value, ',');
+                currentNode = currentNode.next;
+            }
+            return array;
+        }
+        
+        pop(){
+            if (!this.top) {
+                return null 
+            }
+            if (this.top === this.bottom) {
+                return this.bottom = null;
+            }
+            
+            this.top = this.top.next;
+            this.length--;
+            return this
+        }
+
+      
+
+        //
+    }
+
+    
 
     const myStack = new Stack();
 
@@ -184,6 +240,7 @@ const StacksAndLinkedList = () => {
             <button onClick={handlePopvalue}>pop a value into the stack</button>
 
             <p>{popvalue}</p>
+
 
         </DataStructuresWrapper>
     )
