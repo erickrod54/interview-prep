@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.00 - StacksAndLinkedList  
+/**interview-prep-app - version 22.01 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building handlePushvalue handler to push
- *         items and render them through the printList
- *         method. 
+ *     --> Rendering push values. 
  * 
  * Note: printList method will help the handler to print 
  * the list by using the handler and states.
@@ -131,7 +129,10 @@ const StacksAndLinkedList = () => {
             <p>
                 the push method is going to insert a value into an array using the linked list 
             </p>
-            
+
+            <button onClick={handlePushvalue}>insert a value into the stack</button>
+
+            <p>[{pushvalue}]</p>
 
         </DataStructuresWrapper>
     )
