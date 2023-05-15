@@ -1,22 +1,29 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.01 - StacksAndLinkedList  
+/**interview-prep-app - version 22.02 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Rendering push values. 
+ *     --> Building peekfrompush states. 
  * 
  * Note: printList method will help the handler to print 
  * the list by using the handler and states.
+ * 
+ * Here, peek() method is called to get the top element of 
+ * the stack and its value is assigned to the peekValue constant 
+ * using the optional chaining operator (?.) and the nullish coalescing
+ *  operator (??) to handle cases when peek() method 
+ * returns null or undefined.
  */
 
 const StacksAndLinkedList = () => {
 
     const [ peek, setPeek ] = useState('')
     const [ pushvalue, setPushvalue ] = useState([])
+    const [ peekfrompush, setPeekfrompush ] = useState([])
     
 
     class Node {
@@ -133,6 +140,7 @@ const StacksAndLinkedList = () => {
             <button onClick={handlePushvalue}>insert a value into the stack</button>
 
             <p>[{pushvalue}]</p>
+            
 
         </DataStructuresWrapper>
     )
