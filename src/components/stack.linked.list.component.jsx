@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.05 - StacksAndLinkedList  
+/**interview-prep-app - version 22.06 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Rendering the last value added to the list. 
+ *     --> Building the pop states. 
  * 
  * Note: printList method will help the handler to print 
  * the list by using the handler and states.
@@ -24,7 +24,7 @@ const StacksAndLinkedList = () => {
     const [ peek, setPeek ] = useState('')
     const [ pushvalue, setPushvalue ] = useState([])
     const [ peekfrompush, setPeekfrompush ] = useState([])
-    
+    const [ popvalue, setPopvalue ] = useState([])
 
     class Node {
         constructor(value) {
@@ -72,7 +72,6 @@ const StacksAndLinkedList = () => {
         }
         
         pop(){
-
         }
 
       
@@ -156,7 +155,6 @@ const StacksAndLinkedList = () => {
             </p>
 
             <p>{peekfrompush}</p>
-            
 
         </DataStructuresWrapper>
     )
