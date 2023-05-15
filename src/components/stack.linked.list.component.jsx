@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.08 - StacksAndLinkedList  
+/**interview-prep-app - version 22.09 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building the handlePopvalue handler. 
+ *     --> Rendering the list after pop the las element. 
  * 
  * Note: printList method will help the handler to print 
  * the list by using the handler and states.
@@ -174,6 +174,16 @@ const StacksAndLinkedList = () => {
             </p>
 
             <p>{peekfrompush}</p>
+
+            <h3>Pop mehtod:</h3>
+
+            <p>
+                and if i want to know the <strong> pop the value of the top </strong>:
+            </p>
+
+            <button onClick={handlePopvalue}>pop a value into the stack</button>
+
+            <p>{popvalue}</p>
 
         </DataStructuresWrapper>
     )
