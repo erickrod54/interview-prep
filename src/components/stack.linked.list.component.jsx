@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.03 - StacksAndLinkedList  
+/**interview-prep-app - version 22.04 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Adding more values to the push list stack. 
+ *     --> Implementing peek states and mutator to get
+ *         the last item added to the stack. 
  * 
  * Note: printList method will help the handler to print 
  * the list by using the handler and states.
@@ -98,6 +99,13 @@ const StacksAndLinkedList = () => {
         myStack.push(' discord ')
         myStack.push(' udemy ')
         console.log('push values stack ==> ',myStack)
+
+        /**if the value is not verified will trow the following error */
+        /**Uncaught Error: Objects are not valid as a React child (found: object with keys {value, next}). If you meant to render a collection of children, use an array instead.*/
+        /** optional chaining operator (?.) and the nullish coalescing operator (??)*/
+        const peekValue = myStack.peek()?.value ?? "";
+        console.log('the peekValue is ==> ',peekValue)
+        setPeekfrompush(peekValue);
 
         setPushvalue(myStack.printList())
     }
