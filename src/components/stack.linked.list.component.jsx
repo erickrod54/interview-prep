@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.11 - StacksAndLinkedList  
+/**interview-prep-app - version 22.12 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building peekfromarray for 'StackusingArrays'
- *         (starting to build peek method). 
+ *     --> Building peek method for 'StackusingArrays'. 
  * 
  * Note:'Stack' structure use objects and 'StackusingArrays' will
  * use arrays by changing the constructor object for an array
@@ -99,8 +98,7 @@ const StacksAndLinkedList = () => {
         }
 
         peek(){
-            cleanupPeek()
-            return this.top;
+            return this.array[this.array.length-1]
         }
 
         push(value){
