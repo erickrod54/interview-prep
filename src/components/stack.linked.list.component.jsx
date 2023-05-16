@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.17 - StacksAndLinkedList  
+/**interview-prep-app - version 22.18 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building 'handlePushvaluetoarray' handler. 
+ *     --> Rendering 'pushValuetoarray' data. 
  * 
  * Note:'Stack' structure use objects and 'StackusingArrays' will
  * use arrays by changing the constructor object for an array
@@ -270,9 +270,12 @@ const StacksAndLinkedList = () => {
             <h3>Push method:</h3>
 
             <p>
-                the <strong> peek </strong> method will get the plate from the top 
-                of the stack from an array
+                the push method will push items into the array stack
             </p>
+
+            <button onClick={handlePushvaluetoarray}> handle push to an array</button>
+        
+            <p>[{pushValuetoarray +','}]</p>
 
         </DataStructuresWrapper>
     )
