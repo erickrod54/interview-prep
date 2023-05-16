@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.15 - StacksAndLinkedList  
+/**interview-prep-app - version 22.16 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building 'pushValuetoarray' states. 
+ *     --> Building 'push' method in 'StackusingArrays'. 
  * 
  * Note:'Stack' structure use objects and 'StackusingArrays' will
  * use arrays by changing the constructor object for an array
@@ -104,19 +104,9 @@ const StacksAndLinkedList = () => {
         }
 
         push(value){
-            /**i can create a new object or instatiate as i am doing it 
-             * new Node*/
-             const newNode = new Node(value)
-             if (this.length === 0) {
-                 this.top = newNode;
-                 this.bottom = newNode;
-             }else{
-                 const holdingPointer = this.top;
-                 this.top = newNode;
-                 this.top.next = holdingPointer;
-             }
-             this.length++;
-             return this;
+            /**i just call the push method pre built for arrays */
+            this.array.push(value);
+            return this;
         }
 
         printList() {
