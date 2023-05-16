@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.14 - StacksAndLinkedList  
+/**interview-prep-app - version 22.15 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Rendering 'peekfromarray' data. 
+ *     --> Building 'pushValuetoarray' states. 
  * 
  * Note:'Stack' structure use objects and 'StackusingArrays' will
  * use arrays by changing the constructor object for an array
@@ -23,6 +23,8 @@ const StacksAndLinkedList = () => {
 
     /**linked list stack using arrays */
     const [ peekfromarray, setPeekfromarray ] = useState('')
+    const [ pushValuetoarray, setpushValuetomarray ] = useState([]);
+    
 
     
 
@@ -49,17 +51,17 @@ const StacksAndLinkedList = () => {
         push(value){
             /**i can create a new object or instatiate as i am doing it 
              * new Node*/
-            const newNode = new Node(value)
-            if (this.length === 0) {
-                this.top = newNode;
-                this.bottom = newNode;
-            }else{
-                const holdingPointer = this.top;
-                this.top = newNode;
-                this.top.next = holdingPointer;
-            }
-            this.length++;
-            return this;
+             const newNode = new Node(value)
+             if (this.length === 0) {
+                 this.top = newNode;
+                 this.bottom = newNode;
+             }else{
+                 const holdingPointer = this.top;
+                 this.top = newNode;
+                 this.top.next = holdingPointer;
+             }
+             this.length++;
+             return this;
         }
 
         printList() {
@@ -104,17 +106,17 @@ const StacksAndLinkedList = () => {
         push(value){
             /**i can create a new object or instatiate as i am doing it 
              * new Node*/
-            const newNode = new Node(value)
-            if (this.length === 0) {
-                this.top = newNode;
-                this.bottom = newNode;
-            }else{
-                const holdingPointer = this.top;
-                this.top = newNode;
-                this.top.next = holdingPointer;
-            }
-            this.length++;
-            return this;
+             const newNode = new Node(value)
+             if (this.length === 0) {
+                 this.top = newNode;
+                 this.bottom = newNode;
+             }else{
+                 const holdingPointer = this.top;
+                 this.top = newNode;
+                 this.top.next = holdingPointer;
+             }
+             this.length++;
+             return this;
         }
 
         printList() {
@@ -264,6 +266,13 @@ const StacksAndLinkedList = () => {
             <p>{peekfromarray === undefined ? 'undefined' : peekfromarray}</p>
 
             <p>{peekfromarray === undefined ? <span>it is <strong> 'undefined' </strong> because is an empty array</span> : null}</p>
+
+            <h3>Push method:</h3>
+
+            <p>
+                the <strong> peek </strong> method will get the plate from the top 
+                of the stack from an array
+            </p>
 
         </DataStructuresWrapper>
     )
