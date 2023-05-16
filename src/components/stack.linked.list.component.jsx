@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.13 - StacksAndLinkedList  
+/**interview-prep-app - version 22.14 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building handlePeekfromarray handler. 
+ *     --> Rendering 'peekfromarray' data. 
  * 
  * Note:'Stack' structure use objects and 'StackusingArrays' will
  * use arrays by changing the constructor object for an array
@@ -249,7 +249,21 @@ const StacksAndLinkedList = () => {
             <button onClick={handlePopvalue}>pop a value into the stack</button>
 
             <p>{popvalue}</p>
+            
+            <h2>Now the same linked list implementing Arrays:</h2>
 
+            <h3>Peek method:</h3>
+
+            <p>
+                the <strong> peek </strong> method will get the plate from the top 
+                of the stack from an array
+            </p>
+
+            <button onClick={handlePeekfromarray}> handle peek from an array</button>
+
+            <p>{peekfromarray === undefined ? 'undefined' : peekfromarray}</p>
+
+            <p>{peekfromarray === undefined ? <span>it is <strong> 'undefined' </strong> because is an empty array</span> : null}</p>
 
         </DataStructuresWrapper>
     )
