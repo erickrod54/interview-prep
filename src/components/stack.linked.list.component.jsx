@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 23.01 - StacksAndLinkedList  
+/**interview-prep-app - version 23.02 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building 'popvaluefromarray' states for
- *         pop method.
+ *     --> Building pop method.
  * 
  * Note:'Stack' structure use objects and 'StackusingArrays' will
  * use arrays by changing the constructor object for an array
@@ -122,16 +121,8 @@ const StacksAndLinkedList = () => {
         }
         
         pop(){
-            if (!this.top) {
-                return null 
-            }
-            if (this.top === this.bottom) {
-                return this.bottom = null;
-            }
-            
-            this.top = this.top.next;
-            this.length--;
-            return this
+            this.array.pop();
+            return this;
         }
 
       
