@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.20 - StacksAndLinkedList  
+/**interview-prep-app - version 23.00 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building 'peekValue' to set 'peekfrompustoarray'
+ *     --> Rendering 'peekfrompustoarray'.
  * 
  * Note:'Stack' structure use objects and 'StackusingArrays' will
  * use arrays by changing the constructor object for an array
@@ -282,6 +282,12 @@ const StacksAndLinkedList = () => {
             <button onClick={handlePushvaluetoarray}> handle push to an array</button>
         
             <p>[{pushValuetoarray +','}]</p>
+
+            <p>
+            and if i want to know the <strong> last value added to the last item of the array </strong>:
+            </p>
+
+            <p>{peekfrompustoarray}</p>
 
         </DataStructuresWrapper>
     )
