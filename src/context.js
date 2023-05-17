@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 23.06 - context js - 
+/**interview-prep-app - version 23.07 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'callStack' handler
+ *     --> Providing 'setB_state, and 'setC_state' states
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -470,7 +470,6 @@ export const AppProvider = ({ children }) => {
     const [ a_state, setA_state ] = useState(0);
     const [ b_state, setB_state ] = useState(0);
     const [ c_state, setC_state ] = useState(0);
-
     
     //CALL STACK handler
     const callStack = () => {
@@ -543,6 +542,8 @@ export const AppProvider = ({ children }) => {
             b_state,
             c_state,
             setA_state,
+            setB_state,
+            setC_state,
             setReversevalue,
             Object1ValueBooya,
             setRemoveListvalue,
