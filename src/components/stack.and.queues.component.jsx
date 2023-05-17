@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 21.10 - StackAndQueues - 
+/**interview-prep-app - version 23.05 - StackAndQueues - 
  * Features: 
  * 
- *     --> Finishing to developing 'Stack and Queues'.  
+ *     --> Migrating CALL STACK states and handlers.
  * 
- *     --> Changing 'synchronousprocessing' to 
- *         'asynchronousprocessing'.
- * 
- *     --> Fininshing to editing synchronous and 
- *         asynchronous concept. 
+ *     --> Destructuring 'a_state', snd 'setA_state'
+ *         from the context. 
  * 
  * Note: With the knowledge adquire so far i build a clean
  * up function to clear the values for CALLSTACK handler,
@@ -21,7 +18,7 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const StackAndQueues = () => {
 
-    const { graphsData } = useAppContext();
+    const { graphsData, a_state, setA_state } = useAppContext();
     console.log('this is the graphsData ==>', graphsData)
 
     const stackandmethods = graphsData[12].image;
@@ -30,7 +27,7 @@ const StackAndQueues = () => {
     const exerciseinasynchronousprocessing = graphsData[15].image
 
     //CALL STACK states
-    const [ a_state, setA_state ] = useState(0);
+    
     const [ b_state, setB_state ] = useState(0);
     const [ c_state, setC_state ] = useState(0);
 
