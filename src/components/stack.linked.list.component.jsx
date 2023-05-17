@@ -7,7 +7,8 @@ import { DataStructuresWrapper } from "../styled.components";
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building 'handlePopvaluefromarray' handler.
+ *     --> Rendering 'popvaluefromarray' from pop
+ *         handler.
  * 
  * Note:'Stack' structure use objects and 'StackusingArrays' will
  * use arrays by changing the constructor object for an array
@@ -158,6 +159,8 @@ const StacksAndLinkedList = () => {
     }
 
     const handlePopvaluefromarray = () => {
+        /**i invoke the push handler inside the pop handler,
+         * so i will have a value to pop*/
         handlePushvaluetoarray()
         myStackusingArrays.pop()
         console.log('push values stack ==> ',myStack)
@@ -288,6 +291,22 @@ const StacksAndLinkedList = () => {
             </p>
 
             <p>{peekfrompustoarray}</p>
+
+            <h3>Pop method:</h3>
+
+            <p>
+                the pop method will pop items from the array stack, notice 
+                that i do not need a <strong> 'printList()' </strong> method 
+                to render the items, i just access through the linked list
+                <strong> 'myStackusingArrays' </strong> to the <strong> 'array' </strong> 
+                like this <strong> 'myStackusingArrays.array' </strong> and then mutate 
+                <strong> 'setPopvaluefromarray(myStackusingArrays.array)' </strong> the 
+                value in order to render it
+            </p>
+
+            <button onClick={handlePopvaluefromarray}> handle push to an array</button>
+        
+            <p>[{popvaluefromarray +','}]</p>
 
         </DataStructuresWrapper>
     )
