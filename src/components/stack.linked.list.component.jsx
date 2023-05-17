@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.18 - StacksAndLinkedList  
+/**interview-prep-app - version 22.19 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Rendering 'pushValuetoarray' data. 
+ *     --> Building 'peekfrompustoarray' to get the peek 
+ *         from the data pushed. 
  * 
  * Note:'Stack' structure use objects and 'StackusingArrays' will
  * use arrays by changing the constructor object for an array
@@ -24,7 +25,7 @@ const StacksAndLinkedList = () => {
     /**linked list stack using arrays */
     const [ peekfromarray, setPeekfromarray ] = useState('')
     const [ pushValuetoarray, setpushValuetomarray ] = useState([]);
-    
+    const [ peekfrompustoarray, setPeekfrompustoarray ] = useState([]);
 
     
 
