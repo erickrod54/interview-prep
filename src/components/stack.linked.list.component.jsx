@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 22.19 - StacksAndLinkedList  
+/**interview-prep-app - version 22.20 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building 'peekfrompustoarray' to get the peek 
- *         from the data pushed. 
+ *     --> Building 'peekValue' to set 'peekfrompustoarray'
  * 
  * Note:'Stack' structure use objects and 'StackusingArrays' will
  * use arrays by changing the constructor object for an array
@@ -155,6 +154,12 @@ const StacksAndLinkedList = () => {
         myStackusingArrays.push(' udemy ')
         console.log('push values array stack ==> ',myStackusingArrays)
     
+        /**this time does not need verification with optional chaining 
+         * because the stack is working with arrays and not with objects*/
+        const peekValue = myStackusingArrays.peek();
+        console.log('the peekValue is ==> ',peekValue)
+        setPeekfrompustoarray(peekValue);
+
         /**here i acces to the array and set it as the value */
         setpushValuetomarray(myStackusingArrays.array)
     }
