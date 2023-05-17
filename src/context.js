@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 23.05 - context js - 
+/**interview-prep-app - version 23.06 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'Stack and queues states 
- *         and handlers'
+ *     --> Placing and providing 'callStack' handler
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -469,7 +468,19 @@ export const AppProvider = ({ children }) => {
 
     /**Stack and queues states and handlers */
     const [ a_state, setA_state ] = useState(0);
+    const [ b_state, setB_state ] = useState(0);
+    const [ c_state, setC_state ] = useState(0);
 
+    
+    //CALL STACK handler
+    const callStack = () => {
+        return (
+                setA_state(1),
+                setB_state(2),
+                setC_state(3)
+               /**pending to invoke cleanUpfunction*/
+                )
+    }
 
     return (
         <AppContext.Provider value={{
@@ -529,6 +540,8 @@ export const AppProvider = ({ children }) => {
             removeListvalue,
             reversevalue,
             a_state,
+            b_state,
+            c_state,
             setA_state,
             setReversevalue,
             Object1ValueBooya,
@@ -581,7 +594,8 @@ export const AppProvider = ({ children }) => {
             handlefirstRecurringCharacter,
             handlefirstRecurringCharacter1,
             handlefirstRecurringCharacter2,
-            handleDelete
+            handleDelete,
+            callStack
         }}>
             {children}
         </AppContext.Provider>
