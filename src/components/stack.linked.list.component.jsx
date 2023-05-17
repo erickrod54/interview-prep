@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 23.02 - StacksAndLinkedList  
+/**interview-prep-app - version 23.03 - StacksAndLinkedList  
  * - Features: 
  * 
  *     --> Work in progress developing a Linked 
  *         List for the Stack.
  * 
- *     --> Building pop method.
+ *     --> Building 'handlePopvaluefromarray' handler.
  * 
  * Note:'Stack' structure use objects and 'StackusingArrays' will
  * use arrays by changing the constructor object for an array
@@ -156,6 +156,13 @@ const StacksAndLinkedList = () => {
         /**here i acces to the array and set it as the value */
         setpushValuetomarray(myStackusingArrays.array)
     }
+
+    const handlePopvaluefromarray = () => {
+        handlePushvaluetoarray()
+        myStackusingArrays.pop()
+        console.log('push values stack ==> ',myStack)
+        setPopvaluefromarray(myStackusingArrays.array)
+      }
 
     const handlePeek = () => {
         setPeek(myStack.peek())
