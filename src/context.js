@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 20.11 - context js - 
+/**interview-prep-app - version 23.05 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'reversevalue', and 
- *         'setReversevalue' for linked.lists.component
+ *     --> Placing and providing 'Stack and queues states 
+ *         and handlers'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -467,6 +467,9 @@ export const AppProvider = ({ children }) => {
         setObj1(obj1)
     }
 
+    /**Stack and queues states and handlers */
+    const [ a_state, setA_state ] = useState(0);
+
 
     return (
         <AppContext.Provider value={{
@@ -525,6 +528,8 @@ export const AppProvider = ({ children }) => {
             inserListvalue,
             removeListvalue,
             reversevalue,
+            a_state,
+            setA_state,
             setReversevalue,
             Object1ValueBooya,
             setRemoveListvalue,
