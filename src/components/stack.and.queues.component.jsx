@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 23.05 - StackAndQueues - 
+/**interview-prep-app - version 23.07 - StackAndQueues - 
  * Features: 
  * 
- *     --> Migrating CALL STACK states and handlers.
+ *     --> Migrating 'callStack' handler and states.
  * 
- *     --> Destructuring 'a_state', snd 'setA_state'
- *         from the context. 
+ *     --> Destructuring 'callStack' handler. 
  * 
  * Note: With the knowledge adquire so far i build a clean
  * up function to clear the values for CALLSTACK handler,
@@ -18,7 +17,8 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const StackAndQueues = () => {
 
-    const { graphsData, a_state, setA_state } = useAppContext();
+    const { graphsData, callStack, a_state, b_state, c_state, setA_state, setB_state,
+            setC_state } = useAppContext();
     console.log('this is the graphsData ==>', graphsData)
 
     const stackandmethods = graphsData[12].image;
@@ -26,10 +26,7 @@ const StackAndQueues = () => {
     const asynchronousprocessing = graphsData[14].image;
     const exerciseinasynchronousprocessing = graphsData[15].image
 
-    //CALL STACK states
-    
-    const [ b_state, setB_state ] = useState(0);
-    const [ c_state, setC_state ] = useState(0);
+
 
     //CALL STACK && CALLBACK QUEUE states 
     const [ a_time_state, setA_time_state ] = useState(0);
@@ -41,15 +38,7 @@ const StackAndQueues = () => {
     const [ b_zero_state, setB_zero_state ] = useState(0);
     const [ c_zero_state, setC_zero_state ] = useState(0);
 
-    //CALL STACK handler
-    const callStack = () => {
-        return (
-                setA_state(1),
-                setB_state(2),
-                setC_state(3),
-                cleanUpfunction()
-                )
-    }
+    
 
     //CALL STACK && CALLBACK QUEUE handler
     const callSetTimeoutStack = () => {
