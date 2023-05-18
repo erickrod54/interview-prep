@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 23.07 - context js - 
+/**interview-prep-app - version 23.08 - context js - 
  * Features: 
  * 
- *     --> Providing 'setB_state, and 'setC_state' states
+ *     --> Providing 'cleanUpfunction()' handler
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -476,10 +476,21 @@ export const AppProvider = ({ children }) => {
         return (
                 setA_state(1),
                 setB_state(2),
-                setC_state(3)
-               /**pending to invoke cleanUpfunction*/
+                setC_state(3),
+                cleanUpfunction()
                 )
     }
+
+        //CALL STACK handler cleanUp function
+        const cleanUpfunction = () => {
+            setTimeout(() => {
+                return(
+                    setA_state(0),
+                    setB_state(0),
+                    setC_state(0)
+                )
+            }, 6000)
+        }
 
     return (
         <AppContext.Provider value={{
@@ -596,7 +607,8 @@ export const AppProvider = ({ children }) => {
             handlefirstRecurringCharacter1,
             handlefirstRecurringCharacter2,
             handleDelete,
-            callStack
+            callStack,
+            cleanUpfunction
         }}>
             {children}
         </AppContext.Provider>
