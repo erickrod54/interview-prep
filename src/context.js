@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 23.09 - context js - 
+/**interview-prep-app - version 23.10 - context js - 
  * Features: 
  * 
- *     --> Clearing 'setA_state' provide
+ *     --> Clearing 'setB_state' provide
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -552,7 +552,6 @@ export const AppProvider = ({ children }) => {
             a_state,
             b_state,
             c_state,
-            setB_state,
             setC_state,
             setReversevalue,
             Object1ValueBooya,
