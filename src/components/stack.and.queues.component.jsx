@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 23.11 - StackAndQueues - 
+/**interview-prep-app - version 23.12 - StackAndQueues - 
  * Features: 
  * 
- *     --> Clearing 'setC_state' and testing. 
+ *     --> Clearing 'cleanUpfunction' and testing. 
  * 
  * Note: With the knowledge adquire so far i build a clean
  * up function to clear the values for CALLSTACK handler,
@@ -15,7 +15,7 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const StackAndQueues = () => {
 
-    const { graphsData, callStack, a_state, b_state, c_state, cleanUpfunction } = useAppContext();
+    const { graphsData, callStack, a_state, b_state, c_state } = useAppContext();
     console.log('this is the graphsData ==>', graphsData)
 
     const stackandmethods = graphsData[12].image;
