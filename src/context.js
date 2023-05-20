@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 23.13 - context js - 
+/**interview-prep-app - version 23.14 - context js - 
  * Features: 
  * 
- *     --> Placing and providing CALL STACK && CALLBACK 
- *         QUEUE states
+ *     --> Placing and providing 'callSetTimeoutStack'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -476,6 +475,18 @@ export const AppProvider = ({ children }) => {
     const [ a_time_state, setA_time_state ] = useState(0);
     const [ b_time_state, setB_time_state ] = useState(0);
     const [ c_time_state, setC_time_state ] = useState(0);
+
+    //CALL STACK && CALLBACK QUEUE handler
+    const callSetTimeoutStack = () => {
+        return (
+                setA_time_state(1),
+                setTimeout(() => {
+                    setB_time_state(2)
+                }, 2000),
+                setC_time_state(3)
+                /**pending to trigger 'cleanUpSetTimeoutfunction()' */
+                )
+    }
     
     //CALL STACK handler
     const callStack = () => {
@@ -616,7 +627,8 @@ export const AppProvider = ({ children }) => {
             handlefirstRecurringCharacter1,
             handlefirstRecurringCharacter2,
             handleDelete,
-            callStack
+            callStack,
+            callSetTimeoutStack
         }}>
             {children}
         </AppContext.Provider>
