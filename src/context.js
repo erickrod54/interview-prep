@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 23.11 - context js - 
+/**interview-prep-app - version 23.12 - context js - 
  * Features: 
  * 
- *     --> Clearing 'setC_state' provide
+ *     --> Clearing 'cleanUpfunction' provide
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -604,8 +604,7 @@ export const AppProvider = ({ children }) => {
             handlefirstRecurringCharacter1,
             handlefirstRecurringCharacter2,
             handleDelete,
-            callStack,
-            cleanUpfunction
+            callStack
         }}>
             {children}
         </AppContext.Provider>
