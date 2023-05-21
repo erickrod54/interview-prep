@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 23.13 - StackAndQueues - 
+/**interview-prep-app - version 23.14 - StackAndQueues - 
  * Features: 
  * 
- *     --> Migrating CALL STACK && CALLBACK QUEUE states.
+ *     --> Migrating 'callSetTimeoutStack'.
  * 
- *     --> Destructuring CALL STACK && CALLBACK QUEUE states.
+ *     --> Destructuring 'callSetTimeoutStack'.
  * 
  * Note: With the knowledge adquire so far i build a clean
  * up function to clear the values for CALLSTACK handler,
@@ -27,7 +27,8 @@ const StackAndQueues = () => {
             c_time_state, 
             setA_time_state,
             setB_time_state,
-            setC_time_state  } = useAppContext();
+            setC_time_state,
+            callSetTimeoutStack  } = useAppContext();
     console.log('this is the graphsData ==>', graphsData)
 
     const stackandmethods = graphsData[12].image;
@@ -42,18 +43,6 @@ const StackAndQueues = () => {
     const [ c_zero_state, setC_zero_state ] = useState(0);
 
     
-
-    //CALL STACK && CALLBACK QUEUE handler
-    const callSetTimeoutStack = () => {
-        return (
-                setA_time_state(1),
-                setTimeout(() => {
-                    setB_time_state(2)
-                }, 2000),
-                setC_time_state(3),
-                cleanUpSetTimeoutfunction()
-                )
-    }
 
     //CALL STACK && CALLBACK QUEUE cleanup function
     const cleanUpSetTimeoutfunction = () => {
