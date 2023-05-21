@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 23.15 - StackAndQueues - 
+/**interview-prep-app - version 23.16 - StackAndQueues - 
  * Features: 
  * 
- *     --> Migrating 'cleanup function'.
- * 
- *     --> Destructuring 'cleanup function'.
+ *     --> Clearing 'setA_time_state'.
  * 
  * Note: With the knowledge adquire so far i build a clean
  * up function to clear the values for CALLSTACK handler,
@@ -24,8 +22,7 @@ const StackAndQueues = () => {
             c_state, 
             a_time_state,
             b_time_state,
-            c_time_state, 
-            setA_time_state,
+            c_time_state,
             setB_time_state,
             setC_time_state,
             callSetTimeoutStack  } = useAppContext();
