@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 23.15 - context js - 
+/**interview-prep-app - version 23.16 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'cleanUpSetTimeoutfunction'
+ *     --> Clearing 'setA_time_state' provide
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -475,7 +475,7 @@ export const AppProvider = ({ children }) => {
     const [ a_time_state, setA_time_state ] = useState(0);
     const [ b_time_state, setB_time_state ] = useState(0);
     const [ c_time_state, setC_time_state ] = useState(0);
-
+    
     //CALL STACK && CALLBACK QUEUE handler
     const callSetTimeoutStack = () => {
         return (
@@ -582,8 +582,7 @@ export const AppProvider = ({ children }) => {
             c_state,
             a_time_state,
             b_time_state,
-            c_time_state, 
-            setA_time_state,
+            c_time_state,
             setB_time_state,
             setC_time_state,
             setReversevalue,
