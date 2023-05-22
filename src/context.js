@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 23.17 - context js - 
+/**interview-prep-app - version 23.18 - context js - 
  * Features: 
  * 
- *     --> Clearing 'setB_time_state' provide
+ *     --> Clearing 'setC_time_state' provide
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -519,7 +519,7 @@ export const AppProvider = ({ children }) => {
             )
         }, 6000)
     }
-    
+
     return (
         <AppContext.Provider value={{
             nemo,
@@ -583,7 +583,6 @@ export const AppProvider = ({ children }) => {
             a_time_state,
             b_time_state,
             c_time_state,
-            setC_time_state,
             setReversevalue,
             Object1ValueBooya,
             setRemoveListvalue,
