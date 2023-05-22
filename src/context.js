@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 23.18 - context js - 
+/**interview-prep-app - version 23.19 - context js - 
  * Features: 
  * 
- *     --> Clearing 'setC_time_state' provide
+ *     --> Placing and providing CALL STACK && CALLBACK QUEUE 
+ *         states for zero seconds case
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -475,7 +476,12 @@ export const AppProvider = ({ children }) => {
     const [ a_time_state, setA_time_state ] = useState(0);
     const [ b_time_state, setB_time_state ] = useState(0);
     const [ c_time_state, setC_time_state ] = useState(0);
-    
+
+    //CALL STACK && CALLBACK QUEUE states for zero seconds case
+    const [ a_zero_state, setA_zero_state ] = useState(0);
+    const [ b_zero_state, setB_zero_state ] = useState(0);
+    const [ c_zero_state, setC_zero_state ] = useState(0);
+
     //CALL STACK && CALLBACK QUEUE handler
     const callSetTimeoutStack = () => {
         return (
@@ -583,6 +589,12 @@ export const AppProvider = ({ children }) => {
             a_time_state,
             b_time_state,
             c_time_state,
+            a_zero_state,
+            b_zero_state,
+            c_zero_state,
+            setA_zero_state,
+            setB_zero_state,
+            setC_zero_state,
             setReversevalue,
             Object1ValueBooya,
             setRemoveListvalue,
