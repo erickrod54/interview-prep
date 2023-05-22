@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 23.19 - context js - 
+/**interview-prep-app - version 23.20 - context js - 
  * Features: 
  * 
- *     --> Placing and providing CALL STACK && CALLBACK QUEUE 
- *         states for zero seconds case
+ *     --> Placing and providing 'callSetTimeoutStackZero'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -482,6 +481,18 @@ export const AppProvider = ({ children }) => {
     const [ b_zero_state, setB_zero_state ] = useState(0);
     const [ c_zero_state, setC_zero_state ] = useState(0);
 
+     //CALL STACK && CALLBACK QUEUE handler for 0 seconds case
+     const callSetTimeoutStackZero = () => {
+        return (
+                setA_zero_state(1),
+                setTimeout(() => {
+                    setB_zero_state(2)
+                }, 0),
+                setC_zero_state(3)
+                /** pendingo to cleanUpSetTimeoutZerofunction() */
+                )
+            }
+
     //CALL STACK && CALLBACK QUEUE handler
     const callSetTimeoutStack = () => {
         return (
@@ -649,7 +660,8 @@ export const AppProvider = ({ children }) => {
             handleDelete,
             callStack,
             callSetTimeoutStack,
-            cleanUpSetTimeoutfunction
+            cleanUpSetTimeoutfunction,
+            callSetTimeoutStackZero
         }}>
             {children}
         </AppContext.Provider>
