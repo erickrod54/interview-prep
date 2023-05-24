@@ -17,15 +17,16 @@ import { ArrayDataStructure,
          LinkedLists,
          SpaceComplexity,
          StackAndQueues,
-         StacksAndLinkedList
+         StacksAndLinkedList,
+         QueueAndLinkedList
         } from '../components/index.components';
 
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 21.11 - SingleTopicPage  
+/**interview-prep-app - version 24.01 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Adding 'StacksAndLinkedList' to the single topic. 
+ *     --> Adding 'QueueAndLinkedList' to the single topic. 
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -114,6 +115,11 @@ const SingleTopicPage = () => {
     if (id === '17') {
         return <StacksAndLinkedList />
     }
+
+    if (id === '18') {
+        return <QueueAndLinkedList />
+    }
+
 }
 
 export default SingleTopicPage;
