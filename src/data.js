@@ -16,11 +16,11 @@ import { hashtable,
          asynchronousprocessing,
          } from './assets/index';      
 
-/**interview-prep-app - version 21.11 - data js - 
+/**interview-prep-app - version 24.01 - data js - 
  * Features: 
  * 
- *     --> Adding 'StacksAndLinkedList' for 
- *         graphsData.   
+ *     --> Adding 'QueueAndLinkedList' for 
+ *         linksData.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -98,7 +98,11 @@ export const linksData = [
       {
         id:'17',
         name:'stacks and linkedList'
-       }
+       },
+      {
+        id:'18',
+        name:'queues and linkedList'
+      }
     /**
      *,
      {
