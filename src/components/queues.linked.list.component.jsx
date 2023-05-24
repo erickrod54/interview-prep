@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.05 - QueueAndLinkedList  
+/**interview-prep-app - version 24.06 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Building states for 'queuepeek'.
+ *     --> Building 'handleQueuepeek' handler.
  * 
  * Note: This template will have three methods as peek,
  * queue, and dequeue
@@ -45,6 +45,13 @@ const QueueAndLinkedList = () => {
         dequeue(){
 
         }
+    }
+
+    const handleQueuepeek = () => {
+        return(
+            setQueuepeek(myQueue.peek()),
+            console.log('queuepeek from Queue! ==>', queuepeek)
+        )
     }
 
     const myQueue = new Queue();
