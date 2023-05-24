@@ -1,15 +1,49 @@
 import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.01 - QueueAndLinkedList  
+/**interview-prep-app - version 24.02 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Building 'QueueAndLinkedList' basic component.
+ *     --> Building 'Node' and 'Queue' stack template.
  * 
- * Note: changes are going to be made to this component
+ * Note: This template will have three methods as peek,
+ * queue, and dequeue
  */
 
 const QueueAndLinkedList = () => {
+
+    class Node {
+        constructor(value) {
+            this.value = value;
+            this.next = null;
+        }
+    }
+
+    class Queue { 
+        constructor(){
+            /**first in line, last in line */
+            this.first = null;
+            this.last = null;
+            this.length = 0
+        }
+
+        /**get the very first item */
+        peek(){
+
+        }
+
+        /** add an item to the queue*/
+        enqueue(value){
+
+        }
+
+        /**removes an item from the queue*/
+        /**stack vs queue, queue removes from the front of the list */
+        /**what ever is first */
+        dequeue(){
+
+        }
+    }
     
     return(
         <DataStructuresWrapper>
