@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.04 - QueueAndLinkedList  
+/**interview-prep-app - version 24.05 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Instatiating 'Queue' in 'myQueue'.
+ *     --> Building states for 'queuepeek'.
  * 
  * Note: This template will have three methods as peek,
  * queue, and dequeue
  */
 
 const QueueAndLinkedList = () => {
+
+    const [ queuepeek, setQueuepeek ] = useState([])
 
     class Node {
         constructor(value) {
