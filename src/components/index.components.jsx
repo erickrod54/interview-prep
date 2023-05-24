@@ -16,11 +16,12 @@ import LinkedLists from "./linked.lists.component";
 import SpaceComplexity from "./space.complexity.component";
 import StackAndQueues from "./stack.and.queues.component";
 import StacksAndLinkedList from "./stack.linked.list.component";
+import QueueAndLinkedList from "./queues.linked.list.component";
 
-/**interview-prep-app - version 21.11 - 
+/**interview-prep-app - version 24.01 - 
  * components > index - Features: 
  * 
- *     --> Importing and exporting 'StacksAndLinkedList'.
+ *     --> Importing and exporting 'QueueAndLinkedList'.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -43,5 +44,6 @@ export { ArrayDataStructure,
          LinkedLists,
          SpaceComplexity,
          StackAndQueues,
-         StacksAndLinkedList
+         StacksAndLinkedList,
+         QueueAndLinkedList
         }
