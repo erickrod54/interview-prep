@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 23.03 - StacksAndLinkedList  
+/**interview-prep-app - version 24.00 - StacksAndLinkedList  
  * - Features: 
  * 
- *     --> Work in progress developing a Linked 
- *         List for the Stack.
+ *     --> CLearing 'printList' method from 'myStackusingArrays'.
  * 
- *     --> Rendering 'popvaluefromarray' from pop
- *         handler.
- * 
- * Note:'Stack' structure use objects and 'StackusingArrays' will
- * use arrays by changing the constructor object for an array
+ * Note: When is an array implementation printList method is not 
+ * needed in the stack, because just accesing to the array this 
+ * can be printed
  */
 
 const StacksAndLinkedList = () => {
@@ -109,16 +106,6 @@ const StacksAndLinkedList = () => {
             /**i just call the push method pre built for arrays */
             this.array.push(value);
             return this;
-        }
-
-        printList() {
-            const array = [];
-            let currentNode = this.top;
-            while (currentNode !== null) {
-                array.push(currentNode.value, ',');
-                currentNode = currentNode.next;
-            }
-            return array;
         }
         
         pop(){
