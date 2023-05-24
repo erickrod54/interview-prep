@@ -1,10 +1,10 @@
 import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.02 - QueueAndLinkedList  
+/**interview-prep-app - version 24.03 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Building 'Node' and 'Queue' stack template.
+ *     --> Building 'peek' method por Queue.
  * 
  * Note: This template will have three methods as peek,
  * queue, and dequeue
@@ -29,7 +29,7 @@ const QueueAndLinkedList = () => {
 
         /**get the very first item */
         peek(){
-
+            return this.first;
         }
 
         /** add an item to the queue*/
