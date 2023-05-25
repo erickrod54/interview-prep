@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.08 - QueueAndLinkedList  
+/**interview-prep-app - version 24.09 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Building 'enqueue' method in Queue linked List.
+ *     --> Building 'enqueuevalue' states.
  * 
  * Note: This template will have three methods as peek,
  * queue, and dequeue
@@ -12,7 +12,8 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const QueueAndLinkedList = () => {
 
-    const [ queuepeek, setQueuepeek ] = useState([])
+    const [ queuepeek, setQueuepeek ] = useState([]);
+    const [ enqueuevalue, setEnqueuevalue ] = useState([]);
 
     class Node {
         constructor(value) {
