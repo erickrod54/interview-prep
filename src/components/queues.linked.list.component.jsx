@@ -4,7 +4,7 @@ import { DataStructuresWrapper } from "../styled.components";
 /**interview-prep-app - version 24.08 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Implementing 'cleanupQueuepeek' handler.
+ *     --> Building 'enqueue' method in Queue linked List.
  * 
  * Note: This template will have three methods as peek,
  * queue, and dequeue
@@ -36,7 +36,16 @@ const QueueAndLinkedList = () => {
 
         /** add an item to the queue*/
         enqueue(value){
-
+            const newNode = new Node(value);
+            if (this.length === 0) {
+                this.first = newNode;
+                this.last = newNode;
+            }else{
+                this.last.next = newNode;
+                this.last = newNode;
+            }
+            this.length++;
+            return this;
         }
 
         /**removes an item from the queue*/
