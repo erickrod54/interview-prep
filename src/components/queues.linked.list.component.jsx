@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.10 - QueueAndLinkedList  
+/**interview-prep-app - version 24.11 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Building 'printList()' in Queue Linked List.
+ *     --> Building 'handleEnqueue' to get the queue values.
  * 
  * Note: 'printList()' method is necessary in order to render
  * the enqueue values by filling an empty array.
@@ -67,6 +67,8 @@ const QueueAndLinkedList = () => {
         }
     }
 
+    const myQueue = new Queue();
+
     const handleQueuepeek = () => {
         return(
             setQueuepeek(myQueue.peek()),
@@ -82,7 +84,13 @@ const QueueAndLinkedList = () => {
         }, 6000)
     }
 
-    const myQueue = new Queue();
+    const handleEnqueue = () => {
+        return(
+        myQueue.enqueue('Joy'),
+        setEnqueuevalue(myQueue.printList())
+        )   
+    }
+
     
     return(
         <DataStructuresWrapper>
