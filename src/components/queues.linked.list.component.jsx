@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.06 - QueueAndLinkedList  
+/**interview-prep-app - version 24.08 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Building 'handleQueuepeek' handler.
+ *     --> Implementing 'cleanupQueuepeek' handler.
  * 
  * Note: This template will have three methods as peek,
  * queue, and dequeue
@@ -50,8 +50,16 @@ const QueueAndLinkedList = () => {
     const handleQueuepeek = () => {
         return(
             setQueuepeek(myQueue.peek()),
+            cleanupQueuepeek(),
             console.log('queuepeek from Queue! ==>', queuepeek)
         )
+    }
+
+    const cleanupQueuepeek = () => {
+
+        setTimeout(() => {
+            setQueuepeek('Hit up to get the queue peek')
+        }, 6000)
     }
 
     const myQueue = new Queue();
@@ -59,6 +67,20 @@ const QueueAndLinkedList = () => {
     return(
         <DataStructuresWrapper>
             <h2>QueueAndLinkedList</h2>
+
+            <h3>Peek method:</h3>
+
+            <p>
+                The first method that i am going to implement in the linked list for queue is 
+                <strong> 'peek method' </strong>, that get the first item of the line or queue
+            </p>
+
+            <button onClick={handleQueuepeek}> get the peek of the queue </button>
+
+            <p>{queuepeek === null ? 'null' : queuepeek}</p>
+
+            <p>{queuepeek === null ? <span> 'i get <strong> 'null' </strong> because the queue is <strong> 'empty' </strong></span> : ''}</p>
+
         </DataStructuresWrapper>
     )
 }
