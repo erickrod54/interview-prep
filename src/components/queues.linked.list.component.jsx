@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.09 - QueueAndLinkedList  
+/**interview-prep-app - version 24.10 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Building 'enqueuevalue' states.
+ *     --> Building 'printList()' in Queue Linked List.
  * 
- * Note: This template will have three methods as peek,
- * queue, and dequeue
+ * Note: 'printList()' method is necessary in order to render
+ * the enqueue values by filling an empty array.
  */
 
 const QueueAndLinkedList = () => {
@@ -54,6 +54,16 @@ const QueueAndLinkedList = () => {
         /**what ever is first */
         dequeue(){
 
+        }
+
+        printList() {
+            const array = [];
+            let currentNode = this.first;
+            while (currentNode !== null) {
+                array.push(currentNode.value, ',');
+                currentNode = currentNode.next;
+            }
+            return array;
         }
     }
 
