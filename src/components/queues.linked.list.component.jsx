@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.16 - QueueAndLinkedList  
+/**interview-prep-app - version 24.17 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Building 'dequeuevalue' states.
+ *     --> Building 'handleDequeue' handler.
  */
 
 const QueueAndLinkedList = () => {
@@ -98,6 +98,18 @@ const QueueAndLinkedList = () => {
             myQueue.enqueue("Brenda "),
             setEnqueuevalue(myQueue.printList()),
             cleanupEnqueue()
+        );
+    };
+
+    const handleDequeue = () => {
+        return (
+            myQueue.enqueue("Joy "),
+            myQueue.enqueue("Bret "),
+            myQueue.enqueue("Jay "),
+            myQueue.enqueue("Carl "),
+            myQueue.enqueue("Brenda "),
+            myQueue.dequeue(),
+            setDequeuevalue(myQueue.printList())
         );
     };
 
