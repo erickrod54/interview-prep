@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.11 - QueueAndLinkedList  
+/**interview-prep-app - version 24.12 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Building 'handleEnqueue' to get the queue values.
+ *     --> Rendering 'enqueuevalue' value.
  */
 
 const QueueAndLinkedList = () => {
@@ -110,6 +110,18 @@ const QueueAndLinkedList = () => {
                     ""
                 )}
             </p>
+
+            <h3>Enqueue method:</h3>
+
+            <p>
+                The second method is enqueue, this method <strong> 'adds an item to the queue' </strong>
+            </p>
+
+            <button onClick={handleEnqueue}> Enqueue an item to the queue or line</button>
+
+            <p>[{enqueuevalue}]</p>
+
+            <p>{enqueuevalue ? <span> i add the value of <strong> '{enqueuevalue}' </strong> to the queue</span> : null}</p>
         </DataStructuresWrapper>
     );
 };
