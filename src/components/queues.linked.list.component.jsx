@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.12 - QueueAndLinkedList  
+/**interview-prep-app - version 24.13 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Rendering 'enqueuevalue' value.
+ *     --> Building 'cleanupEnqueue' handler for enqueue.
  */
 
 const QueueAndLinkedList = () => {
@@ -81,9 +81,17 @@ const QueueAndLinkedList = () => {
     const handleEnqueue = () => {
         return (
             myQueue.enqueue("Joy"),
-            setEnqueuevalue(myQueue.printList())
+            setEnqueuevalue(myQueue.printList()),
+            cleanupEnqueue()
         );
     };
+
+    const cleanupEnqueue = () => {
+
+        setTimeout(() => {
+            setEnqueuevalue([])
+        }, 6000)
+    }
 
     return (
         <DataStructuresWrapper>
