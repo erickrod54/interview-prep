@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.15 - QueueAndLinkedList  
+/**interview-prep-app - version 24.16 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Building 'dequeue' method in 
- *         Queue Linked List.
+ *     --> Building 'dequeuevalue' states.
  */
 
 const QueueAndLinkedList = () => {
 
     const [queuepeek, setQueuepeek] = useState([]);
     const [enqueuevalue, setEnqueuevalue] = useState([]);
+    const [ dequeuevalue, setDequeuevalue ] = useState([]);
 
     class Node {
         constructor(value) {
