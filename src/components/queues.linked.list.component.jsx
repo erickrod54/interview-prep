@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.14 - QueueAndLinkedList  
+/**interview-prep-app - version 24.15 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Adding more values to 'handleEnqueue' handler.
+ *     --> Building 'dequeue' method in 
+ *         Queue Linked List.
  */
 
 const QueueAndLinkedList = () => {
@@ -49,7 +50,17 @@ const QueueAndLinkedList = () => {
         /**removes an item from the queue*/
         /**stack vs queue, queue removes from the front of the list */
         /**what ever is first */
-        dequeue() {}
+        dequeue() {
+            if (!this.first) {
+                return null;
+            }
+            if (this.first === this.last) {
+                this.last = null;
+            }
+            this.first = this.first.next;
+            this.length--;
+            return this;
+        }
         
         printList() {
             const array = [];
