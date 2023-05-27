@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 24.18 - QueueAndLinkedList  
+/**interview-prep-app - version 24.19 - QueueAndLinkedList  
  * - Features: 
  * 
- *     --> Rendering 'dequeuevalue' value.
+ *     --> Building 'cleanupDequeue' handler.
  */
 
 const QueueAndLinkedList = () => {
@@ -109,9 +109,17 @@ const QueueAndLinkedList = () => {
             myQueue.enqueue("Carl "),
             myQueue.enqueue("Brenda "),
             myQueue.dequeue(),
-            setDequeuevalue(myQueue.printList())
-        );
-    };
+            setDequeuevalue(myQueue.printList()),
+            cleanupDequeue()
+            );
+        };
+
+    const cleanupDequeue = () => {
+
+        setTimeout(() => {
+            setDequeuevalue([])
+        }, 6000)
+    }
 
     const cleanupEnqueue = () => {
 
@@ -161,7 +169,7 @@ const QueueAndLinkedList = () => {
             <h3>Dequeue method:</h3>
 
             <p>
-                The third method is dequeue, this method <strong> 'removes an item to the queue' </strong>
+                The third method is dequeue, this method <strong> removes the 'Joy' item to the queue </strong>
             </p>
 
             <button onClick={handleDequeue}> Dequeue an item to the queue or line</button>
