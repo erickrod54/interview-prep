@@ -16,10 +16,10 @@ import { hashtable,
          asynchronousprocessing,
          } from './assets/index';      
 
-/**interview-prep-app - version 24.01 - data js - 
+/**interview-prep-app - version 24.20 - data js - 
  * Features: 
  * 
- *     --> Adding 'QueueAndLinkedList' for 
+ *     --> Adding 'TreeDataStructure' for 
  *         linksData.   
  * 
  * Note: to generate url's dinamicly
@@ -102,6 +102,10 @@ export const linksData = [
       {
         id:'18',
         name:'queues and linkedList'
+      },
+      {
+        id:'19',
+        name:'Tree Data Structure'
       }
     /**
      *,
