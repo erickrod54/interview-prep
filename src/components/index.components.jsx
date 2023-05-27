@@ -17,11 +17,12 @@ import SpaceComplexity from "./space.complexity.component";
 import StackAndQueues from "./stack.and.queues.component";
 import StacksAndLinkedList from "./stack.linked.list.component";
 import QueueAndLinkedList from "./queues.linked.list.component";
+import TreeDataStructure from "./trees.data.structure.component";
 
-/**interview-prep-app - version 24.01 - 
+/**interview-prep-app - version 24.20 - 
  * components > index - Features: 
  * 
- *     --> Importing and exporting 'QueueAndLinkedList'.
+ *     --> Importing and exporting 'TreeDataStructure'.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -45,5 +46,6 @@ export { ArrayDataStructure,
          SpaceComplexity,
          StackAndQueues,
          StacksAndLinkedList,
-         QueueAndLinkedList
+         QueueAndLinkedList,
+         TreeDataStructure
         }
