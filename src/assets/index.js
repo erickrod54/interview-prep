@@ -15,13 +15,12 @@ import queuesandmethods from './queues_and_methods.png';
 import stacksoverflow from './stacks_overflow.png';
 import asynchronousprocessing from './asynchronous_processing.png';
 import exerciseinasynchronousprocessing from './exercise_in_asynchronous_processing.png';
+import treesdatastructure from './trees.data.structure.png'
 
-
-/**interview-prep-app - version 21.10 - assets > index - 
+/**interview-prep-app - version 25.00 - assets > index - 
  * Features: 
  * 
- *     --> Renaming 'synchronousprocessing' as 
- *         'asynchronousprocessing' asset.
+ *     --> Importing and exporting 'treesdatastructure' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -42,4 +41,6 @@ export { bigo1stgraph,
          queuesandmethods,
          stacksoverflow,
          asynchronousprocessing,
-         exerciseinasynchronousprocessing };
+         exerciseinasynchronousprocessing ,
+         treesdatastructure
+        };
