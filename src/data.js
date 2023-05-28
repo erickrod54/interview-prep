@@ -14,13 +14,14 @@ import { hashtable,
          queuesandmethods,
          exerciseinasynchronousprocessing,
          asynchronousprocessing,
+         treesdatastructure,
          } from './assets/index';      
 
-/**interview-prep-app - version 24.20 - data js - 
+/**interview-prep-app - version 25.00 - data js - 
  * Features: 
  * 
- *     --> Adding 'TreeDataStructure' for 
- *         linksData.   
+ *     --> Adding 'treesdatastructure' for 
+ *         graphsData.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -196,6 +197,10 @@ export const linksData = [
       {
         id:16,
         image:exerciseinasynchronousprocessing
+      },
+      {
+        id:17,
+        image:treesdatastructure
       }
     ]
     
