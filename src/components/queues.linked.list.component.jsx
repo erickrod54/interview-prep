@@ -5,15 +5,12 @@ import { DataStructuresWrapper } from "../styled.components";
  * - Features: 
  * 
  *     --> Building 'handleEnqueue' to get the queue values.
- * 
- * Note: 'printList()' method is necessary in order to render
- * the enqueue values by filling an empty array.
  */
 
 const QueueAndLinkedList = () => {
 
-    const [ queuepeek, setQueuepeek ] = useState([]);
-    const [ enqueuevalue, setEnqueuevalue ] = useState([]);
+    const [queuepeek, setQueuepeek] = useState([]);
+    const [enqueuevalue, setEnqueuevalue] = useState([]);
 
     class Node {
         constructor(value) {
@@ -22,26 +19,26 @@ const QueueAndLinkedList = () => {
         }
     }
 
-    class Queue { 
-        constructor(){
+    class Queue {
+        constructor() {
             /**first in line, last in line */
             this.first = null;
             this.last = null;
-            this.length = 0
+            this.length = 0;
         }
 
         /**get the very first item */
-        peek(){
+        peek() {
             return this.first;
         }
 
         /** add an item to the queue*/
-        enqueue(value){
+        enqueue(value) {
             const newNode = new Node(value);
             if (this.length === 0) {
                 this.first = newNode;
                 this.last = newNode;
-            }else{
+            } else {
                 this.last.next = newNode;
                 this.last = newNode;
             }
@@ -52,15 +49,13 @@ const QueueAndLinkedList = () => {
         /**removes an item from the queue*/
         /**stack vs queue, queue removes from the front of the list */
         /**what ever is first */
-        dequeue(){
-
-        }
-
+        dequeue() {}
+        
         printList() {
             const array = [];
             let currentNode = this.first;
             while (currentNode !== null) {
-                array.push(currentNode.value, ',');
+                array.push(currentNode.value, ",");
                 currentNode = currentNode.next;
             }
             return array;
@@ -70,47 +65,53 @@ const QueueAndLinkedList = () => {
     const myQueue = new Queue();
 
     const handleQueuepeek = () => {
-        return(
+        return (
             setQueuepeek(myQueue.peek()),
             cleanupQueuepeek(),
-            console.log('queuepeek from Queue! ==>', queuepeek)
-        )
-    }
+            console.log("queuepeek from Queue! ==>", queuepeek)
+        );
+    };
 
     const cleanupQueuepeek = () => {
-
         setTimeout(() => {
-            setQueuepeek('Hit up to get the queue peek')
-        }, 6000)
-    }
+            setQueuepeek("Hit up to get the queue peek");
+        }, 6000);
+    };
 
     const handleEnqueue = () => {
-        return(
-        myQueue.enqueue('Joy'),
-        setEnqueuevalue(myQueue.printList())
-        )   
-    }
+        return (
+            myQueue.enqueue("Joy"),
+            setEnqueuevalue(myQueue.printList())
+        );
+    };
 
-    
-    return(
+    return (
         <DataStructuresWrapper>
             <h2>QueueAndLinkedList</h2>
 
             <h3>Peek method:</h3>
 
             <p>
-                The first method that i am going to implement in the linked list for queue is 
-                <strong> 'peek method' </strong>, that get the first item of the line or queue
+                The first method that I am going to implement in the linked list for the queue is{" "}
+                <strong> 'peek method' </strong>, which gets the first item of the line or queue.
             </p>
 
             <button onClick={handleQueuepeek}> get the peek of the queue </button>
 
-            <p>{queuepeek === null ? 'null' : queuepeek}</p>
+            <p>{queuepeek === null ? "null" : queuepeek}</p>
 
-            <p>{queuepeek === null ? <span> 'i get <strong> 'null' </strong> because the queue is <strong> 'empty' </strong></span> : ''}</p>
-
+            <p>
+                {queuepeek === null ? (
+                    <span>
+                        {" "}
+                        'I get <strong> 'null' </strong> because the queue is <strong> 'empty' </strong>"
+                    </span>
+                ) : (
+                    ""
+                )}
+            </p>
         </DataStructuresWrapper>
-    )
-}
+    );
+};
 
-export default QueueAndLinkedList
+export default QueueAndLinkedList;
