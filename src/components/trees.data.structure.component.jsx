@@ -2,13 +2,10 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 25.07 - 
+/**interview-prep-app - version 25.08 - 
  * TreeDataStructure - Features: 
  * 
- *     --> Work in progress 'Binary Tree' Concept.
- * 
- *     --> Destructuring 'kindbinarytrees' from 
- *          'graphsData'
+ *     --> Work in progress 'Binary Tree kinds' Concept.
  * 
  * Note: pending to add binary tree assets
  */
@@ -96,6 +93,21 @@ const TreeDataStructure = () => {
             </p>
 
             <img src={kindbinarytrees} alt='kind binary trees'/>
+
+            <p>
+                as can be seen, each <strong> 'layer' </strong> of the binary tree define 
+                if it's a <strong> Perfect Binary tree </strong> or a <strong> Full Binary tree </strong> 
+                and this defines its complexity the <strong> Perfect Binary tree </strong>
+                is desirable because has less complexity than <strong> Full Binary tree </strong>
+            </p>
+
+            <p>
+                in a <strong> Perfect Binary tree </strong> half of the nodes are in the <strong> last layer </strong>
+                of the tree and by organizing the data in that way i have less complexity at the 
+                <strong> root node </strong> that highly desirable because makes easy to perform 
+                operations from the <strong> root node </strong> to the <strong> bottom layer </strong>
+                and this type of structure creates a <strong> new complexity notation </strong>
+            </p>
         </DataStructuresWrapper>
     )
 }
