@@ -2,12 +2,13 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 25.04 - 
+/**interview-prep-app - version 25.06 - 
  * TreeDataStructure - Features: 
  * 
- *     --> Developing Tree Data Structure concept.
+ *     --> Work in progress 'Binary Tree' Concept.
  * 
- *     --> Work in progress 'Binary Tree' Concept
+ *     --> Destructuring 'binarytreeconcept' from 
+ *          'graphsData'
  * 
  * Note: pending to add binary tree assets
  */
@@ -19,6 +20,7 @@ const TreeDataStructure = () => {
     console.log(' graphsData ==>', graphsData)
 
     const treesdatastructure = graphsData[16].image;
+    const binarytreeconcept = graphsData[17].image;
 
     return(
         <DataStructuresWrapper>
@@ -64,6 +66,8 @@ const TreeDataStructure = () => {
                 <li>Each <strong> 'node' </strong> can have either <strong> '0, 1, or 2 nodes' </strong></li>
                 <li>Each child can have only <strong> 'one parent' </strong></li>
             </ul>
+
+            <img src={binarytreeconcept} alt='binary tree concept'/>
 
             <p>
                 from this binary tree i will focus in two classifications:
