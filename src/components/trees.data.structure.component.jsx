@@ -2,12 +2,12 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 25.03 - 
+/**interview-prep-app - version 25.04 - 
  * TreeDataStructure - Features: 
  * 
  *     --> Developing Tree Data Structure concept.
  * 
- *     --> Developing 'Binary Tree' Concept
+ *     --> Work in progress 'Binary Tree' Concept
  * 
  * Note: pending to add binary tree assets
  */
@@ -56,8 +56,14 @@ const TreeDataStructure = () => {
             <h3>Binary Tree</h3>
 
             <p>
-                A binary tree is a tree that has <strong> 'two node child' </strong>, and <strong> their child have exactly two node child </strong> 
+                A binary tree is a tree that has <strong> 'two node child' </strong>, and <strong> their child have exactly two node child </strong>,
+                binaries trees has a set of rules that are as follows:
             </p>
+
+            <ul>
+                <li>Each <strong> 'node' </strong> can have either <strong> '0, 1, or 2 nodes' </strong></li>
+                <li>Each child can have only <strong> 'one parent' </strong></li>
+            </ul>
 
             <p>
                 from this binary tree i will focus in two classifications:
@@ -67,6 +73,22 @@ const TreeDataStructure = () => {
                 <li>Perfect Binary tree</li>
                 <li>Full Binary tree</li>
             </ul>
+
+            <h3>Perfect Binary tree:</h3>
+
+            <p>
+                a tree that is perfectly full is a tree that has <strong> no gaps </strong>,
+                has everything fill in, every parent node has a child node in descendant way
+                till the end ( left figure )
+            </p>
+
+            <h3>Full Binary tree:</h3>
+
+            <p>
+                a tree full binary tree is a tree that has gaps, means that has nodes that has 
+                from the root node descending nodes or child nodes that has 0 child nodes, and this
+                creates gaps before the structure ends ( right figure )
+            </p>
         </DataStructuresWrapper>
     )
 }
