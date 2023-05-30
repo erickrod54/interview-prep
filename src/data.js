@@ -16,12 +16,13 @@ import { hashtable,
          asynchronousprocessing,
          treesdatastructure,
          binarytreeconcept,
+         kindbinarytrees,
          } from './assets/index';      
 
-/**interview-prep-app - version 25.04 - data js - 
+/**interview-prep-app - version 25.06 - data js - 
  * Features: 
  * 
- *     --> Adding 'binarytreeconcept' for 
+ *     --> Adding 'kindbinarytrees' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -206,8 +207,11 @@ export const linksData = [
       {
         id:18,
         image:binarytreeconcept
+      },
+      {
+        id:19,
+        image: kindbinarytrees
       }
-
     ]
     
     export const everyoneCharacter = [
