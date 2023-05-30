@@ -2,12 +2,12 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 25.06 - 
+/**interview-prep-app - version 25.07 - 
  * TreeDataStructure - Features: 
  * 
  *     --> Work in progress 'Binary Tree' Concept.
  * 
- *     --> Destructuring 'binarytreeconcept' from 
+ *     --> Destructuring 'kindbinarytrees' from 
  *          'graphsData'
  * 
  * Note: pending to add binary tree assets
@@ -21,6 +21,7 @@ const TreeDataStructure = () => {
 
     const treesdatastructure = graphsData[16].image;
     const binarytreeconcept = graphsData[17].image;
+    const kindbinarytrees = graphsData[18].image;
 
     return(
         <DataStructuresWrapper>
@@ -83,7 +84,7 @@ const TreeDataStructure = () => {
             <p>
                 a tree that is perfectly full is a tree that has <strong> no gaps </strong>,
                 has everything fill in, every parent node has a child node in descendant way
-                till the end ( left figure )
+                till the end <strong> ( left figure ) </strong>
             </p>
 
             <h3>Full Binary tree:</h3>
@@ -91,8 +92,10 @@ const TreeDataStructure = () => {
             <p>
                 a tree full binary tree is a tree that has gaps, means that has nodes that has 
                 from the root node descending nodes or child nodes that has 0 child nodes, and this
-                creates gaps before the structure ends ( right figure )
+                creates gaps before the structure ends <strong> ( right figure ) </strong>
             </p>
+
+            <img src={kindbinarytrees} alt='kind binary trees'/>
         </DataStructuresWrapper>
     )
 }
