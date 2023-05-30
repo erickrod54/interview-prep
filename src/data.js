@@ -15,12 +15,13 @@ import { hashtable,
          exerciseinasynchronousprocessing,
          asynchronousprocessing,
          treesdatastructure,
+         binarytreeconcept,
          } from './assets/index';      
 
-/**interview-prep-app - version 25.00 - data js - 
+/**interview-prep-app - version 25.04 - data js - 
  * Features: 
  * 
- *     --> Adding 'treesdatastructure' for 
+ *     --> Adding 'binarytreeconcept' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -201,7 +202,12 @@ export const linksData = [
       {
         id:17,
         image:treesdatastructure
+      },
+      {
+        id:18,
+        image:binarytreeconcept
       }
+
     ]
     
     export const everyoneCharacter = [
