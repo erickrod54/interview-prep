@@ -2,12 +2,12 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 25.09 - 
+/**interview-prep-app - version 25.10 - 
  * TreeDataStructure - Features: 
  * 
  *     --> Work in progress 'Binary Tree kinds' Concept.
  * 
- *     --> Destructuring binarysearchtreeconcept asset.
+ *     --> developing binary tree concept.
  * 
  * Note: pending to add binary tree assets
  */
@@ -126,6 +126,66 @@ const TreeDataStructure = () => {
             <p>
                 this is related to <strong> 'binary search tree' </strong>
             </p>
+
+            <p>
+                so from this point is there a way to calculate the number of nodes of 
+                the binary search tree
+            </p>
+
+            <section className="code-block">
+                <p><strong> level 0: </strong> 2 ^ 0 = 1 <strong> (root level) </strong></p>
+                <p><strong> level 1: </strong> 2 ^ 1 = 2 <strong> (level 1) </strong></p>
+                <p><strong> level 2: </strong> 2 ^ 2 = 4 <strong> (level 2) </strong></p>
+                <p><strong> level 3: </strong> 2 ^ 3 = 8 <strong> (level 3) </strong></p>
+            </section>
+
+            <p>
+                this last example is based in a <strong> perfect binary tree </strong>
+            </p>
+
+            <p>
+                so the formal way to express this calculation is 
+            </p>
+
+            <section className="code-block">
+                <p><strong> # of nodes </strong> 2 ^ h</p>
+                <p>where <strong> 'h' </strong> is the height of the tree</p>
+            </section>
+
+            <p>
+                so knowing the <strong> levels (height) </strong> of the binary tree 
+                i can calculate how many <strong> 'nodes' </strong> the tree has
+            </p>
+
+            <p>
+                but there is one gotcha if i evaluate in the graph how many nodes the
+                tree has 
+            </p>
+
+            <img src={binarysearchtreeconcept} alt='binary search tree concept'/>
+
+            <p>
+                it results in <strong> 7 nodes </strong> not <strong> 8 nodes </strong>
+                so this calculation is made with log
+            </p>
+
+            <section className="code-block">
+                <p><strong> # of nodes </strong> 2 ^ h - 1 </p>
+                <p>where <strong> 'h' </strong> is the height of the tree</p>
+                <p>and it gets simplified in the following way: </p>
+                <p><strong> log nodes </strong> = <strong> height </strong></p>
+                <p>so:</p>
+                <p><strong> log 100 </strong> = <strong> 2 </strong></p>
+                <p> beacause the base calculation is: </p>
+                <p><strong> 10 ^ 2 </strong> = <strong> 100 </strong></p>
+            </section>
+
+            <p>
+                so the calculation <strong> divides the nodes </strong> so i can 
+                perform efficiently methods as <strong> lookup, insert, and delete </strong>
+                in several posibilities represented by <strong> O(log N) </strong>
+            </p>
+
         </DataStructuresWrapper>
     )
 }
