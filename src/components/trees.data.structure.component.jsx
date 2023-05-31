@@ -7,7 +7,7 @@ import { DataStructuresWrapper } from "../styled.components";
  * 
  *     --> Work in progress 'Binary Tree kinds' Concept.
  * 
- *     --> Introducing to 'binary search tree'.
+ *     --> Destructuring binarysearchtreeconcept asset.
  * 
  * Note: pending to add binary tree assets
  */
@@ -21,6 +21,7 @@ const TreeDataStructure = () => {
     const treesdatastructure = graphsData[16].image;
     const binarytreeconcept = graphsData[17].image;
     const kindbinarytrees = graphsData[18].image;
+    const binarysearchtreeconcept = graphsData[19].image;
 
     return(
         <DataStructuresWrapper>
@@ -111,9 +112,12 @@ const TreeDataStructure = () => {
                 and this type of structure creates a <strong> new complexity notation </strong>
             </p>
 
+            <img src={binarysearchtreeconcept} alt='binary search tree concept'/>
+
             <p>
                 And this notation is:
             </p>
+
 
             <section className="code-block">
                 <p><strong> O( log N ) </strong></p>
