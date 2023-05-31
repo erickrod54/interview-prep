@@ -2,10 +2,12 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 25.08 - 
+/**interview-prep-app - version 25.09 - 
  * TreeDataStructure - Features: 
  * 
  *     --> Work in progress 'Binary Tree kinds' Concept.
+ * 
+ *     --> Introducing to 'binary search tree'.
  * 
  * Note: pending to add binary tree assets
  */
@@ -107,6 +109,18 @@ const TreeDataStructure = () => {
                 <strong> root node </strong> that highly desirable because makes easy to perform 
                 operations from the <strong> root node </strong> to the <strong> bottom layer </strong>
                 and this type of structure creates a <strong> new complexity notation </strong>
+            </p>
+
+            <p>
+                And this notation is:
+            </p>
+
+            <section className="code-block">
+                <p><strong> O( log N ) </strong></p>
+            </section>
+
+            <p>
+                this is related to <strong> 'binary search tree' </strong>
             </p>
         </DataStructuresWrapper>
     )
