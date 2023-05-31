@@ -17,12 +17,13 @@ import { hashtable,
          treesdatastructure,
          binarytreeconcept,
          kindbinarytrees,
+         binarysearchtreeconcept,
          } from './assets/index';      
 
-/**interview-prep-app - version 25.06 - data js - 
+/**interview-prep-app - version 25.09 - data js - 
  * Features: 
  * 
- *     --> Adding 'kindbinarytrees' for 
+ *     --> Adding 'binarysearchtreeconcept' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -211,6 +212,10 @@ export const linksData = [
       {
         id:19,
         image: kindbinarytrees
+      },
+      {
+        id:20,
+        image: binarysearchtreeconcept
       }
     ]
     
