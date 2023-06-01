@@ -7,7 +7,7 @@ import { DataStructuresWrapper } from "../styled.components";
  * 
  *     --> Work in progress 'Binary Tree kinds' Concept.
  * 
- *     --> developing binary tree concept.
+ *     --> Developing binary tree concept.
  * 
  * Note: pending to add binary tree assets
  */
