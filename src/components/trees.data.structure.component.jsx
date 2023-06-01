@@ -2,12 +2,13 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 25.10 - 
+/**interview-prep-app - version 25.14 - 
  * TreeDataStructure - Features: 
  * 
  *     --> Work in progress 'Binary Tree kinds' Concept.
  * 
- *     --> Developing binary tree concept.
+ *     --> Developing binary search tree concept
+ *          through O(log N).
  * 
  * Note: pending to add binary tree assets
  */
@@ -22,6 +23,7 @@ const TreeDataStructure = () => {
     const binarytreeconcept = graphsData[17].image;
     const kindbinarytrees = graphsData[18].image;
     const binarysearchtreeconcept = graphsData[19].image;
+    const bigocomplexitychart = graphsData[4].image;
 
     return(
         <DataStructuresWrapper>
@@ -185,6 +187,14 @@ const TreeDataStructure = () => {
                 perform efficiently methods as <strong> lookup, insert, and delete </strong>
                 in several posibilities represented by <strong> O(log N) </strong>
             </p>
+
+            <p>
+                As it follows in the the graph the <strong> O(log N) </strong> is a much 
+                better case scenario than <strong> O(n) </strong> almost at pair with 
+                <strong> O(1) </strong>
+            </p>
+
+            <img src={bigocomplexitychart} alt="big o complexity chart"/>
 
         </DataStructuresWrapper>
     )
