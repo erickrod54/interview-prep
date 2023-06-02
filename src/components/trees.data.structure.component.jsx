@@ -2,13 +2,13 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 25.14 - 
+/**interview-prep-app - version 25.15 - 
  * TreeDataStructure - Features: 
  * 
  *     --> Work in progress 'Binary Tree kinds' Concept.
  * 
  *     --> Developing binary search tree concept
- *          through O(log N).
+ *          through search use case.
  * 
  * Note: pending to add binary tree assets
  */
@@ -183,6 +183,11 @@ const TreeDataStructure = () => {
             </section>
 
             <p>
+                the value of <strong> 'h' </strong> is exactly the same as 
+                the <strong> 'number of levels of the tree' </strong>
+            </p>
+
+            <p>
                 so the calculation <strong> divides the nodes </strong> so i can 
                 perform efficiently methods as <strong> lookup, insert, and delete </strong>
                 in several posibilities represented by <strong> O(log N) </strong>
@@ -195,6 +200,69 @@ const TreeDataStructure = () => {
             </p>
 
             <img src={bigocomplexitychart} alt="big o complexity chart"/>
+
+            <p>
+                so <strong> O(log N) </strong> will mean based in the height the maximum 
+                number of decisions for example to <strong> 'lookup' </strong> for a data 
+                and the search can be divided to get efficiency looking the information 
+            </p>
+
+            <h3>Binary tree use case: </h3>
+
+            <p>
+                A binary search tree are excellent data structures to perform search methods
+                different to a hash table beacuase binary search tree preseves certain relation
+                ( the relation between the parent nodes and child nodes ), and they have a set
+                of rules in order to be classified as a binary tree:
+            </p>
+
+            <ul>
+                <li>
+                    all child nodes to the right of the root node must be greater than the current node,
+                    all child nodes to the left of the root node must be lower than the current node
+                </li>
+                <li>
+                    every node can only have up to two children
+                </li>
+                <li>
+                    
+                </li>
+            </ul>
+
+
+            <p>
+                let's say that i am looking for 37, the search is perform as follows:
+            </p>
+
+            <ul>
+                <li>
+                    the target is <strong> 37 </strong>
+                </li>
+                <li>
+                    beginning from the <strong> root node </strong> is <strong> is 37 less than 101 </strong> R: yes
+                    then i go to the right (because the lower values are there)
+                </li>
+                <li>
+                    at the right i find 33 <strong> ( i compare 33 with the target node ) </strong>, is 33 less than 37 R:yes,
+                    so i go to the left (because the higher values are there)
+                </li>
+                <li>
+                    At the left and find 37, and the search ends        
+                </li>
+            </ul>
+
+            <p>
+                so the decrease and increse rules for binary search tree set a pattern of efficiency for perform a search
+                method ( beacause the decisions for search are based in these rules )
+            </p>
+
+            <p>
+                <strong> now let's look the complexity for the other two methods </strong> for the method <strong> 'insert' </strong>
+                and <strong> 'delete' </strong> both have a complexity of <strong> O(log N) </strong> (using hash tables i have a 
+                complexity of <strong> O( N ) </strong>), and this is because inserting and shifting nodes implies to reorder the tree,
+                and this can have a result of a perfect tree, or a full tree, but implies to move all the nodes ( depending on the 
+                implementation can be a slow process to insert and delete )
+            </p>
 
         </DataStructuresWrapper>
     )
