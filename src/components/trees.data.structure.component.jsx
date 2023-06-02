@@ -2,13 +2,13 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 25.15 - 
+/**interview-prep-app - version 25.16 - 
  * TreeDataStructure - Features: 
  * 
  *     --> Work in progress 'Binary Tree kinds' Concept.
  * 
- *     --> Developing binary search tree concept
- *          through search use case.
+ *     --> Destructuring 'binarysearchtreecomparison'
+ *         from graphsData .
  * 
  * Note: pending to add binary tree assets
  */
@@ -24,6 +24,7 @@ const TreeDataStructure = () => {
     const kindbinarytrees = graphsData[18].image;
     const binarysearchtreeconcept = graphsData[19].image;
     const bigocomplexitychart = graphsData[4].image;
+    const binarysearchtreecomparison = graphsData[20].image; 
 
     return(
         <DataStructuresWrapper>
@@ -207,13 +208,13 @@ const TreeDataStructure = () => {
                 and the search can be divided to get efficiency looking the information 
             </p>
 
-            <h3>Binary tree use case: </h3>
+            <h3>Binary Search Trees: </h3>
 
             <p>
-                A binary search tree are excellent data structures to perform search methods
+                A Binary Search Trees are <strong> excellent data structures to perform search methods </strong>
                 different to a hash table beacuase binary search tree preseves certain relation
-                ( the relation between the parent nodes and child nodes ), and they have a set
-                of rules in order to be classified as a binary tree:
+                <strong> ( the relation between the parent nodes and child nodes ) </strong>, and they have a set
+                of <strong> rules </strong> in order to be classified as a Binary Search Tree:
             </p>
 
             <ul>
@@ -224,14 +225,16 @@ const TreeDataStructure = () => {
                 <li>
                     every node can only have up to two children
                 </li>
-                <li>
-                    
-                </li>
             </ul>
 
+            <p>
+                as follows in the graph:
+            </p>
+
+            <img src={binarysearchtreecomparison} alt="binary search tree comparison"/>
 
             <p>
-                let's say that i am looking for 37, the search is perform as follows:
+                let's say that <strong> i am looking for 37 </strong>, the search is perform as follows:
             </p>
 
             <ul>
