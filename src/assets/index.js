@@ -17,13 +17,14 @@ import asynchronousprocessing from './asynchronous_processing.png';
 import exerciseinasynchronousprocessing from './exercise_in_asynchronous_processing.png';
 import treesdatastructure from './trees.data.structure.png';
 import binarytreeconcept from './binary-tree-concept.png';
-import kindbinarytrees from './kind-binary-trees.png'
-import binarysearchtreeconcept from './binary-search-tree-concept.png'
+import kindbinarytrees from './kind-binary-trees.png';
+import binarysearchtreeconcept from './binary-search-tree-concept.png';
+import binarysearchtreecomparison from './binary-search-tree-comparison.png';
 
-/**interview-prep-app - version 25.09 - assets > index - 
+/**interview-prep-app - version 25.15 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'binarysearchtreeconcept' asset.
+ *     --> Importing and exporting 'binarysearchtreecomparison' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -48,5 +49,6 @@ export { bigo1stgraph,
          treesdatastructure,
          binarytreeconcept,
          kindbinarytrees,
-         binarysearchtreeconcept
+         binarysearchtreeconcept,
+         binarysearchtreecomparison
         };
