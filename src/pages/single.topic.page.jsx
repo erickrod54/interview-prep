@@ -19,19 +19,19 @@ import { ArrayDataStructure,
          StackAndQueues,
          StacksAndLinkedList,
          QueueAndLinkedList,
-         TreeDataStructure
+         TreeDataStructure,
+         BTSComponent
         } from '../components/index.components';
-
+        
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 24.20 - SingleTopicPage  
+/**interview-prep-app - version 25.18 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Adding 'TreeDataStructure' to the single topic. 
+ *     --> Adding 'BTSComponent' to the single topic. 
  * 
  * Note: Pending to re structure imports using the index.
  */
-
 
 const SingleTopicPage = () => {
     
@@ -125,6 +125,9 @@ const SingleTopicPage = () => {
         return <TreeDataStructure />
     }
 
+    if (id === '20') {
+        return <BTSComponent />
+    }
 }
 
 export default SingleTopicPage;
