@@ -2,13 +2,13 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 25.16 - 
+/**interview-prep-app - version 25.17 - 
  * TreeDataStructure - Features: 
  * 
  *     --> Work in progress 'Binary Tree kinds' Concept.
  * 
- *     --> Destructuring 'binarysearchtreecomparison'
- *         from graphsData .
+ *     --> Developing 'BTS' ( Binary search tree ) 
+ *         simulation in visualgo.
  * 
  * Note: pending to add binary tree assets
  */
@@ -267,6 +267,55 @@ const TreeDataStructure = () => {
                 implementation can be a slow process to insert and delete )
             </p>
 
+            <p>
+                let's make a quick simulation using <strong> 'visualgo' </strong>:
+            </p>
+
+            <a href="https://visualgo.net/en/bst"> <strong> visual go link </strong></a>
+
+            <ul>
+                <li>
+                    search
+                </li>
+                <li>
+                    insert
+                </li>
+                <li>
+                    remove
+                </li>
+            </ul>
+
+            <p>
+                after performing these methods in <strong> visual go </strong>, in visual way i can 
+                see the benefits and the downsides of this datastructure:
+             </p>
+
+             <h4>benefits: </h4>
+
+             <ul>
+                <li>
+                    all the operations are better than O( n ) 
+                </li>
+                <li>
+                    ordered 
+                </li>
+                <li>
+                    flexible size 
+                </li>
+             </ul>
+
+             <h4>downsides: </h4>
+
+             <ul>
+                <li>
+                    No <strong> O(1) </strong> operations    
+                </li>
+            </ul>    
+
+            <h4>
+               Note: BTS is really good performing search methods, and for example are cases where 
+               where they out perform arrays and hash tables
+            </h4>   
         </DataStructuresWrapper>
     )
 }
