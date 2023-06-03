@@ -21,11 +21,11 @@ import { hashtable,
          binarysearchtreecomparison,
          } from './assets/index';      
 
-/**interview-prep-app - version 25.15 - data js - 
+/**interview-prep-app - version 25.18 - data js - 
  * Features: 
  * 
- *     --> Adding 'binarysearchtreecomparison' for 
- *         graphsData.   
+ *     --> Adding 'BTS implemnetation' for 
+ *         linksData.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -111,6 +111,10 @@ export const linksData = [
       {
         id:'19',
         name:'Tree Data Structure'
+      },
+      {
+        id:'20',
+        name:'BTS implemnetation'
       }
     /**
      *,
