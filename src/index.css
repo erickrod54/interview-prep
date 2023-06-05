@@ -1,7 +1,7 @@
-/**interview-prep-app - version 13 - index css - 
+/**interview-prep-app - version 26.00 - index css - 
  * Features: 
  * 
- *     --> Writting 'code-block-row' styles 
+ *     --> Writting 'addind styles for large,medium and small images'  
  * 
  * Note: to generate url's dinamicly
  */
@@ -70,3 +70,29 @@ img{
   border: 1px solid black;
   border-radius: 2rem;
 }
+
+/*addind styles for large,medium and small images **/
+
+img.large {
+  width: 800px;
+  height: 500px;
+  border: 2px solid black;
+  border-radius: 2rem;
+}
+
+img.medium {
+  width: 350px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 2rem;
+}
+
+img.small {
+  width: 200px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+
+
