@@ -19,13 +19,14 @@ import { hashtable,
          kindbinarytrees,
          binarysearchtreeconcept,
          binarysearchtreecomparison,
+         binarysearchtreeimplementation,
          } from './assets/index';      
 
-/**interview-prep-app - version 25.18 - data js - 
+/**interview-prep-app - version 26.00 - data js - 
  * Features: 
  * 
- *     --> Adding 'BTS implemnetation' for 
- *         linksData.   
+ *     --> Adding 'binarysearchtreeimplementation' for 
+ *         graphsData.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -225,6 +226,10 @@ export const linksData = [
       {
         id:21,
         image: binarysearchtreecomparison
+      },
+      {
+        id:22,
+        image: binarysearchtreeimplementation
       }
     ]
     
