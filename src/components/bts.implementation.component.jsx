@@ -2,11 +2,12 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.00 - 
+/**interview-prep-app - version 26.01 - 
  * BTSComponent - Features: 
  * 
- *     --> Destructuring 'binarysearchtreeimplementation'
- *         from 'graphsData'
+ *     --> Displaying asset.
+ *      
+ *     --> Starting to implement BTS.
  * 
  * Note: In next versions insert, lookup and 
  * remove methos are going to be developed
@@ -45,6 +46,13 @@ const BTSComponent = () => {
     return(
         <DataStructuresWrapper>
             <h2>BTS Implementation ( Binary Search Tree - BTS )</h2>
+
+            <p>
+                so the search tree that is going to be implemented is as the graph
+                as follows:
+            </p>
+
+            <img src={binarysearchtreeimplementation} className='large' alt='binary search tree implementation'/>
 
         </DataStructuresWrapper>
     )
