@@ -20,11 +20,12 @@ import binarytreeconcept from './binary-tree-concept.png';
 import kindbinarytrees from './kind-binary-trees.png';
 import binarysearchtreeconcept from './binary-search-tree-concept.png';
 import binarysearchtreecomparison from './binary-search-tree-comparison.png';
+import binarysearchtreeimplementation from './binary-search-tree-implementation.png';
 
-/**interview-prep-app - version 25.15 - assets > index - 
+/**interview-prep-app - version 26.00 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'binarysearchtreecomparison' asset.
+ *     --> Importing and exporting 'binarysearchtreeimplementation' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -50,5 +51,6 @@ export { bigo1stgraph,
          binarytreeconcept,
          kindbinarytrees,
          binarysearchtreeconcept,
-         binarysearchtreecomparison
+         binarysearchtreecomparison,
+         binarysearchtreeimplementation
         };
