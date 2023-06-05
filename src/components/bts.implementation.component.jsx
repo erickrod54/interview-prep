@@ -1,16 +1,24 @@
 import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
+import { useAppContext } from "../context";
 
-/**interview-prep-app - version 25.19 - 
+/**interview-prep-app - version 26.00 - 
  * BTSComponent - Features: 
  * 
- *     --> Developing BTS template.
+ *     --> Destructuring 'binarysearchtreeimplementation'
+ *         from 'graphsData'
  * 
  * Note: In next versions insert, lookup and 
  * remove methos are going to be developed
  */
 
 const BTSComponent = () => {
+
+    const { graphsData } = useAppContext()
+
+    /**binarysearchtreeimplementation asset */
+    console.log(' graphsData ==> ', graphsData)
+    const binarysearchtreeimplementation = graphsData[21].image; 
 
     class Node {
         constructor( value ){
