@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.03 - 
+/**interview-prep-app - version 26.04 - 
  * BTSComponent - Features: 
  * 
  *     --> Developing 'insert' method.
  * 
- *     --> Building states for insert method BTS.
+ *     --> Building handleInsertvalue handler.
  * 
- * Note: In next versions insert, lookup and 
- * remove methos are going to be developed
+ * Note: With this method i insert the value 
+ * of nine and i mutated to the state value
  */
 
 const BTSComponent = () => {
@@ -48,6 +48,10 @@ const BTSComponent = () => {
         lookup( value ){
             
         }
+    }
+
+    const handleInsertvalue = () => {
+        setInsertvalue(9)   
     }
 
     return(
