@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.02 - 
+/**interview-prep-app - version 26.03 - 
  * BTSComponent - Features: 
  * 
- *     --> Developing 'insert' method..
+ *     --> Developing 'insert' method.
+ * 
+ *     --> Building states for insert method BTS.
  * 
  * Note: In next versions insert, lookup and 
  * remove methos are going to be developed
@@ -18,6 +20,9 @@ const BTSComponent = () => {
     /**binarysearchtreeimplementation asset */
     console.log(' graphsData ==> ', graphsData)
     const binarysearchtreeimplementation = graphsData[21].image; 
+
+    /**states for insert method BTS */
+    const [ insertvalue, setInsertvalue ] = useState([]);
 
     class Node {
         constructor( value ){
