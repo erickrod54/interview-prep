@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.05 - 
+/**interview-prep-app - version 26.06 - 
  * BTSComponent - Features: 
  * 
  *     --> Developing 'insert' method.
  * 
- *     --> Rendering 'insertvalue'.
+ *     --> Building printList method.
  * 
- * Note: With this method i insert the value 
- * of nine and i mutated to the state value
+ *     --> Instantiating the tree
+ * 
+ * Note: this printList uses a traverse 
+ * method so can iterate over the tree 
+ * to insert the value
  */
 
 const BTSComponent = () => {
@@ -32,26 +35,45 @@ const BTSComponent = () => {
         }
     }
 
-    class BinarySearchTree{
-        constructor(){
-            this.root = null;
+    class BinarySearchTree {
+        constructor() {
+          this.root = null;
         }
-
-        /**here i build the search method in the BTS data structure */
-        insert( value ){
-            const newNode = new Node(value);
-            if (this.root === null) {
-                this.root = newNode;
+    
+        insert(value) {
+          const newNode = new Node(value);
+          if (this.root === null) {
+            this.root = newNode;
+          } 
+        }
+    
+        lookup(value) {}
+    
+        printList() {
+          const array = [];
+          let currentNode = this.root;
+    
+          const traverse = (node) => {
+            if (node !== null) {
+              traverse(node.left);
+              array.push(node.value);
+              traverse(node.right);
             }
+          };
+    
+          traverse(currentNode);
+          return array;
         }
+      }
 
-        lookup( value ){
-            
-        }
-    }
+    /**here i instantiate the tree */
+    const BTS = new BinarySearchTree();
 
     const handleInsertvalue = () => {
-        setInsertvalue(9)   
+        return(
+            BTS.insert(9),
+            setInsertvalue(BTS.printList())
+        )   
     }
 
     return(
