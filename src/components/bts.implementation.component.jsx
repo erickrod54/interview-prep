@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.04 - 
+/**interview-prep-app - version 26.05 - 
  * BTSComponent - Features: 
  * 
  *     --> Developing 'insert' method.
  * 
- *     --> Building handleInsertvalue handler.
+ *     --> Rendering 'insertvalue'.
  * 
  * Note: With this method i insert the value 
  * of nine and i mutated to the state value
@@ -64,6 +64,14 @@ const BTSComponent = () => {
             </p>
 
             <img src={binarysearchtreeimplementation} className='large' alt='binary search tree implementation'/>
+
+            <p>
+                let's insert the value of <strong> '9' </strong>:
+            </p>
+
+            <button onClick={handleInsertvalue}>insert the value of <strong> '9' </strong></button>
+
+            <p>{insertvalue}</p>
 
         </DataStructuresWrapper>
     )
