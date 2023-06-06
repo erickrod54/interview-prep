@@ -2,12 +2,10 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.01 - 
+/**interview-prep-app - version 26.02 - 
  * BTSComponent - Features: 
  * 
- *     --> Displaying asset.
- *      
- *     --> Starting to implement BTS.
+ *     --> Developing 'insert' method..
  * 
  * Note: In next versions insert, lookup and 
  * remove methos are going to be developed
@@ -34,8 +32,12 @@ const BTSComponent = () => {
             this.root = null;
         }
 
+        /**here i build the search method in the BTS data structure */
         insert( value ){
-
+            const newNode = new Node(value);
+            if (this.root === null) {
+                this.root = newNode;
+            }
         }
 
         lookup( value ){
