@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.06 - 
+/**interview-prep-app - version 26.07- 
  * BTSComponent - Features: 
  * 
  *     --> Developing 'insert' method.
  * 
- *     --> Building printList method.
- * 
- *     --> Instantiating the tree
+ *     --> Building cleanupInsertvalue method.
  * 
  * Note: this printList uses a traverse 
  * method so can iterate over the tree 
@@ -74,6 +72,14 @@ const BTSComponent = () => {
             BTS.insert(9),
             setInsertvalue(BTS.printList())
         )   
+    }
+
+    const cleanupInsertvalue = () => {
+        setTimeout(() => {
+            return(
+                setInsertvalue(0)
+            )
+        }, 6000)
     }
 
     return(
