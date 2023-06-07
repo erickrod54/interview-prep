@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.10 - 
+/**interview-prep-app - version 26.11 - 
  * BTSComponent - Features: 
  * 
  *     --> Developing 'insert' method.
  * 
- *     --> Adding the right and left value for the 
- *         BinarySearchTree - BTS.
+ *     --> Developing 'traverseAlt' function.
  * 
  * Note: this BTSAlt is an alternative code to the 
  * first binary search tree
@@ -140,6 +139,18 @@ const BTSComponent = () => {
                 setInsertvalue(0)
             )
         }, 6000)
+    }
+
+    /**alternative BTSAlt handlers and functions */
+    
+    /**traverseAlt is going to be use for iterate over BTSAlt*/
+    function traverseAlt(node) {
+        const tree = { value: node.value };
+        tree.left = node.left === null ? null :
+        traverseAlt(node.left);
+        tree.right = node.right === null ? null :
+        traverseAlt(node.right)
+        return tree
     }
 
     return(
