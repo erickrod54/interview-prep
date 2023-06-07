@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.09- 
+/**interview-prep-app - version 26.10 - 
  * BTSComponent - Features: 
  * 
  *     --> Developing 'insert' method.
  * 
- *     --> Building BinarySearchTreeAlt template.
+ *     --> Adding the right and left value for the 
+ *         BinarySearchTree - BTS.
  * 
  * Note: this BTSAlt is an alternative code to the 
  * first binary search tree
@@ -38,11 +39,30 @@ const BTSComponent = () => {
         }
     
         insert(value) {
-          const newNode = new Node(value);
-          if (this.root === null) {
-            this.root = newNode;
-          } 
-        }
+            const newNode = new Node(value);
+            if (this.root === null) {
+              this.root = newNode;
+            } else {
+              let currentNode = this.root;
+              while(true){
+                  if (value < currentNode.value) {
+                      //Left
+                      if (!currentNode.left) {
+                          currentNode.left = newNode;
+                          return this;
+                      }
+                      currentNode = currentNode.left;
+                  } else {
+                    //right
+                    if (!currentNode.right) {
+                      currentNode.right = newNode;
+                      return this;
+                    }
+                    currentNode = currentNode.right;
+                  }
+              }
+            }
+          }
     
         lookup(value) {}
     
@@ -53,7 +73,7 @@ const BTSComponent = () => {
           const traverse = (node) => {
             if (node !== null) {
               traverse(node.left);
-              array.push(node.value);
+              array.push(node.value + ',');
               traverse(node.right);
             }
           };
@@ -104,6 +124,11 @@ const BTSComponent = () => {
     const handleInsertvalue = () => {
         return(
             BTS.insert(9),
+            BTS.insert(4),
+            BTS.insert(20),
+            BTS.insert(170),
+            BTS.insert(15),
+            BTS.insert(1),
             setInsertvalue(BTS.printList()),
             cleanupInsertvalue()
         )   
@@ -132,9 +157,9 @@ const BTSComponent = () => {
                 let's insert the value of <strong> '9' </strong>:
             </p>
 
-            <button onClick={handleInsertvalue}>insert the value of <strong> '9' </strong></button>
+            <button onClick={handleInsertvalue}>insert the value of <strong> '9', '4', '20', '170', '15', '1' </strong></button>
 
-            <p>{insertvalue}</p>
+            <p>[{insertvalue}]</p>
 
         </DataStructuresWrapper>
     )
