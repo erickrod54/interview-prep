@@ -2,17 +2,15 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.08- 
+/**interview-prep-app - version 26.09- 
  * BTSComponent - Features: 
  * 
  *     --> Developing 'insert' method.
  * 
- *     --> Invoking and testing cleanupInsertvalue 
- *          method.
+ *     --> Building BinarySearchTreeAlt template.
  * 
- * Note: this printList uses a traverse 
- * method so can iterate over the tree 
- * to insert the value
+ * Note: this BTSAlt is an alternative code to the 
+ * first binary search tree
  */
 
 const BTSComponent = () => {
@@ -63,6 +61,41 @@ const BTSComponent = () => {
           traverse(currentNode);
           return array;
         }
+      }
+
+      class BinarySearchTreeAlt {
+        constructor() {
+          this.root = null;
+        }
+    
+        insert(value) {
+          const newNode = new Node(value);
+          if (this.root === null) {
+            this.root = newNode;
+          } else {
+            let currentNode = this.root;
+            while(true){
+                if (value < currentNode.value) {
+                    //Left
+                    if (!currentNode.left) {
+                        currentNode.left = newNode;
+                        return this;
+                    }
+                    currentNode = currentNode.left;
+                } else {
+                  //right
+                  if (!currentNode.right) {
+                    currentNode.right = newNode;
+                    return this;
+                  }
+                  currentNode = currentNode.right;
+                }
+            }
+          }
+        }
+    
+        lookup(value) {}
+    
       }
 
     /**here i instantiate the tree */
