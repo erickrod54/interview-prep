@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.14 - 
+/**interview-prep-app - version 26.15 - 
  * BTSComponent - Features: 
  * 
  *     --> Developing 'insert' method.
  * 
- *     --> Building states for 'handleInsertvalueAlt'.
+ *     --> Rendering insertvaluealt.
  * 
  * Note: this BTSAlt is an alternative code to the 
  * first binary search tree
@@ -162,7 +162,7 @@ const BTSComponent = () => {
     const handleInsertvalueAlt = () => {
         return(
             BTSAlt.insert(9),
-            BTSAlt.insert(4),
+            //BTSAlt.insert(4),
             //BTSAlt.insert(20),
             //BTSAlt.insert(170),
             //BTSAlt.insert(15),
@@ -189,6 +189,17 @@ const BTSComponent = () => {
             <button onClick={handleInsertvalue}>insert the value of <strong> '9', '4', '20', '170', '15', '1' </strong></button>
 
             <p>[{insertvalue}]</p>
+
+            <h3>Alternative template:( check the source code for BTSAlt)</h3>
+
+            <p>
+                now i will test inserting the same values using an alternative <strong> 'BSTAlt' </strong> template,
+                <strong> 'JSON and stringify' </strong> method
+            </p>
+
+            <button onClick={handleInsertvalueAlt}>insert the value of <strong> '9' (Alt template)</strong></button>
+
+            <p>{insertvaluealt}</p>
 
         </DataStructuresWrapper>
     )
