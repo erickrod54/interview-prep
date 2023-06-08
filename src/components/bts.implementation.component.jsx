@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.16 - 
+/**interview-prep-app - version 26.17 - 
  * BTSComponent - Features: 
  * 
  *     --> Developing 'insert' method.
  * 
- *     --> Rendering insertvaluealt with all the
- *         tree values.
+ *     --> Adding a note to BTSAlt rendering.
  * 
  * Note: this BTSAlt is an alternative code to the 
  * first binary search tree
@@ -203,6 +202,8 @@ const BTSComponent = () => {
             <section className="code-block">
                 <p>{insertvaluealt}</p>
             </section>
+
+            <h4>Note: if i copy and paste into the java console i test and verify that the tree is effectivily match with the reference asset</h4>
 
         </DataStructuresWrapper>
     )
