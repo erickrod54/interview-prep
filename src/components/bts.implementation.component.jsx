@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 27.03 - 
+/**interview-prep-app - version 27.04 - 
  * BTSComponent - Features: 
  * 
- *     --> Developing lookup method for BTS template. 
- * 
- *     --> fixing 'cleanupLookupvaluealt' to 'cleanupLookupvalue'.
+ *     --> Work in progress developing remove method for BTSAlt template. 
  * 
  * Note: For every lookup method or peek method
  * i need to store the look in the variable
@@ -133,6 +131,45 @@ const BTSComponent = () => {
         }
     
         lookup(value) {}
+
+        remove(value){
+            if (!this.root) {
+                return false;
+            }
+            let currentNode = this.root;
+            /**this parent will link the child of the remove node
+             * with the parent of the remove node*/
+            let parentNode = null;
+            while(currentNode){
+                if (value > currentNode.value) {
+                    parentNode = currentNode;
+                    currentNode = currentNode.left
+                }else if(value > currentNode.value){
+                    parentNode = currentNode;
+                    currentNode = currentNode.right;
+                }else if( currentNode.value === value){
+                    //We have a match lets get to work
+
+                    //Option 1: No right Child:
+                    if (currentNode.right === null) {
+                        if (parentNode === null) {
+                            this.root = currentNode.left;
+                        }else{
+
+                            //if parent > current value make currentleft left child a parent
+                            if (currentNode.value < parentNode.value) {
+                                parentNode.left = currentNode.left
+                            }
+
+                            //if parent < current value make currentleft right child a parent
+                            if (currentNode.value > parentNode.value) {
+                                parentNode.right = currentNode.right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     
       }
 
