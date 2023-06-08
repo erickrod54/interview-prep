@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 27.00 - 
+/**interview-prep-app - version 27.01 - 
  * BTSComponent - Features: 
  * 
  *     --> Developing lookup method for BTS template. 
  * 
- *     --> Building 'handleLookupvalue' states.
+ *     --> Rendering 'lookupvalue' for BTS.
  * 
  * Note: For every lookup method or peek method
  * i need to store the look in the variable
@@ -162,7 +162,7 @@ const BTSComponent = () => {
         BTS.insert(15);
         BTS.insert(1);
 
-        const lookupResult = BTS.lookup(3);
+        const lookupResult = BTS.lookup(9);
         setLookupvalue(JSON.stringify(lookupResult));
        
 }
@@ -229,6 +229,18 @@ const BTSComponent = () => {
             <button onClick={handleInsertvalue}>insert the value of <strong> '9', '4', '20', '170', '15', '1' </strong></button>
 
             <p>[{insertvalue}]</p>
+
+            <h3>Lookup method:</h3>
+
+            <p>
+                let's lookup the value of <strong> '9' </strong>:
+            </p>
+
+            <button onClick={handleLookupvalue}>lookup the value of <strong> '9' </strong></button>
+
+            <section className="code-block">
+                <p>[{lookupvalue ? lookupvalue : 'value not found'}]</p>
+            </section>
 
             <h3>Alternative template:( check the source code for BTSAlt)</h3>
 
