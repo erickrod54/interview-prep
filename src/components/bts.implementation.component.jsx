@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.20 - 
+/**interview-prep-app - version 27.00 - 
  * BTSComponent - Features: 
  * 
- *     --> Developing 'insert' method.
+ *     --> Developing lookup method for BTS template. 
  * 
- *     --> Building lookup states.
+ *     --> Building 'handleLookupvalue' states.
  * 
- * Note: this BTSAlt is an alternative code to the 
- * first binary search tree
+ * Note: For every lookup method or peek method
+ * i need to store the look in the variable
  */
 
 const BTSComponent = () => {
@@ -151,6 +151,21 @@ const BTSComponent = () => {
             cleanupInsertvalue()
         )   
     }
+
+    /**here i handle the lookup  */
+    const handleLookupvalue = () => {
+        
+        BTS.insert(9);
+        BTS.insert(4);
+        BTS.insert(20);
+        BTS.insert(170);
+        BTS.insert(15);
+        BTS.insert(1);
+
+        const lookupResult = BTS.lookup(3);
+        setLookupvalue(JSON.stringify(lookupResult));
+       
+}
 
     const cleanupInsertvalue = () => {
         setTimeout(() => {
