@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.15 - 
+/**interview-prep-app - version 26.16 - 
  * BTSComponent - Features: 
  * 
  *     --> Developing 'insert' method.
  * 
- *     --> Rendering insertvaluealt.
+ *     --> Rendering insertvaluealt with all the
+ *         tree values.
  * 
  * Note: this BTSAlt is an alternative code to the 
  * first binary search tree
@@ -162,11 +163,11 @@ const BTSComponent = () => {
     const handleInsertvalueAlt = () => {
         return(
             BTSAlt.insert(9),
-            //BTSAlt.insert(4),
-            //BTSAlt.insert(20),
-            //BTSAlt.insert(170),
-            //BTSAlt.insert(15),
-            //BTSAlt.insert(1),
+            BTSAlt.insert(4),
+            BTSAlt.insert(20),
+            BTSAlt.insert(170),
+            BTSAlt.insert(15),
+            BTSAlt.insert(1),
             setInsertvalueAlt(JSON.stringify(traverseAlt(BTSAlt.root)))
         )   
     }
@@ -199,7 +200,9 @@ const BTSComponent = () => {
 
             <button onClick={handleInsertvalueAlt}>insert the value of <strong> '9' (Alt template)</strong></button>
 
-            <p>{insertvaluealt}</p>
+            <section className="code-block">
+                <p>{insertvaluealt}</p>
+            </section>
 
         </DataStructuresWrapper>
     )
