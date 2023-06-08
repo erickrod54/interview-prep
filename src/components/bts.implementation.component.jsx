@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 27.01 - 
+/**interview-prep-app - version 27.02 - 
  * BTSComponent - Features: 
  * 
  *     --> Developing lookup method for BTS template. 
  * 
- *     --> Rendering 'lookupvalue' for BTS.
+ *     --> Building 'cleanupLookupvaluealt' for BTS.
  * 
  * Note: For every lookup method or peek method
  * i need to store the look in the variable
@@ -164,8 +164,17 @@ const BTSComponent = () => {
 
         const lookupResult = BTS.lookup(9);
         setLookupvalue(JSON.stringify(lookupResult));
+        cleanupLookupvaluealt();
        
 }
+
+    const cleanupLookupvaluealt = () => {
+        setTimeout(() => {
+            return(
+                setLookupvalue('BTS lookup values cleared, hit again')
+            )
+        }, 6000)
+    }
 
     const cleanupInsertvalue = () => {
         setTimeout(() => {
