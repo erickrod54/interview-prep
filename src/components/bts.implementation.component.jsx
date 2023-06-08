@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.18 - 
+/**interview-prep-app - version 26.19 - 
  * BTSComponent - Features: 
  * 
  *     --> Developing 'insert' method.
  * 
- *     --> Building a cleanupInsertvalup function.
+ *     --> Building lookup method for BinarySearchTree - BTS.
  * 
  * Note: this BTSAlt is an alternative code to the 
  * first binary search tree
@@ -66,7 +66,22 @@ const BTSComponent = () => {
             }
           }
     
-        lookup(value) {}
+          lookup(value) {
+            if (!this.root) {
+                return false                
+            }
+
+            let currentNode = this.root;
+            while(currentNode){
+                if (value < currentNode.value) {
+                    currentNode = currentNode.left;
+                }else if(value > currentNode.right){
+                    currentNode = currentNode.right;
+                }else if(currentNode.value === value){
+                    return currentNode;
+                }
+            }
+        }
     
         printList() {
           const array = [];
