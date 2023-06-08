@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 26.17 - 
+/**interview-prep-app - version 26.18 - 
  * BTSComponent - Features: 
  * 
  *     --> Developing 'insert' method.
  * 
- *     --> Adding a note to BTSAlt rendering.
+ *     --> Building a cleanupInsertvalup function.
  * 
  * Note: this BTSAlt is an alternative code to the 
  * first binary search tree
@@ -167,8 +167,17 @@ const BTSComponent = () => {
             BTSAlt.insert(170),
             BTSAlt.insert(15),
             BTSAlt.insert(1),
-            setInsertvalueAlt(JSON.stringify(traverseAlt(BTSAlt.root)))
+            setInsertvalueAlt(JSON.stringify(traverseAlt(BTSAlt.root))),
+            cleanupInsertvaluealt()
         )   
+    }
+
+    const cleanupInsertvaluealt = () => {
+        setTimeout(() => {
+            return(
+                setInsertvalueAlt('BTS Alt values cleared, hit again')
+            )
+        }, 6000)
     }
 
     return(
