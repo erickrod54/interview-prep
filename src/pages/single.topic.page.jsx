@@ -20,12 +20,13 @@ import { ArrayDataStructure,
          StacksAndLinkedList,
          QueueAndLinkedList,
          TreeDataStructure,
-         BTSComponent
+         BTSComponent,
+         BTSBalanced
         } from '../components/index.components';
         
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 25.18 - SingleTopicPage  
+/**interview-prep-app - version 27.06 - SingleTopicPage  
  * - Features: 
  * 
  *     --> Adding 'BTSComponent' to the single topic. 
@@ -127,6 +128,10 @@ const SingleTopicPage = () => {
 
     if (id === '20') {
         return <BTSComponent />
+    }
+
+    if (id === '21') {
+        return <BTSBalanced />
     }
 }
 
