@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 27.04 - 
+/**interview-prep-app - version 27.05 - 
  * BTSComponent - Features: 
  * 
- *     --> Work in progress developing remove method for BTSAlt template. 
+ *     --> Pending to fix a bug with the remove method. 
  * 
  * Note: For every lookup method or peek method
  * i need to store the look in the variable
@@ -22,6 +22,7 @@ const BTSComponent = () => {
     /**states for insert method BTS */
     const [ insertvalue, setInsertvalue ] = useState([]);
     const [ lookupvalue, setLookupvalue ] = useState([]);
+    const [ removevalue, setRemovevalue ] = useState([]);
 
     /**states for insert method BTSAlt */
     const [ insertvaluealt, setInsertvalueAlt ] = useState([]);
@@ -132,44 +133,78 @@ const BTSComponent = () => {
     
         lookup(value) {}
 
-        remove(value){
+        remove(value) {
             if (!this.root) {
-                return false;
+              return false;
             }
+      
             let currentNode = this.root;
-            /**this parent will link the child of the remove node
-             * with the parent of the remove node*/
             let parentNode = null;
-            while(currentNode){
-                if (value > currentNode.value) {
-                    parentNode = currentNode;
-                    currentNode = currentNode.left
-                }else if(value > currentNode.value){
-                    parentNode = currentNode;
-                    currentNode = currentNode.right;
-                }else if( currentNode.value === value){
-                    //We have a match lets get to work
-
-                    //Option 1: No right Child:
-                    if (currentNode.right === null) {
-                        if (parentNode === null) {
-                            this.root = currentNode.left;
-                        }else{
-
-                            //if parent > current value make currentleft left child a parent
-                            if (currentNode.value < parentNode.value) {
-                                parentNode.left = currentNode.left
-                            }
-
-                            //if parent < current value make currentleft right child a parent
-                            if (currentNode.value > parentNode.value) {
-                                parentNode.right = currentNode.right;
-                            }
-                        }
+            let isLeftChild = false;
+      
+            while (currentNode) {
+              if (value < currentNode.value) {
+                parentNode = currentNode;
+                currentNode = currentNode.left;
+                isLeftChild = true;
+              } else if (value > currentNode.value) {
+                parentNode = currentNode;
+                currentNode = currentNode.right;
+                isLeftChild = false;
+              } else if (currentNode.value === value) {
+                // Case 1: No right child
+                if (currentNode.right === null) {
+                  if (parentNode === null) {
+                    this.root = currentNode.left;
+                  } else {
+                    if (isLeftChild) {
+                      parentNode.left = currentNode.left;
+                    } else {
+                      parentNode.right = currentNode.left;
                     }
+                  }
                 }
+                // Case 2: Right child without a left child
+                else if (currentNode.right.left === null) {
+                  if (parentNode === null) {
+                    this.root = currentNode.right;
+                  } else {
+                    if (isLeftChild) {
+                      parentNode.left = currentNode.right;
+                    } else {
+                      parentNode.right = currentNode.right;
+                    }
+                  }
+                }
+                // Case 3: Right child with a left child
+                else {
+                  let leftmostParent = currentNode.right;
+                  let leftmost = currentNode.right.left;
+                  while (leftmost.left !== null) {
+                    leftmostParent = leftmost;
+                    leftmost = leftmost.left;
+                  }
+      
+                  leftmostParent.left = leftmost.right;
+                  leftmost.left = currentNode.left;
+                  leftmost.right = currentNode.right;
+      
+                  if (parentNode === null) {
+                    this.root = leftmost;
+                  } else {
+                    if (isLeftChild) {
+                      parentNode.left = leftmost;
+                    } else {
+                      parentNode.right = leftmost;
+                    }
+                  }
+                }
+                return true; // Item removed successfully
+              }
             }
-        }
+      
+            return false; // Item not found in the tree
+          }
     
       }
 
@@ -249,6 +284,18 @@ const BTSComponent = () => {
         )   
     }
 
+    const handleRemovevalueAlt = () => {
+        BTS.insert(9);
+        BTS.insert(4);
+        BTS.insert(20);
+        BTS.insert(170);
+        BTS.insert(15);
+        BTS.insert(1);
+
+        const removeResult = BTSAlt.remove(4);
+        setRemovevalue(JSON.stringify(removeResult));
+    }
+
     const cleanupInsertvaluealt = () => {
         setTimeout(() => {
             return(
@@ -302,6 +349,14 @@ const BTSComponent = () => {
             </section>
 
             <h4>Note: if i copy and paste into the java console i test and verify that the tree is effectivily match with the reference asset</h4>
+
+            <h3>Remove method in BTSAlt: </h3>
+
+            <button onClick={handleRemovevalueAlt}>remove the value of <strong> '9' (Alt template)</strong></button>
+
+            <section className="code-block">
+                <p>{removevalue}</p>
+            </section>
 
         </DataStructuresWrapper>
     )
