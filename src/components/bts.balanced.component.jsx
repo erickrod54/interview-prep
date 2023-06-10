@@ -1,15 +1,23 @@
 import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
+import { useAppContext } from "../context";
 
-/**interview-prep-app - version 27.08 - BTSBalanced  
+/**interview-prep-app - version 27.09 - BTSBalanced  
  * - Features: 
  * 
  *     --> Developing BTS Balanced concept. 
+ * 
+ *     --> Destructuring unbalanced tree from the context.
  * 
  * Note: Pending to re structure imports using the index.
  */
 
 const BTSBalanced = () => {
+
+    const { graphsData } = useAppContext()
+    //console.log(' graphsData ==> ', graphsData)
+    
+    const unbalancedavltreepng = graphsData[22].image;
 
     return(
         <DataStructuresWrapper>
@@ -45,6 +53,29 @@ const BTSBalanced = () => {
                 sequence that the unbalnced node was inserted, and reorder the node layers up to get balanced
                 in the tree
             </p>
+
+            <p>
+                let's make an example performing the following insertions:
+            </p>
+            
+            <ul>
+                <li>
+                    <strong> 77 </strong>
+                </li>
+                <li>
+                    <strong> 80 </strong>
+                </li>
+            </ul>
+
+            <p>
+                for this purpose let's use visualgo
+            </p>
+
+            <p>
+                once the insertion is done, i will get a BTS like this <strong> (unbalanced tree) </strong>:
+            </p>
+
+            <img src={unbalancedavltreepng} className='large' alt="unbalanced avl treepng"/>
 
             <h3> Red black tree </h3>
 
