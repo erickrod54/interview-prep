@@ -20,13 +20,14 @@ import { hashtable,
          binarysearchtreeconcept,
          binarysearchtreecomparison,
          binarysearchtreeimplementation,
+         unbalancedavltreepng,
          } from './assets/index';      
 
-/**interview-prep-app - version 27.06 - data js - 
+/**interview-prep-app - version 27.08 - data js - 
  * Features: 
  * 
- *     --> Adding 'BTS Balanced' for 
- *         linksData.   
+ *     --> Adding 'unbalancedavltreepng' for 
+ *         graphsData.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -234,6 +235,10 @@ export const linksData = [
       {
         id:22,
         image: binarysearchtreeimplementation
+      },
+      {
+        id:23,
+        image: unbalancedavltreepng
       }
     ]
     
