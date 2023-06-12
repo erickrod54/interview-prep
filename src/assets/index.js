@@ -23,11 +23,12 @@ import binarysearchtreecomparison from './binary-search-tree-comparison.png';
 import binarysearchtreeimplementation from './binary-search-tree-implementation.png';
 import unbalancedavltreepng from './unbalanced-avl-tree.png'
 import balancedavltree from './balancedavltree.png'
+import graphs from './graphs.png'
 
-/**interview-prep-app - version 27.09 - assets > index - 
+/**interview-prep-app - version 27.12 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'balancedavltree' asset.
+ *     --> Importing and exporting 'graphs' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -56,5 +57,6 @@ export { bigo1stgraph,
          binarysearchtreecomparison,
          binarysearchtreeimplementation,
          unbalancedavltreepng,
-         balancedavltree
+         balancedavltree,
+         graphs
         };
