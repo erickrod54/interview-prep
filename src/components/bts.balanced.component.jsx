@@ -2,12 +2,12 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 27.09 - BTSBalanced  
+/**interview-prep-app - version 27.10 - BTSBalanced  
  * - Features: 
  * 
  *     --> Developing BTS Balanced concept. 
  * 
- *     --> Destructuring unbalanced tree from the context.
+ *     --> Destructuring balancedavltree tree from the context.
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -18,6 +18,7 @@ const BTSBalanced = () => {
     //console.log(' graphsData ==> ', graphsData)
     
     const unbalancedavltreepng = graphsData[22].image;
+    const balancedavltree = graphsData[23].image;
 
     return(
         <DataStructuresWrapper>
@@ -68,7 +69,7 @@ const BTSBalanced = () => {
             </ul>
 
             <p>
-                for this purpose let's use visualgo
+                for this purpose let's use <a href="https://visualgo.net/en/bst">visualgo AVL</a>
             </p>
 
             <p>
@@ -76,6 +77,12 @@ const BTSBalanced = () => {
             </p>
 
             <img src={unbalancedavltreepng} className='large' alt="unbalanced avl treepng"/>
+
+            <p>
+                and as i have an BTS AVL tree it gets ordered like this:
+            </p>
+
+            <img src={balancedavltree} className='large' alt='balanced avl tree'/>
 
             <h3> Red black tree </h3>
 
