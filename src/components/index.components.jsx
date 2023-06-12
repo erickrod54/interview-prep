@@ -20,11 +20,12 @@ import QueueAndLinkedList from "./queues.linked.list.component";
 import TreeDataStructure from "./trees.data.structure.component";
 import BTSComponent from "./bts.implementation.component";
 import BTSBalanced from "./bts.balanced.component";
+import GraphsStructure from "./graphs.component";
 
-/**interview-prep-app - version 27.06 - 
+/**interview-prep-app - version 27.11 - 
  * components > index - Features: 
  * 
- *     --> Importing and exporting 'BTSBalanced'.
+ *     --> Importing and exporting 'GraphsStructure'.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -51,5 +52,6 @@ export { ArrayDataStructure,
          QueueAndLinkedList,
          TreeDataStructure,
          BTSComponent,
-         BTSBalanced               
+         BTSBalanced,
+         GraphsStructure               
         }

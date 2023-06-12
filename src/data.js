@@ -24,11 +24,11 @@ import { hashtable,
          balancedavltree
          } from './assets/index';      
 
-/**interview-prep-app - version 27.09 - data js - 
+/**interview-prep-app - version 27.11 - data js - 
  * Features: 
  * 
- *     --> Adding 'balancedavltree' for 
- *         graphsData.   
+ *     --> Adding 'Graphs Data Structure' for 
+ *         linksData.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -122,6 +122,10 @@ export const linksData = [
       {
         id:'21',
         name:'BTS balanced'
+      },
+      {
+        id:'22',
+        name:'Graphs Data Structure'
       }
     /**
      *,
