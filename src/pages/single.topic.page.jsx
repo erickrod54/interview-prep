@@ -21,15 +21,16 @@ import { ArrayDataStructure,
          QueueAndLinkedList,
          TreeDataStructure,
          BTSComponent,
-         BTSBalanced
+         BTSBalanced,
+         GraphsStructure
         } from '../components/index.components';
         
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 27.06 - SingleTopicPage  
+/**interview-prep-app - version 27.11 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Adding 'BTSComponent' to the single topic. 
+ *     --> Adding 'GraphsStructure' to the single topic. 
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -133,6 +134,11 @@ const SingleTopicPage = () => {
     if (id === '21') {
         return <BTSBalanced />
     }
+
+    if (id === '22') {
+        return <GraphsStructure />
+    }
+    
 }
 
 export default SingleTopicPage;
