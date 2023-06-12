@@ -21,14 +21,15 @@ import { hashtable,
          binarysearchtreecomparison,
          binarysearchtreeimplementation,
          unbalancedavltreepng,
-         balancedavltree
+         balancedavltree,
+         graphs
          } from './assets/index';      
 
-/**interview-prep-app - version 27.11 - data js - 
+/**interview-prep-app - version 27.12 - data js - 
  * Features: 
  * 
- *     --> Adding 'Graphs Data Structure ' for 
- *         linksData.   
+ *     --> Adding 'graphs ' for 
+ *         graphsData.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -248,6 +249,10 @@ export const linksData = [
       {
         id:24,
         image: balancedavltree
+      },
+      {
+        id:25,
+        image: graphs
       }
     ]
     
