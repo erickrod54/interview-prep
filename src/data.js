@@ -22,13 +22,14 @@ import { hashtable,
          binarysearchtreeimplementation,
          unbalancedavltreepng,
          balancedavltree,
-         graphs
+         graphs,
+         multiplegraphs
          } from './assets/index';      
 
-/**interview-prep-app - version 27.12 - data js - 
+/**interview-prep-app - version 27.13 - data js - 
  * Features: 
  * 
- *     --> Adding 'graphs ' for 
+ *     --> Adding 'multiplegraphs ' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -253,6 +254,10 @@ export const linksData = [
       {
         id:25,
         image: graphs
+      },
+      {
+        id:26,
+        image: multiplegraphs
       }
     ]
     
