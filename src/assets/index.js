@@ -25,11 +25,12 @@ import unbalancedavltreepng from './unbalanced-avl-tree.png'
 import balancedavltree from './balancedavltree.png'
 import graphs from './graphs.png'
 import multiplegraphs from './multiple-graphs.png'; 
+import typesgraphs from './types-graphs.png'
 
-/**interview-prep-app - version 27.13 - assets > index - 
+/**interview-prep-app - version 27.15 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'graphs' asset.
+ *     --> Importing and exporting 'typesgraphs' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -60,5 +61,6 @@ export { bigo1stgraph,
          unbalancedavltreepng,
          balancedavltree,
          graphs,
-         multiplegraphs
+         multiplegraphs,
+         typesgraphs
         };
