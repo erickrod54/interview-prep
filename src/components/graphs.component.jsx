@@ -2,12 +2,12 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 27.13 - 
+/**interview-prep-app - version 27.14 - 
  * GraphsStructure - Features: 
  * 
  *     --> Developing 'Graphs Data Structure' concept.
  * 
- *     --> Destructuring 'graphs' from the context.
+ *     --> Destructuring 'multiplegraphs' from the context.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -19,6 +19,7 @@ const GraphsStructure = () => {
     console.log(' graphsData ==> ', graphsData)
 
     const graphs = graphsData[24].image;
+    const multiplegraphs = graphsData[25].image;
 
     return(
         <DataStructuresWrapper>
@@ -36,6 +37,12 @@ const GraphsStructure = () => {
             </p>
 
             <img src={graphs} className='large' alt="graphs"/>
+
+            <p>
+                and there can be multiple graphs as shown in the following image:
+            </p>
+
+            <img src={multiplegraphs} className='large' alt="multiple graphs"/>
             
         </DataStructuresWrapper>
     )
