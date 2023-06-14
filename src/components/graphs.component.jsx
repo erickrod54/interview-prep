@@ -2,14 +2,14 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 27.15 - 
+/**interview-prep-app - version 27.16 - 
  * GraphsStructure - Features: 
  * 
  *     --> Developing 'Graphs Data Structure' concept.
  * 
  *     --> Developing 'Types of Graphs'.
  * 
- *     --> Destructuring 'graphtypes' from the context.
+ *     --> Destructuring 'weightunweightgraphs' from the context.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -23,6 +23,7 @@ const GraphsStructure = () => {
     const graphs = graphsData[24].image;
     const multiplegraphs = graphsData[25].image;
     const graphtypes = graphsData[26].image;
+    const weightunweightgraphs = graphsData[27].image;
 
     return(
         <DataStructuresWrapper>
@@ -86,6 +87,8 @@ const GraphsStructure = () => {
                     Another way to describe graphs is through <strong> weighted </strong> and <strong> unweighted </strong>
              </p>
 
+             <img src={weightunweightgraphs} className="large" alt="weight unweight graphs"/>
+ 
              <p>
                     And another way to describe graphs is through <strong> cyclic </strong> and <strong> acyclic </strong>,
                     <strong> cyclic </strong> is when every node-vertex is connected with each ohter and is it posible to go 
