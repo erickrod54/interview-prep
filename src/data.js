@@ -24,13 +24,14 @@ import { hashtable,
          balancedavltree,
          graphs,
          multiplegraphs,
-         typesgraphs
+         typesgraphs,
+         weightunweightgraphs
          } from './assets/index';      
 
-/**interview-prep-app - version 27.15 - data js - 
+/**interview-prep-app - version 27.16 - data js - 
  * Features: 
  * 
- *     --> Adding 'typesgraphs ' for 
+ *     --> Adding 'weightunweight-graphs ' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -263,6 +264,10 @@ export const linksData = [
       {
         id:27,
         image: typesgraphs
+      },
+      {
+        id:28,
+        image: weightunweightgraphs
       }
     ]
     
