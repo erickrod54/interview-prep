@@ -2,12 +2,14 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 27.14 - 
+/**interview-prep-app - version 27.15 - 
  * GraphsStructure - Features: 
  * 
  *     --> Developing 'Graphs Data Structure' concept.
  * 
- *     --> Destructuring 'multiplegraphs' from the context.
+ *     --> Developing 'Types of Graphs'.
+ * 
+ *     --> Destructuring 'graphtypes' from the context.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -20,6 +22,7 @@ const GraphsStructure = () => {
 
     const graphs = graphsData[24].image;
     const multiplegraphs = graphsData[25].image;
+    const graphtypes = graphsData[26].image;
 
     return(
         <DataStructuresWrapper>
@@ -43,6 +46,52 @@ const GraphsStructure = () => {
             </p>
 
             <img src={multiplegraphs} className='large' alt="multiple graphs"/>
+            
+            <h3>Types of Graphs:</h3>
+
+            <p>
+                there are two types of graphs: 
+            </p>
+
+            <ul>
+                <li>
+                    <strong> Directed </strong>
+                </li>
+                <li>
+                    <strong> Undirected </strong>
+                </li>
+            </ul>
+
+            <p>
+                as the image as follows:
+            </p>
+
+            <img src={graphtypes} className="large" alt="graph types"/>
+ 
+            <p>
+                A <strong> Directed </strong> graph refers to a <strong> non bidirectional flow </strong>
+                a good use case for this graph is to describe traffic flow, or twitter because when i  
+                follow an account this account does not necessary follows me ( because goes in one direction )
+                and i can think as one way street
+            </p>
+
+            <p>
+                A <strong> Undirected </strong> graph refers to a <strong> bidirectional flow </strong>
+                a good use case is when i think about facebook, when i am connected to a friend that 
+                friend is also connected to me ( so is in both directions ) i can think as one highway 
+                ( where i can i have traffic flow back and forth ) 
+            </p>
+
+             <p>
+                    Another way to describe graphs is through <strong> weighted </strong> and <strong> unweighted </strong>
+             </p>
+
+             <p>
+                    And another way to describe graphs is through <strong> cyclic </strong> and <strong> acyclic </strong>,
+                    <strong> cyclic </strong> is when every node-vertex is connected with each ohter and is it posible to go 
+                    back to the start point node-vertex, and <strong> acyclic </strong> is when not every node-vertex is connected 
+                    with each ohter and is it not posible to go back to the start point node-vertex 
+             </p>       
             
         </DataStructuresWrapper>
     )
