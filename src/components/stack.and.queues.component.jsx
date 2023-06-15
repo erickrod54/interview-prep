@@ -2,10 +2,10 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 27.18 - StackAndQueues - 
+/**interview-prep-app - version 27.19 - StackAndQueues - 
  * Features: 
  * 
- *     --> Migrating 'callSetTimeoutStackZero'.
+ *     --> Clearing 'callSetTimeoutStackZero' set mutators.
  * 
  * Note: With the knowledge adquire so far i build a clean
  * up function to clear the values for CALLSTACK handler,
@@ -27,10 +27,6 @@ const StackAndQueues = () => {
             a_zero_state,
             b_zero_state,
             c_zero_state,
-            setA_zero_state,
-            setB_zero_state,
-            setC_zero_state,
-            cleanUpSetTimeoutZerofunction,
             callSetTimeoutStackZero  } = useAppContext();
     console.log('this is the graphsData ==>', graphsData)
 
