@@ -2,10 +2,10 @@ import React from "react";
 import { useAppContext } from "../context";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 25.12 - StackAndQueues - 
+/**interview-prep-app - version 27.17 - StackAndQueues - 
  * Features: 
  * 
- *     --> Clearing unused 'useState'.
+ *     --> Migrating 'cleanUpSetTimeoutZerofunction'.
  * 
  * Note: With the knowledge adquire so far i build a clean
  * up function to clear the values for CALLSTACK handler,
@@ -29,7 +29,8 @@ const StackAndQueues = () => {
             c_zero_state,
             setA_zero_state,
             setB_zero_state,
-            setC_zero_state  } = useAppContext();
+            setC_zero_state,
+            cleanUpSetTimeoutZerofunction  } = useAppContext();
     console.log('this is the graphsData ==>', graphsData)
 
     const stackandmethods = graphsData[12].image;
@@ -38,15 +39,7 @@ const StackAndQueues = () => {
     const exerciseinasynchronousprocessing = graphsData[15].image
 
     //CALL STACK && CALLBACK QUEUE cleanup function for zero
-    const cleanUpSetTimeoutZerofunction = () => {
-        setTimeout(() => {
-            return(
-                setA_zero_state(0),
-                setB_zero_state(0),
-                setC_zero_state(0)
-            )
-        }, 6000)
-    }
+    
 
     //CALL STACK && CALLBACK QUEUE handler for 0 seconds case
     const callSetTimeoutStackZero = () => {
