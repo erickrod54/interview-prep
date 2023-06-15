@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 27.17 - context js - 
+/**interview-prep-app - version 27.19 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'cleanUpSetTimeoutZerofunction'
+ *     --> Invoking 'cleanUpSetTimeoutZerofunction()'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -488,8 +488,8 @@ export const AppProvider = ({ children }) => {
                 setTimeout(() => {
                     setB_zero_state(2)
                 }, 0),
-                setC_zero_state(3)
-                /** pendingo to cleanUpSetTimeoutZerofunction() */
+                setC_zero_state(3),
+                cleanUpSetTimeoutZerofunction()
                 )
             }
 
@@ -536,7 +536,8 @@ export const AppProvider = ({ children }) => {
             )
         }, 6000)
     }
-
+    
+    //CALL STACK && CALLBACK QUEUE cleanup function for zero
     const cleanUpSetTimeoutZerofunction = () => {
         setTimeout(() => {
             return(
