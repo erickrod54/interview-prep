@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 23.20 - context js - 
+/**interview-prep-app - version 27.17 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'callSetTimeoutStackZero'
+ *     --> Placing and providing 'cleanUpSetTimeoutZerofunction'
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -537,6 +537,16 @@ export const AppProvider = ({ children }) => {
         }, 6000)
     }
 
+    const cleanUpSetTimeoutZerofunction = () => {
+        setTimeout(() => {
+            return(
+                setA_zero_state(0),
+                setB_zero_state(0),
+                setC_zero_state(0)
+            )
+        }, 6000)
+    }
+
     return (
         <AppContext.Provider value={{
             nemo,
@@ -661,7 +671,8 @@ export const AppProvider = ({ children }) => {
             callStack,
             callSetTimeoutStack,
             cleanUpSetTimeoutfunction,
-            callSetTimeoutStackZero
+            callSetTimeoutStackZero,
+            cleanUpSetTimeoutZerofunction
         }}>
             {children}
         </AppContext.Provider>
