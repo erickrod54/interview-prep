@@ -2,12 +2,12 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 27.20 - 
+/**interview-prep-app - version 28.00 - 
  * GraphsStructure - Features: 
  * 
  *     --> Developing 'Graphs Data Structure' concept.
  * 
- *     --> Destructuring 'cyclicacyclicgraph' from the context.
+ *     --> Developing 'weight unweighted graphs' concept.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -83,7 +83,11 @@ const GraphsStructure = () => {
             </p>
 
              <p>
-                    Another way to describe graphs is through <strong> weighted </strong> and <strong> unweighted </strong>
+                    Another way to describe graphs is through <strong> weighted </strong> and <strong> unweighted </strong>,
+                    where values can be applied to multiple aspects of a graph <strong> ( values are not limited to the nodes ) </strong>,
+                    like the example below where information is placed also in the <strong> 'edges' </strong>,
+                    this could be a use case for visit sites that most you like, or google paths to weight the 
+                    shrotest path
              </p>
 
              <img src={weightunweightgraphs} className="large" alt="weight unweight graphs"/>
