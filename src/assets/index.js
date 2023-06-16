@@ -27,11 +27,12 @@ import graphs from './graphs.png'
 import multiplegraphs from './multiple-graphs.png'; 
 import typesgraphs from './types-graphs.png';
 import weightunweightgraphs from './weight-unweight-graphs.png';
+import cyclicacyclicgraph from './cyclic-acyclic-graph.png';
 
-/**interview-prep-app - version 27.16 - assets > index - 
+/**interview-prep-app - version 27.20 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'weightunweightgraphs' asset.
+ *     --> Importing and exporting 'cyclicacyclicgraph' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -64,5 +65,6 @@ export { bigo1stgraph,
          graphs,
          multiplegraphs,
          typesgraphs,
-         weightunweightgraphs
+         weightunweightgraphs,
+         cyclicacyclicgraph
         };
