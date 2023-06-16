@@ -2,14 +2,12 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 27.16 - 
+/**interview-prep-app - version 27.20 - 
  * GraphsStructure - Features: 
  * 
  *     --> Developing 'Graphs Data Structure' concept.
  * 
- *     --> Developing 'Types of Graphs'.
- * 
- *     --> Destructuring 'weightunweightgraphs' from the context.
+ *     --> Destructuring 'cyclicacyclicgraph' from the context.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -24,6 +22,7 @@ const GraphsStructure = () => {
     const multiplegraphs = graphsData[25].image;
     const graphtypes = graphsData[26].image;
     const weightunweightgraphs = graphsData[27].image;
+    const cyclicacyclicgraph = graphsData[28].image;
 
     return(
         <DataStructuresWrapper>
@@ -95,6 +94,8 @@ const GraphsStructure = () => {
                     back to the start point node-vertex, and <strong> acyclic </strong> is when not every node-vertex is connected 
                     with each ohter and is it not posible to go back to the start point node-vertex 
              </p>       
+
+             <img src={cyclicacyclicgraph} className="large" alt="cyclicacyclicgraph"/>        
             
         </DataStructuresWrapper>
     )
