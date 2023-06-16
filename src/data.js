@@ -25,10 +25,12 @@ import { hashtable,
          graphs,
          multiplegraphs,
          typesgraphs,
-         weightunweightgraphs
+         weightunweightgraphs,
+         cyclicacyclicgraph
          } from './assets/index';      
 
-/**interview-prep-app - version 27.16 - data js - 
+         
+/**interview-prep-app - version 27.20 - data js - 
  * Features: 
  * 
  *     --> Adding 'weightunweight-graphs ' for 
@@ -268,6 +270,10 @@ export const linksData = [
       {
         id:28,
         image: weightunweightgraphs
+      },
+      {
+        id:29,
+        image: cyclicacyclicgraph
       }
     ]
     
