@@ -2,12 +2,14 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.01 - 
+/**interview-prep-app - version 28.02 - 
  * GraphsStructure - Features: 
  * 
  *     --> Developing 'Graphs Data Structure' concept.
  * 
- *     --> Developing 'how to implement graphs' concept.
+ *     --> Destructuring 'howtoimplementgraphs' assets.
+ * 
+ *     --> Developing graph tree way implementation.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -23,6 +25,7 @@ const GraphsStructure = () => {
     const graphtypes = graphsData[26].image;
     const weightunweightgraphs = graphsData[27].image;
     const cyclicacyclicgraph = graphsData[28].image;
+    const howtoimplementgraphs = graphsData[29].image;
 
     return(
         <DataStructuresWrapper>
@@ -109,15 +112,25 @@ const GraphsStructure = () => {
 
              <ul>
                 <li>
-                    Edge list
+                    <strong> Edge list </strong>
                 </li>
                 <li>
-                    Adjacent List 
+                    <strong> Adjacent List </strong> 
                 </li>
                 <li>
-                    Adjacent Matrix
+                    <strong> Adjacent Matrix </strong>
                 </li>
              </ul>
+
+             <h3>Edge list</h3>
+
+             <p>
+
+             </p>
+
+             <h3>Graph implementation: </h3>
+
+             <img src={howtoimplementgraphs} className='large' alt="how to implementgraphs"/>
             
         </DataStructuresWrapper>
     )
