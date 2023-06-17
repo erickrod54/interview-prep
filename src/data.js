@@ -26,14 +26,14 @@ import { hashtable,
          multiplegraphs,
          typesgraphs,
          weightunweightgraphs,
-         cyclicacyclicgraph
+         cyclicacyclicgraph,
+         howtoimplementgraphs
          } from './assets/index';      
 
-         
-/**interview-prep-app - version 27.20 - data js - 
+/**interview-prep-app - version 28.02 - data js - 
  * Features: 
  * 
- *     --> Adding 'weightunweight-graphs ' for 
+ *     --> Adding 'howtoimplementgraphs' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -274,6 +274,10 @@ export const linksData = [
       {
         id:29,
         image: cyclicacyclicgraph
+      },
+      {
+        id:30,
+        image: howtoimplementgraphs
       }
     ]
     
