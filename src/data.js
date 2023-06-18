@@ -28,13 +28,14 @@ import { hashtable,
          weightunweightgraphs,
          cyclicacyclicgraph,
          howtoimplementgraphs,
-         graphthreewayimplementation
+         graphthreewayimplementation,
+         adjancentgraph
          } from './assets/index';      
 
-/**interview-prep-app - version 28.03 - data js - 
+/**interview-prep-app - version 28.05 - data js - 
  * Features: 
  * 
- *     --> Adding 'graphthreewayimplementation' for 
+ *     --> Adding 'adjancentgraph' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -283,6 +284,10 @@ export const linksData = [
       {
         id:31,
         image: graphthreewayimplementation
+      },
+      {
+        id:32,
+        image: adjancentgraph
       }
     ]
     
