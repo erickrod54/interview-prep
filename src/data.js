@@ -27,13 +27,14 @@ import { hashtable,
          typesgraphs,
          weightunweightgraphs,
          cyclicacyclicgraph,
-         howtoimplementgraphs
+         howtoimplementgraphs,
+         graphthreewayimplementation
          } from './assets/index';      
 
-/**interview-prep-app - version 28.02 - data js - 
+/**interview-prep-app - version 28.03 - data js - 
  * Features: 
  * 
- *     --> Adding 'howtoimplementgraphs' for 
+ *     --> Adding 'graphthreewayimplementation' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -278,6 +279,10 @@ export const linksData = [
       {
         id:30,
         image: howtoimplementgraphs
+      },
+      {
+        id:31,
+        image: graphthreewayimplementation
       }
     ]
     
