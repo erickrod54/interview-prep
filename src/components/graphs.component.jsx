@@ -2,14 +2,14 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.02 - 
+/**interview-prep-app - version 28.04 - 
  * GraphsStructure - Features: 
  * 
  *     --> Developing 'Graphs Data Structure' concept.
  * 
- *     --> Destructuring 'howtoimplementgraphs' assets.
+ *     --> Destructuring 'graphthreewayimplementation' from the context.
  * 
- *     --> Developing graph tree way implementation.
+ *     --> Developing graph three way implementation
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -26,6 +26,7 @@ const GraphsStructure = () => {
     const weightunweightgraphs = graphsData[27].image;
     const cyclicacyclicgraph = graphsData[28].image;
     const howtoimplementgraphs = graphsData[29].image;
+    const graphthreewayimplementation = graphsData[30].image;
 
     return(
         <DataStructuresWrapper>
@@ -122,10 +123,48 @@ const GraphsStructure = () => {
                 </li>
              </ul>
 
-             <h3>Edge list</h3>
+             <p>
+                let's say i want to build a graph as follows:
+             </p>
+
+             <img src={graphthreewayimplementation} className='large' alt="graph three way implementation"/>
+
+             <h3>Edge list:</h3>
 
              <p>
+                    so i have the following array <strong> ( i choose an array simple for example 
+                    but graphs can take multiple data structures depending on the use case) </strong>
+             </p>
 
+             <section className="code-block">
+                const graph = [[0, 2],[2, 3],[2, 1],[1, 3]]
+             </section>
+
+             <p>
+                so a graph by <strong> Edge List </strong> shows the connection between the <strong> nodes </strong>
+                of the graph
+             </p>
+
+             <h3>Adjacent List: </h3>
+
+             <p>
+                    with this kind of graph i can implement a <strong> 'index using the node' </strong>
+                    and the values using the <strong> 'node neighbors' </strong>, let's say i have focus 
+                    on the node <strong> 2 </strong>, the <strong> Adjancent graph </strong> will be like
+                    this:
+             </p>
+
+             <section className="code-block">
+                const graph = [[2], [2, 3],[2, 1], [0, 1, 3]]
+             </section>
+
+             <p>
+                so how i evaluate this graph, will be as follows in the graph:
+             </p>
+
+             <p>
+                so a graph by <strong> Edge List </strong> shows the connection between the <strong> nodes </strong>
+                of the graph
              </p>
 
              <h3>Graph implementation: </h3>
