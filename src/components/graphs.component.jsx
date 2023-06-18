@@ -2,12 +2,10 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.04 - 
- * GraphsStructure - Features: 
+/**interview-prep-app - version 28.05 - 
+ * GraphsStructure - Features:
  * 
- *     --> Developing 'Graphs Data Structure' concept.
- * 
- *     --> Destructuring 'graphthreewayimplementation' from the context.
+ *     --> Destructuring 'adjancentgraph' from the context.
  * 
  *     --> Developing graph three way implementation
  * 
@@ -27,6 +25,7 @@ const GraphsStructure = () => {
     const cyclicacyclicgraph = graphsData[28].image;
     const howtoimplementgraphs = graphsData[29].image;
     const graphthreewayimplementation = graphsData[30].image;
+    const adjancentgraph = graphsData[31].image;
 
     return(
         <DataStructuresWrapper>
@@ -161,6 +160,8 @@ const GraphsStructure = () => {
              <p>
                 so how i evaluate this graph, will be as follows in the graph:
              </p>
+
+             <img src={adjancentgraph} className='large' alt='adjancent graph'/>
 
              <p>
                 so a graph by <strong> Edge List </strong> shows the connection between the <strong> nodes </strong>
