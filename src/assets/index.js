@@ -31,11 +31,12 @@ import cyclicacyclicgraph from './cyclic-acyclic-graph.png';
 import howtoimplementgraphs from './howtoimplementgraphs.png';
 import graphthreewayimplementation from './graphthreewayimplementation.png'
 import adjancentgraph from './adjancent-graph.png';
+import adjancentmatrix from './adjancent-matrix.png';
 
-/**interview-prep-app - version 28.05 - assets > index - 
+/**interview-prep-app - version 28.06 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'adjancentgraph' asset.
+ *     --> Importing and exporting 'adjancentmatrix' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -72,5 +73,6 @@ export { bigo1stgraph,
          cyclicacyclicgraph,
          howtoimplementgraphs,
          graphthreewayimplementation,
-         adjancentgraph
+         adjancentgraph,
+         adjancentmatrix
         };
