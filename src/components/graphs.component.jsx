@@ -2,12 +2,12 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.05 - 
+/**interview-prep-app - version 28.06 - 
  * GraphsStructure - Features:
  * 
  *     --> Destructuring 'adjancentgraph' from the context.
  * 
- *     --> Developing graph three way implementation
+ *     --> Developing 'Adjacent Matrix' concept.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -163,10 +163,33 @@ const GraphsStructure = () => {
 
              <img src={adjancentgraph} className='large' alt='adjancent graph'/>
 
+             <h3>
+                Note: this is a useful case use when i am working with objects,
+                because they do not have a secuencial number as it is it this example
+                so can be work it out with a key and a value
+             </h3>
+
+             <h3> Adjacent Matrix :</h3>
+
              <p>
-                so a graph by <strong> Edge List </strong> shows the connection between the <strong> nodes </strong>
-                of the graph
+                   the adjancent matrix is built from the indexes in the graph,
+                   these indexes will represent the <strong> edges </strong>, 
+                   connections and will make an access to the <strong> 'nodes' </strong>
+                   values 
              </p>
+
+             <section className="code-block">
+                <p>{`const graph = {`}</p>
+                <p>0: [ 0, 0, 1, 0 ],</p>
+                <p>1: [ 0, 0, 1, 1 ],</p>
+                <p>2: [ 1, 1, 0, 1 ],</p>
+                <p>3: [ 0, 1, 1, 0 ]</p>
+                <p>{`}`}</p>
+             </section>
+
+             
+
+             <h3></h3>
 
              <h3>Graph implementation: </h3>
 
