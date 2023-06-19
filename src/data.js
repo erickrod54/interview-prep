@@ -29,13 +29,15 @@ import { hashtable,
          cyclicacyclicgraph,
          howtoimplementgraphs,
          graphthreewayimplementation,
-         adjancentgraph
+         adjancentgraph,
+         adjancentmatrix
          } from './assets/index';      
 
-/**interview-prep-app - version 28.05 - data js - 
+         
+/**interview-prep-app - version 28.06 - data js - 
  * Features: 
  * 
- *     --> Adding 'adjancentgraph' for 
+ *     --> Adding 'adjancentmatrix' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -288,6 +290,10 @@ export const linksData = [
       {
         id:32,
         image: adjancentgraph
+      },
+      {
+        id:33,
+        image: adjancentmatrix
       }
     ]
     
