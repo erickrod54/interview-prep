@@ -32,11 +32,12 @@ import howtoimplementgraphs from './howtoimplementgraphs.png';
 import graphthreewayimplementation from './graphthreewayimplementation.png'
 import adjancentgraph from './adjancent-graph.png';
 import adjancentmatrix from './adjancent-matrix.png';
+import adjancentmatrixgraph from './adjancent-matrix-graph.png'
 
-/**interview-prep-app - version 28.06 - assets > index - 
+/**interview-prep-app - version 28.07 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'adjancentmatrix' asset.
+ *     --> Importing and exporting 'adjancentmatrixgraph' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -74,5 +75,6 @@ export { bigo1stgraph,
          howtoimplementgraphs,
          graphthreewayimplementation,
          adjancentgraph,
-         adjancentmatrix
+         adjancentmatrix,
+         adjancentmatrixgraph
         };
