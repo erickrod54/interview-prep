@@ -34,11 +34,11 @@ import { hashtable,
          adjancentmatrixgraph
          } from './assets/index';      
 
-/**interview-prep-app - version 28.07 - data js - 
+/**interview-prep-app - version 28.09 - data js - 
  * Features: 
  * 
- *     --> Adding 'adjancentmatrixgraph' for 
- *         graphsData.   
+ *     --> Adding 'Graphs Implementation' for 
+ *         linksData.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -136,6 +136,10 @@ export const linksData = [
       {
         id:'22',
         name:'Graphs Data Structure'
+      },
+      {
+        id:'23',
+        name:'Graphs Implementation'
       }
     /**
      *,
