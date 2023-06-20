@@ -2,10 +2,10 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.07 - 
+/**interview-prep-app - version 28.08 - 
  * GraphsStructure - Features:
  * 
- *     --> Destructuring 'adjancentmatrix' from the context.
+ *     --> Destructuring 'adjancentmatrixgraph' from the context.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -21,10 +21,11 @@ const GraphsStructure = () => {
     const graphtypes = graphsData[26].image;
     const weightunweightgraphs = graphsData[27].image;
     const cyclicacyclicgraph = graphsData[28].image;
-    const howtoimplementgraphs = graphsData[29].image;
+    
     const graphthreewayimplementation = graphsData[30].image;
     const adjancentgraph = graphsData[31].image;
     const adjancentmatrix = graphsData[32].image;
+    const adjancentmatrixgraph = graphsData[33].image;
 
     return(
         <DataStructuresWrapper>
@@ -177,6 +178,24 @@ const GraphsStructure = () => {
                    values 
              </p>
 
+             <p>
+                based in the following graph:
+             </p>
+
+             <img src={adjancentmatrixgraph} className='large' alt="adjancent matrix"/>
+
+             <p></p>
+
+             <img src={adjancentmatrix} className='large' alt="adjancent matrix"/>
+
+             <p>
+                based in the following graph:
+             </p>
+
+             <img src={graphthreewayimplementation} className='large' alt="graph three way implementation"/>
+
+             <p>resulting in the graph structure:</p>
+
              <section className="code-block">
                 <p>{`const graph = {`}</p>
                 <p>0: [ 0, 0, 1, 0 ],</p>
@@ -189,14 +208,6 @@ const GraphsStructure = () => {
              <p>
                 and the connections are made as is shown in the following table:
              </p>
-
-             <img src={adjancentmatrix} className='large' alt="adjancent matrix"/>
-
-             <h3></h3>
-
-             <h3>Graph implementation: </h3>
-
-             <img src={howtoimplementgraphs} className='large' alt="how to implementgraphs"/>
             
         </DataStructuresWrapper>
     )
