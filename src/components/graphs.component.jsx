@@ -2,12 +2,10 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.06 - 
+/**interview-prep-app - version 28.07 - 
  * GraphsStructure - Features:
  * 
- *     --> Destructuring 'adjancentgraph' from the context.
- * 
- *     --> Developing 'Adjacent Matrix' concept.
+ *     --> Destructuring 'adjancentmatrix' from the context.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -26,6 +24,7 @@ const GraphsStructure = () => {
     const howtoimplementgraphs = graphsData[29].image;
     const graphthreewayimplementation = graphsData[30].image;
     const adjancentgraph = graphsData[31].image;
+    const adjancentmatrix = graphsData[32].image;
 
     return(
         <DataStructuresWrapper>
@@ -187,7 +186,11 @@ const GraphsStructure = () => {
                 <p>{`}`}</p>
              </section>
 
-             
+             <p>
+                and the connections are made as is shown in the following table:
+             </p>
+
+             <img src={adjancentmatrix} className='large' alt="adjancent matrix"/>
 
              <h3></h3>
 
