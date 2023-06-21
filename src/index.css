@@ -1,7 +1,7 @@
-/**interview-prep-app - version 26.00 - index css - 
+/**interview-prep-app - version 28.10 - index css - 
  * Features: 
  * 
- *     --> Writting 'addind styles for large,medium and small images'  
+ *     --> Writting margin for 'code-block'  
  * 
  * Note: to generate url's dinamicly
  */
@@ -48,6 +48,7 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 2rem;
   padding: 4rem;
   width: 30%;
   border: 1px solid black;
