@@ -31,14 +31,15 @@ import { hashtable,
          graphthreewayimplementation,
          adjancentgraph,
          adjancentmatrix,
-         adjancentmatrixgraph
+         adjancentmatrixgraph,
+         graphimplementation
          } from './assets/index';      
 
-/**interview-prep-app - version 28.09 - data js - 
+/**interview-prep-app - version 28.10 - data js - 
  * Features: 
  * 
- *     --> Adding 'Graphs Implementation' for 
- *         linksData.   
+ *     --> Adding 'graphimplementation' for 
+ *         graphsData.   
  * 
  * Note: to generate url's dinamicly
  */
@@ -302,6 +303,10 @@ export const linksData = [
       {
         id:34,
         image: adjancentmatrixgraph
+      },
+      {
+        id:35,
+        image: graphimplementation
       }
     ]
     
