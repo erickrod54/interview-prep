@@ -2,12 +2,13 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.10 - GraphsImplementation  
+/**interview-prep-app - version 28.11 - GraphsImplementation  
  * - Features: 
  * 
  *     --> Building 'Graph' template. 
  * 
- *     --> Destructuring 'graphsData' from the context
+ *     --> Building 'addVertex' method in the 'Graph'
+ *         data structure.
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -27,7 +28,11 @@ const GraphsImplementation = () => {
         }
         
         addVertex(node){
-            
+            /**adjancentList[node] is adding the 'node' as a key
+             * to the 'adjancentList' object,  and add it.
+             */
+            this.adjancentList[node] = [];
+            this.numberOfNodes++;
         }
 
         addEdge(node1, node2){
