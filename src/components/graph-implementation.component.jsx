@@ -2,13 +2,12 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.11 - GraphsImplementation  
+/**interview-prep-app - version 28.12 - GraphsImplementation  
  * - Features: 
  * 
  *     --> Building 'Graph' template. 
  * 
- *     --> Building 'addVertex' method in the 'Graph'
- *         data structure.
+ *     --> Building 'addvertex' states.
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -20,6 +19,8 @@ const GraphsImplementation = () => {
     console.log('graphsData ==>', graphsData)
 
     const graphimplementation = graphsData[34].image;
+
+    const [ addvertex, setAddvertex] = useState()
 
     class Graph {
         constructor(){
