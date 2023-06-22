@@ -2,10 +2,10 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.13 - GraphsImplementation  
+/**interview-prep-app - version 28.14 - GraphsImplementation  
  * - Features:
  * 
- *     --> Building 'addvertexHandler' handler.
+ *     --> Rendering 'addvertex' data.
  * 
  * Note: with addvertexHandler i am going to add all the nodes 
  * to the graph.
@@ -106,6 +106,23 @@ const GraphsImplementation = () => {
                 <p>{`                           } ...`}</p>
                 <p>Note: removing them cost a lot that's why an object is constructed inside the hash table, and in addition has faster insertion</p>
             </section>
+
+            <h3>Add Vertex method:</h3>
+
+            <p>
+                let's say i want to add <strong> '7' </strong> nodes, and the nodes-vertex are <strong> '0','1','2','3','4','5','6' </strong>
+            </p>
+
+            <button onClick={addvertexHandler}>Add a Node</button>
+
+            <p>
+                the result will be in something like this:
+            </p>
+
+            <section className="code-block">
+                <p>{addvertex}</p>
+            </section>
+
         </DataStructuresWrapper>
     )
 
