@@ -2,14 +2,13 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.12 - GraphsImplementation  
- * - Features: 
+/**interview-prep-app - version 28.13 - GraphsImplementation  
+ * - Features:
  * 
- *     --> Building 'Graph' template. 
+ *     --> Building 'addvertexHandler' handler.
  * 
- *     --> Building 'addvertex' states.
- * 
- * Note: Pending to re structure imports using the index.
+ * Note: with addvertexHandler i am going to add all the nodes 
+ * to the graph.
  */
 
 const GraphsImplementation = () => {
@@ -56,7 +55,17 @@ const GraphsImplementation = () => {
 
     const myGraph = new Graph();
 
-    myGraph.addVertex('0')
+    const addvertexHandler = () => {
+        myGraph.addVertex('0')
+        myGraph.addVertex('1')
+        myGraph.addVertex('2')
+        myGraph.addVertex('3')
+        myGraph.addVertex('4')
+        myGraph.addVertex('5')
+        myGraph.addVertex('6')
+        console.log('this is myGraph from the console ==>', myGraph)
+        setAddvertex(JSON.stringify(myGraph));
+    }
 
 
     return(
