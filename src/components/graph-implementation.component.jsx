@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.14 - GraphsImplementation  
+/**interview-prep-app - version 28.15 - GraphsImplementation  
  * - Features:
  * 
- *     --> Rendering 'addvertex' data.
+ *     --> Pending to fix bug in addEdges method.
  * 
  * Note: with addvertexHandler i am going to add all the nodes 
  * to the graph.
@@ -15,11 +15,12 @@ const GraphsImplementation = () => {
 
     const { graphsData } = useAppContext()
 
-    console.log('graphsData ==>', graphsData)
+    //console.log('graphsData ==>', graphsData)
 
     const graphimplementation = graphsData[34].image;
 
-    const [ addvertex, setAddvertex] = useState()
+    const [ addvertex, setAddvertex] = useState();
+    const [ addedge, setAddedge ] = useState();
 
     class Graph {
         constructor(){
@@ -37,6 +38,12 @@ const GraphsImplementation = () => {
 
         addEdge(node1, node2){
             //undirected graph
+
+            this.adjancentList[node1].push('connection')
+            /**
+             * this.adjancentList[node1].push(node2);
+            this.adjancentList[node2].push(node1);
+             */
         }
 
         showConnections(){
@@ -65,6 +72,20 @@ const GraphsImplementation = () => {
         myGraph.addVertex('6')
         console.log('this is myGraph from the console ==>', myGraph)
         setAddvertex(JSON.stringify(myGraph));
+    }
+
+    const addedgeHandler = () => {
+        myGraph.addEdge('3','1');
+        /**
+         * myGraph.addEdge('3','4');
+        myGraph.addEdge('4','2');
+        myGraph.addEdge('4','5');
+        myGraph.addEdge('1','2');
+        myGraph.addEdge('1','0');
+        myGraph.addEdge('0','2');
+        myGraph.addEdge('6','5'); */
+        /** */
+        setAddedge(JSON.stringify(myGraph));
     }
 
 
@@ -121,6 +142,23 @@ const GraphsImplementation = () => {
 
             <section className="code-block">
                 <p>{addvertex}</p>
+            </section>
+
+            <h3>Add Edges method:</h3>
+
+            <p>
+                let's say i want the <strong> 'edges / connections' </strong> between the <strong> '7' </strong> nodes, and the nodes-vertex are 
+                <strong> '0','1','2','3','4','5','6' </strong>, as it is in the graph representation:
+            </p>
+
+            <button onClick={addedgeHandler}>Add a Edges</button>
+
+            <p>
+                the result will be in something like this:
+            </p>
+
+            <section className="code-block">
+                <p>{addedge}</p>
             </section>
 
         </DataStructuresWrapper>
