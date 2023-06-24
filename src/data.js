@@ -32,13 +32,14 @@ import { hashtable,
          adjancentgraph,
          adjancentmatrix,
          adjancentmatrixgraph,
-         graphimplementation
+         graphimplementation,
+         datastructuresreview
          } from './assets/index';      
 
-/**interview-prep-app - version 28.10 - data js - 
+/**interview-prep-app - version 28.16 - data js - 
  * Features: 
  * 
- *     --> Adding 'graphimplementation' for 
+ *     --> Adding 'datastructuresreview' for 
  *         graphsData.   
  * 
  * Note: to generate url's dinamicly
@@ -307,6 +308,10 @@ export const linksData = [
       {
         id:35,
         image: graphimplementation
+      },
+      {
+        id:36,
+        image: datastructuresreview
       }
     ]
     
