@@ -36,13 +36,14 @@ import { hashtable,
          datastructuresreview
          } from './assets/index';      
 
-/**interview-prep-app - version 28.16 - data js - 
+/**interview-prep-app - version 28.17 - data js - 
  * Features: 
  * 
- *     --> Adding 'datastructuresreview' for 
- *         graphsData.   
+ *     --> Adding 'Algorithhms Intro' for 
+ *         linksData.   
  * 
- * Note: to generate url's dinamicly
+ * Note: By this point i will start to relate algorithms with
+ * data structures.
  */
 
 export const linksData = [
@@ -142,26 +143,27 @@ export const linksData = [
       {
         id:'23',
         name:'Graphs Implementation'
-      }
-    /**
-     *,
-     {
-       id:'10',
-       name:'queues'
       },
       {
-        id:'11',
-        name:'graphs'
+        id:'24',
+        name:'Algorithhms Intro'
+      },
+      /**{
+        id:'25',
+        name:'Sorting'
       },
       {
-        id:'12',
-        name:'linked lists'
+        id:'26',
+        name:'Dynamic Programming'
       },
       {
-        id:'13',
-        name:'hash tables'
+        id:'27',
+        name:'BFS + DFS ( Searching )'
       },
-      */     
+      {
+        id:'24',
+        name:'Recursion'
+      }, */     
     ]
     
     
