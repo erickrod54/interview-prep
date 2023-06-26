@@ -34,13 +34,14 @@ import { hashtable,
          adjancentmatrixgraph,
          graphimplementation,
          datastructuresreview,
-         datastructureandalgorithms
+         datastructureandalgorithms,
+         factorialexercise
          } from './assets/index';      
 
-/**interview-prep-app - version 28.18 - data js - 
+/**interview-prep-app - version 28.19 - data js - 
  * Features: 
  * 
- *     --> Adding 'datastructureandalgorithms' for 
+ *     --> Adding 'factorialexercise' for 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -319,6 +320,10 @@ export const linksData = [
       {
         id:37,
         image: datastructureandalgorithms
+      },
+      {
+        id:38,
+        image: factorialexercise
       }
     ]
     
