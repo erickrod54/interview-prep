@@ -36,11 +36,12 @@ import adjancentmatrixgraph from './adjancent-matrix-graph.png'
 import graphimplementation from './graph-implementation.png';
 import datastructuresreview from './data_structures_review.png';
 import datastructureandalgorithms from './data_structure_and_algorithms.png'
+import factorialexercise from './factorial_exercise.png'
 
-/**interview-prep-app - version 28.18 - assets > index - 
+/**interview-prep-app - version 28.19 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'datastructureandalgorithms' asset.
+ *     --> Importing and exporting 'factorialexercise' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -82,5 +83,6 @@ export { bigo1stgraph,
          adjancentmatrixgraph,
          graphimplementation,
          datastructuresreview,
-         datastructureandalgorithms
+         datastructureandalgorithms,
+         factorialexercise
         };
