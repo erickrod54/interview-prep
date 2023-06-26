@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.17 - GraphsImplementation  
+/**interview-prep-app - version 28.19 - GraphsImplementation  
  * - Features:
  * 
- *     --> Destructuring datastructuresreview from the context
- * 
- *     --> Pending to fix bug in addEdges method.
+ *     --> Adding norefereer to the anchor tag.
  * 
  * Note: with addvertexHandler i am going to add all the nodes 
  * to the graph.
@@ -177,7 +175,7 @@ const GraphsImplementation = () => {
                 <strong> ( that is the reason of using hash tables as bottom of the top graph ) </strong>
             </p>
 
-            <h3>Note: there are tools like <a href="https://neo4j.com/blog/why-graph-databases-are-the-future/?utm_source=google&utm_medium=paidsearch&utm_campaign=fy23-Q2_AMER_GDB-Ungated_paidsearch_Architect_beginnerswhygraphtechnologyfuture&utm_content=Ad-1&gclid=Cj0KCQjwqNqkBhDlARIsAFaxvwxFZh_Oj8xhtGccdytPEVDLAfn9GQIpDaOrJilkLmFJIuHsbHCtD5caAqQYEALw_wcB" alt="neo4j" target="_blank" >neo4j (Data base tool) </a> 
+            <h3>Note: there are tools like <a href="https://neo4j.com/blog/why-graph-databases-are-the-future/?utm_source=google&utm_medium=paidsearch&utm_campaign=fy23-Q2_AMER_GDB-Ungated_paidsearch_Architect_beginnerswhygraphtechnologyfuture&utm_content=Ad-1&gclid=Cj0KCQjwqNqkBhDlARIsAFaxvwxFZh_Oj8xhtGccdytPEVDLAfn9GQIpDaOrJilkLmFJIuHsbHCtD5caAqQYEALw_wcB" alt="neo4j" target="_blank" rel="noreferrer" >neo4j (Data base tool) </a> 
             and usually tools like this will be use to build complex data structures to contain our data </h3>
 
             <h3>Data Structures review:</h3>
