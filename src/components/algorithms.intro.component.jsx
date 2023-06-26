@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
+import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.19 - 
+/**interview-prep-app - version 28.20 - 
  * AlgorithmsIntro - Features: 
  * 
- *     --> Building basic 'AlgorithmsIntro' Component.
+ *     --> Destructuring 'factorialexercise' from the context.
  * 
  *     --> Developing recursion concept
  * 
@@ -21,7 +22,11 @@ const AlgorithmsIntro = () => {
     const [ inceptionvalue, setInceptionvalue ] = useState()
     const [ factorialvalue, setFactorialvalue ] = useState()
     const [ factorialrecursive, setFactorialrecursive ] = useState()
+
+    const { graphsData } = useAppContext()
     
+    console.log('graphsData from the context ==>', graphsData)
+    const factorialexercise = graphsData[37].image;
     
     let count = 0;
     function inception() {
@@ -260,6 +265,8 @@ const AlgorithmsIntro = () => {
                 approach <strong> ( applying the the 3 rules ) </strong>
             </p>
 
+            <img src={factorialexercise} className="large" alt="factorial exercise"/>
+
             <p>
                 let's see how a factorial works, let see <strong> 'iterative' </strong> approach <strong> ( check the console ) </strong>
             </p>
@@ -273,6 +280,10 @@ const AlgorithmsIntro = () => {
             <button onClick={() => findFactorialRecursive(5)}>Find the factorial of <strong> '5' </strong> <strong> - (recursive approach) </strong></button>
 
             <p>the value with the recursive approach will be: <strong> {factorialrecursive} </strong></p>        
+
+            <h4>Note: An Iterative approach over a Recursive approach will applied depending on the complexity some cases a 
+                Recursive approach can cause a complexity of 2 ^ N, that use from the worst Big O complexity
+            </h4>
 
         </DataStructuresWrapper>
     )
