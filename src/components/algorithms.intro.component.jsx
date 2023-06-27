@@ -7,6 +7,8 @@ import { useAppContext } from "../context";
  * 
  *     --> Developing Fibonacci Sequence Concept.
  * 
+ *     --> Destructuring 'fibonaccirecurssion' from the context.
+ * 
  * Note: Fibonacci Sequence is closely related 
  * to the Recursion Concept
  */
@@ -42,6 +44,7 @@ const AlgorithmsIntro = () => {
     
     //console.log('graphsData from the context ==>', graphsData)
     const factorialexercise = graphsData[37].image;
+    const fibonaccirecurssion = graphsData[38].image;
     
     let count = 0;
     function inception() {
@@ -344,8 +347,11 @@ const AlgorithmsIntro = () => {
             <h3>Fibonacci Sequence:</h3>
 
             <p>
-               Fibonacci sequence is also a <strong> 'Recursion' </strong>
+               Fibonacci sequence is also a <strong> 'Recursion' </strong>, the representation of a fibonaci sequence as example 
+               <strong> Fibonacci Sequence </strong> of number <strong> '7' </strong>
             </p>
+
+            <img src={fibonaccirecurssion} className='large' alt="fibonacci recurssion"/>
 
             <p>
                The Fibonacci Sequence is a mathematical sequence where <strong> 'each number' </strong> is <strong> 'the sum' </strong> 
