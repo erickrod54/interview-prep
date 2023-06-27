@@ -2,15 +2,13 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.20 - 
+/**interview-prep-app - version 29.00 - 
  * AlgorithmsIntro - Features: 
  * 
- *     --> Destructuring 'factorialexercise' from the context.
+ *     --> Developing Fibonacci Sequence Concept.
  * 
- *     --> Developing recursion concept
- * 
- * Note: the first assets added to 'graphsData'
- * are for big notation app
+ * Note: Fibonacci Sequence is closely related 
+ * to the Recursion Concept
  */
 
 const AlgorithmsIntro = () => {
@@ -19,13 +17,30 @@ const AlgorithmsIntro = () => {
     // eslint-disable-next-line
     const [ inceptionund, setInceptionund ] = useState();
     const [ countvalue, setCountvalue ] = useState();
-    const [ inceptionvalue, setInceptionvalue ] = useState()
-    const [ factorialvalue, setFactorialvalue ] = useState()
-    const [ factorialrecursive, setFactorialrecursive ] = useState()
+    const [ inceptionvalue, setInceptionvalue ] = useState();
+    const [ factorialvalue, setFactorialvalue ] = useState();
+    const [ factorialrecursive, setFactorialrecursive ] = useState();
+
+    /**Recursion approach states for fibonacci*/
+    const [ fibonaccirecursive, setFibonaccirecursive ] = useState();
+    const [ fibonaccirecursive8, setFibonaccirecursive8 ] = useState();
+    const [ fibonaccirecursive10, setFibonaccirecursive10 ] = useState();
+    const [ fibonaccirecursive15, setFibonaccirecursive15 ] = useState();
+    const [ fibonaccirecursive20, setFibonaccirecursive20 ] = useState();
+    const [ fibonaccirecursive30, setFibonaccirecursive30 ] = useState();
+    const [ fibonaccirecursive40, setFibonaccirecursive40 ] = useState();
+
+    /**Iterative approach states for fibonacci*/
+    const [ fibonacciterative, setFibonacciterative ] = useState([]);
+    const [ fibonacciterative30, setFibonacciterative30 ] = useState();
+    const [ fibonacciterative40, setFibonacciterative40 ] = useState();
+    const [ fibonacciterative50, setFibonacciterative50 ] = useState();
+    const [ fibonacciterative100, setFibonacciterative100 ] = useState();
+    
 
     const { graphsData } = useAppContext()
     
-    console.log('graphsData from the context ==>', graphsData)
+    //console.log('graphsData from the context ==>', graphsData)
     const factorialexercise = graphsData[37].image;
     
     let count = 0;
@@ -79,7 +94,51 @@ const AlgorithmsIntro = () => {
         setFactorialrecursive(recursivevalue)
         return recursivevalue;
       }
+
+      const fibonacciRecursive = (n) => {
+        if (n < 2) {
+          return n;
+        }
+        const result = fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+
+        if (n === 3) {
+            setFibonaccirecursive(result)
+        }else if (n === 8) {
+            setFibonaccirecursive8(result)
+        }else if (n === 10) {
+            setFibonaccirecursive10(result)
+        }else if (n === 15) {
+            setFibonaccirecursive15(result)
+        }else if (n === 20) {
+            setFibonaccirecursive20(result)
+        }else if (n === 30) {
+            setFibonaccirecursive30(result)
+        }else if (n === 40) {
+            setFibonaccirecursive40(result)
+        }
+        return result;
+      };
       
+      const fibonacciIterative = (n) => {
+        let arr = [0,1];
+        for (let i = 2; i < n + 1; i++) {
+            arr.push(arr[i-2] + arr[i-1])
+        }
+
+        if (n === 3) {
+            setFibonacciterative(arr[n])
+        }else if (n === 30) {
+            setFibonacciterative30(arr[n])
+        }else if (n === 40) {
+            setFibonacciterative40(arr[n])
+        }else if (n === 50) {
+            setFibonacciterative50(arr[n])
+        }else if (n === 100) {
+            setFibonacciterative100(arr[n])
+        }
+
+        return arr[n]
+      };
     
     return(
         <DataStructuresWrapper>
@@ -159,7 +218,8 @@ const AlgorithmsIntro = () => {
 
             <p>
                 And this specific like give me the result <strong> 'done' </strong>
-                finishing the <strong> 'recursion' </strong> cycle:
+                finishing the <strong> 'recursion' </strong> cycle <strong> ( in fact 
+                the end of the recursion is by achieving the base case ) </strong>: 
             </p>
 
                 <p><strong> {`   return inceptionfixed()`} </strong></p>
@@ -279,7 +339,159 @@ const AlgorithmsIntro = () => {
 
             <button onClick={() => findFactorialRecursive(5)}>Find the factorial of <strong> '5' </strong> <strong> - (recursive approach) </strong></button>
 
-            <p>the value with the recursive approach will be: <strong> {factorialrecursive} </strong></p>        
+            <p>the value with the recursive approach will be: <strong> {factorialrecursive} </strong></p>     
+
+            <h3>Fibonacci Sequence:</h3>
+
+            <p>
+               Fibonacci sequence is also a <strong> 'Recursion' </strong>
+            </p>
+
+            <p>
+               The Fibonacci Sequence is a mathematical sequence where <strong> 'each number' </strong> is <strong> 'the sum' </strong> 
+                of the <strong> 'two preceding numbers' </strong>. It starts with 0 and 1, and each subsequent number is the sum of the 
+                two previous numbers. The sequence continues indefinitely, with numbers increasing rapidly. 
+                It is often found in nature and has various applications in mathematics and computer science.     
+            </p>
+
+            <p>
+                let's make an exercise where from a <strong> 'given number N' </strong> return the <strong> 'index value' </strong> of the Fibonacci sequence,
+                where the sequence is:
+            </p>
+
+            <section className="code-block">
+                <p><strong> 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 </strong></p>
+            </section>
+
+           <p>
+               The pattern sequence is that each value is the sum of the two previous values, that means
+               <strong> N=5 is 2 + 3 </strong>
+           </p>
+
+           <p>
+               The sequence will be written in code as this:
+           </p>         
+
+           <section className="code-block">
+                <p>{`const fibonacciRecursive = (n) => {`}</p>
+                <p>{`   if (n < 2 ) {`}</p>
+                <p>{`   return n;`}</p>
+                <p>{`   }`}</p>
+                <p>{`   return fibonacciRecursive(n -1 ) + fibonacciRecursive(n - 2)`}</p>
+                <p>{`   }`}</p>
+           </section>
+
+           <p>
+               The sum of the two previous numbers, so will be <strong> 'n-1' </strong> at <strong> 'left' </strong>
+               and <strong> 'n-2' </strong> at <strong> 'right' </strong>
+           </p>
+
+           <button onClick={() => fibonacciRecursive(3)}>Return Fibonacci sequence of <strong> '3' </strong> <strong> - (recursive approach) </strong></button>
+
+           <p>{fibonaccirecursive}</p>
+
+           <p>
+               And returning fibonacci of <strong> '8' </strong>
+           </p>
+
+           <button onClick={() => fibonacciRecursive(8)}>Return Fibonacci sequence of <strong> '8' </strong> <strong> - (recursive approach) </strong></button>
+
+           <p>{fibonaccirecursive8}</p>
+
+           <p>
+               And returning fibonacci of <strong> '10' </strong>
+           </p>
+
+           <button onClick={() => fibonacciRecursive(10)}>Return Fibonacci sequence of <strong> '21' </strong> <strong> - (recursive approach) </strong></button>
+
+           <p>{fibonaccirecursive10}</p>
+
+           <p>
+               And returning fibonacci of <strong> '15' </strong>
+           </p>
+
+           <button onClick={() => fibonacciRecursive(15)}>Return Fibonacci sequence of <strong> '15' </strong> <strong> - (recursive approach) </strong></button>
+
+           <p>{fibonaccirecursive15}</p>
+
+           <p>
+               And returning fibonacci of <strong> '20' </strong> and notice <strong> ( each iteration time complexity increases for this approach) </strong> 
+           </p>
+           
+           <button onClick={() => fibonacciRecursive(20)}>Return Fibonacci sequence of <strong> '20' </strong> <strong> - (recursive approach) </strong></button>
+
+           <p>{fibonaccirecursive20}</p>
+
+           <p>
+               And returning fibonacci of <strong> '30' </strong>, this operations had a <strong> delay </strong> 
+           </p>
+
+           <button onClick={() => fibonacciRecursive(30)}>Return Fibonacci sequence of <strong> '30' </strong> <strong> - (recursive approach) </strong></button>
+
+           <p>{fibonaccirecursive30}</p>
+
+           <p>
+               And once returning fibonacci of <strong> '40' </strong> this will a complexity notable, the browser will <strong> 'stop' </strong> the page and 
+               display a message of <strong> 'wait' </strong> 
+           </p>
+
+           <button onClick={() => fibonacciRecursive(40)}>Return Fibonacci sequence of <strong> '40' </strong> <strong> - (recursive approach) </strong></button>
+
+           <p>{fibonaccirecursive40}</p>
+
+           <p>
+               Now the <strong> 'time complexity' </strong> of this approach will be:
+           </p>
+
+           <section className="code-block">
+                <p>{`const fibonacciRecursive = (n) => {`}</p>
+                <p>{`   if (n < 2 ) {`}</p>
+                <p>{`   return n;`}</p>
+                <p>{`   }`}</p>
+                <p>{`   return fibonacciRecursive(n -1 ) + fibonacciRecursive(n - 2)`}</p>
+                <p>{`   }`}</p>
+
+                <p>O (2 ^ n)</p>
+           </section>
+
+            <h3>Fibonacci Iterative approach:</h3>
+
+            <button onClick={() => fibonacciIterative(3)}>Return Fibonacci sequence of <strong> '3' </strong> <strong> - (iterative approach) </strong></button>  
+
+            <p>{fibonacciterative}</p> 
+
+            <p>
+               And returning fibonacci of <strong> '30' </strong> 
+            </p>
+
+            <button onClick={() => fibonacciIterative(30)}>Return Fibonacci sequence of <strong> '30' </strong> <strong> - (iterative approach) </strong></button>
+
+            <p>{fibonacciterative30}</p> 
+
+            <p>
+               And returning fibonacci of <strong> '40' </strong> 
+            </p>
+
+            <button onClick={() => fibonacciIterative(40)}>Return Fibonacci sequence of <strong> '40' </strong> <strong> - (iterative approach) </strong></button>
+
+            <p>{fibonacciterative40}</p> 
+
+            <p>
+               And returning fibonacci of <strong> '50' </strong> 
+            </p>
+
+            <button onClick={() => fibonacciIterative(50)}>Return Fibonacci sequence of <strong> '50' </strong> <strong> - (iterative approach) </strong></button>
+
+            <p>{fibonacciterative50}</p> 
+
+            <p>
+               And returning fibonacci of <strong> '100' </strong> 
+            </p>
+
+            <button onClick={() => fibonacciIterative(100)}>Return Fibonacci sequence of <strong> '100' </strong> <strong> - (iterative approach) </strong></button>
+
+            <p>{fibonacciterative100}</p> 
+            
 
             <h4>Note: An Iterative approach over a Recursive approach will applied depending on the complexity some cases a 
                 Recursive approach can cause a complexity of 2 ^ N, that use from the worst Big O complexity
