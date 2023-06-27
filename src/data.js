@@ -35,13 +35,14 @@ import { hashtable,
          graphimplementation,
          datastructuresreview,
          datastructureandalgorithms,
-         factorialexercise
+         factorialexercise,
+         fibonaccirecurssion
          } from './assets/index';      
 
-/**interview-prep-app - version 28.19 - data js - 
+/**interview-prep-app - version 29.00 - data js - 
  * Features: 
  * 
- *     --> Adding 'factorialexercise' for 
+ *     --> Adding 'fibonaccirecurssion' for 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -324,7 +325,11 @@ export const linksData = [
       {
         id:38,
         image: factorialexercise
-      }
+      },
+      {
+        id:39,
+        image: fibonaccirecurssion
+      }    
     ]
     
     export const everyoneCharacter = [
