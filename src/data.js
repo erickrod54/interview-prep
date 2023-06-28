@@ -37,13 +37,14 @@ import { hashtable,
          datastructureandalgorithms,
          factorialexercise,
          fibonaccirecurssion,
-         recursioniterativetradeoffs
+         recursioniterativetradeoffs,
+         recursionconversionrule
          } from './assets/index';      
 
-/**interview-prep-app - version 29.01 - data js - 
+/**interview-prep-app - version 29.02 - data js - 
  * Features: 
  * 
- *     --> Adding 'recursioniterativetradeoffs' for 
+ *     --> Adding 'recursionconversionrule' for 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -334,6 +335,10 @@ export const linksData = [
       {
         id:40,
         image: recursioniterativetradeoffs
+      },
+      {
+        id:41,
+        image: recursionconversionrule
       }    
     ]
     
