@@ -38,11 +38,12 @@ import datastructuresreview from './data_structures_review.png';
 import datastructureandalgorithms from './data_structure_and_algorithms.png'
 import factorialexercise from './factorial_exercise.png'
 import fibonaccirecurssion from './fibonacci_recurssion.png'
-
-/**interview-prep-app - version 29.00 - assets > index - 
+import recursioniterativetradeoffs from './recursion-iterative-tradeoffs.png'
+ 
+/**interview-prep-app - version 29.01 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'fibonaccirecurssion' asset.
+ *     --> Importing and exporting 'recursioniterativetradeoffs' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -86,5 +87,6 @@ export { bigo1stgraph,
          datastructuresreview,
          datastructureandalgorithms,
          factorialexercise,
-         fibonaccirecurssion
+         fibonaccirecurssion,
+         recursioniterativetradeoffs
         };
