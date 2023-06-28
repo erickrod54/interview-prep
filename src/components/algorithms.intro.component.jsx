@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.00 - 
+/**interview-prep-app - version 29.01 - 
  * AlgorithmsIntro - Features: 
  * 
- *     --> Developing Fibonacci Sequence Concept.
- * 
- *     --> Destructuring 'fibonaccirecurssion' from the context.
+ *     --> Developing Recursion tradeoffs.
  * 
  * Note: Fibonacci Sequence is closely related 
  * to the Recursion Concept
@@ -45,6 +43,7 @@ const AlgorithmsIntro = () => {
     //console.log('graphsData from the context ==>', graphsData)
     const factorialexercise = graphsData[37].image;
     const fibonaccirecurssion = graphsData[38].image;
+    const recursioniterativetradeoffs = graphsData[39].image;
     
     let count = 0;
     function inception() {
@@ -497,7 +496,63 @@ const AlgorithmsIntro = () => {
             <button onClick={() => fibonacciIterative(100)}>Return Fibonacci sequence of <strong> '100' </strong> <strong> - (iterative approach) </strong></button>
 
             <p>{fibonacciterative100}</p> 
-            
+
+
+            <h3>Recursion Vs Iterative tradeoffs: </h3>
+
+            <p>
+                <strong> 'Anything that can be implemented Recursively can be implemented Iterative' </strong>, and these two options give me two 
+                options as an engineer, options each with their <strong> 'pros and const' </strong>, and these can be the following:
+            </p>
+
+            <h3>Recursion Pros:</h3>
+
+            <ul>
+                <li>
+                    Dry code ( do not repeat code ) 
+                </li>
+                <li>
+                    Readibility
+                </li>
+            </ul>
+
+            <h3>Recursion Const:</h3>
+
+            <ul>
+                <li>
+                    Large Stack ( creates a footprint every time that the function calls itself, space complexity )    
+                </li>
+            </ul>
+
+            <h3>Iterative Pros:</h3>
+
+            <ul>
+                <li>
+                    Performs faster ( more efficient )
+                </li>
+                <li>
+                    
+                </li>
+            </ul>
+
+            <h3>Iterative Const:</h3>
+
+            <ul>
+                <li>
+                    Not as readable ( confusing code writting )    
+                </li>
+            </ul>
+
+            <p>
+                The main const are as the image as follows:
+            </p>
+
+            <img src={recursioniterativetradeoffs} className='large' alt="recursion iterative tradeoffs"/>
+
+            <p>
+                There are many ways to improve <strong> 'Recursion' </strong> ( that is orconverting to tree data structures or doing traversal) efficiency as 
+                the <strong> 'Tail call Optimizitation' </strong> ( its a tecnique to call a function without incrementing the call stack )
+            </p>
 
             <h4>Note: An Iterative approach over a Recursive approach will applied depending on the complexity some cases a 
                 Recursive approach can cause a complexity of 2 ^ N, that use from the worst Big O complexity
