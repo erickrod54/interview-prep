@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.05 - SortingComponent  
+/**interview-prep-app - version 29.06 - SortingComponent  
  * - Features: 
  * 
  *     --> Building 'SortingComponent'.
  * 
- *     --> Destructuring sortingimportance from the context.
+ *     --> Fixing basket example.
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -16,6 +16,7 @@ const SortingComponent = () => {
 
     const [ lettersorted, setLettersorted ] = useState([]);
     const [ basketsorted, setBasketsorted ] = useState([]);
+    const [ basketsortedfixed, setBasketsortedfixed ] = useState([]);
     const [ spanishsorted, setSpanishsorted ] = useState([]);
     const [ spanishsortedfixed, setSpanishsortedfixed ] = useState([]);
 
@@ -55,6 +56,15 @@ const SortingComponent = () => {
     const handleSortbasket = () => {
         let basketsort = basket.sort()
         setBasketsorted(basketsort)
+        console.log(basketsort)
+    }
+
+    const handleSortbasketfixed = () => {
+        let basketsort = basket.sort(function(a,b){
+            return a-b;
+        });
+
+        setBasketsortedfixed(basketsort)
         console.log(basketsort)
     }
 
@@ -167,7 +177,7 @@ const SortingComponent = () => {
             <p>{`basket.sort()`}</p>
         </section>
         
-        <button onClick={handleSortbasket}> Sort letters </button>
+        <button onClick={handleSortbasket}> Sort numbers </button>
 
         <p>
             will be resulting in the following:
@@ -210,6 +220,39 @@ const SortingComponent = () => {
 
         <p>
             and as the documentation says The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.
+        </p>
+
+        <p>
+            and the fix solution will be as follows:
+        </p>
+
+        <button onClick={handleSortbasketfixed}> Sort numbers fixed </button>
+
+        <p>
+            will be resulting in the following:
+        </p>
+
+        {basketsortedfixed ? 
+        
+        <section className="code-block code-block-row"> 
+            [{basketsortedfixed.map((number, index ) => {
+
+                return(
+                    <div key={index} >
+                        <p>'{number}',</p>
+                    </div>
+                )
+            })}]
+        </section>
+        :
+        null
+        }
+
+        <p>
+            The comparison function (a, b) <span>{`-->`}</span> a - b is passed to the sort() method. This function 
+            determines the sort order of the elements in the array. It subtracts b from a and returns 
+            the result. If the result is negative, a is sorted before b, if the result is positive, b is 
+            sorted before a, and if the result is zero, the order of a and b remains unchanged.
         </p>
 
         <p>
