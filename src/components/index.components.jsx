@@ -23,11 +23,12 @@ import BTSBalanced from "./bts.balanced.component";
 import GraphsStructure from "./graphs.component";
 import GraphsImplementation from "./graph-implementation.component";
 import AlgorithmsIntro from "./algorithms.intro.component";
+import SortingComponent from "./sorting.component";
 
-/**interview-prep-app - version 28.18 - 
+/**interview-prep-app - version 29.03 - 
  * components > index - Features: 
  * 
- *     --> Importing and exporting 'AlgorithmsIntro'.
+ *     --> Importing and exporting 'SortingComponent'.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -57,5 +58,6 @@ export { ArrayDataStructure,
          BTSBalanced,
          GraphsStructure,
          GraphsImplementation,
-         AlgorithmsIntro               
+         AlgorithmsIntro,
+         SortingComponent               
         }
