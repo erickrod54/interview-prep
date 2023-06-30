@@ -38,14 +38,15 @@ import { hashtable,
          factorialexercise,
          fibonaccirecurssion,
          recursioniterativetradeoffs,
-         recursionconversionrule
+         recursionconversionrule,
+         sortingimportance
          } from './assets/index';      
 
-/**interview-prep-app - version 29.03 - data js - 
+/**interview-prep-app - version 29.04 - data js - 
  * Features: 
  * 
- *     --> Adding 'Sorting' for 
- *         linksData.   
+ *     --> Adding 'sortingimportance' for 
+ *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures.
@@ -339,6 +340,10 @@ export const linksData = [
       {
         id:41,
         image: recursionconversionrule
+      },
+      {
+        id:42,
+        image: sortingimportance
       }    
     ]
     
