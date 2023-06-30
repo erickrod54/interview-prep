@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
+import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.04 - SortingComponent  
+/**interview-prep-app - version 29.05 - SortingComponent  
  * - Features: 
  * 
  *     --> Building 'SortingComponent'.
  * 
- *     --> Developing localCompare example. 
+ *     --> Destructuring sortingimportance from the context.
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -18,11 +19,18 @@ const SortingComponent = () => {
     const [ spanishsorted, setSpanishsorted ] = useState([]);
     const [ spanishsortedfixed, setSpanishsortedfixed ] = useState([]);
 
+    const { graphsData } = useAppContext()
+
+    const sortingimportance = graphsData[41].image 
+
+    console.log('graphsData ==>', graphsData)
+
     const letters = ['a', 'd', 'z', 'e', 'r', 'b'];
 
     const basket = [2, 65, 34, 2, 1, 7, 8];
 
     const spanish = ['único', 'árbol', 'cosas', 'fútbol'];
+
 
     const handleSortletters = () => {
         let letterssort = letters.sort()
@@ -116,6 +124,8 @@ const SortingComponent = () => {
             an inefficient way is not an option for these companies because translates 
             on money and time 
         </p>
+
+        <img src={sortingimportance} className="large" alt="sorting importance"/>
 
         <p>
             mostly in interviews i wont have to built a sort method from scratch, but will be
