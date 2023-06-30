@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.01 - 
+/**interview-prep-app - version 29.03 - 
  * AlgorithmsIntro - Features: 
  * 
- *     --> Developing Recursion tradeoffs.
+ *     --> Destructuring recursionconversionrule from the context.
  * 
  * Note: Fibonacci Sequence is closely related 
  * to the Recursion Concept
@@ -44,6 +44,7 @@ const AlgorithmsIntro = () => {
     const factorialexercise = graphsData[37].image;
     const fibonaccirecurssion = graphsData[38].image;
     const recursioniterativetradeoffs = graphsData[39].image;
+    const recursionconversionrule = graphsData[40].image;
     
     let count = 0;
     function inception() {
@@ -553,6 +554,18 @@ const AlgorithmsIntro = () => {
                 There are many ways to improve <strong> 'Recursion' </strong> ( that is orconverting to tree data structures or doing traversal) efficiency as 
                 the <strong> 'Tail call Optimizitation' </strong> ( its a tecnique to call a function without incrementing the call stack )
             </p>
+
+            <h3>
+                Recursion to Convert to a Tree:
+            </h3>
+
+            <p>
+                Along the problem solving there will be many situation where it is necessary to convert certain data structures 
+                to trees and in order to achieve it, has to be through using <strong> 'Recursion' </strong>, and this is 
+                when divide and conquer comes to play, using the set of rules as follows in the graph:
+            </p>
+
+            <img src={recursionconversionrule} className='large' alt="recursion conversion rule"/>        
 
             <h4>Note: An Iterative approach over a Recursive approach will applied depending on the complexity some cases a 
                 Recursive approach can cause a complexity of 2 ^ N, that use from the worst Big O complexity
