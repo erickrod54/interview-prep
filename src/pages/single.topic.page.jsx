@@ -24,15 +24,16 @@ import { ArrayDataStructure,
          BTSBalanced,
          GraphsStructure,
          GraphsImplementation,
-         AlgorithmsIntro
+         AlgorithmsIntro,
+         SortingComponent
         } from '../components/index.components';
         
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 28.18 - SingleTopicPage  
+/**interview-prep-app - version 29.03 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Adding 'AlgorithmsIntro' to the single topic. 
+ *     --> Adding 'SortingComponent' to the single topic. 
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -148,7 +149,11 @@ const SingleTopicPage = () => {
     if (id === '24') {
         return <AlgorithmsIntro />
     }
-    
+
+    if (id === '25') {
+        return <SortingComponent />
+    }
+
 }
 
 export default SingleTopicPage;
