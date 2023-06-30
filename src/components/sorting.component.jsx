@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 29.03 - SortingComponent  
+/**interview-prep-app - version 29.04 - SortingComponent  
  * - Features: 
  * 
- *     --> Building 'SortingComponent'. 
+ *     --> Building 'SortingComponent'.
+ * 
+ *     --> Developing localCompare example. 
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -14,6 +16,7 @@ const SortingComponent = () => {
     const [ lettersorted, setLettersorted ] = useState([]);
     const [ basketsorted, setBasketsorted ] = useState([]);
     const [ spanishsorted, setSpanishsorted ] = useState([]);
+    const [ spanishsortedfixed, setSpanishsortedfixed ] = useState([]);
 
     const letters = ['a', 'd', 'z', 'e', 'r', 'b'];
 
@@ -30,6 +33,14 @@ const SortingComponent = () => {
     const handleSpanishsorted = () => {
         let spanishsort = spanish.sort()
         setSpanishsorted(spanishsort)
+        console.log(spanishsort)
+    }
+
+    const handleSpanishsortedlocal = () => {
+        let spanishsort = spanish.sort(function(a,b){
+            return a.localeCompare(b)
+        })
+        setSpanishsortedfixed(spanishsort)
         console.log(spanishsort)
     }
 
@@ -231,14 +242,38 @@ const SortingComponent = () => {
         </section>
         :
         null
-        }  
+        }
 
+        <p>
+            and in order to fix it will be as this:
+        </p>  
+
+        <button onClick={handleSpanishsortedlocal}> Sort spanish words fix </button>
         <p>
             it does not look ordered, this happen because the particular 
             implementation of the 
             <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"> pre-built sort method in JavaScript </a> language
             
         </p>
+
+        {spanishsortedfixed ? 
+        
+        <section className="code-block code-block-row"> 
+            [{spanishsortedfixed.map((word, index ) => {
+
+                return(
+                    <div key={index} >
+                        <p>'{word}',</p>
+                    </div>
+                )
+            })}]
+        </section>
+        :
+        null
+        }
+
+
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare">Reference for localCompare() docs </a>
 
         </DataStructuresWrapper>
     )
