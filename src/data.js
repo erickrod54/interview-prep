@@ -41,11 +41,11 @@ import { hashtable,
          recursionconversionrule
          } from './assets/index';      
 
-/**interview-prep-app - version 29.02 - data js - 
+/**interview-prep-app - version 29.03 - data js - 
  * Features: 
  * 
- *     --> Adding 'recursionconversionrule' for 
- *         graphsData.   
+ *     --> Adding 'Sorting' for 
+ *         linksData.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures.
@@ -153,11 +153,11 @@ export const linksData = [
         id:'24',
         name:'Algorithhms Intro'
       },
-      /**{
+      {
         id:'25',
         name:'Sorting'
       },
-      {
+      /**{
         id:'26',
         name:'Dynamic Programming'
       },
