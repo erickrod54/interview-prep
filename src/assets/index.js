@@ -40,11 +40,12 @@ import factorialexercise from './factorial_exercise.png'
 import fibonaccirecurssion from './fibonacci_recurssion.png'
 import recursioniterativetradeoffs from './recursion-iterative-tradeoffs.png'
 import recursionconversionrule from './recursion-conversion-rule.png'
+import sortingimportance from './sorting-importance.png'; 
 
-/**interview-prep-app - version 29.02 - assets > index - 
+/**interview-prep-app - version 29.04 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'recursionconversionrule' asset.
+ *     --> Importing and exporting 'sortingimportance' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -90,5 +91,6 @@ export { bigo1stgraph,
          factorialexercise,
          fibonaccirecurssion,
          recursioniterativetradeoffs,
-         recursionconversionrule
+         recursionconversionrule,
+         sortingimportance
         };
