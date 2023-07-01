@@ -328,6 +328,11 @@ const SortingComponent = () => {
 
         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare">Reference for localCompare() docs </a>
 
+        <p>
+            There are some Algorithms that are considered as the <strong> 'elementary sort' </strong> will be the first 
+            3 algorithms, and the last two are more <strong> 'complex algorithms' </strong>
+        </p>
+
         </DataStructuresWrapper>
     )
 }
