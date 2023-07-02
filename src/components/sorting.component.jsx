@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.06 - SortingComponent  
+/**interview-prep-app - version 29.07 - SortingComponent  
  * - Features: 
  * 
- *     --> Building 'SortingComponent'.
- * 
- *     --> Fixing basket example.
+ *     --> Destructuring 'sortelementaryandcomplex' from the context.  
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -22,7 +20,8 @@ const SortingComponent = () => {
 
     const { graphsData } = useAppContext()
 
-    const sortingimportance = graphsData[41].image 
+    const sortingimportance = graphsData[41].image; 
+    const sortelementaryandcomplex = graphsData[42].image;
 
     console.log('graphsData ==>', graphsData)
 
@@ -330,8 +329,11 @@ const SortingComponent = () => {
 
         <p>
             There are some Algorithms that are considered as the <strong> 'elementary sort' </strong> will be the first 
-            3 algorithms, and the last two are more <strong> 'complex algorithms' </strong>
+            3 algorithms, and the last two are more <strong> 'complex algorithms' </strong>, as the image that 
+            follows:
         </p>
+
+        <img src={sortelementaryandcomplex} className="large" alt="sort elementary and complex"/>
 
         </DataStructuresWrapper>
     )
