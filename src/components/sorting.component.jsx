@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.07 - SortingComponent  
+/**interview-prep-app - version 29.08 - SortingComponent  
  * - Features: 
  * 
- *     --> Destructuring 'sortelementaryandcomplex' from the context.  
+ *     --> Developing 'bubblesort' concept.  
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -334,6 +334,33 @@ const SortingComponent = () => {
         </p>
 
         <img src={sortelementaryandcomplex} className="large" alt="sort elementary and complex"/>
+
+        <h3>
+            Bubble sort:
+        </h3>
+
+        <p>
+            let's start with <strong> 'bubble sort' </strong>
+        </p>
+
+        <p>
+            Bubble sort is a simple sorting algorithm that works by repeatedly <strong> 'swapping' </strong> 
+            adjacent elements if they are in the wrong order. The algorithm <strong> compares each pair of adjacent elements </strong> and swaps 
+            them if they are in the wrong order. 
+        </p>
+
+        <p>
+            <strong> This process is repeated until the entire list is sorted </strong>.
+            Imagine you have a row of numbers, and you start from the beginning. You compare each pair of 
+            adjacent numbers, and if they are out of order, you swap them. This way, the largest number 
+            "bubbles" up to the end of the row in each pass.
+        </p>
+
+        <p>
+        After the first pass, the largest number is 
+            in its correct position at the end. Then, you repeat the process for the remaining unsorted numbers 
+            until the entire list is sorted.
+        </p>
 
         </DataStructuresWrapper>
     )
