@@ -39,13 +39,14 @@ import { hashtable,
          fibonaccirecurssion,
          recursioniterativetradeoffs,
          recursionconversionrule,
-         sortingimportance
+         sortingimportance,
+         sortelementaryandcomplex
          } from './assets/index';      
 
-/**interview-prep-app - version 29.04 - data js - 
+/**interview-prep-app - version 29.07 - data js - 
  * Features: 
  * 
- *     --> Adding 'sortingimportance' for 
+ *     --> Adding 'sortelementaryandcomplex' for 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -344,7 +345,11 @@ export const linksData = [
       {
         id:42,
         image: sortingimportance
-      }    
+      },
+      {
+        id:43,
+        image: sortelementaryandcomplex
+      }  
     ]
     
     export const everyoneCharacter = [
