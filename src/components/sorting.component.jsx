@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.08 - SortingComponent  
+/**interview-prep-app - version 29.09 - SortingComponent  
  * - Features: 
  * 
- *     --> Developing 'bubblesort' concept.  
+ *     --> Developing 'bubblesort' exercise.  
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -18,7 +18,7 @@ const SortingComponent = () => {
     const [ spanishsorted, setSpanishsorted ] = useState([]);
     const [ spanishsortedfixed, setSpanishsortedfixed ] = useState([]);
 
-    const { graphsData } = useAppContext()
+    const { graphsData } = useAppContext();
 
     const sortingimportance = graphsData[41].image; 
     const sortelementaryandcomplex = graphsData[42].image;
@@ -30,6 +30,24 @@ const SortingComponent = () => {
     const basket = [2, 65, 34, 2, 1, 7, 8];
 
     const spanish = ['único', 'árbol', 'cosas', 'fútbol'];
+
+    const numbers = [99, 44, 6, 2, 1, 5, 63, 87,283, 4, 0 ];
+
+    const handleBubblesort = (array) => {
+        const length = array.length;
+
+        for (let i = 0; i < length; i++) {
+            for (let j = 0; j < length; j++) {
+                if (array[i] > array[j + 1]) {
+                    //Swap elements
+                    let temp = array[j];
+                    array[j] = array[j +1];
+                    array[j +1] = array[j];
+                }
+            }
+            
+        }
+    }
 
 
     const handleSortletters = () => {
