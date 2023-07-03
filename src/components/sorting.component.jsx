@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.14 - SortingComponent  
+/**interview-prep-app - version 29.15 - SortingComponent  
  * - Features: 
  * 
- *     --> Developing 'Selection' sorting algorithm   
+ *     --> Destructuring 'sortingfindingscanning' from 
+ *         the context   
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -23,6 +24,7 @@ const SortingComponent = () => {
 
     const sortingimportance = graphsData[41].image; 
     const sortelementaryandcomplex = graphsData[42].image;
+    const sortingfindingscanning = graphsData[43].image;
 
     console.log('graphsData ==>', graphsData)
 
@@ -423,6 +425,13 @@ const SortingComponent = () => {
             sorted portion of the list. Although it is simple to understand and implement, selection sort's time complexity is also O(n^2), making
             it less efficient for large lists. However, for small lists or situations where memory is limited, it can still be a reasonable choice.
         </p>
+
+        <p>
+            so the algorithm will <strong> find the smallest ( red color ) </strong>, and <strong> 'scan' the next</strong> looking for the smallest 
+            again in the next element, as the graphic as follows:
+        </p>
+
+        <img src={sortingfindingscanning} className="large" alt="sorting finding scanning"/>
 
         </DataStructuresWrapper>
     )
