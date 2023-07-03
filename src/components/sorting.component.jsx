@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.13 - SortingComponent  
+/**interview-prep-app - version 29.14 - SortingComponent  
  * - Features: 
  * 
- *     --> Sorting the 'numbers' array in 'bubblesortvalue'  
+ *     --> Developing 'Selection' sorting algorithm   
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -401,6 +401,28 @@ const SortingComponent = () => {
         <button onClick={() => handleBubblesort(numbers)}> Apply bubble sort over the <strong> 'numbers array' </strong></button>
 
         <p>[{bubblesortvalue}]</p>
+
+        <h3>
+            Selection sort:
+        </h3>
+
+        <p>
+            Selection sort is a straightforward sorting algorithm that works by repeatedly <strong> finding the smallest element
+            from the unsorted part of the list </strong> and placing it <strong> at the beginning </strong>. The algorithm divides
+            the list into two parts: the sorted part and the unsorted part.
+        </p>
+
+        <p>
+            To begin, it finds the smallest element in the unsorted part and swaps it with the first element. This effectively expands 
+            the sorted part by one element. Then, it moves to the next position in the unsorted part and repeats the process of finding 
+            the smallest element and swapping it with the corresponding position in the sorted part. This continues until the entire list is sorted.
+        </p>
+
+        <p>
+            In essence, selection sort repeatedly selects the smallest element and moves it to its correct position, gradually building up a 
+            sorted portion of the list. Although it is simple to understand and implement, selection sort's time complexity is also O(n^2), making
+            it less efficient for large lists. However, for small lists or situations where memory is limited, it can still be a reasonable choice.
+        </p>
 
         </DataStructuresWrapper>
     )
