@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.11 - SortingComponent  
+/**interview-prep-app - version 29.12 - SortingComponent  
  * - Features: 
  * 
- *     --> Setting 'bubblesortvalue' value.
- * 
- *     --> Asigning to the 'temp' the sorted array  
+ *     --> Rendering the 'numbers' array to be sorted  
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -383,6 +381,22 @@ const SortingComponent = () => {
             in its correct position at the end. Then, you repeat the process for the remaining unsorted numbers 
             until the entire list is sorted.
         </p>
+
+        <p>
+            let's make an exercise of bubble sort to sort the following array:
+        </p>
+
+        <section className="code-block code-block-row">
+        
+        [{numbers.map((number,index) => {
+            return(
+                <div key={index}>
+                    <p>{number},</p>
+                </div>
+            )
+        })}]
+
+        </section>
 
         </DataStructuresWrapper>
     )
