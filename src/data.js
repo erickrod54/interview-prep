@@ -40,13 +40,14 @@ import { hashtable,
          recursioniterativetradeoffs,
          recursionconversionrule,
          sortingimportance,
-         sortelementaryandcomplex
+         sortelementaryandcomplex,
+         sortingfindingscanning
          } from './assets/index';      
 
-/**interview-prep-app - version 29.07 - data js - 
+/**interview-prep-app - version 29.14 - data js - 
  * Features: 
  * 
- *     --> Adding 'sortelementaryandcomplex' for 
+ *     --> Adding 'sortingfindingscanning' for 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -349,6 +350,10 @@ export const linksData = [
       {
         id:43,
         image: sortelementaryandcomplex
+      },
+      {
+        id:44,
+        image: sortingfindingscanning
       }  
     ]
     
