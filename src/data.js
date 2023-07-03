@@ -41,13 +41,14 @@ import { hashtable,
          recursionconversionrule,
          sortingimportance,
          sortelementaryandcomplex,
-         sortingfindingscanning
+         sortingfindingscanning,
+         selectionswappingelements
          } from './assets/index';      
 
-/**interview-prep-app - version 29.14 - data js - 
+/**interview-prep-app - version 29.15 - data js - 
  * Features: 
  * 
- *     --> Adding 'sortingfindingscanning' for 
+ *     --> Adding 'selectionswappingelements' for 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -354,6 +355,10 @@ export const linksData = [
       {
         id:44,
         image: sortingfindingscanning
+      },
+      {
+        id:45,
+        image: selectionswappingelements
       }  
     ]
     
