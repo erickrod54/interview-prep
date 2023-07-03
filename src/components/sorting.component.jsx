@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.09 - SortingComponent  
+/**interview-prep-app - version 29.10 - SortingComponent  
  * - Features: 
  * 
- *     --> Developing 'bubblesort' exercise.  
+ *     --> Building states for 'bubblesort' exercise.  
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -17,6 +17,7 @@ const SortingComponent = () => {
     const [ basketsortedfixed, setBasketsortedfixed ] = useState([]);
     const [ spanishsorted, setSpanishsorted ] = useState([]);
     const [ spanishsortedfixed, setSpanishsortedfixed ] = useState([]);
+    const [ bubblesortvalue, setBubblesortvalue ] = useState([]);
 
     const { graphsData } = useAppContext();
 
