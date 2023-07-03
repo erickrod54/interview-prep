@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.12 - SortingComponent  
+/**interview-prep-app - version 29.13 - SortingComponent  
  * - Features: 
  * 
- *     --> Rendering the 'numbers' array to be sorted  
+ *     --> Sorting the 'numbers' array in 'bubblesortvalue'  
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -397,6 +397,10 @@ const SortingComponent = () => {
         })}]
 
         </section>
+
+        <button onClick={() => handleBubblesort(numbers)}> Apply bubble sort over the <strong> 'numbers array' </strong></button>
+
+        <p>[{bubblesortvalue}]</p>
 
         </DataStructuresWrapper>
     )
