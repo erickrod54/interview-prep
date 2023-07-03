@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.10 - SortingComponent  
+/**interview-prep-app - version 29.11 - SortingComponent  
  * - Features: 
  * 
- *     --> Building states for 'bubblesort' exercise.  
+ *     --> Setting 'bubblesortvalue' value.
+ * 
+ *     --> Asigning to the 'temp' the sorted array  
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -43,9 +45,10 @@ const SortingComponent = () => {
                     //Swap elements
                     let temp = array[j];
                     array[j] = array[j +1];
-                    array[j +1] = array[j];
+                    array[j +1] = temp;
                 }
             }
+            setBubblesortvalue(' ' + array + ' ' + ',')
             
         }
     }
