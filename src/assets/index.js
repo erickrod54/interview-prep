@@ -42,11 +42,12 @@ import recursioniterativetradeoffs from './recursion-iterative-tradeoffs.png'
 import recursionconversionrule from './recursion-conversion-rule.png'
 import sortingimportance from './sorting-importance.png'; 
 import sortelementaryandcomplex from './sort-elementary-and-complex.png';
+import sortingfindingscanning from './sorting-finding-scanning.png'
 
-/**interview-prep-app - version 29.07 - assets > index - 
+/**interview-prep-app - version 29.14 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'sortelementaryandcomplex' asset.
+ *     --> Importing and exporting 'sortingfindingscanning' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -94,5 +95,6 @@ export { bigo1stgraph,
          recursioniterativetradeoffs,
          recursionconversionrule,
          sortingimportance,
-         sortelementaryandcomplex
+         sortelementaryandcomplex,
+         sortingfindingscanning
         };
