@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.16 - SortingComponent  
+/**interview-prep-app - version 29.17 - SortingComponent  
  * - Features: 
  * 
- *     --> Destructuring 'selectionswappingelements' from 
- *         the context   
+ *     --> Starting to apply sort algorithm on 'number' array   
  * 
- * Note: Pending to re structure imports using the index.
+ * Note: Pendind to create the sort algorithm handler
  */
 
 const SortingComponent = () => {
@@ -440,6 +439,22 @@ const SortingComponent = () => {
         </p>
 
         <img src={selectionswappingelements} className="large" alt="selection swapping elements"/>
+
+        <p>
+            let's apply selection sort in the previous <strong> 'numbers' </strong> array:
+        </p>
+
+        <section className="code-block code-block-row">
+        
+        [{numbers.map((number,index) => {
+            return(
+                <div key={index}>
+                    <p>{number},</p>
+                </div>
+            )
+        })}]
+
+        </section>
 
         </DataStructuresWrapper>
     )
