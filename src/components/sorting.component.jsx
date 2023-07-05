@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.18 - SortingComponent  
+/**interview-prep-app - version 29.19 - SortingComponent  
  * - Features: 
  * 
- *     --> Building 'selectionsortvalue' state   
+ *     --> Building 'handleSelectionSort' handler   
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -52,6 +52,28 @@ const SortingComponent = () => {
             setBubblesortvalue(' ' + array + ' ' + ',')
             
         }
+    }
+
+    const handleSelectionSort = (array) => {
+        const length = array.length;
+        for (let i = 0; i < length; i++) {
+            // set current index as minimum
+            let min = i;
+            let temp = array[i];
+            for (let j = i + 1; j < length; j++) {
+                if (array[j] < array[min]) {
+                    //update the minimum if 
+                    //current is lower that 
+                    //what we had previously
+                    min = j;
+                }
+                
+            }
+            
+            array[i] = array[min]
+            array[min] = temp;
+        }
+        setSelectionsortvalue(array + ',' + '')
     }
 
 
