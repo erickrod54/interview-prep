@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.15 - SortingComponent  
+/**interview-prep-app - version 29.16 - SortingComponent  
  * - Features: 
  * 
- *     --> Destructuring 'sortingfindingscanning' from 
+ *     --> Destructuring 'selectionswappingelements' from 
  *         the context   
  * 
  * Note: Pending to re structure imports using the index.
@@ -25,6 +25,7 @@ const SortingComponent = () => {
     const sortingimportance = graphsData[41].image; 
     const sortelementaryandcomplex = graphsData[42].image;
     const sortingfindingscanning = graphsData[43].image;
+    const selectionswappingelements = graphsData[44].image;
 
     console.log('graphsData ==>', graphsData)
 
@@ -432,6 +433,13 @@ const SortingComponent = () => {
         </p>
 
         <img src={sortingfindingscanning} className="large" alt="sorting finding scanning"/>
+
+        <p>
+            once that the smallest item is <strong> found </strong>, will swap as follows in the picture <strong> (the scanning value that is temporal - check the handler - 
+            is a temporal varriable )</strong>
+        </p>
+
+        <img src={selectionswappingelements} className="large" alt="selection swapping elements"/>
 
         </DataStructuresWrapper>
     )
