@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.20 - SortingComponent  
+/**interview-prep-app - version 30.00 - SortingComponent  
  * - Features: 
  * 
- *     --> Rendering 'selectionsortvalue' handler   
+ *     --> Developing 'Insertion sort' concept   
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -486,6 +486,35 @@ const SortingComponent = () => {
         <button onClick={() => handleSelectionSort(numbers)}> Apply bubble sort over the <strong> 'numbers array' </strong></button>
 
         <p>[{selectionsortvalue}]</p>
+
+        <a href="https://www.youtube.com/@AlgoRythmics">Selection sort <strong> dancing </strong> algorithm reference</a>
+
+        <h3>
+            Insertion Sort:
+        </h3>
+
+        <p>
+            Insertion sort is a simple sorting algorithm that works by dividing the list into two parts: the sorted part and
+            the unsorted part. It starts with the first element as the sorted part and the rest as the unsorted part. 
+        </p>
+
+        <p>
+            The algorithm iterates through each element in the unsorted part and "inserts" it into its correct position in the sorted part.
+            It does this by comparing the current element with the elements in the sorted part, moving them to the right until it finds the 
+            correct position to insert the current element. This process continues until the entire list is sorted.
+        </p>
+
+        <p>
+            Imagine you have a hand of cards and you want to arrange them in ascending order. You start with one card in your hand 
+            (the sorted part) and pick another card from the remaining pile (the unsorted part). You compare the new card with the cards
+            in your hand, shifting them to the right until you find the correct spot to insert the new card. You repeat this process for
+            each card until your hand is sorted.
+        </p>
+
+        <p>
+            Insertion sort is efficient for small lists or nearly sorted lists. Its time complexity is also O(n^2), but it performs 
+            better than bubble sort and selection sort in practice because it can exit early if the list is already sorted or nearly sorted.
+        </p>
 
         </DataStructuresWrapper>
     )
