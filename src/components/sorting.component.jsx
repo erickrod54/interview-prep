@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.19 - SortingComponent  
+/**interview-prep-app - version 29.20 - SortingComponent  
  * - Features: 
  * 
- *     --> Building 'handleSelectionSort' handler   
+ *     --> Rendering 'selectionsortvalue' handler   
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -478,6 +478,14 @@ const SortingComponent = () => {
         })}]
 
         </section>
+
+        <p>
+            let's apply the <strong> selection sort algorithm </strong>
+        </p>
+
+        <button onClick={() => handleSelectionSort(numbers)}> Apply bubble sort over the <strong> 'numbers array' </strong></button>
+
+        <p>[{selectionsortvalue}]</p>
 
         </DataStructuresWrapper>
     )
