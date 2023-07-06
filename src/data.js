@@ -42,13 +42,14 @@ import { hashtable,
          sortingimportance,
          sortelementaryandcomplex,
          sortingfindingscanning,
-         selectionswappingelements
+         selectionswappingelements,
+         insertionsortalgorithm
          } from './assets/index';      
 
-/**interview-prep-app - version 29.15 - data js - 
+/**interview-prep-app - version 30.01 - data js - 
  * Features: 
  * 
- *     --> Adding 'selectionswappingelements' for 
+ *     --> Adding 'insertionsortalgorithm' for 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -359,6 +360,10 @@ export const linksData = [
       {
         id:45,
         image: selectionswappingelements
+      },
+      {
+        id:46,
+        image: insertionsortalgorithm
       }  
     ]
     
