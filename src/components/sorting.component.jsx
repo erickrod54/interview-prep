@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.03 - SortingComponent  
+/**interview-prep-app - version 30.04 - SortingComponent  
  * - Features: 
  * 
- *     --> Building 'Insertion sort' handler   
+ *     --> Rendering 'Insertion sort' insertionsortvalue   
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -549,6 +549,10 @@ const SortingComponent = () => {
         })}]
 
         </section>
+
+        <button onClick={() => insertionSort(numbers)}> Apply insertion sort over the <strong> 'numbers array' </strong></button>
+
+        <p>[{insertionsortvalue}]</p>
 
         <h4>
             Note: this method is important, has a level complexity of O(n^2), but is pretty much use for cases when i have a list 
