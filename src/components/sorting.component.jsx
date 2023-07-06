@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.01 - SortingComponent  
+/**interview-prep-app - version 30.02 - SortingComponent  
  * - Features: 
  * 
- *     --> Developing 'Insertion sort' exersice   
+ *     --> Building 'Insertion sort' state   
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -19,6 +19,7 @@ const SortingComponent = () => {
     const [ spanishsortedfixed, setSpanishsortedfixed ] = useState([]);
     const [ bubblesortvalue, setBubblesortvalue ] = useState([]);
     const [ selectionsortvalue, setSelectionsortvalue ] = useState([]);
+    const [ insertionsortvalue, setInsertionsortvalue ] = useState([]);
 
     const { graphsData } = useAppContext();
 
