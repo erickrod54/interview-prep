@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.00 - SortingComponent  
+/**interview-prep-app - version 30.01 - SortingComponent  
  * - Features: 
  * 
- *     --> Developing 'Insertion sort' concept   
+ *     --> Developing 'Insertion sort' exersice   
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -515,6 +515,27 @@ const SortingComponent = () => {
             Insertion sort is efficient for small lists or nearly sorted lists. Its time complexity is also O(n^2), but it performs 
             better than bubble sort and selection sort in practice because it can exit early if the list is already sorted or nearly sorted.
         </p>
+
+        <p>
+            let's make an <strong> 'insertion sort' </strong> exersice base in the <strong> 'numbers' </strong> array:
+        </p>
+
+        <section className="code-block code-block-row">
+        
+        [{numbers.map((number,index) => {
+            return(
+                <div key={index}>
+                    <p>{number},</p>
+                </div>
+            )
+        })}]
+
+        </section>
+
+        <h4>
+            Note: this method is important, has a level complexity of O(n^2), but is pretty much use for cases when i have a list 
+            almost sorted
+        </h4>
 
         </DataStructuresWrapper>
     )
