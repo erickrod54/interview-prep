@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.05 - SortingComponent  
+/**interview-prep-app - version 30.06 - SortingComponent  
  * - Features: 
  * 
- *     --> Developing Merge Sort concept
+ *     --> Destructuring 'mergesortdataset' from the context
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -27,6 +27,7 @@ const SortingComponent = () => {
     const sortelementaryandcomplex = graphsData[42].image;
     const sortingfindingscanning = graphsData[43].image;
     const selectionswappingelements = graphsData[44].image;
+    const mergesortdataset = graphsData[46].image;
 
     console.log('graphsData ==>', graphsData)
 
@@ -570,6 +571,12 @@ const SortingComponent = () => {
             uses the technique <strong> 'divide and conquer' </strong> ( by divideding the problem, and combining the solutions,
             by the Big-O complexity chart is located in the yellow area )
         </p>
+
+        <p>
+            initially i have one subset of data as the graph as follows:
+        </p>
+
+        <img src={mergesortdataset} className="large" alt="merge sort data set"/>
 
         </DataStructuresWrapper>
     )
