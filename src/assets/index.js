@@ -46,11 +46,12 @@ import sortingfindingscanning from './sorting-finding-scanning.png';
 import selectionswappingelements from './selection-swapping-elements.png';
 import insertionsortalgorithm from './insertion-sort-algorithm.png'
 import mergesortdataset from './merge-sort-data-set.png';
+import mergesorthalfdataset from './merge-sort-half-data-set.png'; 
 
-/**interview-prep-app - version 30.05 - assets > index - 
+/**interview-prep-app - version 30.07 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'mergesortdataset' asset.
+ *     --> Importing and exporting 'mergesorthalfdataset' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -102,5 +103,6 @@ export { bigo1stgraph,
          sortingfindingscanning,
          selectionswappingelements,
          insertionsortalgorithm,
-         mergesortdataset
+         mergesortdataset,
+         mergesorthalfdataset
         };
