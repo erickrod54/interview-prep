@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.04 - SortingComponent  
+/**interview-prep-app - version 30.05 - SortingComponent  
  * - Features: 
  * 
- *     --> Rendering 'Insertion sort' insertionsortvalue   
+ *     --> Developing Merge Sort concept
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -556,8 +556,20 @@ const SortingComponent = () => {
 
         <h4>
             Note: this method is important, has a level complexity of O(n^2), but is pretty much use for cases when i have a list 
-            almost sorted
+            almost sorted, insertion sort is ideal for small data sets, when it comes to small data sets  insertion sort, performs
+            better than other algorithms.
         </h4>
+
+        <h3>
+            Merge Sort:
+        </h3>
+
+        <p>
+            So far the complexity until insertion sort has been of <strong> O(n^2) </strong> ( that is a little bit slow ), now 
+            when it comes to <strong> Merge sort </strong> the complexity is <strong> 'O( n log n )' </strong>, this algorithm
+            uses the technique <strong> 'divide and conquer' </strong> ( by divideding the problem, and combining the solutions,
+            by the Big-O complexity chart is located in the yellow area )
+        </p>
 
         </DataStructuresWrapper>
     )
