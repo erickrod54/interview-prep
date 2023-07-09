@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.06 - SortingComponent  
+/**interview-prep-app - version 30.07 - SortingComponent  
  * - Features: 
  * 
- *     --> Destructuring 'mergesortdataset' from the context
+ *     --> Destructuring 'mergesorthalfdataset' from the context
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -28,6 +28,7 @@ const SortingComponent = () => {
     const sortingfindingscanning = graphsData[43].image;
     const selectionswappingelements = graphsData[44].image;
     const mergesortdataset = graphsData[46].image;
+    const mergesorthalfdataset = graphsData[47].image;
 
     console.log('graphsData ==>', graphsData)
 
@@ -577,6 +578,12 @@ const SortingComponent = () => {
         </p>
 
         <img src={mergesortdataset} className="large" alt="merge sort data set"/>
+
+        <p>
+            Then the data subset is divided always in a <strong> 'half' ( divide and conquer ) </strong> as follows:
+        </p>
+
+        <img src={mergesorthalfdataset} className="large" alt="merge sort half data set"/>
 
         </DataStructuresWrapper>
     )
