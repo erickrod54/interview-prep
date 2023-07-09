@@ -56,7 +56,7 @@ import { hashtable,
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
- * data structures.
+ * data structures. the mergesorthalfagaindataset has been added
  */
 
 export const linksData = [
