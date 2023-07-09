@@ -46,13 +46,14 @@ import { hashtable,
          insertionsortalgorithm,
          mergesortdataset,
          mergesorthalfdataset,
-         mergesorthalfagaindataset
+         mergesorthalfagaindataset,
+         mergesortfinalhalfdataset
          } from './assets/index';      
 
-/**interview-prep-app - version 30.08 - data js - 
+/**interview-prep-app - version 30.09 - data js - 
  * Features: 
  * 
- *     --> Adding 'mergesorthalfagaindataset' for 
+ *     --> Adding 'mergesortfinalhalfdataset' for 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -379,6 +380,10 @@ export const linksData = [
       {
         id:49,
         image: mergesorthalfagaindataset
+      },
+      {
+        id:50,
+        image: mergesortfinalhalfdataset
       }
     ]
     
