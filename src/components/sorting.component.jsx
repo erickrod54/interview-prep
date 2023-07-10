@@ -5,7 +5,7 @@ import { useAppContext } from "../context";
 /**interview-prep-app - version 30.09 - SortingComponent  
  * - Features: 
  * 
- *     --> Destructuring 'mergesortfinalhalfdataset' from the context
+ *     --> Destructuring 'mergesortingdataset' from the context
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -31,6 +31,7 @@ const SortingComponent = () => {
     const mergesorthalfdataset = graphsData[47].image;
     const mergesorthalfagaindataset = graphsData[48].image; 
     const mergesortfinalhalfdataset = graphsData[49].image;
+    const mergesortingdataset = graphsData[50].image;
 
     console.log('graphsData ==>', graphsData)
 
@@ -599,7 +600,11 @@ const SortingComponent = () => {
 
         <img src={mergesortfinalhalfdataset} className="large" alt="merge sort half again data set"/>
 
-        
+        <p>
+            when finally get <strong> divided in half until get a single unit </strong>, starts the sorting comparing each single element
+        </p>
+
+        <img src={mergesortingdataset} className="large" alt="merge sorting data set"/>
 
         </DataStructuresWrapper>
     )
