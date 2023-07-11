@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.12 - SortingComponent  
+/**interview-prep-app - version 30.13 - SortingComponent  
  * - Features: 
  * 
- *     --> Destructuring 'mergecomparingcombiningdataset' from the context
+ *     --> Developing merge sort exercise
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -35,16 +35,22 @@ const SortingComponent = () => {
     const mergemoresortingdataset = graphsData[51].image;
     const mergecomparingcombiningdataset = graphsData[52].image;
 
+    
     console.log('graphsData ==>', graphsData)
-
+    
     const letters = ['a', 'd', 'z', 'e', 'r', 'b'];
-
+    
     const basket = [2, 65, 34, 2, 1, 7, 8];
-
+    
     const spanish = ['único', 'árbol', 'cosas', 'fútbol'];
-
+    
     const numbers = [99, 44, 6, 2, 1, 5, 63, 87,283, 4, 0 ];
-
+    
+    const length = numbers.length;
+    const middle = Math.floor(length / 2 );
+    const left = numbers.slice(0,middle);
+    const right = numbers.slice(middle)
+    
     const handleBubblesort = (array) => {
         const length = array.length;
 
@@ -620,7 +626,55 @@ const SortingComponent = () => {
         </p>
 
         <img src={mergecomparingcombiningdataset} className="large" alt="merge comparing combining data set"/>
+
+
+        <h3>
+            Merge sort exercise:
+        </h3>
+
+        <p>
+            let's apply merge sort over the <strong> 'numbers' </strong> array:
+        </p>
         
+        <section className="code-block code-block-row">
+        
+        [{numbers.map((number,index) => {
+            return(
+                <div key={index}>
+                    <p>{number},</p>
+                </div>
+            )
+        })}]
+
+        </section>
+
+        <p>
+            First the array gets divided in <strong> 'half' </strong>, using the <strong> index </strong>
+        </p>
+
+        <section className="code-block">
+        
+        [{left.map((number,index) => {
+
+            return(
+                <div key={index}>
+                    <p>{number},</p>
+                </div>
+            )
+        })}]
+
+        <p>and right side:</p>
+        
+        [{right.map((number,index) => {
+
+        return(
+            <div key={index}>
+                <p>{number},</p>
+            </div>
+        )
+        })}]
+
+        </section>
 
         </DataStructuresWrapper>
     )
