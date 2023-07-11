@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.11 - SortingComponent  
+/**interview-prep-app - version 30.12 - SortingComponent  
  * - Features: 
  * 
- *     --> Destructuring 'mergemoresortingdataset' from the context
+ *     --> Destructuring 'mergecomparingcombiningdataset' from the context
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -33,6 +33,7 @@ const SortingComponent = () => {
     const mergesortfinalhalfdataset = graphsData[49].image;
     const mergesortingdataset = graphsData[50].image;
     const mergemoresortingdataset = graphsData[51].image;
+    const mergecomparingcombiningdataset = graphsData[52].image;
 
     console.log('graphsData ==>', graphsData)
 
@@ -614,6 +615,11 @@ const SortingComponent = () => {
 
         <img src={mergemoresortingdataset} className="large" alt="merge more sorting data set"/>
 
+        <p>
+            once that the data sets gets sorted, start to combined them again in one data set
+        </p>
+
+        <img src={mergecomparingcombiningdataset} className="large" alt="merge comparing combining data set"/>
         
 
         </DataStructuresWrapper>
