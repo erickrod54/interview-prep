@@ -51,11 +51,12 @@ import mergesorthalfagaindataset from './merge-sort-half-again-data-set.png';
 import mergesortfinalhalfdataset from './merge-sort-final-half-data-set.png';
 import mergesortingdataset from './merge-sorting-data-set.png';
 import mergemoresortingdataset from './merge-more-sorting-data-set.png';
+import mergecomparingcombiningdataset from './merge-comparing-combining-data-set.png';
 
-/**interview-prep-app - version 30.11 - assets > index - 
+/**interview-prep-app - version 30.12 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'mergemoresortingdataset' asset.
+ *     --> Importing and exporting 'mergecomparingcombiningdataset' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -112,5 +113,6 @@ export { bigo1stgraph,
          mergesorthalfagaindataset,
          mergesortfinalhalfdataset,
          mergesortingdataset,
-         mergemoresortingdataset
+         mergemoresortingdataset,
+         mergecomparingcombiningdataset
         };
