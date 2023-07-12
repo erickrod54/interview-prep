@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.14 - SortingComponent  
+/**interview-prep-app - version 30.15 - SortingComponent  
  * - Features: 
  * 
- *     --> Developing 'handleMergeSort' handler
+ *     --> Building 'mergesortvalue' state
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -20,6 +20,7 @@ const SortingComponent = () => {
     const [ bubblesortvalue, setBubblesortvalue ] = useState([]);
     const [ selectionsortvalue, setSelectionsortvalue ] = useState([]);
     const [ insertionsortvalue, setInsertionsortvalue ] = useState([]);
+    const [ mergesortvalue, setMergesortvalue ] = useState([]);
 
     const { graphsData } = useAppContext();
 
