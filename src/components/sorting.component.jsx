@@ -2,18 +2,13 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.16 - SortingComponent  
+/**interview-prep-app - version 30.17 - SortingComponent  
  * - Features: 
  * 
- *     --> Fixing 'handleMergeSort' bug.
+ *     --> Rendering 'mergesortvalue'.
  * 
- * Note: Changing the condition to allow empty arrays
- * 
- *      array.length <= 1 
- * 
- * in mergesort method, so this 
- * way get fix the bug to go forward with the method
- * and sort the numbers array
+ * Note: 'mergesortvalue' is the sorted array after
+ * the Merge Sort method
  */
 
 const SortingComponent = () => {
@@ -713,6 +708,17 @@ const SortingComponent = () => {
         })}]
 
         </section>
+
+        <p>
+            it keeps dividing in <strong> half </strong> until get one single item, and then starts to 
+            sort as follows:
+        </p>
+        
+        <button onClick={() => handleMergeSort(numbers)}>Merge sort <strong> numbers </strong></button>
+
+        <p>
+            [{mergesortvalue}]
+        </p>
 
         </DataStructuresWrapper>
     )
