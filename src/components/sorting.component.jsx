@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.13 - SortingComponent  
+/**interview-prep-app - version 30.14 - SortingComponent  
  * - Features: 
  * 
- *     --> Developing merge sort exercise
+ *     --> Developing 'handleMergeSort' handler
  * 
  * Note: Pendind to create the sort algorithm handler
  */
@@ -49,7 +49,44 @@ const SortingComponent = () => {
     const length = numbers.length;
     const middle = Math.floor(length / 2 );
     const left = numbers.slice(0,middle);
-    const right = numbers.slice(middle)
+    const right = numbers.slice(middle);
+
+    /**handleMergeSort performs the Merge sort method */
+    const handleMergeSort = (array) => {
+        if (array.length === 1) {
+            return array
+        }
+        //Split array into right and left
+        const length = numbers.length;
+        const middle = Math.floor(length / 2 );
+        const left = numbers.slice(0,middle);
+        const right = numbers.slice(middle);
+
+        return merge(
+            handleMergeSort(left),
+            handleMergeSort(right)
+        )
+
+        function merge(left, right){
+            const result = [];
+            let leftIndex = 0;
+            let rightIndex = 0;
+
+            while (leftIndex < left.length && rightIndex < right.length) {
+
+                if (left[leftIndex] < right[rightIndex]) {
+                    result.push(left[leftIndex])
+                    leftIndex++;
+                }else{
+                    result.push(right[rightIndex]);
+                    rightIndex++;
+                }
+                
+            }
+
+            return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+        }
+    }
     
     const handleBubblesort = (array) => {
         const length = array.length;
