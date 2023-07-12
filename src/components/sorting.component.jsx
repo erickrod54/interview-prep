@@ -2,12 +2,18 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.15 - SortingComponent  
+/**interview-prep-app - version 30.16 - SortingComponent  
  * - Features: 
  * 
- *     --> Building 'mergesortvalue' state
+ *     --> Fixing 'handleMergeSort' bug.
  * 
- * Note: Pendind to create the sort algorithm handler
+ * Note: Changing the condition to allow empty arrays
+ * 
+ *      array.length <= 1 
+ * 
+ * in mergesort method, so this 
+ * way get fix the bug to go forward with the method
+ * and sort the numbers array
  */
 
 const SortingComponent = () => {
@@ -53,41 +59,35 @@ const SortingComponent = () => {
     const right = numbers.slice(middle);
 
     /**handleMergeSort performs the Merge sort method */
-    const handleMergeSort = (array) => {
-        if (array.length === 1) {
-            return array
-        }
-        //Split array into right and left
-        const length = numbers.length;
-        const middle = Math.floor(length / 2 );
-        const left = numbers.slice(0,middle);
-        const right = numbers.slice(middle);
-
-        return merge(
-            handleMergeSort(left),
-            handleMergeSort(right)
-        )
-
-        function merge(left, right){
-            const result = [];
-            let leftIndex = 0;
-            let rightIndex = 0;
-
-            while (leftIndex < left.length && rightIndex < right.length) {
-
-                if (left[leftIndex] < right[rightIndex]) {
-                    result.push(left[leftIndex])
-                    leftIndex++;
-                }else{
-                    result.push(right[rightIndex]);
-                    rightIndex++;
-                }
-                
-            }
-
-            return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
-        }
+   const handleMergeSort = (array) => {
+    if (array.length <= 1) {
+      return array;
     }
+  
+    const middle = Math.floor(array.length / 2);
+    const left = array.slice(0, middle);
+    const right = array.slice(middle);
+  
+    return merge(handleMergeSort(left), handleMergeSort(right));
+  };
+  
+  function merge(left, right) {
+    const result = [];
+    let leftIndex = 0;
+    let rightIndex = 0;
+  
+    while (leftIndex < left.length && rightIndex < right.length) {
+      if (left[leftIndex] < right[rightIndex]) {
+        result.push(left[leftIndex]);
+        leftIndex++;
+      } else {
+        result.push(right[rightIndex]);
+        rightIndex++;
+      }
+    }
+    setMergesortvalue(result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex)) + ',')
+    return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+  }
     
     const handleBubblesort = (array) => {
         const length = array.length;
