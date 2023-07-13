@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.17 - SortingComponent  
+/**interview-prep-app - version 30.18 - SortingComponent  
  * - Features: 
  * 
- *     --> Rendering 'mergesortvalue'.
+ *     --> Developing Quick Sort algorithm concept.
  * 
  * Note: 'mergesortvalue' is the sorted array after
  * the Merge Sort method
@@ -716,8 +716,20 @@ const SortingComponent = () => {
         
         <button onClick={() => handleMergeSort(numbers)}>Merge sort <strong> numbers </strong></button>
 
+        <section className="code-block code-block-row">
+            <p>
+                [{mergesortvalue}]
+            </p>
+        </section>
+
+        <h3>
+            Quick Sort:
+        </h3>
+
         <p>
-            [{mergesortvalue}]
+            Quick sort is also a <strong> 'divide and conquer algorithm' </strong>, its complexity is also
+            <strong> 'O( log n )' </strong> ( which is pretty good ), and it works using a <strong> 'pivoting technique' </strong>
+            to bring the large list to a smallest list
         </p>
 
         </DataStructuresWrapper>
