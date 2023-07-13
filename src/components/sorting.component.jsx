@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.18 - SortingComponent  
+/**interview-prep-app - version 30.19 - SortingComponent  
  * - Features: 
  * 
- *     --> Developing Quick Sort algorithm concept.
+ *     --> Destructuring 'quicksortbargraph' from the context.
  * 
  * Note: 'mergesortvalue' is the sorted array after
  * the Merge Sort method
@@ -36,6 +36,7 @@ const SortingComponent = () => {
     const mergesortingdataset = graphsData[50].image;
     const mergemoresortingdataset = graphsData[51].image;
     const mergecomparingcombiningdataset = graphsData[52].image;
+    const quicksortbargraph = graphsData[53].image;
 
     
     console.log('graphsData ==>', graphsData)
@@ -731,6 +732,15 @@ const SortingComponent = () => {
             <strong> 'O( log n )' </strong> ( which is pretty good ), and it works using a <strong> 'pivoting technique' </strong>
             to bring the large list to a smallest list
         </p>
+
+        <img src={quicksortbargraph} className="large" alt="quicksort bar graph"/>
+
+        <p>
+            as the graph above, <strong> 'the pivot' </strong> is chosen randomly and the list is split to sort 
+            <strong> lesser item values </strong> to the <strong> 'the pivot' </strong> and <strong> greater item values </strong> 
+            than the pivot 
+        </p>
+        
 
         </DataStructuresWrapper>
     )
