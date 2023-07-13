@@ -53,11 +53,12 @@ import mergesortingdataset from './merge-sorting-data-set.png';
 import mergemoresortingdataset from './merge-more-sorting-data-set.png';
 import mergecomparingcombiningdataset from './merge-comparing-combining-data-set.png';
 import quicksortbargraph from './quick-sort-bar-graph.png';
+import quicksortpivotpickplace from './quick-sort-pivot-pick-place.png';
 
-/**interview-prep-app - version 30.18 - assets > index - 
+/**interview-prep-app - version 30.20 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'quicksortbargraph' asset.
+ *     --> Importing and exporting 'quicksortpivotpickplace' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -116,5 +117,6 @@ export { bigo1stgraph,
          mergesortingdataset,
          mergemoresortingdataset,
          mergecomparingcombiningdataset,
-         quicksortbargraph
+         quicksortbargraph,
+         quicksortpivotpickplace
         };
