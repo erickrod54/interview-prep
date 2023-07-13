@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 30.19 - SortingComponent  
+/**interview-prep-app - version 31.00 - SortingComponent  
  * - Features: 
  * 
- *     --> Destructuring 'quicksortbargraph' from the context.
+ *     --> Destructuring 'quicksortpivotpickplace' from the context.
  * 
  * Note: 'mergesortvalue' is the sorted array after
  * the Merge Sort method
@@ -37,6 +37,7 @@ const SortingComponent = () => {
     const mergemoresortingdataset = graphsData[51].image;
     const mergecomparingcombiningdataset = graphsData[52].image;
     const quicksortbargraph = graphsData[53].image;
+    const quicksortpivotpickplace = graphsData[54].image;
 
     
     console.log('graphsData ==>', graphsData)
@@ -740,6 +741,13 @@ const SortingComponent = () => {
             <strong> lesser item values </strong> to the <strong> 'the pivot' </strong> and <strong> greater item values </strong> 
             than the pivot 
         </p>
+
+        <p>
+            let's think in the following list of numbers, where the quick sort algorithm will choose randomly a 
+            number <strong> '4' </strong> to use it as first <strong> pivot </strong>, to start sorting the list
+        </p>
+
+        <img src={quicksortpivotpickplace} className="large" alt="quicksort bar graph"/>
         
 
         </DataStructuresWrapper>
