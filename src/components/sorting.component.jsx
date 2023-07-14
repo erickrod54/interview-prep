@@ -5,10 +5,10 @@ import { useAppContext } from "../context";
 /**interview-prep-app - version 31.01 - SortingComponent  
  * - Features: 
  * 
- *     --> Destructuring 'quicksortpivotpickplaceagain' from the context.
+ *     --> Developing 'Quick sort' exersice.
  * 
- * Note: 'mergesortvalue' is the sorted array after
- * the Merge Sort method
+ * Note: Quick sort is going to be applied over
+ * numebrs array
  */
 
 const SortingComponent = () => {
@@ -763,6 +763,23 @@ const SortingComponent = () => {
             split them, and sorted, as the graph shows above ( <strong> red </strong> when cannot divide more becuase is 
             sorted and <strong> 'purple' </strong> that keeps choosing new pivots, sorting and sorting the list )
         </p>
+
+        <p>
+            let's apply the <strong> 'quicksort' </strong> algorithm over the <strong> 'numbers' </strong> array, to sort 
+            the numbers in the right order 
+         </p> 
+
+         <section className="code-block code-block-row">
+        
+        [{numbers.map((number,index) => {
+            return(
+                <div key={index}>
+                    <p>{number},</p>
+                </div>
+            )
+        })}]
+
+        </section>   
         
 
         </DataStructuresWrapper>
