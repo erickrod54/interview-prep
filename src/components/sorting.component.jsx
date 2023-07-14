@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 31.00 - SortingComponent  
+/**interview-prep-app - version 31.01 - SortingComponent  
  * - Features: 
  * 
- *     --> Destructuring 'quicksortpivotpickplace' from the context.
+ *     --> Destructuring 'quicksortpivotpickplaceagain' from the context.
  * 
  * Note: 'mergesortvalue' is the sorted array after
  * the Merge Sort method
@@ -38,6 +38,7 @@ const SortingComponent = () => {
     const mergecomparingcombiningdataset = graphsData[52].image;
     const quicksortbargraph = graphsData[53].image;
     const quicksortpivotpickplace = graphsData[54].image;
+    const quicksortpivotpickplaceagain = graphsData[55].image;
 
     
     console.log('graphsData ==>', graphsData)
@@ -748,6 +749,20 @@ const SortingComponent = () => {
         </p>
 
         <img src={quicksortpivotpickplace} className="large" alt="quicksort bar graph"/>
+
+        <p>
+            after everything is <strong> 'sorted' </strong> taking as reference the pivot with the value <strong> '4' </strong>,
+            <strong> 'new pivots' </strong> are chosen to sort both sides ( now <strong> '4' </strong> is the old pivot that 
+            split two list for new pivots ), these pivots are again randomly picked <strong> '2' </strong> and <strong> '7' </strong> 
+        </p>
+
+        <img src={quicksortpivotpickplaceagain} className="large" alt="quick sort pivot pick place again"/>
+
+        <p>
+            this <strong> 'divide and conquer technique' </strong> repeats while the list still unsorted, and will keep 
+            split them, and sorted, as the graph shows above ( <strong> red </strong> when cannot divide more becuase is 
+            sorted and <strong> 'purple' </strong> that keeps choosing new pivots, sorting and sorting the list )
+        </p>
         
 
         </DataStructuresWrapper>
