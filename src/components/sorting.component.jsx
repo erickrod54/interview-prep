@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 31.06 - SortingComponent  
+/**interview-prep-app - version 31.07 - SortingComponent  
  * - Features: 
  * 
- *     --> Building 'cleanQuickSort'.
+ *     --> Developing 'Comparison and non Comparison'
+ *         algorithms concept.
  * 
  * Note: Quick sort is going to be applied over
  * numebrs array
@@ -841,6 +842,17 @@ const SortingComponent = () => {
          <button onClick={() => quickSort(numbers, 0, numbers.length - 1)}> Apply <strong> quick sort </strong> over <strong> numbers </strong> array </button>
          <p>
             [{quicksortvalue}]
+         </p>
+
+         <h3>
+            Comparison and no Comparison algorithms:
+         </h3>
+
+         <p>
+            So far every <strong> 'sorting algorithm' </strong> has <strong> 'tradeoffs' </strong> when it comes 
+            to <strong> 'time complexity' </strong> and <strong> ' space complexity' </strong>, and the most 
+            use algorithms by the <strong> a universal qualification for most use cases  </strong> ( because works
+            with any type of data ) is <strong> 'Quick Sort' </strong> and <strong> 'Merge Sort' </strong>
          </p>
 
         </DataStructuresWrapper>
