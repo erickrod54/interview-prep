@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 31.04 - SortingComponent  
+/**interview-prep-app - version 31.05 - SortingComponent  
  * - Features: 
  * 
- *     --> Building 'quickSort' handler.
+ *     --> Rendering 'quicksortvalue' value.
  * 
  * Note: Quick sort is going to be applied over
  * numebrs array
@@ -822,6 +822,16 @@ const SortingComponent = () => {
 
         </section>   
         
+        <p>
+            let's apply the <strong> 'quicksort' </strong> algorithm over the <strong> 'numbers' </strong> array, to sort 
+            the numbers in the right order 
+         </p> 
+
+         {/**Select first and last index as 2nd and 3rd parameters */}   
+         <button onClick={() => quickSort(numbers, 0, numbers.length - 1)}> Apply <strong> quick sort </strong> over <strong> numbers </strong> array </button>
+         <p>
+            [{quicksortvalue}]
+         </p>
 
         </DataStructuresWrapper>
     )
