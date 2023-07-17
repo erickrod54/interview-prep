@@ -24,11 +24,12 @@ import GraphsStructure from "./graphs.component";
 import GraphsImplementation from "./graph-implementation.component";
 import AlgorithmsIntro from "./algorithms.intro.component";
 import SortingComponent from "./sorting.component";
+import SortingInterview from "./sorting.interview.questions.component";
 
-/**interview-prep-app - version 29.03 - 
+/**interview-prep-app - version 31.11 - 
  * components > index - Features: 
  * 
- *     --> Importing and exporting 'SortingComponent'.
+ *     --> Importing and exporting 'SortingInterview'.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -59,5 +60,6 @@ export { ArrayDataStructure,
          GraphsStructure,
          GraphsImplementation,
          AlgorithmsIntro,
-         SortingComponent               
+         SortingComponent,
+         SortingInterview              
         }
