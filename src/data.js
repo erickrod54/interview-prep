@@ -58,11 +58,11 @@ import { hashtable,
          comparisonnoncomparison
          } from './assets/index';      
 
-/**interview-prep-app - version 31.09 - data js - 
+/**interview-prep-app - version 31.11 - data js - 
  * Features: 
  * 
- *     --> Adding 'comparisonnoncomparison' for 
- *         graphsData.   
+ *     --> Adding 'Interview Questions' to 
+ *         linksData.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -174,6 +174,10 @@ export const linksData = [
         id:'25',
         name:'Sorting'
       },
+      {
+        id:'26',
+        name:'Interview Questions'
+      }
       /**{
         id:'26',
         name:'Dynamic Programming'
