@@ -2,14 +2,11 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 31.08 - SortingComponent  
+/**interview-prep-app - version 31.09 - SortingComponent  
  * - Features: 
  * 
  *     --> Developing 'Comparison and non Comparison'
  *         algorithms concept.
- * 
- *     --> Destructuring 'sortingalgorithmsperformancetable' 
- *          from the context.
  * 
  * Note: Quick sort is going to be applied over
  * numebrs array
@@ -865,7 +862,13 @@ const SortingComponent = () => {
             be the most of decision making with it comes to <strong> 'efficiency' </strong>
          </p>
 
-         <img src={sortingalgorithmsperformancetable} className="large" alt="sorting algorithms performance table"/>        
+         <img src={sortingalgorithmsperformancetable} className="large" alt="sorting algorithms performance table"/>     
+
+         <p>
+             There are <strong> 'two algorithms' </strong> that they are also use, but their application to use
+             cases, is restricted to <strong> 'numbers' ( specificlly )</strong> integers and it is where is 
+             the difference between <strong> comparison and non comparison </strong> algorithmss
+         </p>   
 
         </DataStructuresWrapper>
     )
