@@ -25,12 +25,13 @@ import { ArrayDataStructure,
          GraphsStructure,
          GraphsImplementation,
          AlgorithmsIntro,
-         SortingComponent
+         SortingComponent,
+         SortingInterview
         } from '../components/index.components';
         
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.03 - SingleTopicPage  
+/**interview-prep-app - version 31.11 - SingleTopicPage  
  * - Features: 
  * 
  *     --> Adding 'SortingComponent' to the single topic. 
@@ -152,6 +153,10 @@ const SingleTopicPage = () => {
 
     if (id === '25') {
         return <SortingComponent />
+    }
+
+    if (id === '26') {
+        return <SortingInterview />
     }
 
 }
