@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 31.07 - SortingComponent  
+/**interview-prep-app - version 31.08 - SortingComponent  
  * - Features: 
  * 
  *     --> Developing 'Comparison and non Comparison'
  *         algorithms concept.
+ * 
+ *     --> Destructuring 'sortingalgorithmsperformancetable' 
+ *          from the context.
  * 
  * Note: Quick sort is going to be applied over
  * numebrs array
@@ -42,6 +45,7 @@ const SortingComponent = () => {
     const quicksortbargraph = graphsData[53].image;
     const quicksortpivotpickplace = graphsData[54].image;
     const quicksortpivotpickplaceagain = graphsData[55].image;
+    const sortingalgorithmsperformancetable = graphsData[56].image;
 
     
     console.log('graphsData ==>', graphsData)
@@ -854,6 +858,14 @@ const SortingComponent = () => {
             use algorithms by the <strong> a universal qualification for most use cases  </strong> ( because works
             with any type of data ) is <strong> 'Quick Sort' </strong> and <strong> 'Merge Sort' </strong>
          </p>
+
+         <p>
+            As follows in the table below, can be seen, the differents <strong> sorting algorithms </strong>
+            and the <strong> 'time complexity' </strong> vs <strong> 'space complexity' </strong>, this will 
+            be the most of decision making with it comes to <strong> 'efficiency' </strong>
+         </p>
+
+         <img src={sortingalgorithmsperformancetable} className="large" alt="sorting algorithms performance table"/>        
 
         </DataStructuresWrapper>
     )
