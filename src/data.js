@@ -53,13 +53,14 @@ import { hashtable,
          mergecomparingcombiningdataset,
          quicksortbargraph,
          quicksortpivotpickplace,
-         quicksortpivotpickplaceagain
+         quicksortpivotpickplaceagain,
+         sortingalgorithmsperformancetable
          } from './assets/index';      
 
-/**interview-prep-app - version 31.00 - data js - 
+/**interview-prep-app - version 31.07 - data js - 
  * Features: 
  * 
- *     --> Adding 'quicksortpivotpickplaceagain' for 
+ *     --> Adding 'sortingalgorithmsperformancetable' for 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -414,6 +415,10 @@ export const linksData = [
       {
         id:55,
         image: quicksortpivotpickplaceagain
+      },
+      {
+        id:56,
+        image: sortingalgorithmsperformancetable
       }
     ]
     
