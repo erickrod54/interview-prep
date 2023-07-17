@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 31.09 - SortingComponent  
+/**interview-prep-app - version 31.10 - SortingComponent  
  * - Features: 
  * 
  *     --> Developing 'Comparison and non Comparison'
  *         algorithms concept.
+ * 
+ *     --> Destructuring 'comparisonnoncomparison' 
+ *         from the context.
  * 
  * Note: Quick sort is going to be applied over
  * numebrs array
@@ -43,6 +46,7 @@ const SortingComponent = () => {
     const quicksortpivotpickplace = graphsData[54].image;
     const quicksortpivotpickplaceagain = graphsData[55].image;
     const sortingalgorithmsperformancetable = graphsData[56].image;
+    const comparisonnoncomparison = graphsData[57].image;
 
     
     console.log('graphsData ==>', graphsData)
@@ -869,6 +873,8 @@ const SortingComponent = () => {
              cases, is restricted to <strong> 'numbers' ( specificlly )</strong> integers and it is where is 
              the difference between <strong> comparison and non comparison </strong> algorithmss
          </p>   
+
+         <img src={comparisonnoncomparison} className="large" alt="sorting algorithms performance table"/>        
 
         </DataStructuresWrapper>
     )
