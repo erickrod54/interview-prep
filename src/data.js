@@ -54,13 +54,14 @@ import { hashtable,
          quicksortbargraph,
          quicksortpivotpickplace,
          quicksortpivotpickplaceagain,
-         sortingalgorithmsperformancetable
+         sortingalgorithmsperformancetable,
+         comparisonnoncomparison
          } from './assets/index';      
 
-/**interview-prep-app - version 31.07 - data js - 
+/**interview-prep-app - version 31.09 - data js - 
  * Features: 
  * 
- *     --> Adding 'sortingalgorithmsperformancetable' for 
+ *     --> Adding 'comparisonnoncomparison' for 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -419,6 +420,10 @@ export const linksData = [
       {
         id:56,
         image: sortingalgorithmsperformancetable
+      },
+      {
+        id:57,
+        image: comparisonnoncomparison
       }
     ]
     
