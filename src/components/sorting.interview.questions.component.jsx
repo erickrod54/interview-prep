@@ -1,16 +1,22 @@
 import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
+import { useAppContext } from "../context";
 
-/**interview-prep-app - version 31.13 - SortingInterview   
+/**interview-prep-app - version 31.14 - SortingInterview   
  * - Features: 
  * 
- *     --> Developing 'Which Sort is the Best ?' section. 
+ *     --> Destructuring 'sortingalgorithmsperformancetable'
+ *         from the context. 
  * 
  * Note: Pending to re structure imports using the index.
  * pending to add an extra resource 'sortingalgorithmsperformancetable' 
  */
 
 const SortingInterview = () => {
+
+    const { graphsData } = useAppContext();
+
+    const sortingalgorithmsperformancetable = graphsData[56].image;
 
     return(
         <DataStructuresWrapper>
@@ -123,6 +129,8 @@ const SortingInterview = () => {
                 </ul>
                 
             </ul>
+
+            <img src={sortingalgorithmsperformancetable} className="large" alt="sorting algorithms performance table"/> 
         </DataStructuresWrapper>
     )
 }
