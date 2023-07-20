@@ -1,17 +1,22 @@
 import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
+import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 31.17 - 
+/**interview-prep-app - version 31.18 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Developing 'Searching Algorithms' concept.
+ *     --> Destructuring 'bfsdfsalgorithms' from the context.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
  */
 
 const SearchingAlgorithms = () => {
+
+    const { graphsData } = useAppContext();
+
+    const bfsdfsalgorithms = graphsData[58].image;
 
     return(
         <DataStructuresWrapper>
@@ -23,6 +28,12 @@ const SearchingAlgorithms = () => {
                 because their every day implementation ( searching files in the computer, web search and even 
                 more wide searching in big data ), so it is an important topic
             </p>
+
+            <p>
+                When it comes about searching, it is refers as <strong> BFS ( Breadth-First Searching ) + DFS ( Depth-First Searching) </strong>
+            </p>
+
+            <img src={bfsdfsalgorithms} className="large" alt="bfs dfs algorithms"/>  
 
         </DataStructuresWrapper>
     )
