@@ -55,14 +55,15 @@ import { hashtable,
          quicksortpivotpickplace,
          quicksortpivotpickplaceagain,
          sortingalgorithmsperformancetable,
-         comparisonnoncomparison
+         comparisonnoncomparison,
+         bfsdfsalgorithms
          } from './assets/index';      
 
-/**interview-prep-app - version 31.16 - data js - 
+/**interview-prep-app - version 31.17 - data js - 
  * Features: 
  * 
- *     --> Adding 'Searching Algorithms ( BFS + DFS )' to 
- *         linksData.   
+ *     --> Adding 'bfsdfsalgorithms' to 
+ *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -432,6 +433,10 @@ export const linksData = [
       {
         id:57,
         image: comparisonnoncomparison
+      },
+      {
+        id:58,
+        image: bfsdfsalgorithms
       }
     ]
     
