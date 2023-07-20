@@ -56,12 +56,13 @@ import quicksortbargraph from './quick-sort-bar-graph.png';
 import quicksortpivotpickplace from './quick-sort-pivot-pick-place.png';
 import quicksortpivotpickplaceagain from './quick-sort-pivot-pick-place-again.png';
 import sortingalgorithmsperformancetable from './sorting-algorithms-performance-table.png';
-import comparisonnoncomparison from './comparison-non-comparison.png'
+import comparisonnoncomparison from './comparison-non-comparison.png';
+import bfsdfsalgorithms from './bfs-dfs-algorithms.png'
 
-/**interview-prep-app - version 31.09 - assets > index - 
+/**interview-prep-app - version 31.17 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'comparisonnoncomparison' asset.
+ *     --> Importing and exporting 'bfsdfsalgorithms' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -124,5 +125,6 @@ export { bigo1stgraph,
          quicksortpivotpickplace,
          quicksortpivotpickplaceagain,
          sortingalgorithmsperformancetable,
-         comparisonnoncomparison
+         comparisonnoncomparison,
+         bfsdfsalgorithms
         };
