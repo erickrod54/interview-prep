@@ -26,15 +26,17 @@ import { ArrayDataStructure,
          GraphsImplementation,
          AlgorithmsIntro,
          SortingComponent,
-         SortingInterview
+         SortingInterview,
+         SearchingAlgorithms
         } from '../components/index.components';
         
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 31.11 - SingleTopicPage  
+
+/**interview-prep-app - version 31.16 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Adding 'SortingComponent' to the single topic. 
+ *     --> Adding 'SearchingAlgorithms' to the single topic. 
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -159,6 +161,10 @@ const SingleTopicPage = () => {
         return <SortingInterview />
     }
 
+    if (id === '27') {
+        return <SearchingAlgorithms />
+    }
+    
 }
 
 export default SingleTopicPage;
