@@ -3,13 +3,14 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 31.20 - 
+/**interview-prep-app - version 32.00 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Developing 'Linear Search' concept.
+ *     --> Stating multiple ways to perform searching.
  * 
- * Note: the first assets added to 'graphsData'
- * are for big notation app
+ * Note: These ways are based on JavaScript,and each language 
+ * has a convention, and these statings implements linear 
+ * search
  */
 
 const SearchingAlgorithms = () => {
@@ -53,6 +54,30 @@ const SearchingAlgorithms = () => {
                 the match is found, or until all the elements has been searched. ( the time complexity can vary if it is found the <strong> target </strong>
                 at the very begining of the list is O(1), and if i have to go through the whole list O(n))
             </p>
+
+            <p>
+                And there are multiple ways to perform the search ( these implementations are in JavaScript ), let's say i have a target of <strong> 'Godzilla' </strong>
+                in a <strong> 'beast'</strong> array, naming some of the ways i can perform the search can be:
+            </p>
+
+            <ul>
+                <li>
+                    <strong> beast.indexOf('Godzilla')</strong> ( this will return the index where 'Godzilla is located ')
+                </li>
+
+                <li>
+                    <strong>{` array.findIndex(function(item){ return item === 'Godzilla'})`}</strong> ( this will return 'true' when finds 'Godzilla')
+                </li>
+
+                <li>
+                    <strong>{` beast.find(function(item){ return item === 'Godzilla'})`}</strong> ( this time will return the actual target 'Godzilla')
+                </li>
+
+                <li>
+                    <strong> beast.includes('Godzilla') </strong> ( this will return 'true' when finds 'Godzilla')
+                </li>
+
+            </ul>
             
         </DataStructuresWrapper>
     )
