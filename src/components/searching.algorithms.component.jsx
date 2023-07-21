@@ -3,14 +3,12 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.01 - 
+/**interview-prep-app - version 32.02 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Building 'beastindexofvalue'.
+ *     --> Building 'beasts' array.
  * 
- * Note: This state will capture the value of:
- * 
- *      beast.indexOf('Godzilla')
+ * Note: This array will contain the 'beasts' data
  */
 
 const SearchingAlgorithms = () => {
@@ -21,6 +19,8 @@ const SearchingAlgorithms = () => {
 
     const bfsdfsalgorithms = graphsData[58].image;
     const typesbfsdfsalgorithms = graphsData[59].image;
+
+    const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
     return(
         <DataStructuresWrapper>
