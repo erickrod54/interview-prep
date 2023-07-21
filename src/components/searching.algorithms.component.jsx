@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 31.19 - 
+/**interview-prep-app - version 31.20 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'typesbfsdfsalgorithms' from the context.
+ *     --> Developing 'Linear Search' concept.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -42,6 +42,17 @@ const SearchingAlgorithms = () => {
             </p>        
 
             <img src={typesbfsdfsalgorithms} className="large" alt="types bfs dfs algorithms"/>
+
+            <h3>
+                Linear Search:
+            </h3>
+
+            <p>
+                Linear search or <strong> 'Sequenquial Search' </strong> works looking for a item in a list by setting a <strong> Target value </strong>
+                ( usually in a condition ), and <strong> sequenquially checks the list </strong> looking for the <strong> target </strong> value until 
+                the match is found, or until all the elements has been searched. ( the time complexity can vary if it is found the <strong> target </strong>
+                at the very begining of the list is O(1), and if i have to go through the whole list O(n))
+            </p>
             
         </DataStructuresWrapper>
     )
