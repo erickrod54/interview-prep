@@ -3,14 +3,12 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.03 - 
+/**interview-prep-app - version 32.04 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Building 'beastindexofHandler' handler.
+ *     --> Rendering 'beastindexofvalue' state value.
  * 
- * Note: This handler will handle:
- *  
- *      beast.indexOf('Godzilla')
+ * Note: The value for indexOf will return an index
  */
 
 const SearchingAlgorithms = () => {
@@ -75,6 +73,12 @@ const SearchingAlgorithms = () => {
                 <li>
                     <strong> beast.indexOf('Godzilla')</strong> ( this will return the index where 'Godzilla is located ')
                 </li>
+
+                <button onClick={() => beastindexofHandler(beasts)}>Apply <strong> indexOf </strong> on <strong> beasts </strong> array</button>
+
+                <p>
+                    {beastindexofvalue ? <span> 'it returns the index:' <strong> {beastindexofvalue} </strong> </span> : null }
+                </p>
 
                 <li>
                     <strong>{` array.findIndex(function(item){ return item === 'Godzilla'})`}</strong> ( this will return 'true' when finds 'Godzilla')
