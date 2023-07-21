@@ -1,21 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.00 - 
+/**interview-prep-app - version 32.01 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Stating multiple ways to perform searching.
+ *     --> Building 'beastindexofvalue'.
  * 
- * Note: These ways are based on JavaScript,and each language 
- * has a convention, and these statings implements linear 
- * search
+ * Note: This state will capture the value of:
+ * 
+ *      beast.indexOf('Godzilla')
  */
 
 const SearchingAlgorithms = () => {
 
     const { graphsData } = useAppContext();
+
+    const [ beastindexofvalue, setBeastindexofvalue ] = useState([])
 
     const bfsdfsalgorithms = graphsData[58].image;
     const typesbfsdfsalgorithms = graphsData[59].image;
