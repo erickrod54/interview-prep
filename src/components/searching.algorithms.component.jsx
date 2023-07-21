@@ -3,12 +3,14 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.02 - 
+/**interview-prep-app - version 32.03 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Building 'beasts' array.
+ *     --> Building 'beastindexofHandler' handler.
  * 
- * Note: This array will contain the 'beasts' data
+ * Note: This handler will handle:
+ *  
+ *      beast.indexOf('Godzilla')
  */
 
 const SearchingAlgorithms = () => {
@@ -21,6 +23,13 @@ const SearchingAlgorithms = () => {
     const typesbfsdfsalgorithms = graphsData[59].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
+
+    const beastindexofHandler = (array) => {
+        return(
+            setBeastindexofvalue(array.indexOf('Godzilla')),
+            array.indexOf('Godzilla')
+        )
+    }
 
     return(
         <DataStructuresWrapper>
