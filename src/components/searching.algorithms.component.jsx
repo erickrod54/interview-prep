@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 31.18 - 
+/**interview-prep-app - version 31.19 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'bfsdfsalgorithms' from the context.
+ *     --> Destructuring 'typesbfsdfsalgorithms' from the context.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -17,6 +17,7 @@ const SearchingAlgorithms = () => {
     const { graphsData } = useAppContext();
 
     const bfsdfsalgorithms = graphsData[58].image;
+    const typesbfsdfsalgorithms = graphsData[59].image;
 
     return(
         <DataStructuresWrapper>
@@ -35,6 +36,13 @@ const SearchingAlgorithms = () => {
 
             <img src={bfsdfsalgorithms} className="large" alt="bfs dfs algorithms"/>  
 
+            <p>
+                and the scope for <strong> BFS ( Breadth-First Searching ) + DFS ( Depth-First Searching) </strong> searching algorithms it divides 
+                in the following types:
+            </p>        
+
+            <img src={typesbfsdfsalgorithms} className="large" alt="types bfs dfs algorithms"/>
+            
         </DataStructuresWrapper>
     )
 }
