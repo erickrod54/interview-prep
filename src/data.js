@@ -56,13 +56,14 @@ import { hashtable,
          quicksortpivotpickplaceagain,
          sortingalgorithmsperformancetable,
          comparisonnoncomparison,
-         bfsdfsalgorithms
+         bfsdfsalgorithms,
+         typesbfsdfsalgorithms
          } from './assets/index';      
 
-/**interview-prep-app - version 31.17 - data js - 
+/**interview-prep-app - version 31.19 - data js - 
  * Features: 
  * 
- *     --> Adding 'bfsdfsalgorithms' to 
+ *     --> Adding 'typesbfsdfsalgorithms' to 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -437,6 +438,10 @@ export const linksData = [
       {
         id:58,
         image: bfsdfsalgorithms
+      },
+      {
+        id:59,
+        image: typesbfsdfsalgorithms
       }
     ]
     
