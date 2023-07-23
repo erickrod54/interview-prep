@@ -59,11 +59,12 @@ import sortingalgorithmsperformancetable from './sorting-algorithms-performance-
 import comparisonnoncomparison from './comparison-non-comparison.png';
 import bfsdfsalgorithms from './bfs-dfs-algorithms.png';
 import typesbfsdfsalgorithms from './types-bfs-dfs-algorithms.png';
+import linearsearchprocessbestcase from './linear-search-process-best-case.png';
 
-/**interview-prep-app - version 31.19 - assets > index - 
+/**interview-prep-app - version 32.16 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'typesbfsdfsalgorithms' asset.
+ *     --> Importing and exporting 'linearsearchprocessbestcase' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -128,5 +129,6 @@ export { bigo1stgraph,
          sortingalgorithmsperformancetable,
          comparisonnoncomparison,
          bfsdfsalgorithms,
-         typesbfsdfsalgorithms
+         typesbfsdfsalgorithms,
+         linearsearchprocessbestcase
         };
