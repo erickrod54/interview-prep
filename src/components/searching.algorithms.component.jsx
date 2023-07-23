@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.14 - 
+/**interview-prep-app - version 32.16 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Developing 'Linear Search' Alternatives.
+ *     --> Destructuring 'linearsearchprocessbestcase' from the context.
  * 
  * Note: This is the value captured
  */
@@ -22,6 +22,7 @@ const SearchingAlgorithms = () => {
 
     const bfsdfsalgorithms = graphsData[58].image;
     const typesbfsdfsalgorithms = graphsData[59].image;
+    const linearsearchprocessbestcase = graphsData[60].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
@@ -146,10 +147,13 @@ const SearchingAlgorithms = () => {
                 </p>
 
                 <p>
-                    
+                    let's say i have a list ( can be numbers, nodes, strings any other type of data ), the list is a list of <strong> numbers </strong>
+                    and i have a <strong> target </strong> to find the number <strong> 6 </strong>, as the graph below:
                 </p>
 
             </ul>
+
+                <img src={linearsearchprocessbestcase} className="large" alt="linear search process best case"/>
             
         </DataStructuresWrapper>
     )
