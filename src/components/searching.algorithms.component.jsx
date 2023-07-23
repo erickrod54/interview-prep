@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.06 - 
+/**interview-prep-app - version 32.07 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Building 'beastfindindexHandler' handler.
+ *     --> Rendering 'beastfindindexvalue'.
  * 
  * Note: These handler will handle:
  * 
@@ -18,7 +18,7 @@ const SearchingAlgorithms = () => {
     const { graphsData } = useAppContext();
 
     const [ beastindexofvalue, setBeastindexofvalue ] = useState([]);
-    const [ beastfindindexvalue, setBeastfindindexvalue ] = useState([])
+    const [ beastfindindexvalue, setBeastfindindexvalue ] = useState(false)
 
     const bfsdfsalgorithms = graphsData[58].image;
     const typesbfsdfsalgorithms = graphsData[59].image;
@@ -34,8 +34,8 @@ const SearchingAlgorithms = () => {
 
     const beastfindindexHandler = (array) => {
         return(
-            setBeastfindindexvalue(array.findIndex(function(item){ return item === 'Godzilla'})),
-            array.findIndex(function(item){ return item === 'Godzilla'})
+            array.findIndex(function(item){ return item === 'Godzilla'}),
+            setBeastfindindexvalue(array.findIndex(function(item){ return item === 'Godzilla'}))
         )
     } 
 
@@ -93,6 +93,12 @@ const SearchingAlgorithms = () => {
                 <li>
                     <strong>{` beasts.findIndex(function(item){ return item === 'Godzilla'})`}</strong> ( this will return 'true' when finds 'Godzilla')
                 </li>
+
+                <button onClick={() => beastfindindexHandler(beasts)}>Apply <strong> findIndex </strong> on <strong> beasts </strong> array</button>
+                
+                <p>
+                    {beastfindindexvalue ?  <span> 'it returns the 'true':' <strong> true </strong> </span> : null }
+                </p>
 
                 <li>
                     <strong>{` beast.find(function(item){ return item === 'Godzilla'})`}</strong> ( this time will return the actual target 'Godzilla')
