@@ -3,14 +3,12 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.09 - 
+/**interview-prep-app - version 32.10 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Building 'beastfindHandler' handler.
+ *     --> Rendering 'beastfindvalue' value.
  * 
- * Note: These handler will handle:
- * 
- *      beast.find(function(item){ return item === 'Godzilla'})
+ * Note: This is the value captured
  */
 
 const SearchingAlgorithms = () => {
@@ -111,6 +109,12 @@ const SearchingAlgorithms = () => {
                 <li>
                     <strong>{` beast.find(function(item){ return item === 'Godzilla'})`}</strong> ( this time will return the actual target 'Godzilla')
                 </li>
+
+                <button onClick={() => beastfindHandler(beasts)}>Apply <strong> find </strong> on <strong> beasts </strong> array </button>
+
+                <p>
+                    {beastfindvalue ? <span> 'it returns the 'item' === <strong> {beastfindvalue} </strong> </span> : null }
+                </p>
 
                 <li>
                     <strong> beast.includes('Godzilla') </strong> ( this will return 'true' when finds 'Godzilla')
