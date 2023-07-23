@@ -3,12 +3,12 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.08 - 
+/**interview-prep-app - version 32.09 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Building 'beastfindvalue' state.
+ *     --> Building 'beastfindHandler' handler.
  * 
- * Note: These state will capture the value for:
+ * Note: These handler will handle:
  * 
  *      beast.find(function(item){ return item === 'Godzilla'})
  */
@@ -37,6 +37,13 @@ const SearchingAlgorithms = () => {
         return(
             array.findIndex(function(item){ return item === 'Godzilla'}),
             setBeastfindindexvalue(array.findIndex(function(item){ return item === 'Godzilla'}))
+        )
+    } 
+
+    const beastfindHandler = (array) => {
+        return(
+            setBeastfindvalue(array.find(function(item){ return item === 'Godzilla'})),
+            array.find(function(item){ return item === 'Godzilla'})
         )
     } 
 
