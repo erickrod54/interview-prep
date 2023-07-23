@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.12 - 
+/**interview-prep-app - version 32.13 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Building 'beastincludesHandler' handler.
+ *     --> Rendering 'beastincludesvalue' value.
  * 
  * Note: This is the value captured
  */
@@ -126,6 +126,12 @@ const SearchingAlgorithms = () => {
                 <li>
                     <strong> beast.includes('Godzilla') </strong> ( this will return 'true' when finds 'Godzilla')
                 </li>
+
+                <button onClick={() => beastincludesHandler(beasts)}>Apply <strong> includes </strong> on <strong> beasts </strong> array </button>
+
+                <p>
+                    {beastincludesvalue ? <span> 'it returns the 'true':' <strong> true </strong> </span> : null }
+                </p>
 
             </ul>
             
