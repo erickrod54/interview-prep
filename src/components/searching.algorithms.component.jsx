@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.13 - 
+/**interview-prep-app - version 32.14 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Rendering 'beastincludesvalue' value.
+ *     --> Developing 'Linear Search' Alternatives.
  * 
  * Note: This is the value captured
  */
@@ -131,6 +131,22 @@ const SearchingAlgorithms = () => {
 
                 <p>
                     {beastincludesvalue ? <span> 'it returns the 'true':' <strong> true </strong> </span> : null }
+                </p>
+
+                <h3>
+                    Is there a better way to find a number ? 
+                </h3>
+
+                <p>
+                    When it comes to <strong> 'O(n)' </strong> in <strong> 'linear search' </strong> is because in the process the 
+                    algorithm has to go throught all the <strong> 'list' </strong> to find the item, but there is <strong> 'Alternatives' </strong>
+                    to <strong> 'linear search' </strong> that can handle it a <strong> 'pre-sorting' </strong> to the list the 
+                    algorithm job easier, making a complexity of <strong> 'O(n)' </strong> to <strong> 'O(1)' </strong>, because 
+                    will find this item easily  
+                </p>
+
+                <p>
+                    
                 </p>
 
             </ul>
