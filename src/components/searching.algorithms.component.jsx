@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.10 - 
+/**interview-prep-app - version 32.11 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Rendering 'beastfindvalue' value.
+ *     --> Building 'beastincludesvalue' value.
  * 
  * Note: This is the value captured
  */
@@ -18,6 +18,7 @@ const SearchingAlgorithms = () => {
     const [ beastindexofvalue, setBeastindexofvalue ] = useState([]);
     const [ beastfindindexvalue, setBeastfindindexvalue ] = useState(false);
     const [ beastfindvalue, setBeastfindvalue ] = useState([]);
+    const [ beastincludesvalue, setBeastincludesvalue ] = useState(false);
 
     const bfsdfsalgorithms = graphsData[58].image;
     const typesbfsdfsalgorithms = graphsData[59].image;
