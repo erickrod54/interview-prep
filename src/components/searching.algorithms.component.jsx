@@ -3,14 +3,14 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.07 - 
+/**interview-prep-app - version 32.08 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Rendering 'beastfindindexvalue'.
+ *     --> Building 'beastfindvalue' state.
  * 
- * Note: These handler will handle:
+ * Note: These state will capture the value for:
  * 
- *      beasts.findIndex(function(item){ return item === 'Godzilla'})
+ *      beast.find(function(item){ return item === 'Godzilla'})
  */
 
 const SearchingAlgorithms = () => {
@@ -18,7 +18,8 @@ const SearchingAlgorithms = () => {
     const { graphsData } = useAppContext();
 
     const [ beastindexofvalue, setBeastindexofvalue ] = useState([]);
-    const [ beastfindindexvalue, setBeastfindindexvalue ] = useState(false)
+    const [ beastfindindexvalue, setBeastfindindexvalue ] = useState(false);
+    const [ beastfindvalue, setBeastfindvalue ] = useState([]);
 
     const bfsdfsalgorithms = graphsData[58].image;
     const typesbfsdfsalgorithms = graphsData[59].image;
