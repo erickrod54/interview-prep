@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.11 - 
+/**interview-prep-app - version 32.12 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Building 'beastincludesvalue' value.
+ *     --> Building 'beastincludesHandler' handler.
  * 
  * Note: This is the value captured
  */
@@ -45,6 +45,12 @@ const SearchingAlgorithms = () => {
             array.find(function(item){ return item === 'Godzilla'})
         )
     } 
+
+    const beastincludesHandler = (array) => {
+        const item = array.includes('Godzilla');
+        setBeastincludesvalue(item); // Update the state with the result
+        return item; // Return the result directly
+      };
 
     return(
         <DataStructuresWrapper>
