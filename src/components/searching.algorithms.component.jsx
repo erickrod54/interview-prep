@@ -3,10 +3,11 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.16 - 
+/**interview-prep-app - version 32.17 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'linearsearchprocessbestcase' from the context.
+ *     --> Destructuring 'linearsearchprocessworstcase' 
+ *         from the context.
  * 
  * Note: This is the value captured
  */
@@ -23,6 +24,7 @@ const SearchingAlgorithms = () => {
     const bfsdfsalgorithms = graphsData[58].image;
     const typesbfsdfsalgorithms = graphsData[59].image;
     const linearsearchprocessbestcase = graphsData[60].image;
+    const linearsearchprocessworstcase = graphsData[61].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
@@ -154,6 +156,22 @@ const SearchingAlgorithms = () => {
             </ul>
 
                 <img src={linearsearchprocessbestcase} className="large" alt="linear search process best case"/>
+
+                <p>
+                    Now i have seen the best case scenerio, with a target of <strong> 6 </strong>, but now let's say i have a <strong> target </strong> of 
+                    <strong> 9 </strong>, this will result in the <strong> worst case </strong> due to <strong> 9 </strong> is the last item in the entire 
+                    list and will increase a time complexity that initially was of  <strong> 'O(1)' </strong> to <strong> 'O(n)' </strong> and it is a 
+                    solution that does not fit to handle searching on high amount of data ( as google, amazon, or facebook data ), as the 
+                    graph below:  
+                </p>
+
+                <img src={linearsearchprocessworstcase} className="large" alt="linear search process worst case"/>
+
+                <p>
+                    but <strong> what if i have an alternative ? </strong> to make this search more efficient, instead of get to a <strong> linear search </strong>,
+                    i can <strong> 'store' </strong> the data in a different data structure, that allows me to <strong> pre - sort </strong> the data before 
+                    perform the searching
+                </p>
             
         </DataStructuresWrapper>
     )
