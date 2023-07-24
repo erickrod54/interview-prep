@@ -60,11 +60,12 @@ import comparisonnoncomparison from './comparison-non-comparison.png';
 import bfsdfsalgorithms from './bfs-dfs-algorithms.png';
 import typesbfsdfsalgorithms from './types-bfs-dfs-algorithms.png';
 import linearsearchprocessbestcase from './linear-search-process-best-case.png';
+import linearsearchprocessworstcase from './linear-search-process-worst-case.png';
 
-/**interview-prep-app - version 32.16 - assets > index - 
+/**interview-prep-app - version 32.17 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'linearsearchprocessbestcase' asset.
+ *     --> Importing and exporting 'linearsearchprocessworstcase' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -130,5 +131,6 @@ export { bigo1stgraph,
          comparisonnoncomparison,
          bfsdfsalgorithms,
          typesbfsdfsalgorithms,
-         linearsearchprocessbestcase
+         linearsearchprocessbestcase,
+         linearsearchprocessworstcase
         };
