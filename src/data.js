@@ -58,13 +58,14 @@ import { hashtable,
          comparisonnoncomparison,
          bfsdfsalgorithms,
          typesbfsdfsalgorithms,
-         linearsearchprocessbestcase
+         linearsearchprocessbestcase,
+         linearsearchprocessworstcase
          } from './assets/index';      
 
-/**interview-prep-app - version 32.16 - data js - 
+/**interview-prep-app - version 32.17 - data js - 
  * Features: 
  * 
- *     --> Adding 'linearsearchprocessbestcase' to 
+ *     --> Adding 'linearsearchprocessworstcase' to 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -447,6 +448,10 @@ export const linksData = [
       {
         id:60,
         image: linearsearchprocessbestcase
+      },
+      {
+        id:61,
+        image: linearsearchprocessworstcase
       }
     ]
     
