@@ -62,11 +62,12 @@ import typesbfsdfsalgorithms from './types-bfs-dfs-algorithms.png';
 import linearsearchprocessbestcase from './linear-search-process-best-case.png';
 import linearsearchprocessworstcase from './linear-search-process-worst-case.png';
 import binarysearchtreesectionconcept from './binary-search-tree-section-concept.png';
+import linearsearchtobinarysearch from './linearsearch-to-binarysearch.png'
 
-/**interview-prep-app - version 32.18 - assets > index - 
+/**interview-prep-app - version 32.20 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'binarysearchtreesectionconcept' asset.
+ *     --> Importing and exporting 'linearsearchtobinarysearch' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -134,5 +135,6 @@ export { bigo1stgraph,
          typesbfsdfsalgorithms,
          linearsearchprocessbestcase,
          linearsearchprocessworstcase,
-         binarysearchtreesectionconcept
+         binarysearchtreesectionconcept,
+         linearsearchtobinarysearch
         };
