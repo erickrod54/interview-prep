@@ -3,11 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.17 - 
+/**interview-prep-app - version 32.18 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'linearsearchprocessworstcase' 
- *         from the context.
+ *     --> Developing 'Bynary Search' concept.
  * 
  * Note: This is the value captured
  */
@@ -167,10 +166,18 @@ const SearchingAlgorithms = () => {
 
                 <img src={linearsearchprocessworstcase} className="large" alt="linear search process worst case"/>
 
+                <h3>
+                    Binary Search:
+                </h3>
+                
                 <p>
                     but <strong> what if i have an alternative ? </strong> to make this search more efficient, instead of get to a <strong> linear search </strong>,
                     i can <strong> 'store' </strong> the data in a different data structure, that allows me to <strong> pre - sort </strong> the data before 
-                    perform the searching
+                    perform the searching this is by <strong> Binary Search </strong>
+                </p>
+
+                <p>
+                    let's say i have the following list, and this time i have a target of <strong> 34 </strong>
                 </p>
             
         </DataStructuresWrapper>
