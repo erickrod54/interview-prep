@@ -59,13 +59,14 @@ import { hashtable,
          bfsdfsalgorithms,
          typesbfsdfsalgorithms,
          linearsearchprocessbestcase,
-         linearsearchprocessworstcase
+         linearsearchprocessworstcase,
+         binarysearchtreesectionconcept
          } from './assets/index';      
-
-/**interview-prep-app - version 32.17 - data js - 
+         
+/**interview-prep-app - version 32.18 - data js - 
  * Features: 
  * 
- *     --> Adding 'linearsearchprocessworstcase' to 
+ *     --> Adding 'binarysearchtreesectionconcept' to 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -452,6 +453,10 @@ export const linksData = [
       {
         id:61,
         image: linearsearchprocessworstcase
+      },
+      {
+        id:62,
+        image: binarysearchtreesectionconcept
       }
     ]
     
