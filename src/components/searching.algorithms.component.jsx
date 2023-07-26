@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.20 - 
+/**interview-prep-app - version 32.21 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'linearsearchtobinarysearch'
+ *     --> Destructuring 'linearsearchtobinarysearchsecondhalf'
  *         from the context.
  * 
  * Note: This is the value captured
@@ -27,6 +27,7 @@ const SearchingAlgorithms = () => {
     const linearsearchprocessworstcase = graphsData[61].image;
     const binarysearchtreesectionconcept = graphsData[62].image;
     const linearsearchtobinarysearch = graphsData[63].image;
+    const linearsearchtobinarysearchsecondhalf = graphsData[64].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
@@ -192,6 +193,14 @@ const SearchingAlgorithms = () => {
 
                 <img src={linearsearchtobinarysearch} className="large" alt="binary search tree section concept"/>
 
+                <p>
+                    From this <strong> pivot </strong>, i discard the first half because all these elements are <strong> less than 9 ( pivot )</strong> and 
+                    keep comparing looking for the <strong> target </strong> 34 ( number <strong> 9 has been used as pivot </strong>, so after the comparing and division by half
+                    is made, the binary search tree algorithm will <strong> pick randomly </strong> another <strong> pivot </strong> )
+                </p>
+
+                <img src={linearsearchtobinarysearchsecondhalf} className="large" alt="linear search to binary search second half"/>
+                
                 
 
         </DataStructuresWrapper>
