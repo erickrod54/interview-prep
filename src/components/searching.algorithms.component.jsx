@@ -3,10 +3,11 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.18 - 
+/**interview-prep-app - version 32.19 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Developing 'Bynary Search' concept.
+ *     --> Destructuring 'binarysearchtreesectionconcept'
+ *         from the context.
  * 
  * Note: This is the value captured
  */
@@ -24,6 +25,7 @@ const SearchingAlgorithms = () => {
     const typesbfsdfsalgorithms = graphsData[59].image;
     const linearsearchprocessbestcase = graphsData[60].image;
     const linearsearchprocessworstcase = graphsData[61].image;
+    const binarysearchtreesectionconcept = graphsData[62].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
@@ -179,7 +181,9 @@ const SearchingAlgorithms = () => {
                 <p>
                     let's say i have the following list, and this time i have a target of <strong> 34 </strong>
                 </p>
-            
+
+                <img src={binarysearchtreesectionconcept} className="large" alt="binary search tree section concept"/>
+
         </DataStructuresWrapper>
     )
 }
