@@ -3,11 +3,11 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.21 - 
+/**interview-prep-app - version 32.22 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'linearsearchtobinarysearchsecondhalf'
- *         from the context.
+ *     --> Developing 'Traversal, BFS and DFS'
+ *         concept.
  * 
  * Note: This is the value captured
  */
@@ -200,6 +200,29 @@ const SearchingAlgorithms = () => {
                 </p>
 
                 <img src={linearsearchtobinarysearchsecondhalf} className="large" alt="linear search to binary search second half"/>
+
+
+                <h3>
+                    Traversal, BFS and DFS:
+                </h3>
+
+
+                <p>
+                    sometimes i have to do something that is called <strong> traversal </strong>, that simply means to touch every node ( the reasons for this can
+                    depend on the specific use case, for example add a color property for each node, or shape for each node, or a graph with no order, and i have to visit 
+                    every node )
+                </p>
+
+                <p>
+                    Decisions in a Binary search tree goes from left to rigth, but sometimes i need to perform operations in the same node, there are two ways to do this
+                    by using a <strong> Tree Traversal </strong> ( time complexity of O(n) ), and the second way <strong> Graph Traversal </strong>
+                </p>
+
+                <p>
+                    Been said after the list has been converted to a binary tree must look something like this:
+                </p>
+
+                
                 
                 
 
