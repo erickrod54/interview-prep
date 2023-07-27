@@ -3,11 +3,11 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.22 - 
+/**interview-prep-app - version 32.23 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Developing 'Traversal, BFS and DFS'
- *         concept.
+ *     --> Destructuring 'traversalBFSDFS'
+ *         from  the context.
  * 
  * Note: This is the value captured
  */
@@ -28,6 +28,7 @@ const SearchingAlgorithms = () => {
     const binarysearchtreesectionconcept = graphsData[62].image;
     const linearsearchtobinarysearch = graphsData[63].image;
     const linearsearchtobinarysearchsecondhalf = graphsData[64].image;
+    const traversalBFSDFS = graphsData[65].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
@@ -222,9 +223,8 @@ const SearchingAlgorithms = () => {
                     Been said after the list has been converted to a binary tree must look something like this:
                 </p>
 
-                
-                
-                
+                <img src={traversalBFSDFS} className="large" alt="traversal BFS DFS"/>
+
 
         </DataStructuresWrapper>
     )
