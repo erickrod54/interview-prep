@@ -63,13 +63,14 @@ import { hashtable,
          binarysearchtreesectionconcept,
          linearsearchtobinarysearch,
          linearsearchtobinarysearchsecondhalf,
-         traversalBFSDFS
+         traversalBFSDFS,
+         BFSworkflow
          } from './assets/index';      
          
-/**interview-prep-app - version 32.22 - data js - 
+/**interview-prep-app - version 32.23 - data js - 
  * Features: 
  * 
- *     --> Adding 'traversalBFSDFS' to 
+ *     --> Adding 'BFSworkflow' to 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -472,6 +473,10 @@ export const linksData = [
       {
         id:65,
         image: traversalBFSDFS
+      },
+      {
+        id:66,
+        image: BFSworkflow
       }
     ]
     
