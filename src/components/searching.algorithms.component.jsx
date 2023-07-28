@@ -3,10 +3,12 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.23 - 
+/**interview-prep-app - version 32.24 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'traversalBFSDFS'
+ *     --> Developing BFS + Breadth First Search concept
+ * 
+ *     --> Destructuring 'BFSworkflow'
  *         from  the context.
  * 
  * Note: This is the value captured
@@ -29,6 +31,7 @@ const SearchingAlgorithms = () => {
     const linearsearchtobinarysearch = graphsData[63].image;
     const linearsearchtobinarysearchsecondhalf = graphsData[64].image;
     const traversalBFSDFS = graphsData[65].image;
+    const BFSworkflow = graphsData[66].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
@@ -224,6 +227,17 @@ const SearchingAlgorithms = () => {
                 </p>
 
                 <img src={traversalBFSDFS} className="large" alt="traversal BFS DFS"/>
+
+                <h3>
+                    Breadth First Search
+                </h3>
+
+                <p>
+                    Breadth First Search or <strong> Graph Traversal </strong> works by going <strong> left to right </strong> traversing level by level over the tree
+                    <strong> ( this means that touch every node ) </strong> until the every node and every level is traverse, as the graph below: 
+                </p>
+
+                <img src={BFSworkflow} className="large" alt="BFS workflow"/>
 
 
         </DataStructuresWrapper>
