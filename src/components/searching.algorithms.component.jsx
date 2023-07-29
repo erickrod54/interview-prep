@@ -3,13 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.24 - 
+/**interview-prep-app - version 32.25 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Developing BFS + Breadth First Search concept
- * 
- *     --> Destructuring 'BFSworkflow'
- *         from  the context.
+ *     --> Developing DFS + Depth First Search concept.
  * 
  * Note: This is the value captured
  */
@@ -239,6 +236,25 @@ const SearchingAlgorithms = () => {
 
                 <img src={BFSworkflow} className="large" alt="BFS workflow"/>
 
+
+                <h3>
+                    Depth First Search:
+                </h3>
+
+                <p>
+                    Depth First Search follows the <strong> branch </strong> of the tree until a <strong> leaf node </strong> is reached, then goes back to the parent 
+                    node to check if there is more <strong> leaf nodes </strong>, so keep following each <strong> branch </strong> until traverse the whole tree,
+                    ( this algorithm has less memory consumption, because it does not need to keep every <strong> child pointer at each level </strong> ),usually starts 
+                    from left branches to right branches. 
+                </p>
+
+                <p>
+                    As the the graph bellow, applying Depth First Search will  result a set of data as follows <strong>[ 9, 6, 1, 4, 12, 34, 45 ]</strong> 
+                </p>
+
+                <img src={traversalBFSDFS} className="large" alt="traversal BFS DFS"/>
+
+                
 
         </DataStructuresWrapper>
     )
