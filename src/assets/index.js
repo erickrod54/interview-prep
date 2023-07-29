@@ -65,12 +65,13 @@ import binarysearchtreesectionconcept from './binary-search-tree-section-concept
 import linearsearchtobinarysearch from './linearsearch-to-binarysearch.png';
 import linearsearchtobinarysearchsecondhalf from './linearsearch-to-binarysearch-second-half.png';
 import traversalBFSDFS from './traversal-BFS-DFS.png';
-import BFSworkflow from './BFS-workflow.png'
+import BFSworkflow from './BFS-workflow.png';
+import depthfirstsearch from './depth-first-search.png';
 
-/**interview-prep-app - version 32.23 - assets > index - 
+/**interview-prep-app - version 32.26 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'BFSworkflow' asset.
+ *     --> Importing and exporting 'depthfirstsearch' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -142,5 +143,6 @@ export { bigo1stgraph,
          linearsearchtobinarysearch,
          linearsearchtobinarysearchsecondhalf,
          traversalBFSDFS,
-         BFSworkflow
+         BFSworkflow,
+         depthfirstsearch
         };
