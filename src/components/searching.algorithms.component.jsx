@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.27 - 
+/**interview-prep-app - version 32.28 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'depthfirstsearch'.
+ *     --> Developing 'BFS + DFS' interview questions.
  * 
  * Note: This is the value captured
  */
@@ -269,6 +269,62 @@ const SearchingAlgorithms = () => {
                 <p>
                     the Depth First Search resulting is <strong> [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] </strong>
                 </p>
+
+                <h3>
+                    'BFS + DFS' interview questions:
+                </h3>
+
+                <p>
+                    here is i good <strong> cheat sheet interview questions </strong> that can be used to apply or <strong> BFS or DFS </strong> to some 
+                    use cases according to the <strong> concepts criteria </strong>
+                </p>
+
+                <ul>
+
+                <li><strong> If you know a solution is not very far from the root of the tree: </strong></li>
+
+                <p>
+                    R: <strong> BFS </strong> will appropiate for this solution ( because it starts searching by <strong> closest nodes </strong> to the parent first ) 
+                </p>
+
+                <li><strong> If the tree is very deep and the solutions are very rare: </strong></li>
+
+                <p>
+                    R: <strong> BFS </strong> will appropiate for this solution, because the tree is very <strong> deep </strong> so DFS will take a long 
+                    time to perform by going deep to the <strong> leaf nodes </strong>, and also memory concerns about the space complexity so it does 
+                    to major complications due to <strong> time complexity </strong> and <strong> space complexity </strong> with DFS
+                </p>
+
+                <li><strong> If the tree is very wide: </strong></li>
+
+                <p>
+                    R: The tree is <strong> very wide </strong> but not very deep, a fit for this solution will be <strong> DFS </strong> because can perform 
+                    well going deep to throught the <strong> branchs </strong> to the <strong> leaf nodes </strong>, and with <strong> BFS </strong> will take 
+                    concerns about memory comsumption because the <strong> wide tree ( the way that BFS will go through the tree from left to right )</strong>
+                </p>
+
+                <li><strong> If the solutions are very frequent but located deep in the tree: </strong></li>
+
+                <p>
+                    R: DFS will be an accurate solution, because solutions are very frequent and it doesn't say that the tree is deep, but it says
+                    that the solutions are in specific located at the deepest level of the tree.
+                </p>
+
+                <li><strong> Determining Better a path exists between two nodes: </strong></li>
+
+                <p>
+                    R: <strong> DFS </strong>, because this algorithm if design to find if a <strong> path exists </strong>
+                </p>
+
+                <li><strong> Finding the shortest path: </strong></li>
+
+                <p>
+                    R: <strong> BFS </strong>, because this algorithm if design to find if a <strong> shortest path </strong>
+                </p>
+
+                
+                
+            </ul>
 
         </DataStructuresWrapper>
     )
