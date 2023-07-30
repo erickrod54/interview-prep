@@ -3,7 +3,7 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.25 - 
+/**interview-prep-app - version 32.26 - 
  * SearchingAlgorithms - Features: 
  * 
  *     --> Developing DFS + Depth First Search concept.
@@ -254,7 +254,18 @@ const SearchingAlgorithms = () => {
 
                 <img src={traversalBFSDFS} className="large" alt="traversal BFS DFS"/>
 
-                
+                <p>
+                    So Depth First Search moves as the graph below:
+                </p>
+
+                <p>
+                    every time it get deep when leaf node is reach, switch to the next branch, then it switch to the next branch, goes back to the parent node,
+                    but does not include the node because the parent node was already added to the list 
+                </p>
+
+                <p>
+                    the Depth First Search resulting is <strong> [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] </strong>
+                </p>
 
         </DataStructuresWrapper>
     )
