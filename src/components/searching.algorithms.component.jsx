@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.26 - 
+/**interview-prep-app - version 32.27 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Developing DFS + Depth First Search concept.
+ *     --> Destructuring 'depthfirstsearch'.
  * 
  * Note: This is the value captured
  */
@@ -29,6 +29,7 @@ const SearchingAlgorithms = () => {
     const linearsearchtobinarysearchsecondhalf = graphsData[64].image;
     const traversalBFSDFS = graphsData[65].image;
     const BFSworkflow = graphsData[66].image;
+    const depthfirstsearch = graphsData[67].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
@@ -262,6 +263,8 @@ const SearchingAlgorithms = () => {
                     every time it get deep when leaf node is reach, switch to the next branch, then it switch to the next branch, goes back to the parent node,
                     but does not include the node because the parent node was already added to the list 
                 </p>
+
+                <img src={depthfirstsearch} className="large" alt="depth first search"/>
 
                 <p>
                     the Depth First Search resulting is <strong> [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] </strong>
