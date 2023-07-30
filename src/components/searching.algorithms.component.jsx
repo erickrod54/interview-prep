@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.28 - 
+/**interview-prep-app - version 32.29 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Developing 'BFS + DFS' interview questions.
+ *     --> Developing ' 'BFS VS DFS' ( Which one is better and when ?).
  * 
  * Note: This is the value captured
  */
@@ -269,6 +269,25 @@ const SearchingAlgorithms = () => {
                 <p>
                     the Depth First Search resulting is <strong> [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] </strong>
                 </p>
+
+                <h3>
+                    'BFS VS DFS' ( Which one is better and when ?):
+                </h3>
+
+                <p>
+                    <strong> BFS and DFS </strong>, they are use for the same thing <strong> traversal </strong> ( that is going through  every node ),
+                    but for different reasons
+                </p>
+
+                <p>
+                    <strong> BFS </strong> it is strong finding the <strong> 'shortest path' </strong> and when the <strong> target or targets nodes </strong> are 
+                    close to the <strong> root node </strong>, a downside is the memory consumption as the graph below:
+                </p>
+
+                <p>
+                    <strong> DFS </strong> it is strong to <strong> find 'if a route exists'</strong>, and handle very good memory consumption
+                </p>
+
 
                 <h3>
                     'BFS + DFS' interview questions:
