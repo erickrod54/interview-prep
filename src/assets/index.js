@@ -69,11 +69,12 @@ import BFSworkflow from './BFS-workflow.png';
 import depthfirstsearch from './depth-first-search.png';
 import bfsvsdfsfirstpreview from './bfs-vs-dfs-first-preview.png';
 import bfsvsdfssecondpreview from './bfs-vs-dfs-second-preview.png';
+import bfsoverbinarytreeexercise from './bfs-over-binary-tree-exercise.png';
 
-/**interview-prep-app - version 33.00 - assets > index - 
+/**interview-prep-app - version 33.01 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'bfsvsdfssecondpreview' asset.
+ *     --> Importing and exporting 'bfsoverbinarytreeexercise' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -148,5 +149,6 @@ export { bigo1stgraph,
          BFSworkflow,
          depthfirstsearch,
          bfsvsdfsfirstpreview,
-         bfsvsdfssecondpreview
+         bfsvsdfssecondpreview,
+         bfsoverbinarytreeexercise
         };
