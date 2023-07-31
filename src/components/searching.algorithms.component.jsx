@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.00 - 
+/**interview-prep-app - version 33.01 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'bfsvsdfssecondpreview' from the context.
+ *     --> Destructuring 'bfsoverbinarytreeexercise' from the context.
  * 
  * Note: This is the value captured
  */
@@ -32,6 +32,7 @@ const SearchingAlgorithms = () => {
     const depthfirstsearch = graphsData[67].image;
     const bfsvsdfsfirstpreview = graphsData[68].image;
     const bfsvsdfssecondpreview = graphsData[69].image;
+    const bfsoverbinarytreeexercise = graphsData[70].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
@@ -348,9 +349,27 @@ const SearchingAlgorithms = () => {
                     R: <strong> BFS </strong>, because this algorithm if design to find if a <strong> shortest path </strong>
                 </p>
 
-                
-                
             </ul>
+
+            <h3>
+                    BFS Breadth First Search exersice:
+                </h3>
+
+                <p>
+                    so the <strong> goal </strong> will be to get a resulting list in the <strong> order of BFS </strong>
+                </p>
+
+                <p>
+                    let's say i have the following tree:
+                </p>
+                
+                <img src={bfsoverbinarytreeexercise} className="large" alt="bfs over binary tree exercise"/> 
+                
+
+                <p>
+                    and as i need to <strong> keep tracking </strong> of every node of the tree, i am going to use a <strong> queue </strong>
+                    data structure, becuase i keep previous and next node locations:
+                </p>
 
         </DataStructuresWrapper>
     )
