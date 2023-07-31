@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.01 - 
+/**interview-prep-app - version 33.02 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'bfsoverbinarytreeexercise' from the context.
+ *     --> Building 'bfsvalue' state.
  * 
  * Note: This is the value captured
  */
@@ -19,6 +19,7 @@ const SearchingAlgorithms = () => {
     const [ beastfindindexvalue, setBeastfindindexvalue ] = useState(false);
     const [ beastfindvalue, setBeastfindvalue ] = useState([]);
     const [ beastincludesvalue, setBeastincludesvalue ] = useState(false);
+    const [ bfsvalue, setBFSvalue ] = useState([]);
 
     const bfsdfsalgorithms = graphsData[58].image;
     const typesbfsdfsalgorithms = graphsData[59].image;
