@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.29 - 
+/**interview-prep-app - version 32.30 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Developing ' 'BFS VS DFS' ( Which one is better and when ?).
+ *     --> Destructuring 'bfsvsdfsfirstpreview' from the context.
  * 
  * Note: This is the value captured
  */
@@ -30,6 +30,7 @@ const SearchingAlgorithms = () => {
     const traversalBFSDFS = graphsData[65].image;
     const BFSworkflow = graphsData[66].image;
     const depthfirstsearch = graphsData[67].image;
+    const bfsvsdfsfirstpreview = graphsData[68].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
@@ -283,6 +284,9 @@ const SearchingAlgorithms = () => {
                     <strong> BFS </strong> it is strong finding the <strong> 'shortest path' </strong> and when the <strong> target or targets nodes </strong> are 
                     close to the <strong> root node </strong>, a downside is the memory consumption as the graph below:
                 </p>
+
+
+                <img src={bfsvsdfsfirstpreview} className="large" alt="bfs vs dfs first preview"/>
 
                 <p>
                     <strong> DFS </strong> it is strong to <strong> find 'if a route exists'</strong>, and handle very good memory consumption
