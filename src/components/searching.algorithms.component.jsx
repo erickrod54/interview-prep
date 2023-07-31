@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 32.30 - 
+/**interview-prep-app - version 33.00 - 
  * SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'bfsvsdfsfirstpreview' from the context.
+ *     --> Destructuring 'bfsvsdfssecondpreview' from the context.
  * 
  * Note: This is the value captured
  */
@@ -31,6 +31,7 @@ const SearchingAlgorithms = () => {
     const BFSworkflow = graphsData[66].image;
     const depthfirstsearch = graphsData[67].image;
     const bfsvsdfsfirstpreview = graphsData[68].image;
+    const bfsvsdfssecondpreview = graphsData[69].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
@@ -289,9 +290,11 @@ const SearchingAlgorithms = () => {
                 <img src={bfsvsdfsfirstpreview} className="large" alt="bfs vs dfs first preview"/>
 
                 <p>
-                    <strong> DFS </strong> it is strong to <strong> find 'if a route exists'</strong>, and handle very good memory consumption
+                    <strong> DFS </strong> it is strong to <strong> find 'if a route exists'</strong>, and handle very good memory consumption, as it shows in
+                    the graph below:
                 </p>
 
+                <img src={bfsvsdfssecondpreview} className="large" alt="bfs vs dfs second preview"/>
 
                 <h3>
                     'BFS + DFS' interview questions:
