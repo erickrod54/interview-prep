@@ -67,13 +67,14 @@ import { hashtable,
          BFSworkflow,
          depthfirstsearch,
          bfsvsdfsfirstpreview,
-         bfsvsdfssecondpreview
+         bfsvsdfssecondpreview,
+         bfsoverbinarytreeexercise
          } from './assets/index';      
          
-/**interview-prep-app - version 33.00 - data js - 
+/**interview-prep-app - version 33.01 - data js - 
  * Features: 
  * 
- *     --> Adding 'bfsvsdfssecondpreview' to 
+ *     --> Adding 'bfsoverbinarytreeexercise' to 
  *         graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
@@ -492,6 +493,10 @@ export const linksData = [
       {
         id:69,
         image: bfsvsdfssecondpreview
+      },
+      {
+        id:70,
+        image: bfsoverbinarytreeexercise
       }
     ]
     
