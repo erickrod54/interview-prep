@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.04 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.05 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'breadthFirstSearch' method.
+ *     --> Invoking 'BTS' method.
  * 
  * Note: This is the value captured
  */
@@ -158,6 +158,9 @@ const SearchingAlgorithms = () => {
             return list;
         }
       }
+
+      /**invoking  BinarySearchTree as new BTS*/
+      const BTS = new BinarySearchTree();
 
     return(
         <DataStructuresWrapper>
