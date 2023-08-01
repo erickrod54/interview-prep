@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.07 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.08 -  SearchingAlgorithms - Features: 
  * 
- *     --> Rendering 'bfsvalue' value.
+ *     --> Building 'handleCleanupbfs' handler.
  * 
  * Note: This is the value captured
  */
@@ -173,8 +173,16 @@ const SearchingAlgorithms = () => {
 
         return(
             BTS.breadthFirstSearch(),
-            setBFSvalue(BTS.breadthFirstSearch() + ',')
+            setBFSvalue(BTS.breadthFirstSearch() + ','),
+            handleCleanupbfs()
         )
+  }
+
+  const handleCleanupbfs = () => {
+
+    setTimeout(() => {
+        setBFSvalue('BFS value cleared!')
+    }, 2000);
   }
 
     return(
