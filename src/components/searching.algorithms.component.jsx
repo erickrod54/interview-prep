@@ -3,10 +3,10 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.02 - 
- * SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.03 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'bfsvalue' state.
+ *     --> Building 'BinarySearchTree' queue data strcuture
+ *         to apply 'BFS + Breadth First Search'.
  * 
  * Note: This is the value captured
  */
@@ -63,6 +63,84 @@ const SearchingAlgorithms = () => {
         setBeastincludesvalue(item); // Update the state with the result
         return item; // Return the result directly
       };
+
+    /**Breadth First Search exersice start*/
+    class Node {
+        constructor( value ){
+            this.left = null;
+            this.right = null;
+            this.value = value;
+        }
+    }
+
+    class BinarySearchTree {
+        constructor() {
+          this.root = null;
+        }
+    
+        insert(value) {
+            const newNode = new Node(value);
+            if (this.root === null) {
+              this.root = newNode;
+            } else {
+              let currentNode = this.root;
+              while(true){
+                  if (value < currentNode.value) {
+                      //Left
+                      if (!currentNode.left) {
+                          currentNode.left = newNode;
+                          return this;
+                      }
+                      currentNode = currentNode.left;
+                  } else {
+                    //right
+                    if (!currentNode.right) {
+                      currentNode.right = newNode;
+                      return this;
+                    }
+                    currentNode = currentNode.right;
+                  }
+              }
+            }
+          }
+    
+          lookup(value) {
+            if (!this.root) {
+                return false                
+            }
+
+            let currentNode = this.root;
+            while(currentNode){
+                if (value < currentNode.value) {
+                    currentNode = currentNode.left;
+                }else if(value > currentNode.right){
+                    currentNode = currentNode.right;
+                }else if(currentNode.value === value){
+                    return currentNode;
+                }
+            }
+        }
+    
+        printList() {
+          const array = [];
+          let currentNode = this.root;
+    
+          const traverse = (node) => {
+            if (node !== null) {
+              traverse(node.left);
+              array.push(node.value + ',');
+              traverse(node.right);
+            }
+          };
+    
+          traverse(currentNode);
+          return array;
+        }
+
+        breadthFirstSearch(){
+          
+        }
+      }
 
     return(
         <DataStructuresWrapper>
