@@ -3,10 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.03 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.04 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'BinarySearchTree' queue data strcuture
- *         to apply 'BFS + Breadth First Search'.
+ *     --> Building 'breadthFirstSearch' method.
  * 
  * Note: This is the value captured
  */
@@ -138,7 +137,25 @@ const SearchingAlgorithms = () => {
         }
 
         breadthFirstSearch(){
-          
+            let currentNode = this.root;
+            let list = [];
+            let queue = [];
+
+            queue.push(currentNode);
+
+            while (queue.length > 0) {
+                currentNode = queue.shift();
+                list.push(currentNode.value);
+                if (currentNode.left) {
+                    queue.push(currentNode.left);
+                }
+
+                if (currentNode.right) {
+                    queue.push(currentNode.right);
+                }
+            }
+
+            return list;
         }
       }
 
