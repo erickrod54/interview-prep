@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.06 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.07 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'handleBFStraverse' handler.
+ *     --> Rendering 'bfsvalue' value.
  * 
  * Note: This is the value captured
  */
@@ -483,6 +483,12 @@ const SearchingAlgorithms = () => {
                 <p>
                     and as i need to <strong> keep tracking </strong> of every node of the tree, i am going to use a <strong> queue </strong>
                     data structure, becuase i keep previous and next node locations:
+                </p>
+
+                <button onClick={handleBFStraverse}> Apply BFS traverse over the data </button>
+
+                <p>
+                    [{bfsvalue}]
                 </p>
 
         </DataStructuresWrapper>
