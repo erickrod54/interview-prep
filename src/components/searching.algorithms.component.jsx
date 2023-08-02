@@ -3,12 +3,21 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.09 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.10 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'bfsvaluerecursive' state.
+ *     --> Building 'breadthFirstSearchRecursive' method.
  * 
- * Note: This state will capture the value 
- * for the BFS recursive approach
+ * Note: This method will perform BFS using a recursive approach
+ * taking as base case:
+ * 
+ **      this will be the 'base case' condition that stops or keep letting the 
+  *           recursive process go on
+*
+  *           if (!queue.length) {
+  *              return list;
+  *          }
+  * 
+  * while i still have a queue lenght will still go on over and over until 
  */
 
 const SearchingAlgorithms = () => {
@@ -159,6 +168,33 @@ const SearchingAlgorithms = () => {
 
             return list;
         }
+
+        /**the recursive aproach will require queue and list */
+        breadthFirstSearchRecursive(queue, list){
+            
+            /**this will be the 'base case' condition that stops or keep letting the 
+             * recursive process go on*/
+            if (!queue.length) {
+                return list;
+            }
+
+            let currentNode = queue.shift();
+            list.push(currentNode.value)
+
+             /**from left to right i push */
+             if (currentNode.left) {
+                queue.push(currentNode.left);
+            }
+
+            /**if i have the right node i push it */
+            if (currentNode.right) {
+                queue.push(currentNode.right);
+            }
+
+            /**this will be the recursive call */
+            return this.breadthFirstSearchRecursive(queue, list);
+        }
+
       }
 
       /**invoking  BinarySearchTree as new BTS*/
