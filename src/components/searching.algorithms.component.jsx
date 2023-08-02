@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.13 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.14 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'handleCleanupbfsrecursive' method.
+ *     --> Developing 'DFS + Depth First Search' exercise.
  * 
  * Note: This state captures the 'bfsvaluerecursive' 
  */
@@ -587,6 +587,26 @@ const SearchingAlgorithms = () => {
                 <p>
                     [{bfsvaluerecursive}]
                 </p>
+
+                <h3>
+                    'DFS + Depth First Search' exercise
+                </h3>
+
+                <p>
+                    Implementing 'DFS + Depth First Search' can be done <strong> in tree different ways </strong> as follows:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong> Inorder</strong>
+                    </li>
+                    <li>
+                        <strong> Preorder</strong>
+                    </li>
+                    <li>
+                        <strong> Postorder</strong>
+                    </li>
+                </ul>
 
         </DataStructuresWrapper>
     )
