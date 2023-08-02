@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.12 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.13 -  SearchingAlgorithms - Features: 
  * 
- *     --> Rendering 'bfsvaluerecursive' method.
+ *     --> Building 'handleCleanupbfsrecursive' method.
  * 
  * Note: This state captures the 'bfsvaluerecursive' 
  */
@@ -217,7 +217,8 @@ const SearchingAlgorithms = () => {
 
     return(
         BTS.breadthFirstSearchRecursive([BTS.root], []),
-        setBFSvaluerecursive(BTS.breadthFirstSearchRecursive([BTS.root], []) + ',')
+        setBFSvaluerecursive(BTS.breadthFirstSearchRecursive([BTS.root], []) + ','),
+        handleCleanupbfsrecursive()
     )
 }
 
@@ -225,6 +226,13 @@ const SearchingAlgorithms = () => {
 
     setTimeout(() => {
         setBFSvalue('BFS value cleared!')
+    }, 2000);
+  }
+
+  const handleCleanupbfsrecursive = () => {
+
+    setTimeout(() => {
+        setBFSvaluerecursive('BFS recursive value cleared!')
     }, 2000);
   }
 
