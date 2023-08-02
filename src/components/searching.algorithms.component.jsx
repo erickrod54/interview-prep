@@ -3,21 +3,19 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.10 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.11 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'breadthFirstSearchRecursive' method.
+ *     --> Building 'handleBFSrecursivetraverse' method.
  * 
- * Note: This method will perform BFS using a recursive approach
- * taking as base case:
+ * Note: This handler will give the initial value for the 'queue' and 
+ * the 'list' having:
  * 
- **      this will be the 'base case' condition that stops or keep letting the 
-  *           recursive process go on
-*
-  *           if (!queue.length) {
-  *              return list;
-  *          }
-  * 
-  * while i still have a queue lenght will still go on over and over until 
+ *      BTS.breadthFirstSearchRecursive([BTS.root], [])
+ * 
+ *  the 'queue' is '[BTS.root]' starting at the 'root' node
+ * 
+ *  the 'list' will be a '[]' empty array cause will be fill
+ * it out after every recursive evaluation of the base case. 
  */
 
 const SearchingAlgorithms = () => {
@@ -215,6 +213,21 @@ const SearchingAlgorithms = () => {
             handleCleanupbfs()
         )
   }
+
+  const handleBFSrecursivetraverse = () => {
+    BTS.insert(9);
+    BTS.insert(4);
+    BTS.insert(6);
+    BTS.insert(20);
+    BTS.insert(170);
+    BTS.insert(15);
+    BTS.insert(1);
+
+    return(
+        BTS.breadthFirstSearchRecursive([BTS.root], []),
+        setBFSvaluerecursive(BTS.breadthFirstSearchRecursive([BTS.root], []) + ',')
+    )
+}
 
   const handleCleanupbfs = () => {
 
