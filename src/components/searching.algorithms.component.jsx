@@ -3,11 +3,12 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.08 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.09 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'handleCleanupbfs' handler.
+ *     --> Building 'bfsvaluerecursive' state.
  * 
- * Note: This is the value captured
+ * Note: This state will capture the value 
+ * for the BFS recursive approach
  */
 
 const SearchingAlgorithms = () => {
@@ -19,6 +20,7 @@ const SearchingAlgorithms = () => {
     const [ beastfindvalue, setBeastfindvalue ] = useState([]);
     const [ beastincludesvalue, setBeastincludesvalue ] = useState(false);
     const [ bfsvalue, setBFSvalue ] = useState([]);
+    const [ bfsvaluerecursive, setBFSvaluerecursive ] = useState([]);
 
     const bfsdfsalgorithms = graphsData[58].image;
     const typesbfsdfsalgorithms = graphsData[59].image;
