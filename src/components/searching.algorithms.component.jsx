@@ -3,19 +3,11 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.11 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.12 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'handleBFSrecursivetraverse' method.
+ *     --> Rendering 'bfsvaluerecursive' method.
  * 
- * Note: This handler will give the initial value for the 'queue' and 
- * the 'list' having:
- * 
- *      BTS.breadthFirstSearchRecursive([BTS.root], [])
- * 
- *  the 'queue' is '[BTS.root]' starting at the 'root' node
- * 
- *  the 'list' will be a '[]' empty array cause will be fill
- * it out after every recursive evaluation of the base case. 
+ * Note: This state captures the 'bfsvaluerecursive' 
  */
 
 const SearchingAlgorithms = () => {
@@ -548,6 +540,44 @@ const SearchingAlgorithms = () => {
 
                 <p>
                     [{bfsvalue}]
+                </p>
+
+                <p>
+                    implementing the a <strong> recursive approach </strong> will be like this:
+                </p>
+
+                <section className="code-block">
+                    <p><strong> {`/**the recursive aproach will require 'queue' and 'list' */`} </strong></p>
+                    <p>{`   breadthFirstSearchRecursive(queue, list){`}</p>
+                    <p><strong> {`   /**this will be the 'base case' condition that stops or keep letting the`} </strong></p>
+                    <p><strong> {`    * recursive process go on ( while is not empty )*/`}</strong></p>
+                    <p>{`   if (!queue.length) {`}</p>
+                    <p>{`       return list;`}</p>
+                    <p>{`   }`}</p>
+                    <p>{`   let currentNode = queue.shift();`}</p>
+                    <p>{`   list.push(currentNode.value)`}</p>
+                    <p>{`   `}</p>
+                    <p><strong> {`   /**from left to right i push */`} </strong></p>
+                    <p>{`   if (currentNode.left) { `}</p>
+                    <p>{`   queue.push(currentNode.left);` }</p>
+                    <p>{`   }` }</p>
+                    <p>{`   ` }</p>
+                    <p><strong> {`   /**if i have the right node i push it */` }</strong></p>
+                    <p>{`   if (currentNode.right) {` }</p>
+                    <p>{`   queue.push(currentNode.right);` }</p>
+                    <p>{`   }` }</p>
+                    <p>{`    ` }</p>
+                    <p><strong> {`   /**this will be the recursive call */` }</strong></p>
+                    <p>{`   return this.breadthFirstSearchRecursive(queue, list);` }</p>
+                    <p>{`    }` }</p>
+                    <p>{`   }` }</p>
+                    
+                </section>
+
+                <button onClick={handleBFSrecursivetraverse}> Apply BFS traverse over the data <strong> Recursive Approach </strong></button>    
+            
+                <p>
+                    [{bfsvaluerecursive}]
                 </p>
 
         </DataStructuresWrapper>
