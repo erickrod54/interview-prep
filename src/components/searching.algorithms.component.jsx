@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.14 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.15 -  SearchingAlgorithms - Features: 
  * 
- *     --> Developing 'DFS + Depth First Search' exercise.
+ *     --> Destructuring 'depthfirstsearchimplementations' from the context.
  * 
  * Note: This state captures the 'bfsvaluerecursive' 
  */
@@ -34,6 +34,7 @@ const SearchingAlgorithms = () => {
     const bfsvsdfsfirstpreview = graphsData[68].image;
     const bfsvsdfssecondpreview = graphsData[69].image;
     const bfsoverbinarytreeexercise = graphsData[70].image;
+    const depthfirstsearchimplementations = graphsData[71].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
@@ -600,13 +601,33 @@ const SearchingAlgorithms = () => {
                     <li>
                         <strong> Inorder</strong>
                     </li>
+
+                        <p>
+                            <strong> Inorder </strong> moves from the deep <strong> leaf nodes </strong> to the <strong> parent nodes </strong>
+                        </p>
+
                     <li>
                         <strong> Preorder</strong>
                     </li>
+
+                        <p>
+                            <strong> Preorder </strong> it moves from <strong> left </strong> to <strong> right </strong> ( it is ideal for use cases
+                            where i need to rebuild a tree or graph )
+                        </p>
+
                     <li>
                         <strong> Postorder</strong>
                     </li>
+                 
+                    <p>
+                        <strong> Preorder </strong> it moves from <strong> right </strong> to <strong> left </strong> ( it is ideal for use cases
+                        where i need to rebuild a tree or graph )
+                    </p>
+
                 </ul>
+
+                <img src={depthfirstsearchimplementations} className="large" alt="depth first search implementations"/> 
+
 
         </DataStructuresWrapper>
     )
