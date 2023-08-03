@@ -72,11 +72,10 @@ import { hashtable,
          depthfirstsearchimplementations
          } from './assets/index';      
          
-/**interview-prep-app - version 33.15 - data js - 
+/**interview-prep-app - version 33.16 - data js - 
  * Features: 
  * 
- *     --> Adding 'depthfirstsearchimplementations' to 
- *         graphsData.   
+ *     --> Placing 'letters' sorting data.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -558,5 +557,9 @@ export const array7 = [ 2,3,4,5 ]
 
 /**example array to linked list */
 export const basket = ['apples', 'grapes', 'pears']
+
+
+/**Sorting data */
+export const letters = ['a', 'd', 'z', 'e', 'r', 'b'];
 
 
