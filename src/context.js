@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
-import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, linksData, n, nemo, numbers } from "./data";
+import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 27.19 - context js - 
+/**interview-prep-app - version 33.16 - context js - 
  * Features: 
  * 
- *     --> Invoking 'cleanUpSetTimeoutZerofunction()'
+ *     --> Importing and Providing 'letters' 
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -614,6 +614,7 @@ export const AppProvider = ({ children }) => {
             a_zero_state,
             b_zero_state,
             c_zero_state,
+            letters,
             setA_zero_state,
             setB_zero_state,
             setC_zero_state,
