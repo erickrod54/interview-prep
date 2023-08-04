@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.15 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.17 -  SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'depthfirstsearchimplementations' from the context.
+ *     --> Building 'dfsInordervalue' state.
  * 
  * Note: This state captures the 'bfsvaluerecursive' 
  */
@@ -20,6 +20,7 @@ const SearchingAlgorithms = () => {
     const [ beastincludesvalue, setBeastincludesvalue ] = useState(false);
     const [ bfsvalue, setBFSvalue ] = useState([]);
     const [ bfsvaluerecursive, setBFSvaluerecursive ] = useState([]);
+    const [ dfsInordervalue, setDFSInordervalue ] = useState([]);
 
     const bfsdfsalgorithms = graphsData[58].image;
     const typesbfsdfsalgorithms = graphsData[59].image;
