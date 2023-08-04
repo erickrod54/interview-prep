@@ -5,9 +5,9 @@ import { useAppContext } from "../context";
 
 /**interview-prep-app - version 33.19 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'traverseInOrder' function.
+ *     --> Building 'DSFInorder' method.
  * 
- * Note: This function will have conditions to make traverse DFSInorder method 
+ * Note: This method will traverse on every node to apply DFS in order.
  */
 
 const SearchingAlgorithms = () => {
@@ -189,7 +189,9 @@ const SearchingAlgorithms = () => {
             return this.breadthFirstSearchRecursive(queue, list);
         }
 
-        
+        DSFInorder(){
+            return traverseInOrder(this.root, [])
+        }
 
       }
 
