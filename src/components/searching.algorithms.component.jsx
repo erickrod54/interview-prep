@@ -3,11 +3,11 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.18 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.19 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'numbers' array.
+ *     --> Building 'traverseInOrder' function.
  * 
- * Note: This state captures the 'bfsvaluerecursive' 
+ * Note: This function will have conditions to make traverse DFSInorder method 
  */
 
 const SearchingAlgorithms = () => {
@@ -188,6 +188,24 @@ const SearchingAlgorithms = () => {
             /**this will be the recursive call */
             return this.breadthFirstSearchRecursive(queue, list);
         }
+
+        
+
+      }
+
+      function traverseInOrder(node, list){
+
+        if (node.left) {
+            traverseInOrder(node.left, list)
+        }
+
+        list.push(node.value)
+
+        if (node.right) {
+            traverseInOrder(node.right, list)
+        }    
+
+        return list;
 
       }
 
