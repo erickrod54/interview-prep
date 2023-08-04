@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.17 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.18 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'dfsInordervalue' state.
+ *     --> Building 'numbers' array.
  * 
  * Note: This state captures the 'bfsvaluerecursive' 
  */
@@ -38,6 +38,8 @@ const SearchingAlgorithms = () => {
     const depthfirstsearchimplementations = graphsData[71].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
+
+    const numbers = [ 9, 4, 6, 20, 170, 15, 1 ]
 
     const beastindexofHandler = (array) => {
         return(
