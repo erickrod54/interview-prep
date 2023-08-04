@@ -3,11 +3,11 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.19 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 33.20 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'DSFInorder' method.
+ *     --> Building 'handlerDFSInorder' handler.
  * 
- * Note: This method will traverse on every node to apply DFS in order.
+ * Note: This handler will set and render on every node to apply DFS in order.
  */
 
 const SearchingAlgorithms = () => {
@@ -229,6 +229,21 @@ const SearchingAlgorithms = () => {
             handleCleanupbfs()
         )
   }
+
+  const handlerDFSInorder = () => {
+    BTS.insert(9);
+    BTS.insert(4);
+    BTS.insert(6);
+    BTS.insert(20);
+    BTS.insert(170);
+    BTS.insert(15);
+    BTS.insert(1);
+
+    return(
+        BTS.DSFInorder(),
+        setDFSInordervalue(BTS.DSFInorder() + ',')
+    )
+}
 
   const handleBFSrecursivetraverse = () => {
     BTS.insert(9);
