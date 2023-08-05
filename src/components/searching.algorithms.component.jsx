@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 33.20 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 34.00 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'handlerDFSInorder' handler.
+ *     --> Rendering 'dfsInordervalue' state.
  * 
  * Note: This handler will set and render on every node to apply DFS in order.
  */
@@ -665,6 +665,32 @@ const SearchingAlgorithms = () => {
                 </ul>
 
                 <img src={depthfirstsearchimplementations} className="large" alt="depth first search implementations"/> 
+
+                <h3>
+                    DSF in Order exersise
+                </h3>
+
+                <p>
+                     let's say i have the same lit of <strong> 'numbers' </strong> of the previous exercises
+                </p>                
+
+                 <section className="code-block-row code-block">
+                       [{numbers.map(( number) => {
+                            return(
+                                    <p key={number}>{number + ','}</p>
+                            )
+                       })}]      
+                 </section>
+
+                 <p>
+                    let's apply <strong> DFS in order </strong> to that list of nodes:
+                 </p>
+
+                 <button onClick={handlerDFSInorder}> Apply DFS Inorder to the list </button>
+
+                 <p>
+                    [{dfsInordervalue}]
+                 </p>
 
 
         </DataStructuresWrapper>
