@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 34.09 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 34.10-  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'handlerDFSPostorder' handler.
+ *     --> Rendering 'dfsPostordervalue' value.
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -783,6 +783,20 @@ const handlerDFSPostorder = () => {
 
                 <p>
                 [{dfsPreordervalue}]
+                </p>
+
+                <h3>
+                    DSF Post Order exersise
+                </h3>
+
+                <p>
+                     let's say i have the same lit of <strong> 'numbers' </strong> of the previous exercises
+                </p>                
+
+                <button onClick={handlerDFSPostorder}> Apply DFS Inorder to the list </button>
+
+                <p>
+                [{dfsPostordervalue}]
                 </p>
 
 
