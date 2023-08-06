@@ -3,12 +3,12 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 34.08 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 34.09 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'DFSPostorder' method.
+ *     --> Building 'handlerDFSPostorder' handler.
  * 
- * Note: this 'DFSPostorder' will call 'traversePostOrder' recursivily 
- * until the array met the post order.
+ * Note: this 'handlerDFSPostorder' will handle the array filling the queue
+ * with the post order.
  */
 
 const SearchingAlgorithms = () => {
@@ -322,6 +322,21 @@ const handlerDFSPreorder = () => {
         BTS.breadthFirstSearchRecursive([BTS.root], []),
         setBFSvaluerecursive(BTS.breadthFirstSearchRecursive([BTS.root], []) + ','),
         handleCleanupbfsrecursive()
+    )
+}
+
+const handlerDFSPostorder = () => {
+    BTS.insert(9);
+    BTS.insert(4);
+    BTS.insert(6);
+    BTS.insert(20);
+    BTS.insert(170);
+    BTS.insert(15);
+    BTS.insert(1);
+
+    return(
+        BTS.DFSPostorder(),
+        setdfsPostordervalue(BTS.DFSPostorder() + ',')
     )
 }
 
