@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 34.00 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 34.01 -  SearchingAlgorithms - Features: 
  * 
- *     --> Rendering 'dfsInordervalue' state.
+ *     --> Building 'dfsPreordervalue' state.
  * 
  * Note: This handler will set and render on every node to apply DFS in order.
  */
@@ -21,6 +21,7 @@ const SearchingAlgorithms = () => {
     const [ bfsvalue, setBFSvalue ] = useState([]);
     const [ bfsvaluerecursive, setBFSvaluerecursive ] = useState([]);
     const [ dfsInordervalue, setDFSInordervalue ] = useState([]);
+    const [ dfsPreordervalue, setDFSPreordervalue ] = useState([]);
 
     const bfsdfsalgorithms = graphsData[58].image;
     const typesbfsdfsalgorithms = graphsData[59].image;
