@@ -3,12 +3,12 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 34.06 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 34.07 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'dfsPostordervalue' state.
+ *     --> Building 'traversePostOrder' function.
  * 
- * Note: this 'DSFPreOrder' method is going to be call recursivelly
- * until the base case is met.
+ * Note: this 'traversePostOrder' will be called recursivily by 
+ * the method.
  */
 
 const SearchingAlgorithms = () => {
@@ -222,6 +222,7 @@ const SearchingAlgorithms = () => {
       /**Pre Order function */
       function traversePreOrder(node, list){
 
+        /**to create this order i push before the conditions */
         list.push(node.value)
 
         if (node.left) {
@@ -231,6 +232,24 @@ const SearchingAlgorithms = () => {
         if (node.right) {
             traversePreOrder(node.right, list)
         }    
+
+        return list;
+
+      }
+
+      /**Pre Post function */
+      function traversePostOrder(node, list){
+
+        if (node.left) {
+            traversePreOrder(node.left, list)
+        }
+
+        if (node.right) {
+            traversePreOrder(node.right, list)
+        }    
+
+         /**to create this order i push after the conditions */
+        list.push(node.value)
 
         return list;
 
