@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 34.03 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 34.04 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'DSFPreOrder' method.
+ *     --> Building 'handlerDFSPreorder' method.
  * 
  * Note: this 'DSFPreOrder' method is going to be call recursivelly
  * until the base case is met.
@@ -268,6 +268,22 @@ const SearchingAlgorithms = () => {
         setDFSInordervalue(BTS.DSFInorder() + ',')
     )
 }
+
+const handlerDFSPreorder = () => {
+    BTS.insert(9);
+    BTS.insert(4);
+    BTS.insert(6);
+    BTS.insert(20);
+    BTS.insert(170);
+    BTS.insert(15);
+    BTS.insert(1);
+
+    return(
+        BTS.DSFPreOrder(),
+        setDFSPreordervalue(BTS.DSFPreOrder() + ',')
+    )
+}
+
 
   const handleBFSrecursivetraverse = () => {
     BTS.insert(9);
