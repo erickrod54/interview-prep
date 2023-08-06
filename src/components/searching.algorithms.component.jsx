@@ -3,12 +3,12 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 34.07 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 34.08 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'traversePostOrder' function.
+ *     --> Building 'DFSPostorder' method.
  * 
- * Note: this 'traversePostOrder' will be called recursivily by 
- * the method.
+ * Note: this 'DFSPostorder' will call 'traversePostOrder' recursivily 
+ * until the array met the post order.
  */
 
 const SearchingAlgorithms = () => {
@@ -198,6 +198,10 @@ const SearchingAlgorithms = () => {
 
         DSFPreOrder(){
             return traversePreOrder(this.root, [])
+        }
+
+        DFSPostorder(){
+            return traversePostOrder(this.root, [])
         }
 
       }
