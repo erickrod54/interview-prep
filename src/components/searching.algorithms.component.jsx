@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 34.04 -  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 34.05 -  SearchingAlgorithms - Features: 
  * 
- *     --> Building 'handlerDFSPreorder' method.
+ *     --> Rendering 'dfsPreordervalue' value.
  * 
  * Note: this 'DSFPreOrder' method is going to be call recursivelly
  * until the base case is met.
@@ -731,6 +731,20 @@ const handlerDFSPreorder = () => {
                  <p>
                     [{dfsInordervalue}]
                  </p>
+
+                 <h3>
+                    DSF Pre Order exersise
+                </h3>
+
+                <p>
+                     let's say i have the same lit of <strong> 'numbers' </strong> of the previous exercises
+                </p>                
+
+                <button onClick={handlerDFSPreorder}> Apply DFS Inorder to the list </button>
+
+                <p>
+                [{dfsPreordervalue}]
+                </p>
 
 
         </DataStructuresWrapper>
