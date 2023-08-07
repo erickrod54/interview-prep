@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 34.10-  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 34.11-  SearchingAlgorithms - Features: 
  * 
- *     --> Rendering 'dfsPostordervalue' value.
+ *     --> Destructuring 'DFSinorder' from the context.
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -39,6 +39,7 @@ const SearchingAlgorithms = () => {
     const bfsvsdfssecondpreview = graphsData[69].image;
     const bfsoverbinarytreeexercise = graphsData[70].image;
     const depthfirstsearchimplementations = graphsData[71].image;
+    const DFSinorder = graphsData[72].image;
 
     const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
@@ -764,6 +765,8 @@ const handlerDFSPostorder = () => {
                  <p>
                     let's apply <strong> DFS in order </strong> to that list of nodes:
                  </p>
+
+                 <img src={DFSinorder} className="large" alt="DFS inorder"/> 
 
                  <button onClick={handlerDFSInorder}> Apply DFS Inorder to the list </button>
 
