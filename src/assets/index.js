@@ -73,11 +73,12 @@ import bfsoverbinarytreeexercise from './bfs-over-binary-tree-exercise.png';
 import depthfirstsearchimplementations from './depth-first-search-implementations.png';
 import DFSinorder from './DFS-in-order.png';
 import DFSpreorder from './DFS-in-pre-order.png';
+import DFSinpostorder from './DFS-in-post-order.png'
 
-/**interview-prep-app - version 34.12 - assets > index - 
+/**interview-prep-app - version 34.13 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'DFSpreorder' asset.
+ *     --> Importing and exporting 'DFSinpostorder' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -156,5 +157,6 @@ export { bigo1stgraph,
          bfsoverbinarytreeexercise,
          depthfirstsearchimplementations,
          DFSinorder,
-         DFSpreorder
+         DFSpreorder,
+         DFSinpostorder
         };
