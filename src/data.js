@@ -71,13 +71,14 @@ import { hashtable,
          bfsoverbinarytreeexercise,
          depthfirstsearchimplementations,
          DFSinorder,
-         DFSpreorder
+         DFSpreorder,
+         DFSinpostorder
          } from './assets/index';      
          
-/**interview-prep-app - version 34.12 - data js - 
+/**interview-prep-app - version 34.13 - data js - 
  * Features: 
  * 
- *     --> Adding 'DFSpreorder' graphsData.   
+ *     --> Adding 'DFSinpostorder' graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -511,6 +512,10 @@ export const linksData = [
       {
         id:73,
         image: DFSpreorder
+      },
+      {
+        id:74,
+        image: DFSinpostorder
       }
     ]
     
