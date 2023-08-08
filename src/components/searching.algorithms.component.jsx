@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 34.13-  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 34.15-  SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'DFSinpostorder' from the context.
+ *     --> Adding a note about 'Dijkstra, and Bellman-Ford algorithm'.
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -807,6 +807,12 @@ const handlerDFSPostorder = () => {
                 <p>
                 [{dfsPostordervalue}]
                 </p>
+
+                <h2>Note: there two more important algorithms that are use to find the shortest path 
+                    and these are Dijkstra, and Bellman-Ford algorithm, the first is use when i do not 
+                    have negative wieghtes, and the second Bellman-Ford is use in a abroad use cases
+                    when i have negative and positive weightes.
+                </h2>
 
 
         </DataStructuresWrapper>
