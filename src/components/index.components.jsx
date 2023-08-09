@@ -26,11 +26,12 @@ import AlgorithmsIntro from "./algorithms.intro.component";
 import SortingComponent from "./sorting.component";
 import SortingInterview from "./sorting.interview.questions.component";
 import SearchingAlgorithms from "./searching.algorithms.component";
+import DynamicProgramming from "./dynamic.programming.intro.component";
 
-/**interview-prep-app - version 31.16 - 
+/**interview-prep-app - version 34.15 - 
  * components > index - Features: 
  * 
- *     --> Importing and exporting 'SearchingAlgorithms'.
+ *     --> Importing and exporting 'DynamicProgramming'.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -63,5 +64,6 @@ export { ArrayDataStructure,
          AlgorithmsIntro,
          SortingComponent,
          SortingInterview,
-         SearchingAlgorithms              
+         SearchingAlgorithms,
+         DynamicProgramming              
         }
