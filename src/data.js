@@ -75,14 +75,16 @@ import { hashtable,
          DFSinpostorder
          } from './assets/index';      
          
-/**interview-prep-app - version 34.15 - data js - 
+/**interview-prep-app - version 34.17 - data js - 
  * Features: 
  * 
- *     --> Adding 'Dynamic Programming Intro' linksData.   
+ *     --> Placing 'beasts' data.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
  */
+
+export const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
 export const linksData = [
   {
