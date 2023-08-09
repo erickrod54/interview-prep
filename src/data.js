@@ -75,10 +75,10 @@ import { hashtable,
          DFSinpostorder
          } from './assets/index';      
          
-/**interview-prep-app - version 34.13 - data js - 
+/**interview-prep-app - version 34.15 - data js - 
  * Features: 
  * 
- *     --> Adding 'DFSinpostorder' graphsData.   
+ *     --> Adding 'Dynamic Programming Intro' linksData.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -197,10 +197,14 @@ export const linksData = [
       {
         id:'27',
         name:'Searching Algorithms ( BFS + DFS )'
+      },
+      {
+        id:'28',
+        name:'Dynamic Programming Intro'
       }
       /**{
         id:'26',
-        name:'Dynamic Programming'
+        name:'Dynamic Programming Intro'
       },
       {
         id:'27',
