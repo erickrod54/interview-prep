@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
-import { array1, array2, array3, array4, array5, array6, array7, basket, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers } from "./data";
+import { array1, array2, array3, array4, array5, array6, array7, basket, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers } from "./data";
 
-/**interview-prep-app - version 33.16 - context js - 
+/**interview-prep-app - version 34.17 - context js - 
  * Features: 
  * 
- *     --> Importing and Providing 'letters' 
+ *     --> Importing and Providing 'beasts' 
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -645,6 +645,7 @@ export const AppProvider = ({ children }) => {
             array5,
             array6,
             array7,
+            beasts,
             findNemo,
             handleFindNemo,
             handleFindNemoWithTime,
