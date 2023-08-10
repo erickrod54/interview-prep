@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 34.15-  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 34.17-  SearchingAlgorithms - Features: 
  * 
- *     --> Adding a note about 'Dijkstra, and Bellman-Ford algorithm'.
+ *     --> Destructuring 'beasts' from the context.
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -13,7 +13,7 @@ import { useAppContext } from "../context";
 
 const SearchingAlgorithms = () => {
 
-    const { graphsData } = useAppContext();
+    const { graphsData, beastsbeasts } = useAppContext();
 
     const [ beastindexofvalue, setBeastindexofvalue ] = useState([]);
     const [ beastfindindexvalue, setBeastfindindexvalue ] = useState(false);
@@ -43,7 +43,7 @@ const SearchingAlgorithms = () => {
     const DFSpreorder = graphsData[73].image;
     const DFSinpostorder = graphsData[74].image;
 
-    const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
+    
 
     const numbers = [ 9, 4, 6, 20, 170, 15, 1 ]
 
