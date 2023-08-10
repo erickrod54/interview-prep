@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 34.20-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.00-  DynamicProgramming - Features: 
  * 
  *     --> Developing 'DynamicProgramming' Exercise.
  * 
- *     --> Building 'addTo80' handler
+ *     --> Rendering 'addto80value' handler
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -33,6 +33,19 @@ const DynamicProgramming = () => {
                 DynamicProgramming can adopt names as <strong> memoization - caching </strong>, by applying this technique 
                 <strong> speeds up programs </strong> ( better time complexity ) make it them more accesible
             </p>
+
+            <button onClick={() => addTo80(5)}> Add <strong> 5 </strong> to 80 </button>
+
+            <p>
+                {addto80value}
+            </p>
+
+            <p>
+               that is a recursive function ( repetitive high cost operation ), and i want to increse his performance
+               make in it faster every time 
+            </p>        
+
+
         </DataStructuresWrapper>
     )
 }
