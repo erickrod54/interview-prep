@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 35.01-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.02-  DynamicProgramming - Features: 
  * 
- *     --> Building 'memoizedvalue' state
+ *     --> Stating 'Memoized approach' state
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -43,6 +43,39 @@ const DynamicProgramming = () => {
                that is a recursive function ( repetitive high cost operation ), and i want to increse his performance
                make in it faster every time 
             </p>        
+
+            <h3>
+                Memoized approach:
+            </h3>
+
+            <p>
+               that is a recursive function ( repetitive high cost operation ), and i want to increse his performance
+               make in it faster every time so for this porpuse i will create a variable called <strong> cache </strong>
+               to store information of the operation in the following way
+            </p>        
+
+            <section className="code-block">
+                <p>{`// Using an object`}</p>
+                <p>{`let cache = {`}</p>
+                <p>{`5: 85`}</p>
+                <p>{` };`}</p>
+                <p>{`const memoizedAddTo80 = (n) => {`}</p>
+                <p>{`if (n in cache) {`}</p>
+                <p>{`// Accesing property using 'n' as the key`}</p>
+                <p>{`return (`}</p>
+                <p>{`cache[n],`}</p>
+                <p>{`setMemoizedvalue(cache[n])`}</p>
+                <p>{`)`}</p>
+                <p>{`}else{`}</p>
+                <p>{`console.log('long time flow')`}</p>
+                <p>{`cache[n] = 5 + 80;')`}</p>
+                <p>{`return (`}</p>
+                <p>{`cache[n],`}</p>
+                <p>{`setMemoizedvalue(cache[n])`}</p>
+                <p>{`)`}</p>
+                <p>{`}`}</p>
+                <p>{`}`}</p>
+            </section>    
 
 
         </DataStructuresWrapper>
