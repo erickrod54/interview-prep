@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 35.05-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.06-  DynamicProgramming - Features: 
  * 
- *     --> Building 'cleanupAddTo80' value
+ *     --> Building 'cleanupMemoizedAddTo80' value
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -31,16 +31,24 @@ const DynamicProgramming = () => {
                 // Accesing property using 'n' as the key
                 return (
                     cache[n],
-                    setMemoizedvalue(cache[n])
+                    setMemoizedvalue(cache[n]),
+                    cleanupMemoizedAddTo80()
                     )
             }else{
                 console.log('long time flow')
                 cache[n] = 5 + 80;
                 return (
                     cache[n],
-                    setMemoizedvalue(cache[n])
+                    setMemoizedvalue(cache[n]),
+                    cleanupMemoizedAddTo80()
                     )
             }
+        }
+
+        const cleanupMemoizedAddTo80 = () => {
+            setTimeout(() => {
+                setMemoizedvalue('value cleared!! hit again')
+            }, 2000);
         }
 
         const cleanupAddTo80 = () => {
