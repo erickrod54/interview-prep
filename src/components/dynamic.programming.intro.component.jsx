@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 35.03-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.04-  DynamicProgramming - Features: 
  * 
- *     --> Building 'memoizedAddTo80' handler
+ *     --> Rendering 'memoizedvalue' value
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -98,6 +98,23 @@ const DynamicProgramming = () => {
                 <p>{`}`}</p>
                 <p>{`}`}</p>
             </section>    
+
+            <button onClick={() => memoizedAddTo80(5)}> Add <strong> 5 </strong> to 80 ( memoized approach )</button>
+
+            <p>
+                {memoizedvalue}
+            </p>
+
+            <p>
+                without <strong> memoizing </strong> using the <strong> cache </strong> the flow will take long time to execute
+            </p>
+
+            <p>
+                so the main goal of <p> dynamic programming </p> is to create <strong> storage structures </strong> to remember 
+                solutions, so it will be less processing cost, there is many conventions to achieve this, in <strong> JavaScript </strong>
+                the convention is called <strong> Clousures </strong>
+            </p>
+
 
 
         </DataStructuresWrapper>
