@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 35.00-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.01-  DynamicProgramming - Features: 
  * 
- *     --> Developing 'DynamicProgramming' Exercise.
- * 
- *     --> Rendering 'addto80value' handler
+ *     --> Building 'memoizedvalue' state
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -13,7 +11,8 @@ import { DataStructuresWrapper } from "../styled.components";
 
 const DynamicProgramming = () => {
 
-    const [ addto80value, setaddTo80value ] = useState()
+    const [ addto80value, setaddTo80value ] = useState();
+    const [ memoizedvalue, setMemoizedvalue ] = useState();
 
     const addTo80 = (n) => {
         return setaddTo80value(n + 80);
