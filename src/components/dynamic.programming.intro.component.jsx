@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 35.02-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.03-  DynamicProgramming - Features: 
  * 
- *     --> Stating 'Memoized approach' state
+ *     --> Building 'memoizedAddTo80' handler
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -17,6 +17,28 @@ const DynamicProgramming = () => {
     const addTo80 = (n) => {
         return setaddTo80value(n + 80);
     }
+
+        // Using an object
+        let cache = {
+            5: 85
+        };
+    
+        const memoizedAddTo80 = (n) => {
+            if (n in cache) {
+                // Accesing property using 'n' as the key
+                return (
+                    cache[n],
+                    setMemoizedvalue(cache[n])
+                    )
+            }else{
+                console.log('long time flow')
+                cache[n] = 5 + 80;
+                return (
+                    cache[n],
+                    setMemoizedvalue(cache[n])
+                    )
+            }
+        }
 
     return(
         <DataStructuresWrapper>
