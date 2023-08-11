@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 35.04-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.05-  DynamicProgramming - Features: 
  * 
- *     --> Rendering 'memoizedvalue' value
+ *     --> Building 'cleanupAddTo80' value
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -15,7 +15,10 @@ const DynamicProgramming = () => {
     const [ memoizedvalue, setMemoizedvalue ] = useState();
 
     const addTo80 = (n) => {
-        return setaddTo80value(n + 80);
+        return (
+            setaddTo80value(n + 80),
+            cleanupAddTo80()
+            );
     }
 
         // Using an object
@@ -38,6 +41,12 @@ const DynamicProgramming = () => {
                     setMemoizedvalue(cache[n])
                     )
             }
+        }
+
+        const cleanupAddTo80 = () => {
+            setTimeout(() => {
+                setaddTo80value('value cleared! hit again ')
+            }, 2000);
         }
 
     return(
@@ -110,7 +119,7 @@ const DynamicProgramming = () => {
             </p>
 
             <p>
-                so the main goal of <p> dynamic programming </p> is to create <strong> storage structures </strong> to remember 
+                so the main goal of <strong> dynamic programming </strong> is to create <strong> storage structures </strong> to remember 
                 solutions, so it will be less processing cost, there is many conventions to achieve this, in <strong> JavaScript </strong>
                 the convention is called <strong> Clousures </strong>
             </p>
