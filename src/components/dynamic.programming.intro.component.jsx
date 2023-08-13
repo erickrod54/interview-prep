@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 35.09-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.10-  DynamicProgramming - Features: 
  * 
- *     --> Building 'fibonacci' function
+ *     --> Building 'calculateFibonacci' function
  * 
- * Note: this function is going to calculate fibonacci value
- * given a number.
+ * Note: when the input value changes.
  */
 
 const DynamicProgramming = () => {
@@ -23,6 +22,14 @@ const DynamicProgramming = () => {
         } else {
             return fibonacci(n - 1) + fibonacci(n - 2);
         }
+    }
+
+    /**The calculateFibonacci function is called when the input value changes. 
+     * It calculates the Fibonacci value using the fibonacci function and updates
+     *  the state with the result. */
+    const calculateFibonacci = (n) => {
+        const result = fibonacci(n);
+        setFibonacciValue(result);
     }
 
     const addTo80 = (n) => {
