@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 35.10-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.11-  DynamicProgramming - Features: 
  * 
- *     --> Building 'calculateFibonacci' function
+ *     --> Rendering 'fibonacciValue' 
  * 
  * Note: when the input value changes.
  */
@@ -185,6 +185,28 @@ const DynamicProgramming = () => {
         <p>
             this <strong> pattern </strong> is usually seen in codebases working with <strong> dynamic programming </strong>, this convetion
             in <strong> JavaScript </strong> is called <strong> Closures </strong>
+        </p>
+
+        <h2>Memoized Fibonacci Sequence</h2>
+        <p>
+            this first approach will show a <strong> no memoized </strong> function and their crash results after an extensive calculation
+        </p>
+            <p>Enter a number to calculate its Fibonacci value:</p>
+
+        <p>
+            i enter number <strong> 7, 13, 20, 30 </strong>, but after that the browser will crash because the calculation is too 
+            extensive 
+        </p>
+
+        <input
+                type="number"
+                onChange={(event) => calculateFibonacci(Number(event.target.value))}
+            />
+
+        <p>Fibonacci Value: <strong> {fibonacciValue} </strong></p>
+        
+        <p>
+            so one way to improve it is by using <strong> dynamic programming </strong> 
         </p>
 
         </DataStructuresWrapper>
