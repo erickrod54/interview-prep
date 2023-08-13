@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 35.08-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.09-  DynamicProgramming - Features: 
  * 
- *     --> Building fibonacci state
+ *     --> Building 'fibonacci' function
  * 
- * Note: this 'handlerDFSPostorder' will handle the array filling the queue
- * with the post order.
+ * Note: this function is going to calculate fibonacci value
+ * given a number.
  */
 
 const DynamicProgramming = () => {
@@ -14,6 +14,16 @@ const DynamicProgramming = () => {
     const [ addto80value, setaddTo80value ] = useState();
     const [ memoizedvalue, setMemoizedvalue ] = useState();
     const [fibonacciValue, setFibonacciValue] = useState(null);
+
+    const fibonacci = (n) => {
+        if (n <= 0) {
+            return 0;
+        } else if (n === 1) {
+            return 1;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+    }
 
     const addTo80 = (n) => {
         return (
