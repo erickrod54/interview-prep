@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 35.06-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.07-  DynamicProgramming - Features: 
  * 
- *     --> Building 'cleanupMemoizedAddTo80' value
+ *     --> Improving momoized function
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -132,7 +132,42 @@ const DynamicProgramming = () => {
                 the convention is called <strong> Clousures </strong>
             </p>
 
+            <p>
+                if the parameter 80 does not change, it will be <strong> memoized </strong>, so <strong> cache </strong> will be use 
+                to get the solution in a faster way
+            </p>
 
+           <p>
+                an improve way to make the last code better, is to include <strong> cache </strong> inside of the scope as follows:
+           </p>
+
+           <section className="code-block">
+                <p>{`const memoizedAddTo80 = (n) => {`}</p>
+                <p>{`// Using an object`}</p>
+                <p>{`let cache = {};`}</p>
+                <p>{`return function(n) {`}</p>
+                <p>{`if (n in cache) {`}</p>
+                <p>{`// Accesing property using 'n' as the key`}</p>
+                <p>{`return (`}</p>
+                <p>{`cache[n],`}</p>
+                <p>{`setMemoizedvalue(cache[n])`}</p>
+                <p>{`)`}</p>
+                <p>{`}else{`}</p>
+                <p>{`console.log('long time flow')`}</p>
+                <p>{`cache[n] = 5 + 80;')`}</p>
+                <p>{`return (`}</p>
+                <p>{`cache[n],`}</p>
+                <p>{`setMemoizedvalue(cache[n])`}</p>
+                <p>{`)`}</p>
+                <p>{`}`}</p>
+                <p>{`}`}</p>
+                <p>{`}`}</p>
+            </section>    
+
+        <p>
+            this <strong> pattern </strong> is usually seen in codebases working with <strong> dynamic programming </strong>, this convetion
+            in <strong> JavaScript </strong> is called <strong> Closures </strong>
+        </p>
 
         </DataStructuresWrapper>
     )
