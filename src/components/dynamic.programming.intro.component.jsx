@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 35.07-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.08-  DynamicProgramming - Features: 
  * 
- *     --> Improving momoized function
+ *     --> Building fibonacci state
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -13,6 +13,7 @@ const DynamicProgramming = () => {
 
     const [ addto80value, setaddTo80value ] = useState();
     const [ memoizedvalue, setMemoizedvalue ] = useState();
+    const [fibonacciValue, setFibonacciValue] = useState(null);
 
     const addTo80 = (n) => {
         return (
