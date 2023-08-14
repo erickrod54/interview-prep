@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 35.12-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.13-  DynamicProgramming - Features: 
  * 
- *     --> Destructuring 'fibonaccirecurssionmemo' from the context
+ *     --> Destructuring 'fibonaccimemosecond' from the context
  * 
  * Note: when the input value changes.
  */
@@ -17,6 +17,7 @@ const DynamicProgramming = () => {
 
     const { graphsData } = useAppContext();
     const fibonaccirecurssionmemo = graphsData[75].image;
+    const fibonaccimemosecond = graphsData[76].image;
 
     const fibonacci = (n) => {
         if (n <= 0) {
@@ -223,6 +224,8 @@ const DynamicProgramming = () => {
             this keep growing in calculations each time by overlaping triangles over triangles as 
             the calculation goes up
         </p>
+
+        <img src={fibonaccimemosecond} className="large" alt="fibonacci memo second"/>
 
         </DataStructuresWrapper>
     )
