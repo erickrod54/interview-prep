@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 35.14-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.15-  DynamicProgramming - Features: 
  * 
- *     --> Defining 'steps to apply dynamic programming '
+ *     --> Destructuring 'fibonaccirecurssionmemothird' from 
+ *         the context
  * 
  * Note: when the input value changes.
  */
@@ -18,6 +19,7 @@ const DynamicProgramming = () => {
     const { graphsData } = useAppContext();
     const fibonaccirecurssionmemo = graphsData[75].image;
     const fibonaccimemosecond = graphsData[76].image;
+    const fibonaccirecurssionmemothird = graphsData[77].image;
 
     const fibonacci = (n) => {
         if (n <= 0) {
@@ -248,6 +250,14 @@ const DynamicProgramming = () => {
                 demand a raise from your boss
             </li>
         </ul>
+
+        <p>
+            all of these steps combine <strong> divide and conquer </strong> + <strong> memoization </strong> 
+            to achieve optimization and performance goals
+        </p>
+
+        <img src={fibonaccirecurssionmemothird} className="large" alt="fibonacci recurssion memo third"/>
+
 
         </DataStructuresWrapper>
     )
