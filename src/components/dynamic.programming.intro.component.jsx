@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 35.13-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.14-  DynamicProgramming - Features: 
  * 
- *     --> Destructuring 'fibonaccimemosecond' from the context
+ *     --> Defining 'steps to apply dynamic programming '
  * 
  * Note: when the input value changes.
  */
@@ -226,6 +226,28 @@ const DynamicProgramming = () => {
         </p>
 
         <img src={fibonaccimemosecond} className="large" alt="fibonacci memo second"/>
+
+        <p>
+            so the <strong> steps to apply dynamic programming  </strong> are the following:
+        </p>
+
+        <ul>
+            <li>
+                Can be divided into a subproblem    
+            </li>
+            <li>
+                Recursive solution 
+            </li>
+            <li>
+                Are there repetitive subproblems
+            </li>
+            <li>
+                memoize subproblems
+            </li>
+            <li>
+                demand a raise from your boss
+            </li>
+        </ul>
 
         </DataStructuresWrapper>
     )
