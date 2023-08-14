@@ -76,11 +76,12 @@ import DFSpreorder from './DFS-in-pre-order.png';
 import DFSinpostorder from './DFS-in-post-order.png'
 import fibonaccirecurssionmemo from './fibonacci_recurssion_memo.png';
 import fibonaccimemosecond from './fibonacci_recurssion_memo_second.png';
+import fibonaccirecurssionmemothird from './fibonacci_recurssion_memo_third.png'
 
-/**interview-prep-app - version 35.13 - assets > index - 
+/**interview-prep-app - version 35.15 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'fibonaccimemosecond' asset.
+ *     --> Importing and exporting 'fibonaccirecurssionmemothird' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -162,5 +163,6 @@ export { bigo1stgraph,
          DFSpreorder,
          DFSinpostorder,
          fibonaccirecurssionmemo,
-         fibonaccimemosecond
+         fibonaccimemosecond,
+         fibonaccirecurssionmemothird
         };
