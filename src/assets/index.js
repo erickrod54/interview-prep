@@ -74,11 +74,12 @@ import depthfirstsearchimplementations from './depth-first-search-implementation
 import DFSinorder from './DFS-in-order.png';
 import DFSpreorder from './DFS-in-pre-order.png';
 import DFSinpostorder from './DFS-in-post-order.png'
+import fibonaccirecurssionmemo from './fibonacci_recurssion_memo.png'
 
-/**interview-prep-app - version 34.13 - assets > index - 
+/**interview-prep-app - version 35.12 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'DFSinpostorder' asset.
+ *     --> Importing and exporting 'fibonaccirecurssionmemo' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -158,5 +159,6 @@ export { bigo1stgraph,
          depthfirstsearchimplementations,
          DFSinorder,
          DFSpreorder,
-         DFSinpostorder
+         DFSinpostorder,
+         fibonaccirecurssionmemo
         };
