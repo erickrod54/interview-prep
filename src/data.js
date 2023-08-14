@@ -72,10 +72,11 @@ import { hashtable,
          depthfirstsearchimplementations,
          DFSinorder,
          DFSpreorder,
-         DFSinpostorder
+         DFSinpostorder,
+         fibonaccirecurssionmemo
          } from './assets/index';      
          
-/**interview-prep-app - version 34.17 - data js - 
+/**interview-prep-app - version 35.12 - data js - 
  * Features: 
  * 
  *     --> Placing 'beasts' data.   
@@ -522,6 +523,10 @@ export const linksData = [
       {
         id:74,
         image: DFSinpostorder
+      },
+      {
+        id:75,
+        image: fibonaccirecurssionmemo
       }
     ]
     
