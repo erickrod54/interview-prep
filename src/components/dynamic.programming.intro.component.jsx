@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
+import { useAppContext } from "../context";
 
-/**interview-prep-app - version 35.11-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.12-  DynamicProgramming - Features: 
  * 
- *     --> Rendering 'fibonacciValue' 
+ *     --> Destructuring 'fibonaccirecurssionmemo' from the context
  * 
  * Note: when the input value changes.
  */
@@ -13,6 +14,9 @@ const DynamicProgramming = () => {
     const [ addto80value, setaddTo80value ] = useState();
     const [ memoizedvalue, setMemoizedvalue ] = useState();
     const [fibonacciValue, setFibonacciValue] = useState(null);
+
+    const { graphsData } = useAppContext();
+    const fibonaccirecurssionmemo = graphsData[75].image;
 
     const fibonacci = (n) => {
         if (n <= 0) {
@@ -207,6 +211,17 @@ const DynamicProgramming = () => {
         
         <p>
             so one way to improve it is by using <strong> dynamic programming </strong> 
+        </p>
+
+        <p>
+            so let's see the fibonacci graph to check how the calculations are made:
+        </p>
+
+        <img src={fibonaccirecurssionmemo} className="large" alt="fibonacci recurssion memo"/>
+
+        <p>
+            this keep growing in calculations each time by overlaping triangles over triangles as 
+            the calculation goes up
         </p>
 
         </DataStructuresWrapper>
