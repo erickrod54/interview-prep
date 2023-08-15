@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 35.15-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.16-  DynamicProgramming - Features: 
  * 
- *     --> Destructuring 'fibonaccirecurssionmemothird' from 
+ *     --> Destructuring 'fibonaccimemofourth' from 
  *         the context
  * 
  * Note: when the input value changes.
@@ -20,6 +20,7 @@ const DynamicProgramming = () => {
     const fibonaccirecurssionmemo = graphsData[75].image;
     const fibonaccimemosecond = graphsData[76].image;
     const fibonaccirecurssionmemothird = graphsData[77].image;
+    const fibonaccimemofourth = graphsData[78].image;
 
     const fibonacci = (n) => {
         if (n <= 0) {
@@ -258,6 +259,12 @@ const DynamicProgramming = () => {
 
         <img src={fibonaccirecurssionmemothird} className="large" alt="fibonacci recurssion memo third"/>
 
+        <p>
+            by implementing a <strong> memoized </strong> solution i will get something as follows
+        </p>
+
+        <img src={fibonaccimemofourth} className="large" alt="fibonacci memo fourth"/>
+        
 
         </DataStructuresWrapper>
     )
