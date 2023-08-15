@@ -75,13 +75,14 @@ import { hashtable,
          DFSinpostorder,
          fibonaccirecurssionmemo,
          fibonaccimemosecond,
-         fibonaccirecurssionmemothird
+         fibonaccirecurssionmemothird,
+         fibonaccimemofourth
          } from './assets/index';      
          
-/**interview-prep-app - version 35.15 - data js - 
+/**interview-prep-app - version 35.16 - data js - 
  * Features: 
  * 
- *     --> Adding 'fibonaccirecurssionmemothird'  to graphsData.   
+ *     --> Adding 'fibonaccimemofourth'  to graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -537,6 +538,10 @@ export const linksData = [
       {
         id:77,
         image: fibonaccirecurssionmemothird
+      },
+      {
+        id:78,
+        image: fibonaccimemofourth
       }
     ]
     
