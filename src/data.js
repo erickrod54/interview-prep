@@ -79,14 +79,16 @@ import { hashtable,
          fibonaccimemofourth
          } from './assets/index';      
          
-/**interview-prep-app - version 35.16 - data js - 
+/**interview-prep-app - version 35.17 - data js - 
  * Features: 
  * 
- *     --> Adding 'fibonaccimemofourth'  to graphsData.   
+ *     --> Placing 'numbers'  data for searching.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
  */
+
+export const numberssearching = [ 9, 4, 6, 20, 170, 15, 1 ]
 
 export const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
