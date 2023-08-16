@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 34.19-  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 35.17-  SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'beasts' from the context ( fixed ).
+ *     --> Destructuring 'numbers' from the context.
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
  * with the post order.
@@ -13,7 +13,7 @@ import { useAppContext } from "../context";
 
 const SearchingAlgorithms = () => {
 
-    const { graphsData, beasts } = useAppContext();
+    const { graphsData, beasts, numberssearching } = useAppContext();
 
     const [ beastindexofvalue, setBeastindexofvalue ] = useState([]);
     const [ beastfindindexvalue, setBeastfindindexvalue ] = useState(false);
@@ -24,6 +24,8 @@ const SearchingAlgorithms = () => {
     const [ dfsInordervalue, setDFSInordervalue ] = useState([]);
     const [ dfsPreordervalue, setDFSPreordervalue ] = useState([]);
     const [ dfsPostordervalue, setdfsPostordervalue ] = useState([]);
+
+    const numbers = numberssearching;
 
     const bfsdfsalgorithms = graphsData[58].image;
     const typesbfsdfsalgorithms = graphsData[59].image;
@@ -45,7 +47,7 @@ const SearchingAlgorithms = () => {
 
     
 
-    const numbers = [ 9, 4, 6, 20, 170, 15, 1 ]
+    
 
     const beastindexofHandler = (array) => {
         return(
