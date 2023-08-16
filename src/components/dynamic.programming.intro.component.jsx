@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 35.16-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.18-  DynamicProgramming - Features: 
  * 
- *     --> Destructuring 'fibonaccimemofourth' from 
- *         the context
+ *     --> Building 'fasterfibvalue' state
  * 
  * Note: when the input value changes.
  */
@@ -15,6 +14,7 @@ const DynamicProgramming = () => {
     const [ addto80value, setaddTo80value ] = useState();
     const [ memoizedvalue, setMemoizedvalue ] = useState();
     const [fibonacciValue, setFibonacciValue] = useState(null);
+    const [ fasterfibvalue, setFasterfibvalue ] = useState(null);
 
     const { graphsData } = useAppContext();
     const fibonaccirecurssionmemo = graphsData[75].image;
