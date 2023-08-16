@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 35.20-  DynamicProgramming - Features: 
+/**interview-prep-app - version 36.00-  DynamicProgramming - Features: 
  * 
- *     --> Building 'fasterFib' variable
+ *     --> Rendering 'fasterfibvalue' value
  * 
  * Note: this 'fasterFib' will invoke fibonacciMaster().
  */
@@ -293,6 +293,25 @@ const DynamicProgramming = () => {
         </p>
 
         <img src={fibonaccimemofourth} className="large" alt="fibonacci memo fourth"/>
+
+        <h3>
+            Fibonacci Memoized:
+        </h3>
+
+        <p>
+            this fibonacci implementation makes less ammount of <strong> calculations </strong> tham the 
+            previous one, becuase it remembers the solutions ( does not pass from 40 because involves 
+            huge amount of calcualtions but below of that is faster than the previous )
+        </p>
+        
+        <input
+                type="num"
+                onChange={(event) => fasterFib(Number(event.target.value))}
+            />
+
+        <p>
+            Faster Fibonacci Value: <strong> {fasterfibvalue} </strong>
+        </p>
         
 
         </DataStructuresWrapper>
