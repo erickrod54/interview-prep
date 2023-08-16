@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 35.19-  DynamicProgramming - Features: 
+/**interview-prep-app - version 35.20-  DynamicProgramming - Features: 
  * 
- *     --> Building 'fibonacciMaster' state
+ *     --> Building 'fasterFib' variable
  * 
- * Note: this is the memoized version of fibonacci.
+ * Note: this 'fasterFib' will invoke fibonacciMaster().
  */
 
 const DynamicProgramming = () => {
@@ -58,6 +58,8 @@ const DynamicProgramming = () => {
             }
         }
     } 
+
+    const fasterFib = fibonacciMaster();
 
     /**The calculateFibonacci function is called when the input value changes. 
      * It calculates the Fibonacci value using the fibonacci function and updates
