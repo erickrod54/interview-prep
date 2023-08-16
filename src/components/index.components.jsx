@@ -27,11 +27,12 @@ import SortingComponent from "./sorting.component";
 import SortingInterview from "./sorting.interview.questions.component";
 import SearchingAlgorithms from "./searching.algorithms.component";
 import DynamicProgramming from "./dynamic.programming.intro.component";
+import NonTechnicalQuestions from "./non.technical.questions.component";
 
-/**interview-prep-app - version 34.15 - 
+/**interview-prep-app - version 36.01  - 
  * components > index - Features: 
  * 
- *     --> Importing and exporting 'DynamicProgramming'.
+ *     --> Importing and exporting 'NonTechnicalQuestions'.
  * 
  * Note: the first assets added to 'graphsData'
  * are for big notation app
@@ -65,5 +66,6 @@ export { ArrayDataStructure,
          SortingComponent,
          SortingInterview,
          SearchingAlgorithms,
-         DynamicProgramming              
+         DynamicProgramming,
+         NonTechnicalQuestions         
         }
