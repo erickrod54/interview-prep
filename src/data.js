@@ -79,10 +79,10 @@ import { hashtable,
          fibonaccimemofourth
          } from './assets/index';      
          
-/**interview-prep-app - version 35.17 - data js - 
+/**interview-prep-app - version 36.01 - data js - 
  * Features: 
  * 
- *     --> Placing 'numbers'  data for searching.   
+ *     --> Adding 'Non technical Interview'  linksData.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -209,6 +209,10 @@ export const linksData = [
       {
         id:'28',
         name:'Dynamic Programming Intro'
+      },
+      {
+        id:'29',
+        name:'Non technical Interview'
       }
       /**{
         id:'26',
