@@ -28,15 +28,16 @@ import { ArrayDataStructure,
          SortingComponent,
          SortingInterview,
          SearchingAlgorithms,
-         DynamicProgramming
+         DynamicProgramming,
+         NonTechnicalQuestions
         } from '../components/index.components';
         
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 34.15 - SingleTopicPage  
+/**interview-prep-app - version 36.01 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Adding 'DynamicProgramming' to the single topic. 
+ *     --> Adding 'NonTechnicalQuestions' to the single topic. 
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -167,6 +168,10 @@ const SingleTopicPage = () => {
 
     if (id === '28') {
         return <DynamicProgramming />
+    }
+
+    if (id === '29') {
+        return <NonTechnicalQuestions />
     }
     
 }
