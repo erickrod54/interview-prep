@@ -3,10 +3,10 @@ import { useAppContext } from "../context";
 import { Link } from 'react-router-dom'
 import styled from "styled-components";
 
-/**interview-prep-app - version 34.15 - TopicsPage 
+/**interview-prep-app - version 36.01 - TopicsPage 
  * - Features: 
  * 
- *     --> Adding 'Dynamic Programming' topic.
+ *     --> Adding 'Interview - Non Technical Questions' topic.
  * 
  * Note: setting titles and sub titles for the topics
  * also filtering 'linksData' by topics section.
@@ -51,6 +51,16 @@ const TopicsPage = () => {
         <h2>Dynamic Programming:</h2>
         <div className="topics-container">
         {linksData.filter((link) => link.id >= 28 ).map((item) => {
+            const { id, name } = item;
+            
+            return(
+                <Link key={id} to={`${id}`}>{name}</Link>
+                )
+            })}
+        </div>
+        <h2>Interview - Non Technical Questions:</h2>
+        <div className="topics-container">
+        {linksData.filter((link) => link.id >= 29 ).map((item) => {
             const { id, name } = item;
             
             return(
