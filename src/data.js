@@ -79,10 +79,10 @@ import { hashtable,
          fibonaccimemofourth
          } from './assets/index';      
          
-/**interview-prep-app - version 36.01 - data js - 
+/**interview-prep-app - version 36.02 - data js - 
  * Features: 
  * 
- *     --> Adding 'Non technical Interview'  linksData.   
+ *     --> Adding 'baskets'  linksData.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -91,6 +91,8 @@ import { hashtable,
 export const numberssearching = [ 9, 4, 6, 20, 170, 15, 1 ]
 
 export const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
+
+export const baskets = [2, 65, 34, 2, 1, 7, 8];
 
 export const linksData = [
   {
