@@ -76,13 +76,14 @@ import { hashtable,
          fibonaccirecurssionmemo,
          fibonaccimemosecond,
          fibonaccirecurssionmemothird,
-         fibonaccimemofourth
+         fibonaccimemofourth,
+         heroesnontechnicalinterview
          } from './assets/index';      
          
-/**interview-prep-app - version 36.02 - data js - 
+/**interview-prep-app - version 36.03 - data js - 
  * Features: 
  * 
- *     --> Adding 'baskets'  linksData.   
+ *     --> Adding 'heroesnontechnicalinterview'  tp graphsData.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -550,6 +551,10 @@ export const linksData = [
       {
         id:78,
         image: fibonaccimemofourth
+      },
+      {
+        id:79,
+        image: heroesnontechnicalinterview
       }
     ]
     
