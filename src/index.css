@@ -1,10 +1,19 @@
-/**interview-prep-app - version 28.10 - index css - 
+/**interview-prep-app - version 36.03 - index css - 
  * Features: 
  * 
- *     --> Writting margin for 'code-block'  
+ *     --> Writting '--color-primary' variable  
  * 
  * Note: to generate url's dinamicly
  */
+
+ :root{
+  font-size: 62.5%;
+  --color-primary:hsl(300, 100%, 50%);
+}
+
+.answer{
+  color: var(--color-primary);
+}
 
 body {
   margin: 0;
