@@ -78,11 +78,12 @@ import fibonaccirecurssionmemo from './fibonacci_recurssion_memo.png';
 import fibonaccimemosecond from './fibonacci_recurssion_memo_second.png';
 import fibonaccirecurssionmemothird from './fibonacci_recurssion_memo_third.png';
 import fibonaccimemofourth from './fibonacci_recurssion_memo_fourth.png';
+import heroesnontechnicalinterview from './4-heroes-nontechnical-interview.png';
 
-/**interview-prep-app - version 35.16 - assets > index - 
+/**interview-prep-app - version 36.03 - assets > index - 
  * Features: 
  * 
- *     --> Importing and exporting 'fibonaccimemofourth' asset.
+ *     --> Importing and exporting 'heroesnontechnicalinterview' asset.
  * 
  * Note: depending on how big will be this component
  * i'll make it's own context
@@ -166,5 +167,6 @@ export { bigo1stgraph,
          fibonaccirecurssionmemo,
          fibonaccimemosecond,
          fibonaccirecurssionmemothird,
-         fibonaccimemofourth
+         fibonaccimemofourth,
+         heroesnontechnicalinterview
         };
