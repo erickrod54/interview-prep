@@ -1,7 +1,8 @@
 import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
+import { useAppContext } from "../context";
 
-/**interview-prep-app - version 36.03-  NonTechnicalQuestions - Features:
+/**interview-prep-app - version 36.04-  NonTechnicalQuestions - Features:
  *
  *     --> Setting the questions for 'Non Technical Questions' 
  *
@@ -9,6 +10,11 @@ import { DataStructuresWrapper } from "../styled.components";
  */
 
 const NonTechnicalQuestions = () => {
+
+  const { graphsData } = useAppContext();
+
+  const heroesnontechnicalinterview = graphsData[79].image;
+
   return (
     <DataStructuresWrapper>
       <h2>Non Technical Questions</h2>
@@ -24,6 +30,13 @@ const NonTechnicalQuestions = () => {
         always try to <strong> sense </strong> and <strong> match </strong> at
         energy level
       </p>
+
+      <p>
+          there is a story component based for an interview as <strong> heroes </strong>
+          composition, and is as follows:
+      </p>
+
+      <img src={heroesnontechnicalinterview} className="large" alt="heroes non technical interview"/>
 
       <p>there is a list of questions and common answers following:</p>
 
