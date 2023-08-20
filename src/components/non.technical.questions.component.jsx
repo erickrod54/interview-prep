@@ -2,7 +2,7 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 36.06-  NonTechnicalQuestions - Features:
+/**interview-prep-app - version 36.07-  NonTechnicalQuestions - Features:
  *
  *     --> Answering the questions for 'Non Technical Questions' - Work in Progress -
  *
@@ -155,15 +155,74 @@ const NonTechnicalQuestions = () => {
 
         <p className="answer">
 
+            this is a direct questions to the interviewer, how do they grow to that point,
+            and mention something that they mention, th goal is to meet them 
+
+            <ul>
+                <li>
+                    Focus on them, not company 
+                </li>
+                <li>
+                    Mention something that they mention 
+                </li>
+            </ul>
+            
+            questions can be like:
+
+            <ul>
+                <li>
+                    What was the greatest mistake that you made in the first month of this job ? 
+                </li>
+                <li>
+                    Where do you see this company going in a period of 5 years ? 
+                </li>
+                <li>
+                    Why did you join to this company ? 
+                </li>
+                <li>
+                    The first time that you messed up, how was handle by the company ?
+                </li>
+            </ul>                      
         </p>
 
         <li>Secret Weapon</li>
 
-        <p className="answer"></p>
+        <p className="answer">
+            these are key concepts that must be include in every answer:
+            
+            <ul>
+                <li>Simplicity over complexity ( solving problems in a way that the code is maintainable and readable )</li>
+                <li>Premature optimization us the root of all evil ( based on time and resources i have to probe the value of this in order to make optimizations )</li>
+                <li>Overall goal, not myopic ( probe that i can attach to the business or customer goals, even on situation that the code don't have my personal 
+                    expections, when i consider that have right numbers to go to production and get aligned with the deadline i deply it  ) </li>
+            </ul>
+        </p>
 
         <li>After the interview</li>
 
-        <p className="answer"></p>
+        <p className="answer">
+            First of all i have to show them my good impression, thank them for their time, and focus that i expect hear back 
+            from them, and get somefeedback whatever the final decision is, the keys for answer this questions are:
+
+            <ul>
+                <li>
+                    Don't overuse 'I'
+                </li>
+                <li>
+                    Talk about the interviewer
+                </li>
+                <li>
+                    Express that i am the ideal candidate ( how my workflow approach novel and creative ideas, 
+                    that i don't need micromanagement due to my experience and in one year i'll be one of your best assets )
+                </li>
+                <li>
+                    Don't brag
+                </li>
+            </ul>
+
+            express my expection to be sorrounded of a diverse and creative group of people that i can work and grow with like the same
+            interviewer
+        </p>
       </ul>
     </DataStructuresWrapper>
   );
