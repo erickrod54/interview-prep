@@ -2,7 +2,7 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 36.05-  NonTechnicalQuestions - Features:
+/**interview-prep-app - version 36.06-  NonTechnicalQuestions - Features:
  *
  *     --> Answering the questions for 'Non Technical Questions' - Work in Progress -
  *
@@ -79,6 +79,14 @@ const NonTechnicalQuestions = () => {
                 <li>have metrics and numbers ( is related with the action taken - workflow, to lists, tests, etc )</li>
                 <li>Scaling, performance and security ( is related with the result - the benefit )</li>
             </ul>
+
+            a variation of this questions can be:
+
+                <ul>
+                    <li>Tell me aboout an interesting project ?</li>
+                </ul>
+
+                First i have to show that i am different, and i have to relate this interesting project to the job description
         </p>
 
         <li>Why do you want work with us ?</li>
@@ -122,7 +130,32 @@ const NonTechnicalQuestions = () => {
 
         <li>What is your biggeest weakness ?</li>
 
-        <p className="answer"></p>
+        <p className="answer">
+            the key for this question is to 
+
+            <ul>
+                <li>
+                    Real answer
+                </li>
+
+                <li>
+                    Show how i improved 
+                </li>
+            </ul>
+
+            the answer for this question to explain how i after starting in my early career with a solid
+            IT background, i end up switching to develop software due to my migration process and how throught 
+            that path i discover that i were really skillful and capable to build amazing things and to use 
+            this skill to survive in my difficult migration journey, until this point that i reach,
+            stability and focus that even when i lost my gear, i never gave up and code even from my phone
+            ( the bad thing it is that was really difficult to deploy and test the code )
+        </p>
+
+        <li>Do you have any questions for me ?</li>
+
+        <p className="answer">
+
+        </p>
 
         <li>Secret Weapon</li>
 
