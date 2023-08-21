@@ -2,9 +2,9 @@ import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 36.07-  NonTechnicalQuestions - Features:
+/**interview-prep-app - version 36.08-  NonTechnicalQuestions - Features:
  *
- *     --> Answering the questions for 'Non Technical Questions' - Work in Progress -
+ *     --> Answering the questions for 'Non Technical Questions' - Finish answers -
  *
  * Note: this 'fasterFib' will invoke fibonacciMaster().
  */
@@ -41,19 +41,6 @@ const NonTechnicalQuestions = () => {
       <p>there is a list of questions and common answers following:</p>
 
       <ul>
-        <li>Can you do the job ?</li>
-
-        <p className="answer">
-
-        </p>
-
-        <li>Can i work with you ?</li>
-
-        <p className="answer"></p>
-
-        <li>Are you going to improve ?</li>
-
-        <p className="answer"></p>
 
         <li>Why did i leave my last job ?</li>
 
@@ -213,7 +200,7 @@ const NonTechnicalQuestions = () => {
                 </li>
                 <li>
                     Express that i am the ideal candidate ( how my workflow approach novel and creative ideas, 
-                    that i don't need micromanagement due to my experience and in one year i'll be one of your best assets )
+                    that i don't need micromanagement due to my experience and in one year i'll be one of your best assets, focus on my freelancer experience to adapt and grow )
                 </li>
                 <li>
                     Don't brag
