@@ -3,10 +3,10 @@ import { useAppContext } from "../context";
 import { Link } from 'react-router-dom'
 import styled from "styled-components";
 
-/**interview-prep-app - version 36.01 - TopicsPage 
+/**interview-prep-app - version 36.09 - TopicsPage 
  * - Features: 
  * 
- *     --> Adding 'Interview - Non Technical Questions' topic.
+ *     --> Adding 'Offer and Negotiation' topic.
  * 
  * Note: setting titles and sub titles for the topics
  * also filtering 'linksData' by topics section.
@@ -61,6 +61,16 @@ const TopicsPage = () => {
         <h2>Interview - Non Technical Questions:</h2>
         <div className="topics-container">
         {linksData.filter((link) => link.id >= 29 ).map((item) => {
+            const { id, name } = item;
+            
+            return(
+                <Link key={id} to={`${id}`}>{name}</Link>
+                )
+            })}
+        </div>
+        <h2>Offer and Negotiation:</h2>
+        <div className="topics-container">
+        {linksData.filter((link) => link.id >= 30 ).map((item) => {
             const { id, name } = item;
             
             return(
