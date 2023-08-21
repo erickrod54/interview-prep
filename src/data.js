@@ -80,10 +80,10 @@ import { hashtable,
          heroesnontechnicalinterview
          } from './assets/index';      
          
-/**interview-prep-app - version 36.03 - data js - 
+/**interview-prep-app - version 36.09 - data js - 
  * Features: 
  * 
- *     --> Adding 'heroesnontechnicalinterview'  tp graphsData.   
+ *     --> Adding 'Offer and Negotiation'  to LinksData.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -216,7 +216,11 @@ export const linksData = [
       {
         id:'29',
         name:'Non technical Interview'
-      }
+      },
+      {
+        id:'30',
+        name:'Offer and Negotiation intro'
+      },
       /**{
         id:'26',
         name:'Dynamic Programming Intro'
