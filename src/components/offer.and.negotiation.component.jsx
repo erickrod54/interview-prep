@@ -1,7 +1,7 @@
 import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 36.11 - OfferAndNegotiation - 
+/**interview-prep-app - version 36.12 - OfferAndNegotiation - 
  * Features: 
  * 
  *     --> Answering  'OfferAndNegotiation' - Work in progress.   
@@ -51,6 +51,31 @@ const OfferAndNegotiation = () => {
             </p>
 
             <h3>Handling multiple offers:</h3>
+
+            <p>
+                From the most important to the less important there is a list to handle this situation:
+
+                <ul>
+                    <li>
+                        Is there an offer that i feel i am are under qualifed for ?
+                    </li>
+                    <li>
+                        Long term growth potential ( balance of the multiple offer what is th offer that make me grow )
+                    </li>
+                    <li>
+                        Will i respect people around me ? ( not a matter of age, a matter of skills + experience + personality, people that i can learn with )
+                    </li>
+                    <li>
+                        Salary and benefits ? ( i have insurance for my eyes, hands, and general insurance )
+                    </li>
+                    <li>
+                        Is my decision based on desesperation ? ( focus on my current situation - low of contracts 
+                        ( never happen jeje ) - and make the best decision if the offer is good, the joob that make me comfotable and happy )
+                    </li>
+                </ul>
+
+                Note: reference to the phycological study of the cake, one slice of cake now, or two slices of cake in the future
+            </p>
 
             <h3>Handling a rejection:</h3>
 
