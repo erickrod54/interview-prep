@@ -29,15 +29,16 @@ import { ArrayDataStructure,
          SortingInterview,
          SearchingAlgorithms,
          DynamicProgramming,
-         NonTechnicalQuestions
+         NonTechnicalQuestions,
+         OfferAndNegotiation
         } from '../components/index.components';
         
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 36.01 - SingleTopicPage  
+/**interview-prep-app - version 36.09 - SingleTopicPage  
  * - Features: 
  * 
- *     --> Adding 'NonTechnicalQuestions' to the single topic. 
+ *     --> Adding 'OfferAndNegotiation' to the single topic. 
  * 
  * Note: Pending to re structure imports using the index.
  */
@@ -172,6 +173,10 @@ const SingleTopicPage = () => {
 
     if (id === '29') {
         return <NonTechnicalQuestions />
+    }
+
+    if (id === '30') {
+        return <OfferAndNegotiation />
     }
     
 }
