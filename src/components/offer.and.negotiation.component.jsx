@@ -1,10 +1,10 @@
 import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 36.12 - OfferAndNegotiation - 
+/**interview-prep-app - version 36.13 - OfferAndNegotiation - 
  * Features: 
  * 
- *     --> Answering  'OfferAndNegotiation' - Work in progress.   
+ *     --> Answering  'OfferAndNegotiation' - finish.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -87,6 +87,24 @@ const OfferAndNegotiation = () => {
             </p>
 
             <h3>Getting a raise:</h3>
+
+            <p>
+                Is hopefully not than hard once that i have the <strong> value </strong> to the company
+                and been also a good employee, and hit the ground running planning the career path
+                that's the way i find myself in the company in 5 years, there is tips to handle
+                this situation
+
+                <ul>
+                    <li>
+                         Ask for a raise ( rather to keep experience for the company, so this can be done once i get the company experience )       
+                    </li>
+                    <li>
+                         Show. Don't tell ( make a presentation that i have improving towards company goals throght numbers )       
+                    </li>
+                </ul>
+
+                this is a processs that have time set soemtimes <strong> 6 months mark </strong>, sometimes <strong> 3 months mark </strong>
+            </p>
 
             <h3>Negotiation 101:</h3>
 
