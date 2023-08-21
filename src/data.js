@@ -80,10 +80,10 @@ import { hashtable,
          heroesnontechnicalinterview
          } from './assets/index';      
          
-/**interview-prep-app - version 36.09 - data js - 
+/**interview-prep-app - version 36.14 - data js - 
  * Features: 
  * 
- *     --> Adding 'Offer and Negotiation'  to LinksData.   
+ *     --> Placing 'spanishs'  data.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -94,6 +94,8 @@ export const numberssearching = [ 9, 4, 6, 20, 170, 15, 1 ]
 export const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie']
 
 export const baskets = [2, 65, 34, 2, 1, 7, 8];
+
+export const spanishs = ['único', 'árbol', 'cosas', 'fútbol'];
 
 export const linksData = [
   {
