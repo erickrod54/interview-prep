@@ -1,10 +1,10 @@
 import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 
-/**interview-prep-app - version 36.10 - OfferAndNegotiation - 
+/**interview-prep-app - version 36.11 - OfferAndNegotiation - 
  * Features: 
  * 
- *     --> Stating 'OfferAndNegotiation'  and answering topics.   
+ *     --> Answering  'OfferAndNegotiation' - Work in progress.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -20,7 +20,34 @@ const OfferAndNegotiation = () => {
             <h3>Handling an offer:</h3>
 
             <p>
+                Make an agreement on why i am the right fit on the team, by this point the conversation 
+                keep going for both parties in the same page, in a positive mood, there are some tips to
+                handle this answer: 
 
+                <ul>
+                    <li>
+                        Don't end the conversation
+                    </li>
+                    <li>
+                        Be positive
+                    </li>
+                    <li>
+                        Ask for time
+                    </li>
+                    <li>
+                        Let other companies know ( for the case of multiple offers or frelancer contracts )
+                    </li>
+                </ul>
+
+                and key to keep in mind is to let them know that i will produce <strong> big value </strong>
+                to the company ( because this builds social probe ), there is a todo list that must be made
+                previous to this process as:
+
+                <ul>
+                    <li>Find the exact salary that i want ( get the average salary or above it )</li>
+                    <li>What value i am going to provide to the company ( create a value for the company )</li>
+                    <li>If you have a goog <strong> value </strong> for the company i can ask more and go higher </li>
+                </ul>
             </p>
 
             <h3>Handling multiple offers:</h3>
@@ -68,6 +95,9 @@ const OfferAndNegotiation = () => {
                         Be positive
                     </li>
                 </ul>
+
+                It is always good to have <strong> steakes </strong> as other options as <strong> multiple offers </strong>, or as 
+                my <strong> freelance job </strong>, and always work with recruiters to make changes fast and complete the offer 
             </p>
 
         </DataStructuresWrapper>
