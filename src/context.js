@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 36.14 - context js - 
+/**interview-prep-app - version 36.16 - context js - 
  * Features: 
  * 
- *     --> Importing and Providing 'numberssorting' data
+ *     --> Importing and Providing 'cleanQuickSort' data
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -548,6 +548,12 @@ export const AppProvider = ({ children }) => {
         }, 6000)
     }
 
+    const cleanQuickSort = () => {
+        setTimeout(() => {
+            setQuicksortvalue(' value cleared!, hit again! ')
+        }, 2000);
+      }
+
     return (
         <AppContext.Provider value={{
             nemo,
@@ -616,6 +622,7 @@ export const AppProvider = ({ children }) => {
             c_zero_state,
             letters,
             numberssorting,
+            cleanQuickSort,
             setA_zero_state,
             setB_zero_state,
             setC_zero_state,
