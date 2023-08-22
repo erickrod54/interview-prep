@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 36.15 - SortingComponent  
+/**interview-prep-app - version 36.16 - SortingComponent  
  * - Features: 
  * 
- *     --> Migrating and Destructuring 'numberssorting' sorting data
+ *     --> Migrating and Destructuring 'cleanQuickSort' sorting data
  * 
  * Note: Quick sort is going to be applied over
  * numebrs array
@@ -25,7 +25,7 @@ const SortingComponent = () => {
     const [ quicksortvalue, setQuicksortvalue ] = useState([]);
     
 
-    const { graphsData, letters, baskets, spanishs, numberssorting } = useAppContext();
+    const { graphsData, letters, baskets, spanishs, numberssorting, cleanQuickSort } = useAppContext();
 
     const spanish = spanishs;
     const basket = baskets;
@@ -79,11 +79,7 @@ const SortingComponent = () => {
                 );
       }
 
-      const cleanQuickSort = () => {
-        setTimeout(() => {
-            setQuicksortvalue(' value cleared!, hit again! ')
-        }, 2000);
-      }
+      
          
       function partition(array, pivot, left, right){
         let pivotValue = array[pivot];
