@@ -80,10 +80,10 @@ import { hashtable,
          heroesnontechnicalinterview
          } from './assets/index';      
          
-/**interview-prep-app - version 36.14 - data js - 
+/**interview-prep-app - version 36.15 - data js - 
  * Features: 
  * 
- *     --> Placing 'spanishs'  data.   
+ *     --> Placing 'numberssorting'  data.   
  * 
  * Note: By this point i will start to relate algorithms with
  * data structures. the mergesorthalfagaindataset has been added
@@ -96,6 +96,8 @@ export const beasts = ['Centaur','Godzilla','Mosura','Minotaur','Hydra','Nessie'
 export const baskets = [2, 65, 34, 2, 1, 7, 8];
 
 export const spanishs = ['único', 'árbol', 'cosas', 'fútbol'];
+
+export const numberssorting = [99, 44, 6, 2, 1, 5, 63, 87,283, 4, 0 ];
 
 export const linksData = [
   {
