@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 36.03 - SortingComponent  
+/**interview-prep-app - version 36.14 - SortingComponent  
  * - Features: 
  * 
- *     --> Migrating and Destructuring 'baskets' sorting data
+ *     --> Migrating and Destructuring 'spanish' sorting data
  * 
  * Note: Quick sort is going to be applied over
  * numebrs array
@@ -25,8 +25,9 @@ const SortingComponent = () => {
     const [ quicksortvalue, setQuicksortvalue ] = useState([]);
     
 
-    const { graphsData, letters, baskets } = useAppContext();
+    const { graphsData, letters, baskets, spanishs } = useAppContext();
 
+    const spanish = spanishs;
     const basket = baskets;
 
     const sortingimportance = graphsData[41].image; 
@@ -51,7 +52,7 @@ const SortingComponent = () => {
     
     
     
-    const spanish = ['único', 'árbol', 'cosas', 'fútbol'];
+    
     
     const numbers = [99, 44, 6, 2, 1, 5, 63, 87,283, 4, 0 ];
 
