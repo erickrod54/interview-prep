@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
-import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, spanishs } from "./data";
+import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
 /**interview-prep-app - version 36.14 - context js - 
  * Features: 
  * 
- *     --> Importing and Providing 'spanishs' data
+ *     --> Importing and Providing 'numberssorting' data
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -615,6 +615,7 @@ export const AppProvider = ({ children }) => {
             b_zero_state,
             c_zero_state,
             letters,
+            numberssorting,
             setA_zero_state,
             setB_zero_state,
             setC_zero_state,
@@ -649,6 +650,7 @@ export const AppProvider = ({ children }) => {
             numberssearching,
             baskets,
             spanishs,
+            numberssorting,
             findNemo,
             handleFindNemo,
             handleFindNemoWithTime,
