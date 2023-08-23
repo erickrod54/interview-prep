@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 36.17 - context js - 
+/**interview-prep-app - version 36.18 - context js - 
  * Features: 
  * 
- *     --> Fixing 'setQuicksortvalue' value
+ *     --> Providing ' quicksortvalue' handler and quickSort,' state
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -551,6 +551,29 @@ export const AppProvider = ({ children }) => {
     //Quicksort states and handlers
     const [ quicksortvalue, setQuicksortvalue ] = useState([]);
 
+    const quickSort = (array, left, right) => {
+        const len = array.length; 
+        let pivot;
+        let partitionIndex;
+      
+        if(left < right) {
+          pivot = right;
+          partitionIndex = partition(array, pivot, left, right);
+          
+          //sort left and right
+
+          /**the pivot is the last item 'partitionIndex - 1' of each 
+           * split list ( this process is ramdom )*/
+          quickSort(array, left, partitionIndex - 1);
+          quickSort(array, partitionIndex + 1, right);
+        }
+        return (
+                setQuicksortvalue(array + ',' ),
+                array,
+                cleanQuickSort()
+                );
+      }
+
     const cleanQuickSort = () => {
         setTimeout(() => {
             setQuicksortvalue(' value cleared!, hit again! ')
@@ -625,6 +648,8 @@ export const AppProvider = ({ children }) => {
             c_zero_state,
             letters,
             numberssorting,
+            quicksortvalue,
+            quickSort,
             cleanQuickSort,
             setA_zero_state,
             setB_zero_state,
