@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 36.16 - SortingComponent  
+/**interview-prep-app - version 36.18 - SortingComponent  
  * - Features: 
  * 
- *     --> Migrating and Destructuring 'cleanQuickSort' sorting data
+ *     --> Migrating and Destructuring 'quicksortvalue' and  'quickSort' sorting data
  * 
  * Note: Quick sort is going to be applied over
  * numebrs array
@@ -22,10 +22,10 @@ const SortingComponent = () => {
     const [ selectionsortvalue, setSelectionsortvalue ] = useState([]);
     const [ insertionsortvalue, setInsertionsortvalue ] = useState([]);
     const [ mergesortvalue, setMergesortvalue ] = useState([]);
-    const [ quicksortvalue, setQuicksortvalue ] = useState([]);
+    //const [ quicksortvalue, setQuicksortvalue ] = useState([]);
     
 
-    const { graphsData, letters, baskets, spanishs, numberssorting, cleanQuickSort } = useAppContext();
+    const { graphsData, letters, baskets, spanishs, numberssorting,  quicksortvalue, quickSort } = useAppContext();
 
     const spanish = spanishs;
     const basket = baskets;
@@ -55,29 +55,6 @@ const SortingComponent = () => {
     
     
     const numbers = numberssorting;
-
-    const quickSort = (array, left, right) => {
-        const len = array.length; 
-        let pivot;
-        let partitionIndex;
-      
-        if(left < right) {
-          pivot = right;
-          partitionIndex = partition(array, pivot, left, right);
-          
-          //sort left and right
-
-          /**the pivot is the last item 'partitionIndex - 1' of each 
-           * split list ( this process is ramdom )*/
-          quickSort(array, left, partitionIndex - 1);
-          quickSort(array, partitionIndex + 1, right);
-        }
-        return (
-                setQuicksortvalue(array + ',' ),
-                array,
-                cleanQuickSort()
-                );
-      }
 
       
          
