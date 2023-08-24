@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 36.18 - context js - 
+/**interview-prep-app - version 36.20 - context js - 
  * Features: 
  * 
- *     --> Providing ' quicksortvalue' handler and quickSort,' state
+ *     --> Providing ' beastindexofvalue' state
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -580,6 +580,10 @@ export const AppProvider = ({ children }) => {
         }, 2000);
       }
 
+      /**these are searching.algorithms.component handlers and state */
+
+      const [ beastindexofvalue, setBeastindexofvalue ] = useState([]);
+
     return (
         <AppContext.Provider value={{
             nemo,
@@ -649,6 +653,7 @@ export const AppProvider = ({ children }) => {
             letters,
             numberssorting,
             quicksortvalue,
+            beastindexofvalue,
             quickSort,
             cleanQuickSort,
             setA_zero_state,
@@ -715,7 +720,8 @@ export const AppProvider = ({ children }) => {
             callSetTimeoutStack,
             cleanUpSetTimeoutfunction,
             callSetTimeoutStackZero,
-            cleanUpSetTimeoutZerofunction
+            cleanUpSetTimeoutZerofunction,
+            setBeastindexofvalue
         }}>
             {children}
         </AppContext.Provider>
