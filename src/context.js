@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 36.20 - context js - 
+/**interview-prep-app - version 37.00 - context js - 
  * Features: 
  * 
- *     --> Providing ' beastindexofvalue' state
+ *     --> Providing ' beastindexofHandler' handler
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -584,6 +584,13 @@ export const AppProvider = ({ children }) => {
 
       const [ beastindexofvalue, setBeastindexofvalue ] = useState([]);
 
+      const beastindexofHandler = (array) => {
+        return(
+            setBeastindexofvalue(array.indexOf('Godzilla')),
+            array.indexOf('Godzilla')
+        )
+    }
+
     return (
         <AppContext.Provider value={{
             nemo,
@@ -721,7 +728,7 @@ export const AppProvider = ({ children }) => {
             cleanUpSetTimeoutfunction,
             callSetTimeoutStackZero,
             cleanUpSetTimeoutZerofunction,
-            setBeastindexofvalue
+            beastindexofHandler
         }}>
             {children}
         </AppContext.Provider>
