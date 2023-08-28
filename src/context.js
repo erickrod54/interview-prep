@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 37.00 - context js - 
+/**interview-prep-app - version 37.02 - context js - 
  * Features: 
  * 
- *     --> Providing ' beastindexofHandler' handler
+ *     --> Migrating 'partition' handler
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -572,6 +572,26 @@ export const AppProvider = ({ children }) => {
                 array,
                 cleanQuickSort()
                 );
+      }
+
+      function partition(array, pivot, left, right){
+        let pivotValue = array[pivot];
+        let partitionIndex = left;
+      
+        for(let i = left; i < right; i++) {
+          if(array[i] < pivotValue){
+            swap(array, i, partitionIndex);
+            partitionIndex++;
+          }
+        }
+        swap(array, right, partitionIndex);
+        return partitionIndex;
+      }
+      
+      function swap(array, firstIndex, secondIndex){
+          var temp = array[firstIndex];
+          array[firstIndex] = array[secondIndex];
+          array[secondIndex] = temp;
       }
 
     const cleanQuickSort = () => {
