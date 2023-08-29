@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 36.19 - SortingComponent  
+/**interview-prep-app - version 37.02 - SortingComponent  
  * - Features: 
  * 
- *     --> Clearing 'quicksortvalue' local state
+ *     --> Migrating 'quicksortvalue' local state
  * 
  * Note: Quick sort is going to be applied over
  * numebrs array
@@ -26,6 +26,7 @@ const SortingComponent = () => {
 
     const { graphsData, letters, baskets, spanishs, numberssorting,  quicksortvalue, quickSort } = useAppContext();
 
+    const numbers = numberssorting;
     const spanish = spanishs;
     const basket = baskets;
 
@@ -50,32 +51,6 @@ const SortingComponent = () => {
     console.log('graphsData ==>', graphsData)
     
     
-    numbers = numberssorting;
-    
-    
-    const numbers = numberssorting;
-
-      
-         
-      function partition(array, pivot, left, right){
-        let pivotValue = array[pivot];
-        let partitionIndex = left;
-      
-        for(let i = left; i < right; i++) {
-          if(array[i] < pivotValue){
-            swap(array, i, partitionIndex);
-            partitionIndex++;
-          }
-        }
-        swap(array, right, partitionIndex);
-        return partitionIndex;
-      }
-      
-      function swap(array, firstIndex, secondIndex){
-          var temp = array[firstIndex];
-          array[firstIndex] = array[secondIndex];
-          array[secondIndex] = temp;
-      }
     
     const length = numbers.length;
     const middle = Math.floor(length / 2 );
