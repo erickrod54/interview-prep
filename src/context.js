@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 37.04 - context js - 
+/**interview-prep-app - version 37.06 - context js - 
  * Features: 
  * 
- *     --> Placing  'handleSortletters' handler
+ *     --> Placing  'basketsorted', 'setBasketsorted' 
+ *         states
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -613,6 +614,7 @@ export const AppProvider = ({ children }) => {
 
     /**sorting.component states and handlers */
     const [ lettersorted, setLettersorted ] = useState([]);
+    const [ basketsorted, setBasketsorted ] = useState([]);
 
     const handleSortletters = () => {
         let letterssort = letters.sort()
@@ -691,6 +693,8 @@ export const AppProvider = ({ children }) => {
             quicksortvalue,
             beastindexofvalue,
             lettersorted,
+            basketsorted, 
+            setBasketsorted,
             handleSortletters,
             setLettersorted,
             quickSort,
