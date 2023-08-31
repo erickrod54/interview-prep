@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 37.02 - context js - 
+/**interview-prep-app - version 37.03 - context js - 
  * Features: 
  * 
- *     --> Migrating 'partition' handler
+ *     --> Placing  'lettersorted', and 'setLettersorted,
  * 
  * 
  * Note: pending to migrate functionalities from
@@ -611,6 +611,9 @@ export const AppProvider = ({ children }) => {
         )
     }
 
+    /**sorting.component states and handlers */
+    const [ lettersorted, setLettersorted ] = useState([]);
+
     return (
         <AppContext.Provider value={{
             nemo,
@@ -681,6 +684,8 @@ export const AppProvider = ({ children }) => {
             numberssorting,
             quicksortvalue,
             beastindexofvalue,
+            lettersorted,
+            setLettersorted,
             quickSort,
             cleanQuickSort,
             setA_zero_state,
