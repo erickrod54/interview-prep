@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 37.07 - context js - 
+/**interview-prep-app - version 37.08 - context js - 
  * Features: 
  * 
- *     --> Placing  'spanishsorted', and 'setSpanishsorted' 
+ *     --> Placing  'handleSpanishsorted' 
  *         states
  * 
  * 
@@ -617,10 +617,18 @@ export const AppProvider = ({ children }) => {
     const [ basketsorted, setBasketsorted ] = useState([]);
     const [ spanishsorted, setSpanishsorted ] = useState([]);
 
+    const spanish = spanishs;
+
     const handleSortletters = () => {
         let letterssort = letters.sort()
         setLettersorted(letterssort)
         console.log(lettersorted)
+    }
+
+    const handleSpanishsorted = () => {
+        let spanishsort = spanish.sort()
+        setSpanishsorted(spanishsort)
+        console.log(spanishsort)
     }
     
 
@@ -697,6 +705,7 @@ export const AppProvider = ({ children }) => {
             lettersorted,
             basketsorted, 
             spanishsorted,
+            handleSpanishsorted,
             setSpanishsorted,
             setBasketsorted,
             handleSortletters,
