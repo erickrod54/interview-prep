@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 37.06 - SortingComponent  
+/**interview-prep-app - version 37.07 - SortingComponent  
  * - Features: 
  * 
- *     --> Migrating 'basketsorted', and 'setBasketsorted'
+ *     --> Migrating 'spanishsorted', and 'setSpanishsorted',
  * 
  * Note: Quick sort is going to be applied over
  * numebrs array
@@ -14,7 +14,6 @@ import { useAppContext } from "../context";
 const SortingComponent = () => {
 
     const [ basketsortedfixed, setBasketsortedfixed ] = useState([]);
-    const [ spanishsorted, setSpanishsorted ] = useState([]);
     const [ spanishsortedfixed, setSpanishsortedfixed ] = useState([]);
     const [ bubblesortvalue, setBubblesortvalue ] = useState([]);
     const [ selectionsortvalue, setSelectionsortvalue ] = useState([]);
@@ -22,7 +21,11 @@ const SortingComponent = () => {
     const [ mergesortvalue, setMergesortvalue ] = useState([]);
     
 
-    const { graphsData, letters, baskets, spanishs, numberssorting,  quicksortvalue, quickSort, lettersorted, handleSortletters, basketsorted, setBasketsorted } = useAppContext();
+    const { graphsData, 
+            letters, 
+            baskets, 
+            spanishs, 
+            numberssorting,  quicksortvalue, quickSort, lettersorted, handleSortletters, basketsorted, setBasketsorted, spanishsorted, setSpanishsorted } = useAppContext();
 
     const numbers = numberssorting;
     const spanish = spanishs;
