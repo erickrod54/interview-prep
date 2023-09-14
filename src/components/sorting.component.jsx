@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 37.10 - SortingComponent  
+/**interview-prep-app - version 37.11 - SortingComponent  
  * - Features: 
  * 
- *     --> Destructuring 'basketsortedfixed' and 'setBasketsortedfixed'
+ *     --> Destructuring 'handleSortbasketfixed'
  * 
- * Note: Quick sort is going to be applied over
- * numebrs array
+ * Note: pending to clear 'setBasketsortedfixed' from the 
+ * context destructuring 'setBasketsortedfixed'
  */
 
 const SortingComponent = () => {
@@ -32,7 +32,7 @@ const SortingComponent = () => {
             basketsorted,
             setBasketsorted, 
             spanishsorted, 
-            handleSpanishsorted, basketsortedfixed, setBasketsortedfixed } = useAppContext();
+            handleSpanishsorted, basketsortedfixed, setBasketsortedfixed, handleSortbasketfixed } = useAppContext();
         
     const numbers = numberssorting;
     const spanish = spanishs;
@@ -163,15 +163,6 @@ const SortingComponent = () => {
     const handleSortbasket = () => {
         let basketsort = basket.sort()
         setBasketsorted(basketsort)
-        console.log(basketsort)
-    }
-
-    const handleSortbasketfixed = () => {
-        let basketsort = basket.sort(function(a,b){
-            return a-b;
-        });
-
-        setBasketsortedfixed(basketsort)
         console.log(basketsort)
     }
 
