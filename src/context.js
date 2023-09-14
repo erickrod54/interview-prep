@@ -1,15 +1,14 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 37.10 - context js - 
+/**interview-prep-app - version 37.11 - context js - 
  * Features: 
  * 
- *     --> Placing  'basketsortedfixed' and 'setBasketsortedfixed'
- *         states
+ *     --> Placing  'handleSortbasketfixed' handler
  * 
  * 
- * Note: pending to migrate functionalities from
- * local components
+ * Note: pending to clear 'basketsortedfixed', 'setBasketsortedfixed'
+ * from the provider
  */
 
 
@@ -631,6 +630,15 @@ export const AppProvider = ({ children }) => {
         setSpanishsorted(spanishsort)
         console.log(spanishsort)
     }
+
+    const handleSortbasketfixed = () => {
+        let basketsort = basket.sort(function(a,b){
+            return a-b;
+        });
+
+        setBasketsortedfixed(basketsort)
+        console.log(basketsort)
+    }
     
 
     return (
@@ -708,6 +716,7 @@ export const AppProvider = ({ children }) => {
             spanishsorted,
             basketsortedfixed,
             setBasketsortedfixed,
+            handleSortbasketfixed,
             handleSpanishsorted,
             setSpanishsorted,
             setBasketsorted,
