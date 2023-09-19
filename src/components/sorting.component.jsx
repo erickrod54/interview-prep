@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 37.11 - SortingComponent  
+/**interview-prep-app - version 37.12 - SortingComponent  
  * - Features: 
  * 
- *     --> Destructuring 'handleSortbasketfixed'
+ *     --> Clearing 'setBasketsortedfixed'
  * 
  * Note: pending to clear 'setBasketsortedfixed' from the 
  * context destructuring 'setBasketsortedfixed'
@@ -32,7 +32,7 @@ const SortingComponent = () => {
             basketsorted,
             setBasketsorted, 
             spanishsorted, 
-            handleSpanishsorted, basketsortedfixed, setBasketsortedfixed, handleSortbasketfixed } = useAppContext();
+            handleSpanishsorted, basketsortedfixed, handleSortbasketfixed } = useAppContext();
         
     const numbers = numberssorting;
     const spanish = spanishs;
