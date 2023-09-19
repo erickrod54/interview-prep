@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 37.11 - context js - 
+/**interview-prep-app - version 37.12 - context js - 
  * Features: 
  * 
- *     --> Placing  'handleSortbasketfixed' handler
+ *     --> Migrating  'spanishsortedfixed', 'setSpanishsortedfixed'
+ *         states
  * 
  * 
  * Note: pending to clear 'basketsortedfixed', 'setBasketsortedfixed'
@@ -78,7 +79,7 @@ export const AppProvider = ({ children }) => {
 
     const handleFirst = () => {
         // eslint-disable-next-line 
-        if ([] === []) {
+        if ([]) {
             setFirst(<h4>[] === [] - true</h4>)
             return first
         }
@@ -616,6 +617,7 @@ export const AppProvider = ({ children }) => {
     const [ basketsorted, setBasketsorted ] = useState([]);
     const [ spanishsorted, setSpanishsorted ] = useState([]);
     const [ basketsortedfixed, setBasketsortedfixed ] = useState([]);
+    const [ spanishsortedfixed, setSpanishsortedfixed ] = useState([]);
 
     const spanish = spanishs;
 
@@ -715,6 +717,8 @@ export const AppProvider = ({ children }) => {
             basketsorted, 
             spanishsorted,
             basketsortedfixed,
+            spanishsortedfixed, 
+            setSpanishsortedfixed,
             setBasketsortedfixed,
             handleSortbasketfixed,
             handleSpanishsorted,
