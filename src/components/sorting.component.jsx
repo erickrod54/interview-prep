@@ -13,7 +13,7 @@ import { useAppContext } from "../context";
 
 const SortingComponent = () => {
 
-    const [ spanishsortedfixed, setSpanishsortedfixed ] = useState([]);
+    
     const [ bubblesortvalue, setBubblesortvalue ] = useState([]);
     const [ selectionsortvalue, setSelectionsortvalue ] = useState([]);
     const [ insertionsortvalue, setInsertionsortvalue ] = useState([]);
@@ -32,7 +32,10 @@ const SortingComponent = () => {
             basketsorted,
             setBasketsorted, 
             spanishsorted, 
-            handleSpanishsorted, basketsortedfixed, handleSortbasketfixed } = useAppContext();
+            handleSpanishsorted, 
+            spanishsortedfixed, 
+            setSpanishsortedfixed,
+            basketsortedfixed, handleSortbasketfixed } = useAppContext();
         
     const numbers = numberssorting;
     const spanish = spanishs;
