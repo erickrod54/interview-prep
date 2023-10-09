@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 37.12 - SortingComponent  
+/**interview-prep-app - version 37.13 - SortingComponent  
  * - Features: 
  * 
- *     --> Clearing 'setBasketsortedfixed'
+ *     --> Migrating and destructuring 'bubblesortvalue' state
  * 
  * Note: pending to clear 'setBasketsortedfixed' from the 
  * context destructuring 'setBasketsortedfixed'
@@ -14,7 +14,7 @@ import { useAppContext } from "../context";
 const SortingComponent = () => {
 
     
-    const [ bubblesortvalue, setBubblesortvalue ] = useState([]);
+    
     const [ selectionsortvalue, setSelectionsortvalue ] = useState([]);
     const [ insertionsortvalue, setInsertionsortvalue ] = useState([]);
     const [ mergesortvalue, setMergesortvalue ] = useState([]);
@@ -35,7 +35,9 @@ const SortingComponent = () => {
             handleSpanishsorted, 
             spanishsortedfixed, 
             setSpanishsortedfixed,
-            basketsortedfixed, handleSortbasketfixed } = useAppContext();
+            basketsortedfixed,
+            handleSortbasketfixed,
+            bubblesortvalue, setBubblesortvalue } = useAppContext();
         
     const numbers = numberssorting;
     const spanish = spanishs;
