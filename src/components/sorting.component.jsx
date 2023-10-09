@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 37.13 - SortingComponent  
+/**interview-prep-app - version 37.14 - SortingComponent  
  * - Features: 
  * 
- *     --> Migrating and destructuring 'bubblesortvalue' state
+ *     --> Migrating and destructuring 'handleBubblesort' handler
  * 
  * Note: pending to clear 'setBasketsortedfixed' from the 
  * context destructuring 'setBasketsortedfixed'
@@ -37,7 +37,9 @@ const SortingComponent = () => {
             setSpanishsortedfixed,
             basketsortedfixed,
             handleSortbasketfixed,
-            bubblesortvalue, setBubblesortvalue } = useAppContext();
+            bubblesortvalue,
+            handleBubblesort,
+            setBubblesortvalue } = useAppContext();
         
     const numbers = numberssorting;
     const spanish = spanishs;
@@ -100,23 +102,6 @@ const SortingComponent = () => {
     setMergesortvalue(result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex)) + ',')
     return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
   }
-    
-    const handleBubblesort = (array) => {
-        const length = array.length;
-
-        for (let i = 0; i < length; i++) {
-            for (let j = 0; j < length; j++) {
-                if (array[i] > array[j + 1]) {
-                    //Swap elements
-                    let temp = array[j];
-                    array[j] = array[j +1];
-                    array[j +1] = temp;
-                }
-            }
-            setBubblesortvalue(' ' + array + ' ' + ',')
-            
-        }
-    }
 
     const insertionSort = (array) => {
         const length = array.length;
