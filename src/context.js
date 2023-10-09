@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 37.13 - context js - 
+/**interview-prep-app - version 37.14 - context js - 
  * Features: 
  * 
- *     --> Adding 'bubblesortvalue', and 'setBubblesortvalue'
+ *     --> Adding 'handleBubblesort'
  * 
  * 
  * Note: pending to clear 'basketsortedfixed', 'setBasketsortedfixed'
@@ -620,6 +620,23 @@ export const AppProvider = ({ children }) => {
     const [ bubblesortvalue, setBubblesortvalue ] = useState([]);
 
     const spanish = spanishs;
+
+    const handleBubblesort = (array) => {
+        const length = array.length;
+
+        for (let i = 0; i < length; i++) {
+            for (let j = 0; j < length; j++) {
+                if (array[i] > array[j + 1]) {
+                    //Swap elements
+                    let temp = array[j];
+                    array[j] = array[j +1];
+                    array[j +1] = temp;
+                }
+            }
+            setBubblesortvalue(' ' + array + ' ' + ',')
+            
+        }
+    }
 
     const handleSortletters = () => {
         let letterssort = letters.sort()
