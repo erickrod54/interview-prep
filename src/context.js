@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 37.16 - context js - 
+/**interview-prep-app - version 37.17 - context js - 
  * Features: 
  * 
- *     --> Placing and Providing 'selectionsortvalue', and 
- *        'setSelectionsortvalue'
+ *     --> Placing and Providing 'handleSelectionSorte'
  * 
  * 
  * Note: pending to clear 'basketsortedfixed', 'setBasketsortedfixed'
@@ -640,6 +639,28 @@ export const AppProvider = ({ children }) => {
         }
     }
 
+    const handleSelectionSort = (array) => {
+        const length = array.length;
+        for (let i = 0; i < length; i++) {
+            // set current index as minimum
+            let min = i;
+            let temp = array[i];
+            for (let j = i + 1; j < length; j++) {
+                if (array[j] < array[min]) {
+                    //update the minimum if 
+                    //current is lower that 
+                    //what we had previously
+                    min = j;
+                }
+                
+            }
+            
+            array[i] = array[min]
+            array[min] = temp;
+        }
+        setSelectionsortvalue(array + ',' + '')
+    }
+
     const handleSortletters = () => {
         let letterssort = letters.sort()
         setLettersorted(letterssort)
@@ -739,6 +760,7 @@ export const AppProvider = ({ children }) => {
             spanishsortedfixed, 
             bubblesortvalue,
             selectionsortvalue,
+            handleSelectionSort,
             setSelectionsortvalue,
             handleBubblesort,
             setSpanishsortedfixed,
