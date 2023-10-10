@@ -1,10 +1,12 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 37.14 - context js - 
+/**interview-prep-app - version 37.15 - context js - 
  * Features: 
  * 
- *     --> Adding 'handleBubblesort'
+ *     --> Clearing 'setBubblesortvaluet'
+ * 
+ *    --> Providing 'handleBubblesort'
  * 
  * 
  * Note: pending to clear 'basketsortedfixed', 'setBasketsortedfixed'
@@ -736,7 +738,7 @@ export const AppProvider = ({ children }) => {
             basketsortedfixed,
             spanishsortedfixed, 
             bubblesortvalue,
-            setBubblesortvalue,
+            handleBubblesort,
             setSpanishsortedfixed,
             setBasketsortedfixed,
             handleSortbasketfixed,
