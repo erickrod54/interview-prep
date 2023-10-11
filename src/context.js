@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 37.19 - context js - 
+/**interview-prep-app - version 37.20 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'insertionsortvalue',
- *         and 'setInsertionsortvalue'
+ *     --> Placing and providing 'insertionSort'
  * 
  * 
  * Note: pending to clear 'basketsortedfixed', 'setBasketsortedfixed'
@@ -624,6 +623,23 @@ export const AppProvider = ({ children }) => {
 
     const spanish = spanishs;
 
+    const insertionSort = (array) => {
+        const length = array.length;
+        for (let i = 1; i < length; i++) {
+          let current = array[i];
+          let j = i - 1;
+      
+          while (j >= 0 && array[j] > current) {
+            array[j + 1] = array[j];
+            j--;
+          }
+      
+          array[j + 1] = current;
+        }
+      
+        setInsertionsortvalue( '' + array + ',');
+      };
+
     const handleBubblesort = (array) => {
         const length = array.length;
 
@@ -764,6 +780,7 @@ export const AppProvider = ({ children }) => {
             selectionsortvalue,
             insertionsortvalue, 
             setInsertionsortvalue,
+            insertionSort,
             handleSelectionSort,
             handleBubblesort,
             setSpanishsortedfixed,
