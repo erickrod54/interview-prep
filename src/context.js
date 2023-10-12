@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 38.01 - context js - 
+/**interview-prep-app - version 38.02 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'mergesortvalue', and
- *         'setMergesortvalue' states
+ *     --> Placing and providing 'merge' handler
  * 
  * 
  * Note: pending to clear 'basketsortedfixed', 'setBasketsortedfixed'
@@ -625,6 +624,24 @@ export const AppProvider = ({ children }) => {
 
     const spanish = spanishs;
 
+    function merge(left, right) {
+        const result = [];
+        let leftIndex = 0;
+        let rightIndex = 0;
+      
+        while (leftIndex < left.length && rightIndex < right.length) {
+          if (left[leftIndex] < right[rightIndex]) {
+            result.push(left[leftIndex]);
+            leftIndex++;
+          } else {
+            result.push(right[rightIndex]);
+            rightIndex++;
+          }
+        }
+        setMergesortvalue(result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex)) + ',')
+        return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+      }
+
     const insertionSort = (array) => {
         const length = array.length;
         for (let i = 1; i < length; i++) {
@@ -783,6 +800,7 @@ export const AppProvider = ({ children }) => {
             insertionsortvalue, 
             mergesortvalue, 
             setMergesortvalue,
+            merge,
             insertionSort,
             handleSelectionSort,
             handleBubblesort,
