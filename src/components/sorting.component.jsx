@@ -2,19 +2,17 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 38.00 - SortingComponent  
+/**interview-prep-app - version 38.01 - SortingComponent  
  * - Features: 
  * 
- *     --> Clearing 'setInsertionsortvalue'
+ *     --> Migrating and destructuring 'mergesortvalue', and
+ *         'setMergesortvalue'
  * 
  * Note: pending to clear 'setBasketsortedfixed' from the 
  * context destructuring 'setBasketsortedfixed'
  */
 
 const SortingComponent = () => {
-
-    const [ mergesortvalue, setMergesortvalue ] = useState([]);
-    
 
     const { graphsData, 
             letters, 
@@ -38,7 +36,8 @@ const SortingComponent = () => {
             selectionsortvalue,
             handleSelectionSort,
             insertionsortvalue,
-            insertionSort } = useAppContext();
+            insertionSort,
+            mergesortvalue, setMergesortvalue } = useAppContext();
         
     const numbers = numberssorting;
     const spanish = spanishs;
