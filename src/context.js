@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 38.02 - context js - 
+/**interview-prep-app - version 38.03 - context js - 
  * Features: 
  * 
- *     --> Placing and providing 'merge' handler
+ *     --> Clearing 'setMergesortvalue'
  * 
  * 
  * Note: pending to clear 'basketsortedfixed', 'setBasketsortedfixed'
@@ -719,7 +719,7 @@ export const AppProvider = ({ children }) => {
         console.log(basketsort)
     }
     
-
+    
     return (
         <AppContext.Provider value={{
             nemo,
@@ -799,7 +799,6 @@ export const AppProvider = ({ children }) => {
             selectionsortvalue,
             insertionsortvalue, 
             mergesortvalue, 
-            setMergesortvalue,
             merge,
             insertionSort,
             handleSelectionSort,
