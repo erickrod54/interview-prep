@@ -2,16 +2,19 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 29.03 - 
+/**interview-prep-app - version 38.05 - 
  * AlgorithmsIntro - Features: 
  * 
- *     --> Destructuring recursionconversionrule from the context.
+ *     --> Migrating and Destructuring ' fibonacciterative100', and 
+ *         'setFibonacciterative100'.
  * 
  * Note: Fibonacci Sequence is closely related 
  * to the Recursion Concept
  */
 
 const AlgorithmsIntro = () => {
+
+    const { fibonacciterative100, setFibonacciterative100 } = useAppContext()
 
     
     // eslint-disable-next-line
@@ -35,7 +38,6 @@ const AlgorithmsIntro = () => {
     const [ fibonacciterative30, setFibonacciterative30 ] = useState();
     const [ fibonacciterative40, setFibonacciterative40 ] = useState();
     const [ fibonacciterative50, setFibonacciterative50 ] = useState();
-    const [ fibonacciterative100, setFibonacciterative100 ] = useState();
     
 
     const { graphsData } = useAppContext()
