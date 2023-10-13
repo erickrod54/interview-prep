@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 38.03 - SortingComponent  
+/**interview-prep-app - version 38.04 - SortingComponent  
  * - Features: 
  * 
- *     --> Clearing 'setMergesortvalue'
+ *     --> Clearing 'useState'
  * 
  * Note: pending to clear 'setBasketsortedfixed' from the 
  * context destructuring 'setBasketsortedfixed'
