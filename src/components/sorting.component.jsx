@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 38.02 - SortingComponent  
+/**interview-prep-app - version 38.03 - SortingComponent  
  * - Features: 
  * 
- *     --> Migrating and destructuring 'merge'
+ *     --> Clearing 'setMergesortvalue'
  * 
  * Note: pending to clear 'setBasketsortedfixed' from the 
  * context destructuring 'setBasketsortedfixed'
@@ -37,7 +37,7 @@ const SortingComponent = () => {
             insertionsortvalue,
             insertionSort,
             mergesortvalue,
-            merge, setMergesortvalue } = useAppContext();
+            merge } = useAppContext();
         
     const numbers = numberssorting;
     const spanish = spanishs;
