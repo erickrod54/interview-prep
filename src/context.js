@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 38.03 - context js - 
+/**interview-prep-app - version 38.05 - context js - 
  * Features: 
  * 
- *     --> Clearing 'setMergesortvalue'
+ *     --> Placing and providing  'fibonacciterative100', and 
+ *        'setFibonacciterative100'
  * 
  * 
  * Note: pending to clear 'basketsortedfixed', 'setBasketsortedfixed'
@@ -15,6 +16,9 @@ import { array1, array2, array3, array4, array5, array6, array7, basket, baskets
 export const AppContext = React.createContext()
 
 export const AppProvider = ({ children }) => {
+
+    /**Algorithms intro states and handlers - start */
+    const [ fibonacciterative100, setFibonacciterative100 ] = useState();
 
     /**--- logic for HowToSolveProblems Component start--*/
 
@@ -196,7 +200,7 @@ export const AppProvider = ({ children }) => {
 
     const printMe = (arg) => {
         setShowPrintMe(!showPrintMe)
-        return console.log(arg);
+        return (arg);
     }
 
     /**Big o notation states and handlers - end */
@@ -799,6 +803,8 @@ export const AppProvider = ({ children }) => {
             selectionsortvalue,
             insertionsortvalue, 
             mergesortvalue, 
+            fibonacciterative100,
+            setFibonacciterative100,
             merge,
             insertionSort,
             handleSelectionSort,
