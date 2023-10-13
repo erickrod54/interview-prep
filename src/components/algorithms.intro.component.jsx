@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
-/**interview-prep-app - version 38.05 - 
+/**interview-prep-app - version 38.06 - 
  * AlgorithmsIntro - Features: 
  * 
- *     --> Migrating and Destructuring ' fibonacciterative100', and 
- *         'setFibonacciterative100'.
+ *     --> Migrating and Destructuring 'inceptionund', and 'setInceptionund'.
  * 
  * Note: Fibonacci Sequence is closely related 
  * to the Recursion Concept
@@ -14,11 +13,9 @@ import { useAppContext } from "../context";
 
 const AlgorithmsIntro = () => {
 
-    const { fibonacciterative100, setFibonacciterative100 } = useAppContext()
+    const { fibonacciterative100, setFibonacciterative100, inceptionund, setInceptionund } = useAppContext()
 
     
-    // eslint-disable-next-line
-    const [ inceptionund, setInceptionund ] = useState();
     const [ countvalue, setCountvalue ] = useState();
     const [ inceptionvalue, setInceptionvalue ] = useState();
     const [ factorialvalue, setFactorialvalue ] = useState();
