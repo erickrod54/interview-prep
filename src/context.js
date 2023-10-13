@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 38.05 - context js - 
+/**interview-prep-app - version 38.06 - context js - 
  * Features: 
  * 
- *     --> Placing and providing  'fibonacciterative100', and 
- *        'setFibonacciterative100'
+ *     --> Placing and providing  'inceptionund', and 'setInceptionund'
  * 
  * 
  * Note: pending to clear 'basketsortedfixed', 'setBasketsortedfixed'
@@ -19,6 +18,8 @@ export const AppProvider = ({ children }) => {
 
     /**Algorithms intro states and handlers - start */
     const [ fibonacciterative100, setFibonacciterative100 ] = useState();
+    // eslint-disable-next-line
+    const [ inceptionund, setInceptionund ] = useState();
 
     /**--- logic for HowToSolveProblems Component start--*/
 
@@ -804,6 +805,8 @@ export const AppProvider = ({ children }) => {
             insertionsortvalue, 
             mergesortvalue, 
             fibonacciterative100,
+            inceptionund, 
+            setInceptionund,
             setFibonacciterative100,
             merge,
             insertionSort,
