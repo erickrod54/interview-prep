@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 38.08-  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 38.09-  SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'beastfindindexHandler'
+ *     --> Clearing 'setBeastfindindexvalue'
  * 
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
@@ -14,7 +14,7 @@ import { useAppContext } from "../context";
 
 const SearchingAlgorithms = () => {
 
-    const { graphsData, beasts, numberssearching, beastindexofvalue, beastindexofHandler, beastfindindexvalue, beastfindindexHandler, setBeastfindindexvalue  } = useAppContext();
+    const { graphsData, beasts, numberssearching, beastindexofvalue, beastindexofHandler, beastfindindexvalue, beastfindindexHandler  } = useAppContext();
 
     
     
