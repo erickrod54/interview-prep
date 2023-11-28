@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 38.14-  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 38.15-  SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring and providing 'bfsvalue', 'setBFSvalue'
+ *     --> Destructuring and providing 'bfsvaluerecursive', and 'setBFSvaluerecursive'
  * 
  * 
  * Note: this 'handlerDFSPostorder' will handle the array filling the queue
@@ -20,11 +20,8 @@ const SearchingAlgorithms = () => {
              beastindexofvalue,
              beastindexofHandler,
               beastfindindexvalue,
-              beastfindindexHandler, beastincludesvalue, bfsvalue, setBFSvalue   } = useAppContext();
+              beastfindindexHandler, beastincludesvalue, bfsvalue, setBFSvalue, bfsvaluerecursive, setBFSvaluerecursive   } = useAppContext();
 
-    
-    
-    const [ bfsvaluerecursive, setBFSvaluerecursive ] = useState([]);
     const [ dfsInordervalue, setDFSInordervalue ] = useState([]);
     const [ dfsPreordervalue, setDFSPreordervalue ] = useState([]);
     const [ dfsPostordervalue, setdfsPostordervalue ] = useState([]);
