@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { array1, array2, array3, array4, array5, array6, array7, basket, baskets, beasts, boxes, boxes1, boxesletters, everyoneCharacter, graphsData, largeArray, letters, linksData, n, nemo, numbers, numberssearching, numberssorting, spanishs } from "./data";
 
-/**interview-prep-app - version 38.13 - context js - 
+/**interview-prep-app - version 38.14 - context js - 
  * Features: 
  * 
- *     --> Clearing  'setBeastincludesvalue' 
+ *     --> Placing and Providing  'bfsvalue', and 'setBFSvalue' 
  * 
  * 
  * Note: pending to clear 'basketsortedfixed', 'setBasketsortedfixed'
@@ -727,6 +727,7 @@ export const AppProvider = ({ children }) => {
     /**searching algorithms states and handlers */
     const [ beastfindindexvalue, setBeastfindindexvalue ] = useState(false);
     const [ beastincludesvalue, setBeastincludesvalue ] = useState(false);
+    const [ bfsvalue, setBFSvalue ] = useState([]);
     
     const beastfindindexHandler = (array) => {
         return(
@@ -825,6 +826,8 @@ export const AppProvider = ({ children }) => {
             inceptionund, 
             beastfindindexvalue, 
             beastincludesvalue,
+            bfsvalue,
+            setBFSvalue,
             beastincludesHandler,
             beastfindindexHandler,
             setInceptionund,
