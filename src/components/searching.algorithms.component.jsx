@@ -3,9 +3,9 @@ import { DataStructuresWrapper } from "../styled.components";
 import { useAppContext } from "../context";
 
 
-/**interview-prep-app - version 38.11-  SearchingAlgorithms - Features: 
+/**interview-prep-app - version 38.12-  SearchingAlgorithms - Features: 
  * 
- *     --> Destructuring 'beastincludesvalue', and 'setBeastincludesvalue '
+ *     --> Destructuring 'beastincludesHandler'
  *          from the context
  * 
  * 
@@ -15,7 +15,11 @@ import { useAppContext } from "../context";
 
 const SearchingAlgorithms = () => {
 
-    const { graphsData, beasts, numberssearching, beastindexofvalue, beastindexofHandler, beastfindindexvalue, beastfindindexHandler, beastincludesvalue, setBeastincludesvalue   } = useAppContext();
+    const { graphsData,
+             beasts,
+             numberssearching,
+             beastindexofvalue,
+             beastindexofHandler, beastfindindexvalue, beastfindindexHandler, beastincludesvalue, setBeastincludesvalue   } = useAppContext();
 
     
     const [ bfsvalue, setBFSvalue ] = useState([]);
@@ -51,12 +55,6 @@ const SearchingAlgorithms = () => {
             array.find(function(item){ return item === 'Godzilla'})
         )
     } 
-
-    const beastincludesHandler = (array) => {
-        const item = array.includes('Godzilla');
-        setBeastincludesvalue(item); // Update the state with the result
-        return item; // Return the result directly
-      };
 
     /**Breadth First Search exersice start*/
     class Node {
